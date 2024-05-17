@@ -1,4 +1,5 @@
-# just-the-docs-template
+# 📖 Course Docs for *Post-AP CS: Python Applications*
+### Built with `just-the-docs-template`
 
 This is a *bare-minimum* template to create a [Jekyll] site that:
 
