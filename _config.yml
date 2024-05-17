@@ -1,8 +1,5 @@
-title: Python Docs
+title: 💻 Python Docs
 description: Documentation, class notes, & project instructions for Post-AP Computer Science: Python Applications.
 theme: just-the-docs
 
 url: https://pythondocs.coderina.dev
-
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
