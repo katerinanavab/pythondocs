@@ -5,5 +5,4 @@ theme: just-the-docs
 url: https://pythondocs.coderina.dev
 
 aux_links:
-  Instructor Site: https://coderina.dev
-  Blackbaud LMS: https://bwl.myschoolapp.com/app#login
+  "Instructor Site": - "https://coderina.dev"
