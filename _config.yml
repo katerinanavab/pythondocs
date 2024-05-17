@@ -1,8 +1,9 @@
 title: Python Docs
-description: Documentation, class notes, & project instructions for Post-AP Computer Science: Python Applications.
+description: Course materials for Post-AP Computer Science: Python Applications
 theme: just-the-docs
 
 url: https://pythondocs.coderina.dev
 
 aux_links:
-  "Instructor Site": - "https://coderina.dev"
+  "Instructor Site": 
+    - "https://coderina.dev"
