@@ -3,3 +3,7 @@ description: Documentation, class notes, & project instructions for Post-AP Comp
 theme: just-the-docs
 
 url: https://pythondocs.coderina.dev
+
+aux_links:
+  Instructor Site: https://coderina.dev
+  Blackbaud LMS: https://bwl.myschoolapp.com/app#login
