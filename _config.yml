@@ -5,4 +5,7 @@ theme: just-the-docs
 url: https://katerinanavab.github.io/pythondocs
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  "Instructor Site":
+    - "https://coderina.dev"
+
+logo: "logo-postapcs.png"
