@@ -5,7 +5,6 @@ theme: just-the-docs
 url: https://katerinanavab.github.io/pythondocs
 
 logo: "logo-postapcs.png"
-favicon_ico: "logo-postapcs.png"
 
 aux_links_new_tab: true
 aux_links:
