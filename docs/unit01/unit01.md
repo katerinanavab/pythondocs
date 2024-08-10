@@ -1,5 +1,5 @@
 ---
 layout: default
-title: "1. Python Bootcamp"
+title: "1️⃣ Python Bootcamp"
 nav_order: 2
 ---
