@@ -1,8 +1,11 @@
 ---
 title: Home
 layout: home
+nav_exclude: true
 ---
 
 # Post-AP Computer Science: Python Applications
 Welcome to our course website! 💻
+
+### Course Description
 > The Post-AP Computer Science course is designed for highly motivated students who have successfully completed introductory and AP-level courses. It leverages the Python programming language, renowned for its versatility across various domains, to deepen students’ engagement with real-world technological applications. The realm of Data Science is explored first, where Python libraries like Pandas, NumPy, and Matplotlib are used to wrangle vast collections of data, perform statistical analyses, create visualizations, and interpret trends. Students choose datasets to investigate, perform Exploratory Data Analysis experiments, and assemble the results into a formal research poster. The focus of the course then shifts to using Python for Web Development, particularly in creating dynamic server-side applications through the Flask framework and handling SQL database interactions. By learning how to integrate Python logic with HTML web pages, students bridge the gap between backend data processing and frontend user interfaces. Projects range from simple interactive applications, like personal blogs and to-do lists, to more complex ones, like live data dashboards. Finally, students explore the forefront of technology through modules on Machine Learning and Artificial Intelligence. By the end of the course, students will have developed a robust portfolio of programs that demonstrate their advanced coding skills and readiness for future challenges in the world of technology.
