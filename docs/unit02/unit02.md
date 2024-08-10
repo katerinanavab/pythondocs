@@ -1,5 +1,5 @@
 ---
 layout: default
-title: "2️⃣ Data Science & Visualization"
+title: "2️⃣ Data Science"
 nav_order: 3
 ---
