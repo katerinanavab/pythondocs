@@ -5,6 +5,7 @@ theme: just-the-docs
 url: https://katerinanavab.github.io/pythondocs
 
 logo: "assets/pythondocs-logo.png"
+favicon_ico: "assets/pythondocs-favicon/favicon.ico"
 
 aux_links_new_tab: true
 aux_links:
