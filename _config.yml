@@ -9,6 +9,10 @@ favicon_ico: "favicon.ico"
 
 aux_links_new_tab: true
 aux_links:
+  "Blackbaud":
+    - "https://bwl.myschoolapp.com/app#login"
+  "Replit":
+    - "https://replit.com/~"
   "Instructor Site":
     - "https://coderina.dev"
     
