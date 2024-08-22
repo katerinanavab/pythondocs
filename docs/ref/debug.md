@@ -1,11 +1,8 @@
 ---
-layout: home
+layout: default
 title: "🐛 Debugging" 
 parent: References
-nav_order: 3
-seo:
-  type: Resource
-  name: Debugging scenarios and solutions
+nav_order: 2
 ---
 
 # 🐛 Debugging Scenarios & Solutions
@@ -13,7 +10,7 @@ seo:
 
 <a name="top"></a>
 
-# Quick debugging tips
+## Quick debugging tips
 {:.no_toc}
 1. Read the error message and look at the line that it refers to.
     1. Sometimes the issue is at the line just ⬆ **above** the line that was listed in the error.
@@ -85,7 +82,7 @@ while num_items:
     items.append(item)
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -101,7 +98,7 @@ print('Hello, World'
 print("Hello, World")
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -117,7 +114,7 @@ or
 print('Hello, World") # mismatched quotation marks
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -135,7 +132,7 @@ print("Hello world!")
 print("What a nice day!")
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -156,7 +153,7 @@ def print_hello():
     print("Hello!")
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -186,7 +183,7 @@ if len(my_str) != 0: # my_str != ""
     print("The last symbol is", my_str[-1])
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -223,7 +220,7 @@ print("First month is", month_names.get("1"))
 print("First month is", month_names[str(1)])
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -255,7 +252,7 @@ print(Hello, World)
 ```
 generates the same error (`NameError: name 'Hello' is not defined`), since Python is now looking for a variable called `Hello` - it doesn’t know that we just forgot to put quotation marks around the text.
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -275,7 +272,7 @@ dict1 = {"A":1, "B":2, "C":3}
 print(dict1["A"])
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -334,7 +331,7 @@ if __name__ == '__main__':
   
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 # `RecursionError: maximum recursion depth exceeded`
@@ -469,7 +466,7 @@ if __name__ == "__main__":
 ```
 
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -507,7 +504,7 @@ print'Hello World
 print(Hello World) # see also NameError
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -518,7 +515,7 @@ print(Hello World) # see also NameError
 print('Hello, World'))
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -557,7 +554,7 @@ for i in range(total):
     print(i)
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -592,7 +589,7 @@ if "a" in val:
     print("Found it!")
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -615,7 +612,7 @@ print("I would like", num, "tacos please.") # using print defaults
 print(f"I would like {num} tacos please.") # using f-strings
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -651,7 +648,7 @@ for i in range(len(total)):
 	print(i) # prints the indices of the list, which is just 0
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -676,7 +673,7 @@ len(42)
 len([42]) 
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -702,7 +699,7 @@ len(42, 33)
 len([42, 33]) 
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -732,7 +729,7 @@ if my_var < 5:
    print(my_var)
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -760,7 +757,7 @@ for item in nested_list:
 ```
 
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -781,7 +778,7 @@ current_year = int(current_year)
 print(current_year)
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -804,7 +801,7 @@ if my_list != []: # len(my_list) != 0
 ```
 
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -834,7 +831,7 @@ if __name__ == '__main__':
     print_hello()
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -867,7 +864,7 @@ if __name__ == '__main__':
     assert get_hello() == "hello" # to check the return value
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -893,7 +890,7 @@ def get_largest(x,y):
       return y
 ```
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
@@ -917,7 +914,7 @@ if __name__ == '__main__':
     print(f"Circle has area {area(radius)} inches squared.")
 ``` 
 
-[Back to top](#top)
+[⬆️ BACK TO TOP](#top)
 
 ---
 
