@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 🐛Debugging 
+title: "🐛 Debugging" 
 parent: References
 nav_order: 3
 seo:
@@ -8,7 +8,7 @@ seo:
   name: Debugging scenarios and solutions
 ---
 
-# 🐛Debugging Scenarios & Solutions
+# 🐛 Debugging Scenarios & Solutions
 {:.no_toc}
 
 <a name="top"></a>
@@ -16,7 +16,7 @@ seo:
 # Quick debugging tips
 {:.no_toc}
 1. Read the error message and look at the line that it refers to.
-    1. Sometimes the issue is at the line just **above** the line that was listed in the error.
+    1. Sometimes the issue is at the line just ⬆ **above** the line that was listed in the error.
     1. If enabled, pay close attention to the **syntax highlighting** in your editor, which can point at where the error might be happening.
 1. Use `print()` statements to display the type and value of your variable.
 1. Go back to the instructions and carefully re-read them.
@@ -921,33 +921,7 @@ if __name__ == '__main__':
 
 ---
 
-
----
----
----
-
-# Common autograder error messages on Gradescope
-
-## `Your submission timed out. It took longer than 600 seconds to run.` 
-
-* **Cause**: you have an infinite `while` loop in your code. 
-* **Check**: Carefully look at the condition in the `while` and ask when/if it will ever become False. Check when/where you are updating variables in the condition - the loop will keep going until the condition becomes False, so if the variable is not updated _within_ the loop, you get an infinite loop.
-
-## `Test Failed: Check the name of your .py file: it is incorrect.`
-
-* **Cause**: you did not name your file according to the instructions.
-* We do not re-upload students' files: if _you_ would want to manually do something for all 280+ students in the class, please do not ask us to do it.
-
-## `Test Failed: Syntax error when importing ...`
-
-* **Cause**: Something in your file is causing a syntax error (could be as simple as incorrect indentation; see the SyntaxError examples listed above). 
-* **Check**: Run your code and examine the line that is causing an error. If you are not getting any syntax errors when running code in your IDE, then verify that you have a correctly-placed `if __name__ == '__main__'` block in your file.
-
-[Back to top](#top)
-
----
-
 **Acknowledgement**
 
-Developed by Yekaterina Kharitonova with assistance from students and course mentors.
+Content on this page is adapted from [Yekaterina Kharitonova](ucsb-csw8.github.io)
 {: .fs-2 }
