@@ -25,7 +25,7 @@ nav_order: 1
   
 * ⏰ **LATE WORK POLICY**: Late projects may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
-> {: .warning }
+> {: .warning .fs-3 }
 > Whenever you submit work late, especially after the assignment has been graded on BlackBaud, you must **SEND ME AN EMAIL**! Otherwise I will not be notified.
 
 * Projects are graded on a 5-point scale, and **EXTRA CREDIT** is always available to encourage effort and creativity. _See the rubric section below for details._
@@ -87,7 +87,7 @@ nav_order: 1
 ### Homework (30% of total grade)
 * 💬 **Homework** is assigned in the form of a `CodeCollab`: like posting on a discussion board, but instead of talking about a book or article, the class has a shared goal of figuring out how some 🔍 mystery code 🔍 works.
 
-> {: .highlight }
+> {: .highlight .fs-3 }
 > CodeCollabs are always **due on FRIDAYS @11:59pm**❗
 
 * _How it works:_ At the beginning of each week, I will **post a DISCUSSION assignment on BlackBaud** that includes a Replit link to a working program that you will **analyze collaboratively**.
@@ -96,31 +96,74 @@ nav_order: 1
   * CodeCollabs will be reviewed together during the first class period of the following week.
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
-> {: .warning }
+> {: .warning .fs-3 }
 > Whenever you submit work late, especially after the assignment has been graded on BlackBaud, you must **SEND ME AN EMAIL**! Otherwise I will not be notified.
 
 ### Participation (20% of total grade)
 * 👥 **Participation** is graded weekly (up to 2 points max per class period) and will be evaluated based on adherence to these key values: being **respectful**, **prepared**, and **engaged**.
   * Being <span class="highlighter">respectful</span> of your community means being mindful of and kind toward your environment, and the people within – this includes arriving **on-time** to commitments.
 
-> {: .warning }
+> {: .warning .fs-3 }
 > ⏰ If you are **over 5 minutes late**, you must first get a LATE PASS from the Upper School Office and then enter the classroom QUIETLY as to not disrupt the class. Unexcused lateness always results in a deduction of 1 point for the day, and unexcused absence results in a deduction of 2 points (a 0/2 for the day).
 
   * Being <span class="highlighter">prepared</span> for class means you have your laptop ready (unless otherwise instructed) within the first 5 minutes of class. It also means you arrive with a positive attitude and are ready to learn!
   * Show you are <span class="highlighter">engaged</span> by volunteering answers/comments, staying on task, and completing classwork as directed. You are expected to take your own notes while new material is being introduced, to contribute during group activities, and be open to collaborating with all classmates.
 
-> {: .highlight }
+> {: .highlight .fs-3 }
 > **NON-NEGOTIABLES**: Be aware that tardiness, off-task behavior, and side conversations will have a negative impact on your grade. _However, consistently arriving on-time with a positive attitude is a great way to earn an easy 100% for your participation grade_ ☺︎
 
 ## Expectations & Policies
 
-### AI Usage Policies
-* TBD (To Be _Discussed_)
+### AI Usage Policies 
+* **Generative Artificial Intelligence (GenAI)** tools like ChatGPT are a significant technological advancement that has the potential to support your learning, especially in Computer Science. But with any new technology, there are significant limitations and risks associated with its use, misuse, and overuse. *[Source](https://www.aiforeducation.io/ai-resources/drafting-a-genai-academic-policy)*
+* To support appropriate use of GenAI tools in your learning, these **three steps** should always be taken when determining if and when to use GenAI tools:
+
+> 1. **Check with your teacher** if the task or assignment can be completed with the _support_ of a GenAI tool.
+> 2. If the tool is allowed, **track your conversation** with the tool by screenshotting or copy-pasting the interaction in a document that you can share with your teacher.
+> 3. **Cite the use of the tool** when submitting your work. Here is an example with APA style formatting: `OpenAI. (2023). ChatGPT (Mar 14 version) [Large language model]. https://chat.openai.com/chat`
+
+> {: .warning .fs-3 }
+> If these steps are not followed, your use of GenAI will be considered an **academic integrity violation**.
+
+<details>
+<summary><strong>EXAMPLES OF AI USE</strong></summary>
+
+<p class="fs-3 note">These examples are specific to my Computer Science classes and are subject to change as we explore appropriate AI usage throughout the year. Always check with your teacher before using GenAI tools!!!</p>
+ 
+<div>
+<table><thead>
+  <tr>
+    <th class="text-center fw-700">Appropriate Use</th>
+    <th class="text-center fw-700">Inappropriate Use</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="fs-1">
+     <ul>
+      <li>Help brainstorm creative ideas</li>
+      <li>Explain concepts in a different way</li>
+      <li>Critique and provide feedback on code</li>
+      <li>Teach how to add a new, specific feature to an <strong>already working</strong> program</li>
+     </ul>
+    </td>
+   <td class="fs-1">
+     <ul>
+      <li>Completing any written assignments, like homework discussions</li>
+      <li>Asking GenAI to write a significant portion of code for a program</li>
+      <li>Copying any amount of code without understanding how it works</li>
+      <li>Not asking for permission to use GenAI tools, not checking for inaccuracies, and not citing work with GenAI</li>
+     </ul>
+    </td>
+  </tr>
+</tbody></table>
+</div>
+
+</details>
 
 ### Other Classroom Policies
 * 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> during <span class="highlighter">7th period (1:00-1:45pm) any day of the week</span>. Drop-ins are welcome, meaning there is no need to let me know in advance if you plan on stopping by during 7th period.
  
-> {: .note } 
+> {: .note .fs-3 } 
 > You may email me to schedule an appointment at a different time, ONLY IF you are unavailable during 7th period all days of the week. _Include a list of your free periods in your email!_
 
 * 📝 You can leave a **sticky note on my desk** for anything you want me to remember to do.
@@ -133,7 +176,7 @@ nav_order: 1
   * Respect others’ property. Avoid touching or writing on anything that does not belong to you (including tables, books, teacher’s belongings, walls, etc.)
   * Please pick up after yourself, don't leave trash behind, and don't expect that other people (like your teacher) will clean up your messes.
 
-> {: .important }
+> {: .important .fs-3 }
 > 🧠 Finally, some **mindset** tips: I strongly encourage you all to be **proactive** about your learning, embrace **creativity**, take **responsibility** for your work, and _never be afraid to ask for help_!!! There are no bad questions, and chances are if you are wondering about it, someone else in the class is too. If you feel most comfortable waiting until after class, that is okay, but do keep communication open between us.
 
 ## FAQs
