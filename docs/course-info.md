@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "ℹ️ Course Info"
+title: "Course Info"
 nav_order: 1
 ---
 
@@ -178,11 +178,3 @@ nav_order: 1
 
 > {: .important .fs-3 }
 > 🧠 Finally, some **mindset** tips: I strongly encourage you all to be **proactive** about your learning, embrace **creativity**, take **responsibility** for your work, and _never be afraid to ask for help_!!! There are no bad questions, and chances are if you are wondering about it, someone else in the class is too. If you feel most comfortable waiting until after class, that is okay, but do keep communication open between us.
-
-## FAQs
-
-### How to use Replit for coding projects
-TUTORIAL COMING SOON!
-
-### How to do CodeCollab homework assignments
-TUTORIAL COMING SOON!
