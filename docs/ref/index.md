@@ -9,5 +9,4 @@ permalink: ref
 # References
 {: .no_toc }
 
-Course Reference Pages
 {: .fs-6 .fw-300 }
