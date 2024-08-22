@@ -71,7 +71,7 @@ From top to bottom:
 | `≈` | "approximately" symbol ||
 
 
-Whenever are talk about **_indentation_**, we are referring to the offset that is created using either the `Tab` key (on the right side of the keyboard) or to the sequence of spaces created using the spacebar (the longest key on the bottom of the keyboard).
+Whenever are talking about **_indentation_**, we are referring to the offset that is created using either the `Tab` key (on the right side of the keyboard) or to the sequence of spaces created using the `spacebar`.
 
 ---
 
