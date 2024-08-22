@@ -1,11 +1,8 @@
 ---
-layout: home
+layout: default
 title: "🔣 Keyboard Symbols" 
 parent: References
-nav_order: 2
-seo:
-  type: Resource
-  name: Keyboard symbols and their names
+nav_order: 1
 ---
 
 # 🔣 Keyboard Symbols
@@ -17,14 +14,14 @@ From left to right:
 | Symbol | Common Name in CS | Other Names |
 |---|-----|----------------------|
 | `~` | Tilde | |
-| ` | Backtick | Grave Accent, back quote |
-| `!` | Exclamation Mark  | Exclamation Point, Ecphoneme | 
+| ` | Backtick | grave accent, back quote |
+| `!` | Exclamation Mark  | exclamation point | 
 | `@` | At Sign | at, at symbol | 
 | `#` | Pound Sign | Number Sign, Hash, or Octothorpe |
 | `$` | Dollar ||
 | `%` | Percent ||
 | `^` | Caret ||
-| `&` | Ampersand | And symbol |
+| `&` | Ampersand | "And" symbol |
 | `*` | Asterisk | Star |
 | `(` | Open Parenthesis | left parenthesis |
 | `)` | Close Parenthesis | right parenthesis |
@@ -58,7 +55,7 @@ From top to bottom:
 | `<` | Less Than | left angle bracket |
 | `>` | Greater Than | right angle bracket |
 | `.` | Period | decimal, dot, full stop |
-| `/` | Slash ([Forward Slash](https://sites.cs.ucsb.edu/~pconrad/topics/BackslashVsForwardSlash/)) | Fraction slash, Solidus, Virgule |
+| `/` | Slash ([Forward Slash](https://sites.cs.ucsb.edu/~pconrad/topics/BackslashVsForwardSlash/)) | forward slash, fraction slash |
 | `?` | Question Mark | |
 
 ## 💻 Other Symbols
@@ -67,7 +64,7 @@ From top to bottom:
 |---|-----|----------------------|
 | `...` | [Ellipsis](https://en.wikipedia.org/wiki/Ellipsis) | "dot dot dot" |
 | `>>>` | a Python prompt | (triple) angled brackets, chevron |
-| `≠` | "not equal" sign, inequality Written as `!=` in Python ||
+| `≠` | "not equal" sign, inequality written as `!=` in Python ||
 | `≈` | "approximately" symbol ||
 
 
