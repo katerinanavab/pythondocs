@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 🔣Keyboard Symbols 
+title: "🔣 Keyboard Symbols" 
 parent: References
 nav_order: 2
 seo:
@@ -8,7 +8,7 @@ seo:
   name: Keyboard symbols and their names
 ---
 
-# 🔣Keyboard Symbols
+# 🔣 Keyboard Symbols
 
 ## ⌨️  Keyboard Symbols on the Top Row
 
@@ -77,5 +77,5 @@ Whenever are talking about **_indentation_**, we are referring to the offset tha
 
 #### Acknowledgement
 
-Developed by [Yekaterina Kharitonova](ucsb-csw8.github.io) with reference to [1](https://excelnotes.com/names-of-the-keyboard-symbols) and [2](https://finallylearn.com/what-are-the-keyboard-symbol-names>).
+Content on this page is adapted from [Yekaterina Kharitonova](ucsb-csw8.github.io) with reference to [1](https://excelnotes.com/names-of-the-keyboard-symbols) and [2](https://finallylearn.com/what-are-the-keyboard-symbol-names>).
 {: .fs-2 }
