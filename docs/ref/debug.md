@@ -10,7 +10,7 @@ nav_order: 2
 
 <a name="top"></a>
 
-## Quick debugging tips
+### Quick debugging tips:
 {:.no_toc}
 1. Read the error message and look at the line that it refers to.
     1. Sometimes the issue is at the line just ⬆ **above** the line that was listed in the error.
@@ -31,7 +31,9 @@ nav_order: 2
 
 ---
 
-## `AttributeError: '...' object has no attribute '...'`
+## Common Error Messages
+
+### `AttributeError: '...' object has no attribute '...'`
 
 Example errors:
 * `AttributeError: 'int' object has no attribute 'isdigit'`
@@ -55,8 +57,7 @@ if my_int.isdigit():
     my_float = float(my_int)
 ```
 
-
-## EOF (end-of-file) Errors
+---
 
 ### `EOFError: EOF when reading a line`
 
@@ -102,7 +103,7 @@ print("Hello, World")
 
 ---
 
-## `EOL while scanning string literal`
+### `EOL while scanning string literal`
 
 *   **Cause**:   Missing a **closing** quotation mark or a mismatched quotation mark (incorrectly placed quotation can also cause it).
 *   Example erroneous code:
@@ -118,7 +119,6 @@ print('Hello, World") # mismatched quotation marks
 
 ---
 
-## Indentation Errors
 ### `IndentationError: unexpected indent`
 *   Example erroneous code:
 ```py
@@ -157,7 +157,7 @@ def print_hello():
 
 ---
 
-# `IndexError: ... index out of range`
+### `IndexError: ... index out of range`
 
 Example errors:
 * `IndexError: string index out of range`
@@ -187,7 +187,7 @@ if len(my_str) != 0: # my_str != ""
 
 ---
 
-# `KeyError: ...` with a dictionary
+### `KeyError: ...` with a dictionary
 
 This error occurs when working with dictionaries. The line above the error shows which line caused the incorrect retrieval.
 
@@ -224,9 +224,7 @@ print("First month is", month_names[str(1)])
 
 ---
 
-# Name Errors
-
-## `NameError: name '...' is not defined`
+### `NameError: name '...' is not defined`
 
 Python would replace the ellipsis `...` with the name of the variable that it's unable to find.
 *   **Cause**:   Generally, this error happens when a function name or a variable name 
@@ -256,7 +254,7 @@ generates the same error (`NameError: name 'Hello' is not defined`), since Pytho
 
 ---
 
-## `NameError` with a dictionary
+### `NameError` with a dictionary
 
 *   `NameError: name 'A' is not defined`
 *   Example erroneous code:
@@ -276,7 +274,7 @@ print(dict1["A"])
 
 ---
 
-# Positional Arguments Errors
+### Positional Arguments Errors
 
 Let's first look at the case where too many arguments were provided in the function call.
 In that case, the error would be something like: `print_name takes 0 positional arguments but 1 was given`.
@@ -334,7 +332,7 @@ if __name__ == '__main__':
 [⬆️ BACK TO TOP](#top)
 
 ---
-# `RecursionError: maximum recursion depth exceeded`
+### `RecursionError: maximum recursion depth exceeded`
 
 * **Cause**: This error usually occurs due to an **infinite recursion**, which typically happens when there is ...
     * <span style="color:red">no base case</span>
@@ -359,7 +357,7 @@ if __name__ == '__main__':
         - Check the instructions - are the input values supposed to be from a specific range (e.g., non-negative? is 0 included? are letters/strings accepted?)
     *  <span style="color:red">A missing `return`</span>: Verify that if the function is supposed to **return** its result, then _each branch_ contains the `return` keyword. In the recursive case/branch, it is common to `return` **the result of calling the recursive function** (i.e., the recursive call). 
 
-### Example erroneous code illustrating the above recursion issues
+#### Example erroneous code illustrating the above recursion issues
 
 Starting from the first case, we illustrate the potential issues by building on the first example:
 
@@ -471,9 +469,9 @@ if __name__ == "__main__":
 ---
 
 
-# Syntax Errors
+## Syntax Errors
 
-## `SyntaxError: invalid character in identifier`
+### `SyntaxError: invalid character in identifier`
 
 *   **Cause**:   Either quotations around the text or some other symbol is not from the standard Latin alphabet used by Python. The error typically occurs when writing code in a text processor (e.g., Word), typing on a mobile device that has autocorrect enabled, or (rarely) when accidentally switching the keyboard language layout.
 
@@ -484,7 +482,7 @@ print(‘Hello!’) # invalid quotations
 
 
 
-## `SyntaxError: invalid syntax`
+### `SyntaxError: invalid syntax`
 
 This is a general error that occurs when the syntax is not correct and a "Python sentence" is broken.
     If enabled, pay close attention to the syntax highlighting, which can point at where the error might be happening.
@@ -508,7 +506,7 @@ print(Hello World) # see also NameError
 
 ---
 
-## `SyntaxError: unmatched ')'`
+### `SyntaxError: unmatched ')'`
 *   **Cause**:  an extra **closing** parenthesis `)` that does not have a matching **opening** paren `(`.
 *   Example erroneous code:
 ```py
@@ -519,7 +517,7 @@ print('Hello, World'))
 
 ---
 
-# Type Errors
+## Type Errors
 
 ### `TypeError: argument of type 'int' is not iterable`
 
@@ -761,7 +759,7 @@ for item in nested_list:
 
 ---
 
-# `ValueError: invalid literal for int() with base 10`
+### `ValueError: invalid literal for int() with base 10`
 *   Example erroneous code:
 ```py
 current_year = '1792.99'
@@ -782,7 +780,7 @@ print(current_year)
 
 ---
 
-# `ZeroDivisionError: division by zero`
+### `ZeroDivisionError: division by zero`
 
 * Example erroneous code:
 ```py
@@ -805,9 +803,9 @@ if my_list != []: # len(my_list) != 0
 
 ---
 
-# Undesirable Results
+## Undesirable Results
 
-## Output printing None
+### Output printing `None`
 
 * `None` is printed even though you don't want it to be there 
 * Example erroneous code: 
@@ -835,7 +833,7 @@ if __name__ == '__main__':
 
 ---
 
-## Function returns None but a different value is needed
+### Function returns `None` but a different value is needed
 
 * Example erroneous code: 
 
@@ -869,7 +867,7 @@ if __name__ == '__main__':
 ---
 
 
-## Logic Errors
+### Logic Errors
 * Sometimes, we get a logic error, when the output does not match what we expect.
 * Example erroneous code: 
 ```py
@@ -894,7 +892,7 @@ def get_largest(x,y):
 
 ---
 
-## Function address is printed `<function function_name at 0x....> `
+### Function address is printed `<function function_name at 0x....> `
 *   Function Address gets printed - `<function function_name at 0x....> `
 *   Example erroneous code:
 
