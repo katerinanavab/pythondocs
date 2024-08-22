@@ -17,7 +17,7 @@ nav_order: 1
 ## Assignments & Grading
 
 ### Projects (50% of total grade)
-* 💻 **Projects** serve as the bulk of our coursework, and are completed on **Replit**, with grades and feedback posted on **BlackBaud**.
+* 💻 **Projects** serve as the bulk of our coursework and include shorter coding exercises as well as longer creative programs. Projects are typically completed on **Replit** and submitted as a link on **BlackBaud**.
 
 * 💯 **GRADE IMPROVEMENT POLICY**: You may <span class="highlighter">re-submit projects for a full RE-GRADE</span>, but you must email me to let me know which project, and it must be completed at least one week BEFORE the end of the current quarter.
   * When re-working your projects, you are encouraged to come to office hours for help or more feedback. I am way more likely to grade your work favorably if you've shown effort towards improving your skills...
@@ -94,7 +94,7 @@ nav_order: 1
   * All of the CodeCollab programs can also be found on my Replit profile page: [replit.com/@katerinanavab](replit.com/@katerinanavab)
   * To earn full credit, you must post **at least two (2) comments**: one standalone, and one response to a classmate.
   * CodeCollabs will be reviewed together during the first class period of the following week.
-* ⏰ **LATE WORK POLICY**: Late homework may only receive up to 75% credit if submitted UNDER one week late, or up to 50% credit if submitted OVER one week late.
+* ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
 > {: .warning }
 > Whenever you submit work late, especially after the assignment has been graded on BlackBaud, you must **SEND ME AN EMAIL**! Otherwise I will not be notified.
