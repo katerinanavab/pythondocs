@@ -14,7 +14,7 @@ From left to right:
 | Symbol | Common Name in CS | Other Names |
 |---|-----|----------------------|
 | `~` | Tilde | |
-| ` | Backtick | grave accent, back quote |
+| `` ` `` | Backtick | grave accent, back quote |
 | `!` | Exclamation Mark  | exclamation point | 
 | `@` | At Sign | at, at symbol | 
 | `#` | Pound Sign | Number Sign, Hash, or Octothorpe |
