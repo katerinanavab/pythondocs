@@ -14,22 +14,22 @@ From left to right:
 | Symbol | Common Name in CS | Other Names |
 |---|-----|----------------------|
 | `~` | Tilde | |
-| `` ` `` | Backtick | grave accent, back quote |
-| `!` | Exclamation Mark  | exclamation point | 
-| `@` | At Sign | at, at symbol | 
-| `#` | Pound Sign | Number Sign, Hash, or Octothorpe |
+| `` ` `` | Backtick | Back quote |
+| `!` | Exclamation mark  | Exclamation point | 
+| `@` | At sign | At, at symbol | 
+| `#` | Hashtag | Number sign, pound sign, or octothorpe |
 | `$` | Dollar ||
 | `%` | Percent ||
 | `^` | Caret ||
 | `&` | Ampersand | "And" symbol |
 | `*` | Asterisk | Star |
-| `(` | Open Parenthesis | left parenthesis |
-| `)` | Close Parenthesis | right parenthesis |
-| `( )` | Parentheses | round brackets |
+| `(` | Open parenthesis | Left parenthesis |
+| `)` | Close parenthesis | Right parenthesis |
+| `( )` | Parentheses | Round brackets |
 | `_` | Underscore ||
 | `–` | Minus | Hyphen, dash, minus sign |
 | `+` | Plus | Plus sign |
-| `=` | Assignment operator | Equal, Assignment |
+| `=` | Assignment operator | Equal, assignment |
 
 ## ⌨️  Keyboard Symbols on the Right Side of the Keyboard
 
@@ -42,20 +42,20 @@ From top to bottom:
 | `{ }` |  Curly Brackets | Braces |
 | `[` | Open Square Bracket | |
 | `]` | Close Square Bracket | |
-| `[ ]` |  Square Brackets | Brackets |
-| `|` | Vertical Pipe | Pipe |
-| `\` | [Back Slash](https://sites.cs.ucsb.edu/~pconrad/topics/BackslashVsForwardSlash/) | backward slash |
+| `[ ]` | Square Brackets | Brackets |
+| <code>&#124;</code> | Bar | Vertical pipe |
+| `\` | [Back Slash](https://sites.cs.ucsb.edu/~pconrad/topics/BackslashVsForwardSlash/) | Backward slash |
 | `:` | Colon | |
 | `;` | Semicolon | |
-| `"` | double quotes | Quotation Mark |
+| `"` | Double quotes | Quotation mark |
 | `""` | Double Quotation Marks | |
-| `'` | single quote | apostrophe, prime |
+| `'` | Single quote | Apostrophe, prime |
 | `''` | Single Quotation Marks | |
 | `,` | Comma | |
-| `<` | Less Than | left angle bracket |
-| `>` | Greater Than | right angle bracket |
-| `.` | Period | decimal, dot, full stop |
-| `/` | Slash ([Forward Slash](https://sites.cs.ucsb.edu/~pconrad/topics/BackslashVsForwardSlash/)) | forward slash, fraction slash |
+| `<` | Less Than | Left angle bracket |
+| `>` | Greater Than | Right angle bracket |
+| `.` | Period | Decimal, dot, full stop |
+| `/` | Slash ([Forward Slash](https://sites.cs.ucsb.edu/~pconrad/topics/BackslashVsForwardSlash/)) | Forward slash, fraction slash |
 | `?` | Question Mark | |
 
 ## 💻 Other Symbols
