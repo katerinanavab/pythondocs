@@ -161,10 +161,10 @@ nav_order: 0
 </details>
 
 ### Other Classroom Policies
-* 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> during <span class="highlighter">7th period (1:00-1:45pm) any day of the week</span>. Drop-ins are welcome, meaning there is no need to let me know in advance if you plan on stopping by during 7th period.
+* 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> on <span class="highlighter">Tue/Wed/Thu during 4th period (10:45-11:25)</span>. Drop-ins are welcome, meaning there is no need to let me know in advance if you plan on stopping by during 7th period.
  
 > {: .note .fs-3 } 
-> You may email me to schedule an appointment at a different time, ONLY IF you are unavailable during 7th period all days of the week. _Include a list of your free periods in your email!_
+> You may email me to schedule an appointment at a different time, ONLY IF you have other classes during my scheduled office hours. _Include a list of your free periods in your email!_
 
 * 📝 You can leave a **sticky note on my desk** for anything you want me to remember to do.
   * _Ex: “Please re-grade my project”_
