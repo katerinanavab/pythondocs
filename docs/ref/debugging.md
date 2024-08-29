@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "🐛 Debugging" 
+title: "🐞 Debugging" 
 parent: References
 nav_order: 2
 ---
 
-# 🐛 Debugging Scenarios & Solutions
+# 🐞 Debugging Scenarios & Solutions
 {:.no_toc}
 
 <a name="top"></a>
