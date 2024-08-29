@@ -39,7 +39,7 @@ You must contribute at least **two (2) valid comments** in the discussion before
   * *EX:* Observing the use and purpose of symbols such as curly braces `{ }` would count as a "lower-level objective"
 * 📚 You are encouraged to **do research** and refer to the course notes, online textbooks, and reference websites like [W3Schools](https://www.w3schools.com/). Feel free to **include links** to relevant and helpful articles, images, and videos!
   * Sharing links is a particularly great way to supplement your "response" comment, especially if your classmate asked a question or brought up something that needs further clarification.
-* 🔍 Keep in mind that a `CodeCollab` is an **exploratory** endeavor and you should approach it like an **experiment**. Work submitted will NOT be checked on "correctness" of responses, rather, the articulation of your thought process. Thus, it's less important that you get the "right answer" and more important that you record your thinking process as descriptively as possible. Attempt to use technical vocabulary often - it's OK if you use a term incorrectly, but you should always try!
+* 🔍 Keep in mind that a `CodeCollab` is an **exploratory** endeavor and you should approach it like an **experiment**. Work submitted will NOT be checked on "correctness" of responses, rather, the articulation of your thought process. Thus, it's less important that you get the "right answer" and more important that you record your thinking process as descriptively as possible.
   * _What did you notice about the code or the output?_
   * _What did you realize after changing part of the code?_
   * _What questions did it generate?_
