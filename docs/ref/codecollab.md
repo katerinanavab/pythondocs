@@ -17,7 +17,7 @@ nav_order: 0
 ### Discussion Requirements
 
 {: .important }
-To earn full credit, you must contribute at least **two (2) valid comments** in the discussion before `Friday @ 11:59 PM`. See below for more detailed guidelines for what qualifies as an acceptable comment.
+💬 You must contribute at least **two (2) valid comments** in the discussion before `Friday @ 11:59 PM` to earn full credit. See below for more detailed guidelines for what qualifies as an acceptable comment.
 
 #### Checklist:
 - [ ] At least one (1) of your comments must be a **paragraph-long post** where you analyze/attempt to explain a section of code. This is considered your "individual contribution" and it's the most important part of the assignment.
