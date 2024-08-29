@@ -88,12 +88,12 @@ nav_order: 0
 * 💬 **Homework** is assigned in the form of a `CodeCollab`: like posting on a discussion board, but instead of talking about a book or article, the class has a shared goal of figuring out how some 🔍 mystery code 🔍 works.
 
 > {: .highlight .fs-3 }
-> CodeCollabs are always **due on FRIDAYS @11:59pm**❗
+> CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
 
 * _How it works:_ At the beginning of each week, I will **post a DISCUSSION assignment on BlackBaud** that includes a Replit link to a working program that you will **analyze collaboratively**.
   * All of the CodeCollab programs can also be found on my Replit profile page: [replit.com/@katerinanavab](replit.com/@katerinanavab)
-  * To earn full credit, you must post **at least two (2) comments**: one standalone, and one response to a classmate.
-  * CodeCollabs will be reviewed together during the first class period of the following week.
+  * To earn full credit, you must post **at least two (2) comments**: one main post, and one response to a classmate.
+  * See our course website's [CodeCollab Instructions](https://coderina.dev/webdocs/docs/ref/codecollab.html) page for detailed guidelines.
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
 > {: .warning .fs-3 }
@@ -161,7 +161,7 @@ nav_order: 0
 </details>
 
 ### Other Classroom Policies
-* 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> on <span class="highlighter">Tue/Wed/Thu during 4th period (10:45-11:25)</span>. Drop-ins are welcome, meaning there is no need to let me know in advance if you plan on stopping by during 7th period.
+* 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> on <span class="highlighter">Tue/Wed/Thu during 4th period (10:45-11:25)</span>. Drop-ins are welcome, meaning there is no need to let me know in advance if you plan on stopping by during 4th period.
  
 > {: .note .fs-3 } 
 > You may email me to schedule an appointment at a different time, ONLY IF you have other classes during my scheduled office hours. _Include a list of your free periods in your email!_
