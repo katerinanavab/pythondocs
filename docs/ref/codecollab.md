@@ -5,7 +5,7 @@ parent: References
 nav_order: 0
 ---
 
-# CodeCollab Homework Instructions
+# 💬 CodeCollab Homework Instructions
 
 ### Getting Started
 1. Find the discussion assignment for the current week on **BlackBaud**.
@@ -17,7 +17,7 @@ nav_order: 0
 ### Discussion Requirements
 
 {: .important }
-💬 You must contribute at least **two (2) valid comments** in the discussion before `Friday @ 11:59 PM` to earn full credit. See below for more detailed guidelines for what qualifies as an acceptable comment.
+You must contribute at least **two (2) valid comments** in the discussion before `Friday @ 11:59 PM` to earn full credit. See below for more detailed guidelines for what qualifies as an acceptable comment.
 
 #### Checklist:
 - [ ] At least one (1) of your comments must be a **paragraph-long post** where you analyze/attempt to explain a section of code. This is considered your "individual contribution" and it's the most important part of the assignment.
