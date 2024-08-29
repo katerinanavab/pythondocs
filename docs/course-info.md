@@ -93,7 +93,7 @@ nav_order: 0
 * _How it works:_ At the beginning of each week, I will **post a DISCUSSION assignment on BlackBaud** that includes a Replit link to a working program that you will **analyze collaboratively**.
   * All of the CodeCollab programs can also be found on my Replit profile page: [replit.com/@katerinanavab](replit.com/@katerinanavab)
   * To earn full credit, you must post **at least two (2) comments**: one main post, and one response to a classmate.
-  * See our course website's [CodeCollab Instructions](https://coderina.dev/webdocs/docs/ref/codecollab.html) page for detailed guidelines.
+  * See our course website's [CodeCollab Instructions](https://coderina.dev/pythondocs/docs/ref/codecollab.html) page for detailed guidelines.
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
 > {: .warning .fs-3 }
