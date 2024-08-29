@@ -8,8 +8,8 @@ nav_order: 0
 # 💬 CodeCollab Homework Instructions
 
 ### Getting Started
-1. Find the discussion assignment for the current week on **BlackBaud**.
-2. Follow the provided link to the **Replit** program.
+1. Locate the discussion assignment for the current week on **BlackBaud**.
+2. Follow the provided link to open the **Replit** program.
 3. Click `FORK` to **make your own copy** of the program to **run**, **test**, and **modify** the code.
    
   > Your **forked copy** of the program will be saved in the `MY REPLS` section of Replit. You can always access my **original copy** at the provided link and fork a new copy if you need to start over.
@@ -33,13 +33,13 @@ You must contribute at least **two (2) valid comments** in the discussion before
 
 * 🛠️ Start by tinkering with and manipulating the given code on your forked copy of the program to understand how it works. 
   * **Make small changes** one at a time, press `RUN`, then observe the resulting **output**. This process will help you visualize the **cause and effect** of different code instructions.
-  * *EX:* A simple "experiment" you can always do is to **delete/comment-out a single line of code** and see what happens.
-* 📝 When writing your discussion post, **describe your process** of tinkering with the code and your **observations**. Try to explain what your observations mean in terms of both higher-level objectives (*like programming & computational thinking concepts*) and lower-level objectives (_like syntax & vocabulary_).
+  * *EX:* A simple "experiment" you can always do is to **delete/comment-out a single line of code** then see what happens.
+* 📝 When writing your discussion post, **describe your process** of tinkering with the code and present your **observations**. Seek to explain what your observations mean in terms of both higher-level objectives (*like programming & computational thinking concepts*) and lower-level objectives (_like syntax & vocabulary_).
   * *EX:* Explaining the overall goal / task achieved of a code section would count as a "higher-level objective"
   * *EX:* Observing the use and purpose of symbols such as curly braces `{ }` would count as a "lower-level objective"
 * 📚 You are encouraged to **do research** and refer to the course notes, online textbooks, and reference websites like [W3Schools](https://www.w3schools.com/). Feel free to **include links** to relevant and helpful articles, images, and videos!
   * Sharing links is a particularly great way to supplement your "response" comment, especially if your classmate asked a question or brought up something that needs further clarification.
-* 🔍 Keep in mind that a CodeCollab is an **exploratory** endeavor and you should approach it like an **experiment**. Work submitted will NOT be checked on "correctness" of responses, rather, the articulation of your thought process. Thus, it's less important that you get the "right answer" and more important that you record your thinking process as descriptively as possible. Attempt to use technical vocabulary often - it's OK if you use a term incorrectly, but you should always try!
+* 🔍 Keep in mind that a `CodeCollab` is an **exploratory** endeavor and you should approach it like an **experiment**. Work submitted will NOT be checked on "correctness" of responses, rather, the articulation of your thought process. Thus, it's less important that you get the "right answer" and more important that you record your thinking process as descriptively as possible. Attempt to use technical vocabulary often - it's OK if you use a term incorrectly, but you should always try!
   * _What did you notice about the code or the output?_
   * _What did you realize after changing part of the code?_
   * _What questions did it generate?_
