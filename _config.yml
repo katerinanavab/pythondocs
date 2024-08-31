@@ -9,10 +9,12 @@ favicon_ico: "favicon.ico"
 
 aux_links_new_tab: true
 aux_links:
-  "BLACKBAUD":
-    - "https://bwl.myschoolapp.com/app#login"
-  "REPLIT":
+  "DevDocs":
+    - "https://devdocs.io/"
+  "Replit":
     - "https://replit.com/~"
+  "Blackbaud":
+    - "https://bwl.myschoolapp.com/app#login"
     
 back_to_top: true
 back_to_top_text: "⬆️ BACK TO TOP"
