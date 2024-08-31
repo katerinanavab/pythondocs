@@ -34,7 +34,7 @@ callouts:
     title: New
     color: green
   note:
-    title: Note
+    title: Task
     color: purple
   warning:
     title: Warning
