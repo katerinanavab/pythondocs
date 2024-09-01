@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "📓1.2: File Handling" 
+title: "📓1.2: Files, Libraries, & APIs" 
 parent: "1️⃣ Python Bootcamp"
 nav_order: 2
 ---
@@ -19,5 +19,5 @@ nav_order: 2
 #### Acknowledgement
 {: .no_toc }
 
-Content on this page is adapted from []().
+Content on this page is adapted from [Nina Zakharenko](https://www.learnpython.dev/).
 {: .fs-2 }
