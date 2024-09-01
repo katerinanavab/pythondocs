@@ -17,6 +17,53 @@ h3 {
 }
 .highlighter {
 	background-color: #fcf2c2;
-	border-radius: 2px;
-	
+	border-radius: 2px;	
+}
+.task {
+    background: rgba($purple-000, 0.2);
+    border-left: $border-radius solid $purple-300;
+    border-radius: $border-radius;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: .8rem;
+}
+
+.task::before {
+	color: $purple-300;
+    content: "Task";
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .75em;
+    padding-bottom: .125rem;
+}
+
+.setup {
+    background: rgba($green-000, 0.2);
+    border-left: $border-radius solid $green-300;
+    border-radius: $border-radius;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: .8rem;
+}
+ 
+.setup::before {
+		color: $green-300;
+    content: "Setup";
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .75em;
+    padding-bottom: .125rem;
+}
+
+blockquote.setup, blockquote.task {
+  margin-left: 0;
+  margin-right: 0;
+  
+  > p:first-child {
+    margin-top: 0;
+  }
+    
+  > p:last-child {
+    margin-bottom: 0;
+  }
 }
