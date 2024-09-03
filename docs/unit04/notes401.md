@@ -32,7 +32,16 @@ Then using that data set, when you input,
 it feeds it in and the AI uses its data set to predict the next word, 
 or pixel in the case of image generation.
 
-This can lead to AI's being misled in math or science as the AI
-just predicts the answer, so if it's never seen that math problem or science question,
+This can lead to AI's being misled in math or science, as the AI
+just predicts the answer.
+So if it's never seen that math problem or science question,
 it will make up something in its dataset.
 
+#### Predictive AI
+
+Some types of AI are based on predicting certain things like a number or text that was written by a person.
+These are trained using data from things like Captcha's which you might find annoying, but it prevents bots from logging in,
+but at the same time trains them to learn things like traffic signs for self-driving cars.
+These use neural networks as there data set using the data as nodes with different weights.
+
+### AI modules in Python.
