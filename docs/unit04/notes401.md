@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "📓2.1: Python Basics" 
+title: "📓4.1: AI Basics" 
 parent: "4️⃣ Machine Learning"
 nav_order: 1
 ---
@@ -45,3 +45,10 @@ but at the same time trains them to learn things like traffic signs for self-dri
 These use neural networks as there data set using the data as nodes with different weights.
 
 ### AI modules in Python.
+
+Some common AI modules include:
+-groq
+-openai
+
+These modules are used to allow you to access AI model's data set for your own use.
+They each of there own syntax, but for groq's the syntax is pretty simple.
