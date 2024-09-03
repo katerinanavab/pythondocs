@@ -41,7 +41,7 @@ Python has an incredibly rich fully featured [standard library](https://docs.pyt
 
 Python is considered to be a "batteries included" language, because the standard library contains a majority of the libraries and packages you'll need in a standard application.
 
-#### PEP8
+#### PEP8 STYLE GUIDELINES
 {:.no_toc}
 
 [PEP8](https://pep8.org/) is a Python  **coding standard**, that sets guidelines for how our Python code should look like.
@@ -87,7 +87,7 @@ Here, the value of the variable `x` changed from a number to a string.
 #### Naming Variables
 {: .no_toc }
 
-When creating variables in Python, there are a few best practices you should follow. The [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/#naming-conventions) specifies the following convention for naming variables: 
+When creating variables in Python, there are a few best practices you should follow. The [PEP8 guidelines](https://www.python.org/dev/peps/pep-0008/#naming-conventions) specify the following convention for naming variables: 
 
 {: .highlight }
 Python variable names are entirely **lowercase**, with multiple words separated by **underscores** `_`. 
