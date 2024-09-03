@@ -26,13 +26,17 @@ nav_order: 0
   
 * ⏰ **LATE WORK POLICY**: Late projects may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
-> {: .warning .fs-3 }
-> Whenever you submit work late, especially after the assignment has been graded on BlackBaud, you must **SEND ME AN EMAIL**! Otherwise I will not be notified.
+{: .warning .fs-3 }
+Whenever you submit work late, especially after the assignment has been graded on BlackBaud, you must **SEND ME AN EMAIL**! Otherwise I will not be notified.
 
 * Projects are graded on a 5-point scale, and **EXTRA CREDIT** is always available to encourage effort and creativity. _See the rubric section below for details._
 
+<html>
+ 
 <details>
 <summary>PROJECT GRADING RUBRIC</summary>
+
+<p class="fs-3 highlight">Programming projects are evaluated via a <strong>qualitative system</strong> considering a program’s efficiency, legibility, correctness, completeness, comments, etc. The grading rubric employs a 5-point scale. The assignment score is then adjusted to be out of 10 points, such that students earn a baseline of 50% credit for submitted work. Extra credit may be awarded for exceptional effort!</p>
 
 <div>
 <table><thead>
@@ -81,14 +85,13 @@ nav_order: 0
 </div>
 
 </details>
-
-<p class="fs-3 highlight">Programming projects are evaluated via a <strong>qualitative system</strong> considering a program’s efficiency, legibility, correctness, completeness, comments, etc. The grading rubric employs a 5-point scale. The assignment score is then adjusted to be out of 10 points, such that students earn a baseline of 50% credit for submitted work. Extra credit may be awarded for exceptional effort!</p>
+</html>
 
 ### Homework (30% of total grade)
 * 💬 **Homework** is assigned in the form of a `CodeCollab`: like posting on a discussion board, but instead of talking about a book or article, the class has a shared goal of figuring out how some 🔍 mystery code 🔍 works.
 
-> {: .highlight .fs-3 }
-> CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
+{: .highlight .fs-3 }
+CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
 
 * _How it works:_ At the beginning of each week, I will **post a DISCUSSION assignment on BlackBaud** that includes a Replit link to a working program that you will **analyze collaboratively**.
   * All of the CodeCollab programs can also be found on my Replit profile page: [replit.com/@katerinanavab](replit.com/@katerinanavab)
@@ -96,21 +99,21 @@ nav_order: 0
   * See our course website's [CodeCollab Instructions](https://coderina.dev/webdocs/docs/ref/codecollab.html) page for detailed guidelines.
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
-> {: .warning .fs-3 }
-> Whenever you submit work late, especially after the assignment has been graded on BlackBaud, you must **SEND ME AN EMAIL**! Otherwise I will not be notified.
+{: .warning .fs-3 }
+Whenever you submit work late, especially after the assignment has been graded on BlackBaud, you must **SEND ME AN EMAIL**! Otherwise I will not be notified.
 
 ### Participation (20% of total grade)
 * 👥 **Participation** is graded weekly (up to 2 points max per class period) and will be evaluated based on adherence to these key values: being **respectful**, **prepared**, and **engaged**.
   * Being <span class="highlighter">respectful</span> of your community means being mindful of and kind toward your environment, and the people within – this includes arriving **on-time** to commitments.
 
-> {: .warning .fs-3 }
-> ⏰ If you are **over 5 minutes late**, you must first get a LATE PASS from the Upper School Office and then enter the classroom QUIETLY as to not disrupt the class. Unexcused lateness always results in a deduction of 1 point for the day, and unexcused absence results in a deduction of 2 points (a 0/2 for the day).
+{: .warning .fs-3 }
+⏰ If you are **over 5 minutes late**, you must first get a LATE PASS from the Upper School Office and then enter the classroom QUIETLY as to not disrupt the class. Unexcused lateness always results in a deduction of 1 point for the day, and unexcused absence results in a deduction of 2 points (a 0/2 for the day).
 
   * Being <span class="highlighter">prepared</span> for class means you have your laptop ready (unless otherwise instructed) within the first 5 minutes of class. It also means you arrive with a positive attitude and are ready to learn!
   * Show you are <span class="highlighter">engaged</span> by volunteering answers/comments, staying on task, and completing classwork as directed. You are expected to take your own notes while new material is being introduced, to contribute during group activities, and be open to collaborating with all classmates.
 
-> {: .highlight .fs-3 }
-> **NON-NEGOTIABLES**: Be aware that tardiness, off-task behavior, and side conversations will have a negative impact on your grade. _However, consistently arriving on-time with a positive attitude is a great way to earn an easy 100% for your participation grade_ ☺︎
+{: .highlight .fs-3 }
+**NON-NEGOTIABLES**: Be aware that tardiness, off-task behavior, and side conversations will have a negative impact on your grade. _However, consistently arriving on-time with a positive attitude is a great way to earn an easy 100% for your participation grade_ ☺︎
 
 ## Expectations & Policies
 
@@ -122,12 +125,15 @@ nav_order: 0
 > 2. If the tool is allowed, **track your conversation** with the tool by screenshotting or copy-pasting the interaction in a document that you can share with your teacher.
 > 3. **Cite the use of the tool** when submitting your work. Here is an example with APA style formatting: `OpenAI. (2023). ChatGPT (Mar 14 version) [Large language model]. https://chat.openai.com/chat`
 
-> {: .warning .fs-3 }
-> If these steps are not followed, your use of GenAI will be considered an **academic integrity violation**.
+{: .warning .fs-3 }
+If these steps are not followed, your use of GenAI will be considered an **academic integrity violation**.
 
+<html>
 <details>
 <summary>EXAMPLES OF AI USE</summary>
- 
+
+<p class="fs-3 note">These examples are specific to my Computer Science classes and are subject to change as we explore appropriate AI usage throughout the year. <strong>Rule of thumb:</strong> Always check with your teacher before using GenAI tools!!!</p>
+
 <div>
 <table><thead>
   <tr>
@@ -157,14 +163,13 @@ nav_order: 0
 </div>
 
 </details>
-
-<p class="fs-3 note">These examples are specific to my Computer Science classes and are subject to change as we explore appropriate AI usage throughout the year. <strong>Rule of thumb:</strong> Always check with your teacher before using GenAI tools!!!</p>
+</html>
 
 ### Other Classroom Policies
 * 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> on <span class="highlighter">Tue/Wed/Thu during 4th period (10:45-11:25)</span>. Drop-ins are welcome, meaning there is no need to let me know in advance if you plan on stopping by during 4th period.
  
-> {: .highlight .fs-3 } 
-> You may email me to schedule an appointment at a different time, ONLY IF you have other classes during my scheduled office hours. _Include a list of your free periods in your email!_
+{: .highlight .fs-3 } 
+You may email me to schedule an appointment at a different time, ONLY IF you have other classes during my scheduled office hours. _Include a list of your free periods in your email!_
 
 * 📝 You can leave a **sticky note on my desk** for anything you want me to remember to do.
   * _Ex: “Please re-grade my project”_
@@ -176,5 +181,5 @@ nav_order: 0
   * Respect others’ property. Avoid touching or writing on anything that does not belong to you (including tables, books, teacher’s belongings, walls, etc.)
   * Please pick up after yourself, don't leave trash behind, and don't expect that other people (like your teacher) will clean up your messes.
 
-> {: .important .fs-3 }
-> 🧠 Finally, some **mindset** tips: I strongly encourage you all to be **proactive** about your learning, embrace **creativity**, take **responsibility** for your work, and _never be afraid to ask for help_!!! There are no bad questions, and chances are if you are wondering about it, someone else in the class is too. If you feel most comfortable waiting until after class, that is okay, but do keep communication open between us.
+{: .important .fs-3 }
+🧠 Finally, some **mindset** tips: I strongly encourage you all to be **proactive** about your learning, embrace **creativity**, take **responsibility** for your work, and _never be afraid to ask for help_!!! There are no bad questions, and chances are if you are wondering about it, someone else in the class is too. If you feel most comfortable waiting until after class, that is okay, but do keep communication open between us.
