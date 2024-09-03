@@ -147,9 +147,8 @@ In my code, my length is 4 and my lower case name is: fred
 
 Much better!
 
-{{% notice note %}}
+{: .note }
 Using a `main` method is a common pattern that you’ll see in Python programs, and it comes in handy for being able to write programs that work both on their own and when imported into other programs.
-{{% /notice %}}
 
 ---
 ## File Handling
@@ -245,9 +244,9 @@ This runs the `pip` module and asks it to find the `requests` library on PyPI.or
 
 ---
 ## APIs
-{{% notice note %}}
+
+{: .note }
 Zapier has an *excellent* intro to APIs by by Brian Cooksey. The images and diagrams used on this page is from his post. Please read it [here](https://zapier.com/learn/apis/chapter-1-introduction-to-apis/).
-{{% /notice %}}
 
 
 ### Requests and Responses
@@ -360,9 +359,8 @@ That's where external libraries come in. The external `requests` library was dev
 
 ### Our First Request With The `requests` Library
 
-{{% notice tip %}}
+{: .note }
 If you didn't install the `requests` library in the working with libraries chapter, you'll need to do that first before running this code. Use: `python -m pip install requests`
-{{% /notice %}}
 
 Let's make a request to shibe.online to get ourselves some dog pictures. Create a file called `shibe.py` in our `pyworkshop` directory and copy this:
 
@@ -467,9 +465,8 @@ Note: After the class, you can find a detailed list of APIs in this [public-apis
 
 #### Free APIs
 
-{{% notice note %}}
+{: .note }
 Free APIs are... free. That means that they may go down if their owner decides to drop their upkeep. If the API used in these examples doesn't work in the future, try a different one listed in the `public-apis` repo linked to above.
-{{% /notice %}}
 
 
 ---
@@ -505,14 +502,17 @@ if __name__ == "__main__":
 
 First, we imported the built-in `json` library to help us decode the json file. Then, we opened the file using the `open()` function, and passed the open file handle to the `json.load()` function. The `load()` function read our data in and spit it out as a Python representation - in this case, a list of dictionaries. We then print this list.
 
-{{%expand "Here's what you should have seen on your command line:" %}}
+<html>
+<details>
+<summary>HINT:</summary>
 
 ```bash
 (env) $ python file_execise.py
 [{'name': 'New York', 'pop': 8550405}, {'name': 'Los Angeles', 'pop': 3971883}, {'name': 'Chicago', 'pop': 2720546}, {'name': 'Houston', 'pop': 2296224}, {'name': 'Philadelphia', 'pop': 1567442}]
 ```
 
-{{%/expand%}}
+</details>
+</html>
 
 This list is a little hard to make sense of in its raw form, let's print it a little nicer. Use `enumerate()` to go through the list and print it nicely:
 
@@ -534,7 +534,9 @@ if __name__ == "__main__":
 
 A few new things here: first, remember that `enumerate()` outputs a tuple of (index, entry), so we use `index` and `entry` variables to capture those. Then, for every item in the list, we print the index (+ 1, because zero-indexed lists are sometimes hard to read), and we pull the name and population out of each entry dictionary using the dictionary `[]` syntax.
 
-{{%expand "Here's what you should have seen on your command line:" %}}
+<html>
+<details>
+<summary>HINT:</summary>
 
 ```bash
 (env) $ python file_execise.py
@@ -546,7 +548,8 @@ Largest cities in the US by population:
 5: Philadelphia - 1567442
 ```
 
-{{%/expand%}}
+</details>
+</html>
 
 One more thing to clean up - using the `open()` keyword on its own is frowned upon, because it won't automatically close any resources you might open. Even if you call the `close()` keyword yourself, there's no guarantee your program won't crash, leaving important resources dangling. It's safer to open files inside a context using the `with` keyword. Once your code exits the scope of the context, your file is automatically closed. Note: our reading and formatting code has shifted to the right because of the change in scope.
 
@@ -567,8 +570,10 @@ if __name__ == "__main__":
     main()
 ```
 
-{{%expand "Here's what you should have seen on your command line:" %}}
-
+<html>
+<details>
+<summary>HINT:</summary>
+	
 ```bash
 (env) $ python file_execise.py
 Largest cities in the US by population:
@@ -580,8 +585,10 @@ Largest cities in the US by population:
 The file is now closed.
 ```
 
-{{%/expand%}}
+</details>
+</html>
 
+---
 
 #### Acknowledgement
 {: .no_toc }
