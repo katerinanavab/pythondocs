@@ -44,6 +44,16 @@ These are trained using data from things like Captcha's which you might find ann
 but at the same time trains them to learn things like traffic signs for self-driving cars.
 These use neural networks as there data set using the data as nodes with different weights.
 
+### Librarys you'll need
+- Customtkinter
+- Groq
+
+These librarys are important for this AI
+the AI needs customtkinter for the window and text boxes
+and groq to acess its API to use the model.
+
+
+
 ### AI modules in Python.
 
 Some common AI modules include:
@@ -90,17 +100,31 @@ def send_message():
 
 ```
 
-Lets break it down, we start with a function, send_message, this is the function that gets called whenever it sends a message.
-The first thing it does is it sets a variable called user_input.
-Next it checks for the user_input to make sure the user sent something instead of just clicking the send button with no input.
-Then it does chat_history.append, this appends/adds data to the AI's History/Memory.
-The data that it appends is the role: "user" which means the role is the person not the AI, and the content which is "user_input" is the data the person inputted.
-Then it configures the chat_output area, putting it in the normal state allowing the AI to output.
-Next it creates an image using the PIL module, this is optional and it puts an image that the user selected in front of its message.
-Then it runs chat_output.insert, and inserts the user input into the window.
-Next it sets a variable and prints it which is optional to allow saving of the chat into a file for the AI to remember even after you close the window.
+Lets break it down, it starts with a function, send_message, this is the function that gets called whenever the user sends a message.
+The first thing it does, set a variable called user_input.
+Next, it checks for the user_input to make sure the user sent something instead of just clicking the send button with no input.
+Then, it does chat_history.append, this appends/adds data to the AI's History/Memory.
+The, data that it appends is the role: "user" which means the role is the person not the AI, and the content which is "user_input" is the data the person inputted.
+Then, it configures the chat_output area, putting it in the normal state allowing the AI to output.
+Next, it creates an image using the PIL module, this is optional and it puts an image that the user selected in front of its message.
+Then, it runs chat_output.insert, and inserts the user input into the window.
+Next, it sets a variable and prints it which is optional to allow saving of the chat into a file for the AI to remember even after you close the window.
 The other chathistory append is also for saving, that saves it to the file.
-Then it configures the chat_output area, putting it in the disabled state allowing the AI to think. 
+Then, it configures the chat_output area, putting it in the disabled state allowing the AI to think. 
+Next, it deletes the user input to get ready for the next one.
+Then, it creates it's response, it uses the llama3 model by meta, to generate text.
+Then, it appends the text to chat history with the role as assistant and the content being the AI's response.
+Again, it configures the chat_output area, putting it in the normal state allowing the AI to output.
+Then, it sets appendvar again to save the AI's output, Optional.
+It prints appendvar again, Optional.
+Then it creates an image of the AI using PIL, Optional.
+Then, it inserts the AI's message.
+Finally it disables the chat output again and jumps somewhere else in the AI's code.
+
+
+
+
+
 
 
 
