@@ -96,7 +96,7 @@ CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
 * _How it works:_ At the beginning of each week, I will **post a DISCUSSION assignment on BlackBaud** that includes a Replit link to a working program that you will **analyze collaboratively**.
   * All of the CodeCollab programs can also be found on my Replit profile page: [replit.com/@katerinanavab](https://replit.com/@katerinanavab)
   * To earn full credit, you must post **at least two (2) comments**: one main post, and one response to a classmate.
-  * See our course website's [CodeCollab Instructions](https://coderina.dev/pythondocs/docs/ref/codecollab.html) page for detailed guidelines.
+  * See our course website's [CodeCollab Instructions](https://coderina.dev/webdocs/docs/ref/codecollab.html) page for detailed guidelines.
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
 {: .warning .fs-3 }
@@ -132,7 +132,7 @@ If these steps are not followed, your use of GenAI will be considered an **acade
 <details>
 <summary><strong class="text-purple-100">EXAMPLES OF AI USE</strong></summary>
 
-<p class="fs-3 note">These examples are specific to my Computer Science classes and are subject to change as we explore appropriate AI usage throughout the year. <strong>Rule of thumb:</strong> Always check with your teacher before using GenAI tools!!!</p>
+<p class="fs-3 highlight">These examples are specific to my Computer Science classes and are subject to change as we explore appropriate AI usage throughout the year. <strong>Rule of thumb:</strong> Always check with your teacher before using GenAI tools!!!</p>
 
 <div>
 <table><thead>
