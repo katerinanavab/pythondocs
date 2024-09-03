@@ -34,7 +34,7 @@ Whenever you submit work late, especially after the assignment has been graded o
 <html>
  
 <details>
-<summary>PROJECT GRADING RUBRIC</summary>
+<summary><strong class="text-purple-100">PROJECT GRADING RUBRIC</strong></summary>
 
 <p class="fs-3 highlight">Programming projects are evaluated via a <strong>qualitative system</strong> considering a program’s efficiency, legibility, correctness, completeness, comments, etc. The grading rubric employs a 5-point scale. The assignment score is then adjusted to be out of 10 points, such that students earn a baseline of 50% credit for submitted work. Extra credit may be awarded for exceptional effort!</p>
 
@@ -130,7 +130,7 @@ If these steps are not followed, your use of GenAI will be considered an **acade
 
 <html>
 <details>
-<summary>EXAMPLES OF AI USE</summary>
+<summary><strong class="text-purple-100">EXAMPLES OF AI USE</strong></summary>
 
 <p class="fs-3 note">These examples are specific to my Computer Science classes and are subject to change as we explore appropriate AI usage throughout the year. <strong>Rule of thumb:</strong> Always check with your teacher before using GenAI tools!!!</p>
 
