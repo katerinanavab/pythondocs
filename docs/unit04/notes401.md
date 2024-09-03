@@ -121,6 +121,8 @@ Then it creates an image of the AI using PIL, Optional.
 Then, it inserts the AI's message.
 Finally it disables the chat output again and jumps somewhere else in the AI's code.
 
+More Coming Soon!
+
 
 
 
