@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "🐞 Debugging" 
+title: "🐞 Debugging Tips" 
 parent: References
 nav_order: 2
 ---
