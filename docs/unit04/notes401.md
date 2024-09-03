@@ -92,5 +92,8 @@ def send_message():
 
 Lets break it down, we start with a function, send_message, this is the function that gets called whenever it sends a message.
 The first thing it does is it sets a variable called user_input.
+Next it checks for the user_input to make sure the user sent something instead of just clicking the send button with no input.
+Then it does chat_history.append, this appends/adds data to the AI's History/Memory.
+The data that it appends is the role: "user" which means the role is the person not the AI, and the content which is "user_input" is the data the person inputted.
 
 
