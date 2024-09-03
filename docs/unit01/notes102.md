@@ -1,8 +1,8 @@
 ---
 layout: notes
-title: "📓1.2: Files, Libraries, & APIs" 
+title: "📓1.3: Files, Libraries, & APIs" 
 parent: "1️⃣ Python Bootcamp"
-nav_order: 2
+nav_order: 3
 ---
 
 ## Table of Contents
@@ -19,5 +19,5 @@ nav_order: 2
 #### Acknowledgement
 {: .no_toc }
 
-Content on this page is adapted from [Nina Zakharenko](https://www.learnpython.dev/).
+Content on this page is adapted from [LearnPython - Nina Zakharenko](https://www.learnpython.dev/).
 {: .fs-2 }
