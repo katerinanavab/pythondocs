@@ -49,21 +49,23 @@ Python is considered to be a "batteries included" language, because the standard
 ---
 ## Basic Data Types
 
-### Naming Variables
+First, make sure you have a Replit program to take notes and code along as we dive into our Python Bootcamp.
 
-Python variables can't start with a number. In general, they're named all lower case, separated by underscores. Unlike other languages, that name their variables with camelCase.
+<div class="setup" markdown="block">
 
-You don't want to name your variables the same as the *types* that we'll be working with. For example **don't** name your variables `int`, `list`, `dict`. Etc.
+1. On [Replit](https://replit.com/~), click `+ Create Repl` on the sidebar to open a **NEW PROJECT**
+2. In the pop-up menu, select `Python` as the **TEMPLATE**
+3. Specify the **TITLE** following this pattern: `CS3_Unit1_Notes`
 
-### Open a REPL
+</div>
 
 ### Variables
 
-Variables in Python allow us to store information and give it a label that we can use to retrieve that information later. We can use variables to store numbers, strings (a sequence of characters), or even more complex data types like lists and dictionaries.
+**Variables** in Python allow us to store information and give it a label that we can use to retrieve that information later. We can use variables to store numbers, strings (a sequence of characters), or even more complex data types like lists and dictionaries.
 
 We assign _values_ to _variables_ by putting the _value_ to the right of an equal sign.
 
-Because Python is a *dynamic* language, we don't need to declare the type of the variables before we store data in them.
+Because Python is a *dynamic* language, we **don't need to declare the type** of the variables before we store data in them.
 
 That means that this is valid Python code:
 
@@ -82,35 +84,29 @@ For example, the below is perfectly valid Python code:
 
 Here, the value of the variable `x` changed from a number to a string.
 
-When creating variables, there are a few best practices you should follow.
-
 #### Naming Variables
+{: .no_toc }
 
-Convention says that variables should be named in lowercase, with whole words separated by underscores.
+When creating variables in Python, there are a few best practices you should follow. The [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/#naming-conventions) specifies the following convention for naming variables: 
 
-{{% notice note %}}
-If you want to learn more about Python naming conventions look at [PEP8](https://www.python.org/dev/peps/pep-0008/#naming-conventions) during a break.
-{{% /notice %}}
+{: .highlight }
+Python variable names are entirely **lowercase**, with multiple words separated by **underscores** `_`. 
 
-Because Python is a dynamic language and you don't have type hints to explain what's stored inside a variable while reading code, you should do your best naming your variables to describe what is stored inside of them.
+> Unlike other languages that name multi-word variables with **camelCase** (like `Java`).
+
+Because Python is a** dynamic language** and you don't have type hints to explain what's stored inside a variable while reading code, you should do your best naming your variables to describe what is stored inside of them.
 
 It's ok to be _verbose_. For example, `n` is a poor variable name, while `numbers` is a better one. If you're storing a collection of items, name your variable as a plural.
 
-{{% notice note %}}
-Learn more about great naming practices for dynamic types by watching this 30-minute [talk by Brandon Rhodes](https://www.youtube.com/watch?v=YklKUuDpX5c).
-{{% /notice %}}
+<div class="warning" markdown="block">
 
-#### Naming Gotchas
+- You can't start your variable name with a numerical digit, although your variable name can end in a digit. 
+- Your variable name can't contain special characters, such as `!`,  `@`,  `#`, `$`,  `%` and more.
+- There are some things that you can't name your variables, such as `and`, `if`, `True`, or `False`. That's because Python uses these names for program control structure.
+- 💣 Python will let you override built-in methods and types without a warning so don't name your Python variables things like `list`, `str`, or `int`.
+    - If you notice your program behaving oddly and you can't find the source of the bug, double check the list of [built-in functions](https://docs.python.org/3/library/functions.html) and [built-in types](https://docs.python.org/3/library/stdtypes.html) to make sure that your variable names don't conflict.
 
-There are some things that you can't name your variables, such as `and`, `if`, `True`, or `False`. That's because Python uses these names for program control structure.
-
-You can't start your variable name with a digit, although your variable name can end in a digit. Your variable name can't contain special characters, such as `!`,  `@`,  `#`, `$`,  `%` and more.
-
-{{% notice warning %}}
-💣 Python will let you override built-in methods and types without a warning so don't name your Python variables things like `list`, `str`, or `int`.
-{{% /notice %}}
-
-If you notice your program behaving oddly and you can't find the source of the bug, double check the list of [built-in functions](https://docs.python.org/3/library/functions.html) and [built-in types](https://docs.python.org/3/library/stdtypes.html) to make sure that your variable names don't conflict.
+</div>
 
 ### Types
 
@@ -123,6 +119,7 @@ Python has a very easy way of determining the type of something, with the `type(
 ```
 
 #### No-Value, `None`, or Null Value
+{: .no_toc }
 
 There's a special type in Python that signifies no value at all. In other languages, it might be called Null. In Python, it's called `None`.
 
@@ -166,12 +163,14 @@ z = float(5.0)
 Python also provides a `decimal` library, which has certain benefits over the `float` datatype. For more information, refer to the [Python documentation](https://docs.python.org/3/library/decimal.html).
 
 ### Mathematical Operations
+{: .no_toc }
 
 Numbers can be added together. If you add a `float` and an `int`, the resulting type will be a `float`.
 
 If you divide two `int`s (integers), the result will be of type `float`.
 
 ### Boolean Types
+{: .no_toc }
 
 In Python, Booleans are of type `bool`. Surprisingly, the boolean types `True` and `False` are also numbers under the hood.
 
@@ -220,6 +219,7 @@ long_greeting = """
 ```
 
 #### Printing Strings
+{: .no_toc }
 
 Strings can be printed out using the `print()` function in Python. While you're working the REPL, you'll see that variables are displayed for you. When you move on to writing standalone Python programs, that will no longer be the case.
 
@@ -234,10 +234,11 @@ Nina
 ```
 
 #### String Formatting
+{: .no_toc }
 
 There are several types of string formatting in Python.
 
-If you're using Python 3.7 and above (remember to check with `python --version` on the command line) you can use my favorite type of string formatting, and the one I'll be using for the course called f-strings.
+If you're using Python 3.7 and above you can use my favorite type of string formatting, and the one I'll be using for the course called `f-strings`.
 
 ```python
 >>> name = "Nina"
@@ -250,9 +251,11 @@ Hello, Nina
 f-strings allow you to simply and easily reference variables in your code, and as a bonus, they're *much* faster.
 
 ### Common Mistakes
-There are a few common errors that you'll encounter when working with Strings and numbers. Remember, in Python program errors are called Exceptions. By going over what they are, you'll be able to recognize them immediately.
+
+There are a few common errors that you'll encounter when working with Strings and numbers. In Python programs, errors are called `Exceptions`. By going over what they are, you'll be able to recognize them immediately.
 
 ### Scenario 1: Mismatched string quotes
+{: .no_toc }
 
 {{% notice info %}}
 Mismatched string quotes will result in a `SyntaxError`
@@ -263,6 +266,7 @@ When we try to start a String with one type of quote, and end with another, we'l
 For example, starting the string Hello with a double quote, and ending in a single quote, like this:
 
 #### Input: **"**Hello**'**
+{: .no_toc }
 
 For example, in the REPL:
 
@@ -277,6 +281,7 @@ SyntaxError: EOL while scanning string literal
 **Solution:** use matching quote types for defining your strings. Either single quotes `'Hello'` or double quotes `"Hello"`.
 
 ### Scenario 2: Trying to print a String and a number with concatenation using the "+" symbol.
+{: .no_toc }
 
 {{% notice info %}}
 Trying to add or concatenate a String and a number will result in a `TypeError`
@@ -285,6 +290,7 @@ Trying to add or concatenate a String and a number will result in a `TypeError`
 If you add try to add (or concatenate) a String and a number, you'll get an error saying that adding the two types together isn't possible.
 
 #### Input: 3 + "Three"
+{: .no_toc }
 
 In the REPL:
 ```python
@@ -316,9 +322,10 @@ In the REPL:
 8
 ```
 
-### Exercises
+### Practice
 
 #### Types
+{: .no_toc }
 
 List the type of the following variables using the `type()` function.
 
@@ -331,6 +338,7 @@ List the type of the following variables using the `type()` function.
 ```
 
 #### Numbers
+{: .no_toc }
 
 Calculate the amount of rent you pay daily, by taking your monthly rent and diving it by 30.
 
@@ -342,6 +350,7 @@ Calculate the amount of rent you pay daily, by taking your monthly rent and divi
 ```
 
 #### Strings
+{: .no_toc }
 
 Try printing some things to your REPL:
 
@@ -353,14 +362,6 @@ Hello world
 My name is Nina
 ```
 
-There are three different ways to format strings in Python3. You may run into %-formatting and `str.format()` in older code. These are still common in Python but no longer recommended, due to readability concerns.
-
-```python
->>> name = "Nina"
->>> print("Hello, my name is %s" % name)
-Hello, my name is Nina
-```
-
 The current recommended way to format string is with f-Strings. f-Strings are much more readable and easier to maintain than the previous methods. With f-Strings, your string is prepended with the letter `f` and your variables or expressions to interpret are placed in `{brackets}`.
 
 ```python
@@ -370,6 +371,7 @@ Hello, my name is Nina and I pay $16.0 in rent per day
 ```
 
 #### Helper Functions
+{: .no_toc }
 
 Python has a few built-in functions to help you if you get stuck. `type()` tells you what an object's type is, for example a string (`str`) or integer (`int`). `dir()` returns a list of valid attributes for an object, so you can quickly see what variables an object has or what functions you can call on it. `help()` brings up helpful documentation on any object. You can also type `help()` on its own to bring an interactive help console.
 
@@ -387,9 +389,10 @@ Python has a few built-in functions to help you if you get stuck. `type()` tells
 
 ---
 ## Functions
-The purpose of functions in Python are to create reusable code. If we find ourselves copying and pasting the same code multiple times, that's a good sign that a function might help!
 
-### Anatomy of a function
+The purpose of functions in Python are to **create reusable code**. If we find ourselves copying and pasting the same code multiple times, that's a good sign that a function might help!
+
+### Defining Functions
 
 This is the recipe for defining a Python function:
 
@@ -444,6 +447,7 @@ SyntaxError: invalid syntax
 ```
 
 ### Function Contents
+{: .no_toc }
 
 The recipe for function contents:
 
@@ -453,12 +457,14 @@ The recipe for function contents:
 1. (optional) a `return` statement
 
 #### `return` statement
+{: .no_toc }
 
 A `return` statement is a way to "short-circuit" the function.
 
 Using a `return` statement, you can optionally pass back data to the caller of your function.
 
-##### with no `return` statement
+#### with no `return` statement
+{: .no_toc }
 
 If a function doesn't have a return statement, it implicitly returns `None`.
 
@@ -471,7 +477,8 @@ If a function doesn't have a return statement, it implicitly returns `None`.
 <type 'NoneType'>
 ```
 
-##### with a `return` statement, but no value
+#### with a `return` statement, but no value
+{: .no_toc }
 
 If a function has a return statement, but no value, it also returns `None`. This is typically used to control the flow of a program.
 
@@ -485,7 +492,8 @@ If a function has a return statement, but no value, it also returns `None`. This
 <type 'NoneType'>
 ```
 
-##### with a `return` statement and a value
+#### with a `return` statement and a value
+{: .no_toc }
 
 To return a value from a function, just type it after the `return` statement. You can return anything from a Python function, including other functions! For today, we'll focus on simple and complex data types.
 
@@ -506,7 +514,8 @@ Note: Because it's syntactically correct to have multiple return statements in a
 linter will give you a helpful hint about the rest of the code being unreachable.
 {{% /notice %}}
 
-#### Indentation
+### Indentation
+{: .no_toc }
 
 One of the most important aspects of functions is indentation. Remember, Python doesn't use curly braces to figure out what's inside a function like other languages you've seen like JavaScript or Java.
 
@@ -538,9 +547,10 @@ IndentationError: expected an indented block
 ```
 {{% /expand%}}
 
-### Calling Functions
+### Arguments & Calling Functions
 
 #### With no arguments
+{: .no_toc }
 
 Once you've defined a function, you can call it from your Python code as many times as you'd like.
 
@@ -555,6 +565,7 @@ Hello, World!
 ```
 
 #### With arguments
+{: .no_toc }
 
 Let's try it again, this time with a function that does accept arguments.
 
@@ -572,6 +583,7 @@ Here, note that the function accepts **names** for the arguments. But, when we c
 ```
 
 #### Storing the `return`ed value of a function.
+{: .no_toc }
 
 Storing the `return`ed value of a function is easy. All you need to do is assign it to a variable.
 
@@ -589,8 +601,10 @@ Let's try it now.
 The variable `new_number` now contains the result of running our `add_numbers` function with our arguments `3` and `5`.
 
 ### Arguments in Practice
+{: .no_toc }
 
-### Positional arguments are required
+#### Positional arguments are required
+{: .no_toc }
 
 Positional arguments are all required, and must be given in the order they are declared.
 
@@ -606,7 +620,8 @@ In the REPL:
 Nina, Hello!.
 ```
 
-### Keyword arguments with default values
+#### Keyword arguments with default values
+{: .no_toc }
 
 Functions can accept two types of named arguments, ones without default values, and ones with default values. Arguments that have default values are called **keyword arguments**. The nice thing about defaults is they can be overridden when needed.
 
@@ -624,6 +639,7 @@ def say_greeting_with_default(name, greeting="Hello", punctuation="!"):
 ```
 
 #### Without default arguments
+{: .no_toc }
 
 Now, in the REPL, let's try calling our function with no default arguments:
 
@@ -637,6 +653,7 @@ Good Day, Nina.
 ```
 
 #### Using default arguments
+{: .no_toc }
 
 Let's make a new function, `say_greeting_with_default` that accepts two arguments -- `name`, and a now **optional** argument, `greeting`. If `greeting` is not passed in, it will default to `Hello`.
 
@@ -654,6 +671,7 @@ Good Day, Nina!
 ```
 
 #### Order matters!
+{: .no_toc }
 
 A function can accept all of one type or the other, but arguments need to go in a specific order.
 
@@ -670,10 +688,12 @@ SyntaxError: non-default argument follows default argument
 ```
 
 ### Calling functions with arguments
+{: .no_toc }
 
 There are a few important things to know about calling functions with arguments.
 
 #### Arguments without defaults are **required**!
+{: .no_toc }
 
 Arguments without default values are **required** by Python. Otherwise your function wouldn't know what to do! If you don't pass in all the required arguments, you'll get a `TypeError`.
 
@@ -689,6 +709,7 @@ TypeError: say_greeting() missing 1 required positional argument: 'greeting'
 ```
 
 #### You can pass in none, some, or all of the keyword arguments.
+{: .no_toc }
 
 If your function takes keyword arguments, you can provide zero, one, or all of them when you call it. You don't need to pass these arguments in order either.
 
@@ -705,6 +726,7 @@ If your function takes keyword arguments, you can provide zero, one, or all of t
 ```
 
 #### You can pass in required parameters by keyword.
+{: .no_toc }
 
 Even if your function arguments don't have keyword arguments with defaults, you can still pass values in to the function by name. This is especially helpful if you want to be extra clear about what you're passing in.
 
@@ -719,6 +741,7 @@ Bonjour, Max.
 ```
 
 ### Arguments Danger Zone
+{: .no_toc }
 
 {{% notice warning %}}
 Never use mutable types, like `list`s as a default argument.
@@ -750,6 +773,7 @@ If you need to use a mutable type, like a `list` as a default, use a *marker* in
 In Python, default arguments are evaluated only once -- when the function is defined. Not each time the function is called. That means if you use a value that can be changed, it won't behave like you'd expect it to.
 
 ### Naming Functions and Arguments
+{: .no_toc }
 
 Because Python is a dynamic language (sometimes called duck-typed) we use names as cues for what our function does, the arguments it accepts, and the values it returns.
 
@@ -774,7 +798,7 @@ For example, I'd expect a variable called `name` to be a single string, and a va
 A great resource to help you figure out the best naming conventions to use in your production Python code is a talk by Brandon Rhodes, called ["The Naming of Ducks: Where Dynamic Types Meet Smart Conventions"](https://www.youtube.com/watch?v=YklKUuDpX5c).
 {{% /notice %}}
 
-### Scope inside a function
+### Function Scope
 
 Inside of a function in Python, the **scope** changes.
 
@@ -800,7 +824,8 @@ NameError: name 'twitter_account' is not defined
 We get a `NameError` when trying to access the `twitter_account` variable outside of the function. That's because it's out of scope, exactly like we expected it to be.
 
 
-### Using variables defined outside of the function
+#### Using variables defined outside of the function
+{: .no_toc }
 
 Generally, we want to be careful when using variables defined outside of our function.
 
@@ -844,8 +869,10 @@ For example:
 >>>
 ```
 
-### Exercises
-## Functions
+### Practice
+
+#### Functions
+{: .no_toc }
 
 Let's try creating a basic function. Use tab to indent the second line, and press enter on an empty line to finish the function.
 
@@ -876,7 +903,8 @@ The sum of 1 and 2 is 3
 {{% /expand%}}
 
 
-## The Importance of Whitespace
+#### The Importance of Whitespace
+{: .no_toc }
 
 Here's an error that you'll become very familiar with during your career as a Pythonista, the `IndentationError`. Whitespace is important for defining function scope in python, so missing or extra indentations or spaces will cause the runtime to throw this error. Let's redefine our `add_numbers` function, but we'll forget to indent the second line, `return x + y`. Notice that the second line is directly under (at the same indentation level) as the `def`:
 
@@ -891,7 +919,8 @@ IndentationError: expected an indented block
 
 Notice how the runtime tells us the line that failed (`line 2`), gives you a copy of the line with an arrow pointing to the offending error (`return x + y`), and then tells you the error (`IndentationError`) with additional information (`expected an indented block`).
 
-## Function Scope
+#### Function Scope
+{: .no_toc }
 
 As we saw earlier, scoping in Python happens with whitespace. Let's see this in action:
 
@@ -926,7 +955,8 @@ The sum of 5 and 6 is 11
 {{% /expand%}}
 
 
-## Positional Arguments vs Keyword Arguments
+#### Positional Arguments vs Keyword Arguments
+{: .no_toc }
 
 The `x` and `y` arguments for our `add_numbers()` function are called positional arguments. Python also lets us declare *keyword* arguments. Keyword arguments are great for setting default values, because passing them is optional. Just remember that keyword arguments must come *after* any positional arguments. Let's make a more generic function for doing math:
 
@@ -973,7 +1003,8 @@ The `x` and `y` arguments for our `add_numbers()` function are called positional
 ### Lists
 Lists are one of the most powerful data types in Python. Generally, they're container objects used to store related items together.
 
-### `list` cheat sheet
+#### `list` cheat sheet
+{: .no_toc }
 
 | type             	| `list`                                                                                	|
 |------------------	|---------------------------------------------------------------------------------------	|
@@ -986,7 +1017,6 @@ Lists are one of the most powerful data types in Python. Generally, they're cont
 | mutable?         	| Yes                                                                                   	|
 | in-place sortable?        	| Yes. `my_list.sort()` will sort the list in-place. `my_list.sort(reverse=True)` will sort the list in-place in *descending* order. `my_list.reverse()` will *reverse the items* in `my_list` in-place.           	|
 
-### In Practice
 
 Let's create a few lists to see how they work.
 
@@ -1017,6 +1047,7 @@ We can check its length with the built-in `len()` method, like so:
 ```
 
 ### Indexes and Indices
+{: .no_toc }
 
 Lists retain the order of the items in them. In the next section, you'll learn about some data structures that don't.
 
@@ -1037,6 +1068,7 @@ In order to *access* items in a list, we'll need to use an *index*. (Multiple in
 ```
 
 #### Updating an item in a list
+{: .no_toc }
 
 To update a particular item in a `list` use square-bracket notion and assign a new value. `my_list[pos] = new_value`
 
@@ -1062,6 +1094,7 @@ IndexError: list index out of range
 ```
 
 #### Formatting
+{: .no_toc }
 
 {{% notice tip %}}
 We can *optionally* add new lines after the commas. This helps with readability for more complex list items.
@@ -1078,7 +1111,8 @@ Notice that we can also *optionally* add a trailing comma after the last item. A
 ```
 
 
-### Common Gotchas
+### Common Mistakes
+{: .no_toc }
 
 {{% notice info %}}
 If you forget to include commas between your items, you'll get a `SyntaxError`.
@@ -1114,10 +1148,12 @@ SyntaxError: invalid syntax
 ```
 
 ### Sorting
+{: .no_toc }
 
 Sorting sounds complicated, but in practice, it's just one method call away!
 
 #### Sorting a Copy Of Your List
+{: .no_toc }
 
 If you'd like sort to return a brand new copy of your list, instead of modifying your original copy, you can use the built-in `sorted(my_list)` function on your list to return a *new* `list`, sorted in increasing (ascending) order. Or use `sorted(my_list, reverse=True)` to create a new `list` sorted backwards, in decreasing (or descending) order. This operation will **not modify** the underlying list.
 
@@ -1136,6 +1172,7 @@ Either of these operations will return a *new* list.
 ```
 
 #### Sorting the list in-place
+{: .no_toc }
 
 You can call `my_list.sort()` on your list to sort it in increasing (ascending) order, or `my_list.sort(reverse=True)` on the list to sort it backwards, in decreasing (or descending) order. This operation will modify the underlying list, and *doesn't return a value*.
 
@@ -1156,6 +1193,7 @@ You can call `my_list.sort()` on your list to sort it in increasing (ascending) 
 ```
 
 #### Reverse the list in-place
+{: .no_toc }
 
 To reverse the items of a list in-place, call `my_list.reverse()` on it.
 
@@ -1167,10 +1205,13 @@ To reverse the items of a list in-place, call `my_list.reverse()` on it.
 ```
 
 ### Finding Methods
+{: .no_toc }
 
 Remember, if you ever forget which methods are available on `list`, just call `dir` on it. Ignore the methods that start with underscores. If you need help remembering what a method does, you can call `help()` on it. For example, for append, call `help(list.append)`.
 
-### Adding, Removing, Changing, and Finding Items in `list`s cheat sheet
+#### Adding, Removing, Changing, and Finding Items in `list`s cheat sheet
+{: .no_toc }
+
 
 | action                                           	| method                                	| returns           	| possible errors                            	|
 |--------------------------------------------------	|---------------------------------------	|-------------------	|--------------------------------------------	|
@@ -1187,6 +1228,7 @@ Remember, if you ever forget which methods are available on `list`, just call `d
 
 
 #### Checking Length
+{: .no_toc }
 
 Before we add or remove items, it's usually a good idea to check a list's length. We do that with the `len` built in function. We can even use the `len` built in function to check the lengths of other types, like strings.
 
@@ -1201,6 +1243,7 @@ Let's see it in action on a names `list` with two items, and a name `str`ing wit
 ```
 
 ### Adding Items
+{: .no_toc }
 
 Let's start with a list of two names.
 
@@ -1209,6 +1252,7 @@ Let's start with a list of two names.
 ```
 
 ##### `my_list.append(item)` adds to the end of `my_list`
+{: .no_toc }
 
 We can use `my_list.append(item)` to add an additional item to the end of the list.
 
@@ -1219,6 +1263,7 @@ We can use `my_list.append(item)` to add an additional item to the end of the li
 ```
 
 ##### `my_list.insert(pos, item)` inserts an item into `my_list` at the given position
+{: .no_toc }
 
 Use `my_list.insert(pos, item)` to insert items in an arbitrary position in the list. If the position is 0, we'll insert at the beginning of the list.
 
@@ -1244,6 +1289,7 @@ insert(self, index, object, /)
 You can also call help on `names.insert`. Because `names` is already of type `list`, it achieves the same result.
 
 ##### `my_list.extend(other_list)` adds all the contents of `other_list` to `my_list`
+{: .no_toc }
 
 ```python
 >>> names = ["Nina", "Max"]
@@ -1256,6 +1302,7 @@ You can also call help on `names.insert`. Because `names` is already of type `li
 ```
 
 ### Looking for Items
+{: .no_toc }
 
 Looking for items in a list is *slow*. Each item needs to be checked in order to find a match.
 
@@ -1268,6 +1315,7 @@ names = ["Nina", "Max", "Phillip", "Nina"]
 ```
 
 ##### Use the `in` keyword to determine if an item is present or not.
+{: .no_toc }
 
 ```python
 >>> "Nina" in names
@@ -1277,6 +1325,7 @@ False
 ```
 
 ##### Use the `my_list.index(item)` method to find the **first** index of a potential match.
+{: .no_toc }
 
 Notice that only the *first* index of the string `"Nina"` is returned. We'll learn more about what an index is in the next chapter.
 
@@ -1296,6 +1345,7 @@ ValueError: 'Rose' is not in list
 ```
 
 ##### Use the `my_list.count(item)` method to find out how many times an item appears in a list.
+{: .no_toc }
 
 ```python
 >>> names.count("Nina")
@@ -1305,6 +1355,7 @@ ValueError: 'Rose' is not in list
 ```
 
 ### Updating Items
+{: .no_toc }
 
 To update items in a list, use the *position* of the item you'd like to change using square bracket `[]` syntax. Like: `my_list[pos] = new_item`
 
@@ -1342,10 +1393,12 @@ IndexError: list assignment index out of range
 ```
 
 ### Removing Items
+{: .no_toc }
 
 There are a few ways to remove items from a list.
 
 ##### Use `my_list.remove(item)` to remove the *first* instance of the item
+{: .no_toc }
 
 Be careful. `remove()` only removes the first instance of the item from the list, which isn't always what we want to do.
 
@@ -1375,6 +1428,7 @@ ValueError: list.remove(x): x not in list
 ```
 
 ##### Use `my_list.pop()` to remove the last item, or `my_list.pop(index)` to remove the item at that index
+{: .no_toc }
 
 Using `pop()` will also **return** the item that was in that position. That's useful if we want to save the item.
 
