@@ -51,8 +51,8 @@ Some common AI modules include:
 -openai
 
 These modules are used to allow you to access AI model's data set for your own use.
-They each of there own syntax, but for groq's the syntax using tkinter(talked about in a previous lesson) with some other library's is pretty simple.
-
+They each of there own syntax, but for groq's the syntax using tkinter with some other library's is pretty simple.
+This is an example AI's message sending function using the groq module
 ```python
 def send_message():
     user_input = input_entry.get("1.0", tk.END).strip()
@@ -95,5 +95,12 @@ The first thing it does is it sets a variable called user_input.
 Next it checks for the user_input to make sure the user sent something instead of just clicking the send button with no input.
 Then it does chat_history.append, this appends/adds data to the AI's History/Memory.
 The data that it appends is the role: "user" which means the role is the person not the AI, and the content which is "user_input" is the data the person inputted.
+Then it configures the chat_output area, putting it in the normal state allowing the AI to output.
+Next it creates an image using the PIL module, this is optional and it puts an image that the user selected in front of its message.
+Then it runs chat_output.insert, and inserts the user input into the window.
+Next it sets a variable and prints it which is optional to allow saving of the chat into a file for the AI to remember even after you close the window.
+The other chathistory append is also for saving, that saves it to the file.
+Then it configures the chat_output area, putting it in the disabled state allowing the AI to think. 
+
 
 
