@@ -121,7 +121,11 @@ Then it creates an image of the AI using PIL, Optional.
 Then, it inserts the AI's message.
 Finally it disables the chat output again and jumps somewhere else in the AI's code.
 
-More Coming Soon!
+### Common errors:
+- Missing an API key, To get one create an account on groq.com, create and account, and get a key from https://console.groq.com/playground, under the API keys section.
+- Forgetting to install a module.
+- Using wrong type of variable Str vs Int when using numbers, which is why it uses str() method.
+- Wrong python version: This AI **only** works in python 3.12.4.
 
 
 
