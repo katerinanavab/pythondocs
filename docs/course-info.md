@@ -10,7 +10,8 @@ nav_order: 0
 ## Table of Contents
 {: .no_toc .text-delta }
 
-1. TOC
+{: .fs-2 }
+- TOC
 {:toc}
 
 ---
@@ -31,10 +32,7 @@ nav_order: 0
 * Projects are graded on a 5-point scale, and **EXTRA CREDIT** is always available to encourage effort and creativity. _See the rubric section below for details._
 
 <details>
-<summary><strong>PROJECT GRADING RUBRIC</strong></summary>
-
-<p class="fs-3 highlight">Programming projects are evaluated via a qualitative system considering a program’s efficiency, legibility, correctness, completeness, comments, etc. This rubric employs a 5-point scale. The assignment score is then adjusted to be out of 10 points, such that students earn a baseline of 50% credit for submitted work. Extra credit may be awarded for exceptional effort!</p>
-
+<summary>PROJECT GRADING RUBRIC</summary>
 
 <div>
 <table><thead>
@@ -84,6 +82,8 @@ nav_order: 0
 
 </details>
 
+<p class="fs-3 highlight">Programming projects are evaluated via a <strong>qualitative system</strong> considering a program’s efficiency, legibility, correctness, completeness, comments, etc. The grading rubric employs a 5-point scale. The assignment score is then adjusted to be out of 10 points, such that students earn a baseline of 50% credit for submitted work. Extra credit may be awarded for exceptional effort!</p>
+
 ### Homework (30% of total grade)
 * 💬 **Homework** is assigned in the form of a `CodeCollab`: like posting on a discussion board, but instead of talking about a book or article, the class has a shared goal of figuring out how some 🔍 mystery code 🔍 works.
 
@@ -93,7 +93,7 @@ nav_order: 0
 * _How it works:_ At the beginning of each week, I will **post a DISCUSSION assignment on BlackBaud** that includes a Replit link to a working program that you will **analyze collaboratively**.
   * All of the CodeCollab programs can also be found on my Replit profile page: [replit.com/@katerinanavab](replit.com/@katerinanavab)
   * To earn full credit, you must post **at least two (2) comments**: one main post, and one response to a classmate.
-  * See our course website's [CodeCollab Instructions](https://coderina.dev/pythondocs/docs/ref/codecollab.html) page for detailed guidelines.
+  * See our course website's [CodeCollab Instructions](https://coderina.dev/webdocs/docs/ref/codecollab.html) page for detailed guidelines.
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
 > {: .warning .fs-3 }
@@ -126,9 +126,7 @@ nav_order: 0
 > If these steps are not followed, your use of GenAI will be considered an **academic integrity violation**.
 
 <details>
-<summary><strong>EXAMPLES OF AI USE</strong></summary>
-
-<p class="fs-3 note">These examples are specific to my Computer Science classes and are subject to change as we explore appropriate AI usage throughout the year. Always check with your teacher before using GenAI tools!!!</p>
+<summary>EXAMPLES OF AI USE</summary>
  
 <div>
 <table><thead>
@@ -160,10 +158,12 @@ nav_order: 0
 
 </details>
 
+<p class="fs-3 note">These examples are specific to my Computer Science classes and are subject to change as we explore appropriate AI usage throughout the year. <strong>Rule of thumb:</strong> Always check with your teacher before using GenAI tools!!!</p>
+
 ### Other Classroom Policies
 * 🗓️ **Office Hours / Extra Help** is held in <span class="highlighter">Room #71</span> on <span class="highlighter">Tue/Wed/Thu during 4th period (10:45-11:25)</span>. Drop-ins are welcome, meaning there is no need to let me know in advance if you plan on stopping by during 4th period.
  
-> {: .note .fs-3 } 
+> {: .highlight .fs-3 } 
 > You may email me to schedule an appointment at a different time, ONLY IF you have other classes during my scheduled office hours. _Include a list of your free periods in your email!_
 
 * 📝 You can leave a **sticky note on my desk** for anything you want me to remember to do.
