@@ -15,7 +15,7 @@ nav_order: 1
 ---
 
 ## Introduction to machine learning using Python!
-### How does machine learning work?
+### What is an AI?
 
 Machine learning or AI is a way computers can learn.
 AI can do many useful tasks such as:
@@ -23,4 +23,12 @@ AI can do many useful tasks such as:
 - Writing
 - Generating Images
 - Send Emails
-  
+
+### How does AI work?
+
+The way AI works, 
+is that it gathers data from a bunch of different sources and sort of trains the AI.
+Then using that data set, when you input, 
+it feeds it in and the AI uses its data set to predict the next word, 
+or pixel in the case of image generation
+
