@@ -19,10 +19,6 @@ aux_links:
 back_to_top: true
 back_to_top_text: "⬆️ BACK TO TOP"
 
-liquid:
-   error_mode: strict
-   strict_filters: true
-
 callouts_level: quiet # or loud
 callouts:
   highlight:
@@ -34,7 +30,7 @@ callouts:
     title: New
     color: green
   note:
-    title: Task
+    title: Note
     color: purple
   warning:
     title: Warning
