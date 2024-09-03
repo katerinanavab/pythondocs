@@ -51,7 +51,7 @@ Some common AI modules include:
 -openai
 
 These modules are used to allow you to access AI model's data set for your own use.
-They each of there own syntax, but for groq's the syntax using tkinter(talked about in a previous lesson) is pretty simple.
+They each of there own syntax, but for groq's the syntax using tkinter(talked about in a previous lesson) with some other library's is pretty simple.
 
 ```python
 def send_message():
@@ -83,5 +83,14 @@ def send_message():
         chathistory.append(appendvar)
         chat_output.image_create("current",image=image)
         chat_output.insert(tk.END, f"V3ectorGPT: {response.choices[0].message.content}\n")
+        
+        chat_output.config(state=tk.DISABLED)
+        
+        chat_output.see(tk.END)  # Scroll to the bottom
+
 ```
+
+Lets break it down, we start with a function, send_message, this is the function that gets called whenever it sends a message.
+The first thing it does is it sets a variable called user_input.
+
 
