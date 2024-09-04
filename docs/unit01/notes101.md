@@ -53,9 +53,7 @@ First, make sure you have a Replit program to take notes and code along as we di
 
 <div class="setup" markdown="block">
 
-1. On [Replit](https://replit.com/~), click `+ Create Repl` on the sidebar to open a **NEW PROJECT**
-2. In the pop-up menu, select `Python` as the **TEMPLATE**
-3. Specify the **TITLE** following this pattern: `CS3_Unit1_Notes`
+1. GITHUB NOTES FILE
 
 </div>
 
@@ -98,6 +96,7 @@ Because Python is a** dynamic language** and you don't have type hints to explai
 
 It's ok to be _verbose_. For example, `n` is a poor variable name, while `numbers` is a better one. If you're storing a collection of items, name your variable as a plural.
 
+<html
 <div class="warning" markdown="block">
 
 - You can't start your variable name with a numerical digit, although your variable name can end in a digit. 
@@ -107,6 +106,7 @@ It's ok to be _verbose_. For example, `n` is a poor variable name, while `number
     - If you notice your program behaving oddly and you can't find the source of the bug, double check the list of [built-in functions](https://docs.python.org/3/library/functions.html) and [built-in types](https://docs.python.org/3/library/stdtypes.html) to make sure that your variable names don't conflict.
 
 </div>
+</html>
 
 ### The `type()` Function
 
