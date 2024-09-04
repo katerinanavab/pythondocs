@@ -49,7 +49,7 @@ Python is considered to be a "batteries included" language, because the standard
 ---
 ## Basic Data Types
 
-First, make sure you have a Replit program to take notes and code along as we dive into our Python Bootcamp.
+First, make sure you have a blank Python program to take notes and code along as we dive into the lesson.
 
 <div class="setup" markdown="block">
 
@@ -510,7 +510,7 @@ Let's try it together. Type the following code in your REPL. Note that the 3 dot
 
 <html>
 <details>
-<summary><strong>See an error? Expand this section:</strong></summary>
+<summary><strong>🆘 Getting an error? Expand this section:</strong></summary>
 <div markdown="block"> 
     
 **Note:** If you get an `IndentationError`, that means that you didn't correctly indent your code after your function definition. Try typing your function into the REPL one more time.
@@ -860,7 +860,7 @@ Now let's try our new function. Type this into your REPL:
 
 <html>
 <details>
-<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
 <div markdown="block"> 
     
 ```python
@@ -910,7 +910,7 @@ As we saw earlier, scoping in Python happens with whitespace. Let's see this in 
 
 <html>
 <details>
-<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
 <div markdown="block"> 
     
 ```python
@@ -954,7 +954,7 @@ The `x` and `y` arguments for our `add_numbers()` function are called positional
 
 <html>
 <details>
-<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
 <div markdown="block"> 
     
 ```python
@@ -2090,7 +2090,7 @@ There are many other ways to interact with our lists as well:
 
 <html>
 <details>
-<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
 <div markdown="block"> 
 
 ```python
@@ -2178,7 +2178,7 @@ Let's play with some set operations:
 
 <html>
 <details>
-<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
 <div markdown="block"> 
     
 ```python
@@ -2238,7 +2238,7 @@ Oops! Remember that tuples are immutable, so you can't change them once they've 
 
 <html>
 <details>
-<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
 <div markdown="block"> 
     
 ```python
@@ -2304,7 +2304,7 @@ Dictionaries are great for storing data that you can index with keys. The keys m
 
 <html>
 <details>
-<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
 <div markdown="block"> 
     
 ```python
@@ -2376,7 +2376,7 @@ Let's see this in practice:
 
 <html>
 <details>
-<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
 <div markdown="block"> 
     
 ```python
