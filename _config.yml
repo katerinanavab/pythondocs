@@ -11,8 +11,8 @@ aux_links_new_tab: true
 aux_links:
   "DevDocs":
     - "https://devdocs.io/"
-  "Replit":
-    - "https://replit.com/~"
+  "GitHub":
+    - "https://classroom.github.com/classrooms/180414627-bwl-cs3-python"
   "Blackbaud":
     - "https://bwl.myschoolapp.com/app#login"
     
