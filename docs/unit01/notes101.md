@@ -96,7 +96,7 @@ Because Python is a** dynamic language** and you don't have type hints to explai
 
 It's ok to be _verbose_. For example, `n` is a poor variable name, while `numbers` is a better one. If you're storing a collection of items, name your variable as a plural.
 
-<html
+<html>
 <div class="warning" markdown="block">
 
 - You can't start your variable name with a numerical digit, although your variable name can end in a digit. 
