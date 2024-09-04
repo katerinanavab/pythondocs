@@ -15,10 +15,9 @@ nav_order: 2
 ---
 ## Boolean Logic
 
-### Truthiness
-Evaluating expression to be `True` or `False` will help us control the flow of our program.
+### Truthiness Cheat Sheet
+Evaluating an expression to be `True` or `False` will help us control the flow of our program.
 
-### cheat sheet
 
 | type                                        	| truthiness                                                                     	|   	|
 |---------------------------------------------	|--------------------------------------------------------------------------------	|---	|
@@ -42,11 +41,11 @@ Sometimes the truth is obvious. For example `3 < 5` is always `True`. Other time
 True
 ```
 
-{{% notice tip %}}
-Tip: If you want to test your assumptions about an expression that returns `True` or `False`, you can pass it into the constructor for `bool`eans: `bool(expression)`.
-{{% /notice %}}
+{:.highlight}
+**Tip:** If you want to test your assumptions about an expression that returns `True` or `False`, you can pass it into the constructor for `bool`eans: `bool(expression)`.
 
 ### Numbers
+{:.no_toc}
 
 In Python, the integer `0` is always `False`, while every other number, *including negative numbers*, are `True`. In fact, under the hood, `bool`eans inherit from `int`egers.
 
@@ -60,6 +59,7 @@ True
 ```
 
 ### Sequences
+{:.no_toc}
 
 Empty sequences in Python always evaluate to `False`, **including empty `str`ings.**
 
@@ -92,6 +92,7 @@ True
 ```
 
 ### `None`
+{:.no_toc}
 
 The `None` type in Python represents nothing. No returned value. It shouldn't come as a surprise that the truthiness of `None` is `False`.
 
@@ -200,9 +201,8 @@ False
 |`is`| *is* the same object in memory? (not equality!)|
 |`is not`| *is not* the same object in memory? (not equality!)|
 
-{{% notice note %}}
+{:.highlight}
 This is something that trips up Python beginners, so make sure you remember that *equality* (`==`, `!=`) **is not** the same as *identity* (`is`, `not is`).
-{{% /notice %}}
 
 The `is` keywords tests if the two compared objects are stored in the same memory location. I won't go into too much detail into why, but remember **not** to use `is` when what you actually want to check for is equality.
 
@@ -216,9 +216,8 @@ True
 False
 ```
 
-{{% notice tip %}}
+{:.highlight}
 When you're first starting out, the only place you'll want to use the `is` keyword is to explicitly compare a value to the built-in types of `None`, `True`, or `False`.
-{{% /notice %}}
 
 ```python
 >>> a = True
@@ -248,6 +247,7 @@ You can use them to compare one (or more expressions) and determine if they eval
 Thankfully, you don't have to be a computer scientist to understand them if you use this handy table.
 
 ### `and`, `or`, `not` Cheat Sheet
+{:.no_toc}
 
 |Operation|Result|
 |---|---|
@@ -256,7 +256,8 @@ Thankfully, you don't have to be a computer scientist to understand them if you 
 |`not a`|if a is false, then `True`, else `False`|
 
 
-### `and`
+#### `and` table
+{:.no_toc}
 
 <!--
 | a       	| b       	| a `and` b  	|
@@ -267,10 +268,9 @@ Thankfully, you don't have to be a computer scientist to understand them if you 
 | False 	| False 	| False    	|
 -->
 
-{{% notice note %}}
+{:.highlight}
 For `a and b`, if a is false, a is returned. Otherwise b is returned.
 *If `a and b` are both `bool`ean values, the expression evaluates to`True` if both a and b are `True`.*
-{{% /notice %}}
 
 ```python
 >>> a = True    # a is True
@@ -300,7 +300,8 @@ True
 0
 ```
 
-### `or`
+#### `or` table
+{:.no_toc}
 
 <!--
 | a       	| b       	| a `or` b   	|
@@ -331,7 +332,8 @@ True
 1
 ```
 
-### `not`
+#### `not` table
+{:.no_toc}
 
 | a       	| `not` a    	|
 |---------	|------------	|
@@ -366,7 +368,8 @@ False
 True
 ```
 
-### In Combination
+#### In Combination
+{:.no_toc}
 
 When combining multiple boolean operators, you can add optional parenthesis for readability.
 
@@ -392,7 +395,8 @@ False
 True
 ```
 
-### With "truthiness"
+#### With "truthiness"
+{:.no_toc}
 
 Remember, we learned that some values in Python are *falsey* like the number zero, and some are *truthy* like any number *expect* for zero.
 
@@ -424,11 +428,10 @@ False
 >>> 0 or None   # Neither are True. Returns nothing (None)
 ```
 
-## Boolean Logic
+### Practice
 
-### Comparisons
-
-Let's practice using our comparison operators. Remember:
+#### Comparison Operators
+{:.no_toc}
 
 |Operator|Means|
 |---|---|
@@ -453,8 +456,11 @@ Remember, the first six operators test the object's *value*. `is` and `is not` t
 >>> 5 != 10
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+  
 ```python
 >>> 10 > 5
 True
@@ -476,9 +482,12 @@ True
 True
 ```
 
-{{% /expand %}}
+</div>
+</details>
+</html>
 
-### Truthiness
+#### Truthiness
+{:.no_toc}
 
 Different languages have different ideas of what is "truthy" and "falsy." In Python, all objects can be tested for truth, and an object is considered True unless except under certain circumstances that we talked about earlier in the chapter. Remember that checking if an object is "equal" to another object doesn't necessarily mean the same thing. An object is considered "truthy" if it satisfies the check performed by `if` or `while` statements.
 
@@ -499,8 +508,11 @@ True and False can also be represented by 1 and 0
 >>> 0 == False
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+  
 ```python
 >>> 5 == True
 False
@@ -518,9 +530,12 @@ True
 >>> 0 == False
 True
 ```
-{{% /expand %}}
+</div>
+</details>
+</html>
 
-### Boolean Operators
+#### Boolean Operators
+{:.no_toc}
 
 Python also supports boolean operators, although they're a little different than the comparison operators. Remember that `or` and `and` return one of their operands, rather than `True` or `False`.
 
@@ -558,7 +573,11 @@ Python also supports boolean operators, although they're a little different than
 >>> a and b and c
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+
 ```python
 >>> True or False
 True
@@ -597,7 +616,9 @@ False
 True
 ```
 
-{{% /expand %}}
+</div>
+</details>
+</html>
 
 ---
 
