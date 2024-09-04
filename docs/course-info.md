@@ -18,7 +18,11 @@ nav_order: 0
 ## Assignments & Grading
 
 ### Projects (50% of total grade)
-* 💻 **Projects** serve as the bulk of our coursework and include shorter coding exercises as well as longer creative programs. Projects are typically completed on **Replit** and submitted as a link on **BlackBaud**.
+* 💻 **Projects** serve as the bulk of our coursework and include shorter coding exercises as well as longer creative programs.
+* Projects will typically follow this workflow:
+> 1. A link to a **GitHub template repository** will be provided as starter code. A `repository`, or "repo," is like a project folder that contains code files.
+> 2. You will write your code in the **GitHub Codespaces IDE**. An `IDE` is an "Integrated Development Environment," which means an application where you can write and run code.
+> 3. Your completed project will be submitted as a link on **Blackbaud**.
 
 * 💯 **GRADE IMPROVEMENT POLICY**: You may <span class="highlighter">re-submit projects for a full RE-GRADE</span>, but you must email me to let me know which project, and it must be completed at least one week BEFORE the end of the current quarter.
   * When re-working your projects, you are encouraged to come to office hours for help or more feedback. I am way more likely to grade your work favorably if you've shown effort towards improving your skills...
@@ -93,10 +97,10 @@ Whenever you submit work late, especially after the assignment has been graded o
 {: .highlight .fs-3 }
 CodeCollabs are always **due on `Fridays @ 11:59PM`**❗
 
-* _How it works:_ At the beginning of each week, I will **post a DISCUSSION assignment on BlackBaud** that includes a Replit link to a working program that you will **analyze collaboratively**.
-  * All of the CodeCollab programs can also be found on my Replit profile page: [replit.com/@katerinanavab](https://replit.com/@katerinanavab)
+* _How it works:_ At the beginning of each week, I will **post a DISCUSSION assignment on Blackbaud** that includes a **GitHub repository link** to a working program that you will **analyze collaboratively**.
   * To earn full credit, you must post **at least two (2) comments**: one main post, and one response to a classmate.
   * See our course website's [CodeCollab Instructions](https://coderina.dev/pythondocs/docs/ref/codecollab.html) page for detailed guidelines.
+
 * ⏰ **LATE WORK POLICY**: Late homework may only receive up to <span class="highlighter">75% credit if submitted UNDER one week late</span>, or up to <span class="highlighter">50% credit if submitted OVER one week late</span>.
 
 {: .warning .fs-3 }
@@ -175,7 +179,10 @@ You may email me to schedule an appointment at a different time, ONLY IF you hav
   * _Ex: “Please re-grade my project”_
 * 🖊️ **Student supplies** (pens, pencils, sticky notes, etc.) will always be available to borrow, located up front by the whiteboard. No need to ask, but please return pens/pencils after class! 
 * 🤞 **SILENTLY SIGNAL** that you need to leave for the bathroom or water by holding up crossed fingers. Just make sure I acknowledge you are leaving the room first - wait for me to give a thumbs up 👍
-* 📱 **NO PHONES!** → as per the new BWL Upper School policy, phones must be locked up downstairs while you are in classes. If you are caught with a cell phone in class, it will be confiscated immediately and you will be sent to the Upper School office. 
+* 📱 **NO-PHONE ZONE!** → as per the new BWL Upper School policy, phones must be locked up downstairs while you are in the building.
+  * If you are caught with a cell phone in class, it will be confiscated immediately and you will be sent to the Upper School office.
+* 🖥️ Using your personal **LAPTOP** is a _privilege_.
+  * If you are caught using your laptop for things like iMessage, Discord, etc., you will be required to use the **DESKTOP COMPUTERS** in the classroom for a period of time.
 * 😊 **Common courtesy** stuff:
   * Student actions that interfere with teaching or learning in the classroom will NOT be tolerated. Please do not spend your class time on distracting apps, having side conversations, or doing work for other classes. 
   * Respect others’ property. Avoid touching or writing on anything that does not belong to you (including tables, books, teacher’s belongings, walls, etc.)
