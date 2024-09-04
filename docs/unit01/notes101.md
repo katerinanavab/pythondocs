@@ -1463,7 +1463,8 @@ Tuples are light-weight collections used to keep track of related, but different
 
 You might ask, why tuples when Python already has lists? Tuples are different in a few ways. While lists are generally used to store collections of similar items together, tuples, by contrast, can be used to contain a snapshot of data. They can't be continually changed, added or removed from like you could with a list.
 
-### `tuple` cheat sheet
+#### `tuple` cheat sheet
+{: .no_toc }
 
 | type               	| `tuple`                                                                                                 	|
 |--------------------	|---------------------------------------------------------------------------------------------------------	|
@@ -1476,16 +1477,18 @@ You might ask, why tuples when Python already has lists? Tuples are different in
 | mutable?           	| **No**                                                                                                  	|
 | in-place sortable? 	| **No**                                                                                                  	|
 
-### Uses
-
+#### Uses
+{: .no_toc }
 A good use of a `tuple` might be for storing the information for a *row* in a spreadsheet. That data is information only. We don't necessarily care about updating or manipulating that data. We just want a read-only snapshot.
 
 
 Tuples are an interesting and powerful datatype, and one of the more unique aspects of Python. Most other programming languages have ways of representing lists and dictionaries, but only a small subset contain tuples. Use them to your advantage.
 
 ### Examples
+{: .no_toc }
 
 #### Empty and one-item `tuple`s
+{: .no_toc }
 
 One important thing to note about tuples, is there's a quirk to their creation. Let's check the type of an empty `tuple` created with `()`.
 ```python
@@ -1515,6 +1518,7 @@ If you're creating a one-item tuple, you **must** include a trailing comma, like
 {{% /notice %}}
 
 #### Creation
+{: .no_toc }
 
 Let's say we have a spreadsheet of students, and we'd like to represent each row as a tuple.
 
@@ -1523,6 +1527,7 @@ Let's say we have a spreadsheet of students, and we'd like to represent each row
 ```
 
 #### Access by index
+{: .no_toc }
 
 We can access items in the `tuple` by index, but we **can't change them**.
 
@@ -1543,6 +1548,7 @@ We'll see `TypeError: 'tuple' object does not support item assignment` if we try
 `tuple`s also don't have an `append` or `extend` method available on them like lists do, because they can't be changed.
 
 ### `tuple` unpacking.
+{: .no_toc }
 
 Sounds like a lot of work for not a lot of benefit, right? Not so. `tuple`s are great when you depend on your data staying unchanged. Because of this guarantee, we can use `tuples` in other types of containers like `set`s and `dict`ionaries.
 
@@ -1580,7 +1586,8 @@ You can return tuples from functions, and use unpacking.
 ### Sets
 Sets are a datatype that allows you to store other **immutable** types in an unsorted way. An item can only be contained in a set once. There are no duplicates allowed. The benefits of a set are: very fast membership testing along with being able to use powerful set operations, like `union`, `difference`, and `intersection`.
 
-### `set` cheat sheet
+#### `set` cheat sheet
+{: .no_toc }
 
 | type               	| `set`                                                                                                                         	|
 |--------------------	|-------------------------------------------------------------------------------------------------------------------------------	|
@@ -1592,9 +1599,12 @@ Sets are a datatype that allows you to store other **immutable** types in an uns
 | order preserved?   	| **No**. Items *can't* be accessed by index.                                                                                   	|
 | mutable?           	| **Yes**. Can add to or remove from `set`s.                                                                                    	|
 | in-place sortable? 	| **No**, because items aren't ordered.                                                                                                                        	|
+
 ### Examples
+{: .no_toc }
 
 #### Empty `set`s
+{: .no_toc }
 
 Let's create our first few sets.
 
@@ -1618,10 +1628,12 @@ While you're learning Python, it's useful to use `type()`, `dir()` and `help()` 
 {{% /notice %}}
 
 #### `set`s with items
+{: .no_toc }
 
 Now, let's make a new set with some items in it, and test out important set concepts.
 
 #### `set`s can't contain duplicate values
+{: .no_toc }
 
 ```python
 >>> names = {"Nina", "Max", "Nina"}
@@ -1632,6 +1644,7 @@ Now, let's make a new set with some items in it, and test out important set conc
 ```
 
 #### `set`s can't contain mutable types
+{: .no_toc }
 
 The way that `set`s allow you to quickly check if an item is contained in them or not is with an algorithm called a hash. I won't cover the details, but an algorithm is a way of representing an immutable data type with a unique numerical representation. In Python, there's a built-in `hash()` function.
 
@@ -1662,6 +1675,7 @@ TypeError: unhashable type: 'list'
 ```
 
 #### `set`s can be used to de-duplicate the items in a list
+{: .no_toc }
 
 Tip: *If you don't care about order*, you can quickly de-duplicate the items in a `list` by passing the `list` into the `set` constructor.
 
@@ -1672,6 +1686,7 @@ Tip: *If you don't care about order*, you can quickly de-duplicate the items in 
 ```
 
 #### `set`s don't have an order
+{: .no_toc }
 
 Sets don't have an order. That means that when you print them, the items won't be displayed in the order they were entered in the list.
 
@@ -1706,10 +1721,12 @@ Tip: If your set contains items of the same type, and you want to sort the items
 ```
 
 #### adding to and removing from `set`s
+{: .no_toc }
 
 Since a set has no order, we can't add or remove items to it by index. We need to call the operations with the item itself.
 
-##### Add items to a set with `my_set.add(item)`.
+#### Add items to a set with `my_set.add(item)`.
+{: .no_toc }
 
 ```python
 >>> colors = {"Red", "Green", "Blue"}
@@ -1718,7 +1735,8 @@ Since a set has no order, we can't add or remove items to it by index. We need t
 {'Orange', 'Green', 'Blue', 'Red'}
 ```
 
-##### Remove items with `my_set.discard(item)`
+#### Remove items with `my_set.discard(item)`
+{: .no_toc }
 
 You can remove an item from a `set` if it's present with `my_set.discard(item)`. If the set doesn't contain the item, no error occurs.
 
@@ -1735,7 +1753,8 @@ You can remove an item from a `set` if it's present with `my_set.discard(item)`.
 You can also remove items from a `set` with `my_set.remove(item)`, which will raise a `KeyError` if the item doesn't exist.
 
 
-##### Update a set with another sequence using `my_set.update(sequence)`
+#### Update a set with another sequence using `my_set.update(sequence)`
+{: .no_toc }
 
 You can update a `set` by passing in another sequence, meaning another `set`, `list`, or `tuple`.
 
@@ -1761,10 +1780,12 @@ Be careful passing in a `str`ing to `my_set.update(sequence)`. That's because a 
 Your set will update with each character of the `str`ing, which was probably not your intended result.
 
 ### `set` operations
+{: .no_toc }
 
 `sets` allow quick and easy operations to compare items between two sets.
 
 #### `set` operations cheat sheet
+{: .no_toc }
 
  method operation    	| symbol operation 	| result                                                                        	|
 |---------------------	|------------------	|-------------------------------------------------------------------------------	|
@@ -1773,6 +1794,7 @@ Your set will update with each character of the `str`ing, which was probably not
 | `s.difference(t)`    	| `s ^ t`          	| creates a new set containing items that are **not in both `s` and in `t`**                        	|
 
 #### examples
+{: .no_toc }
 
 Let's see it in action.
 
@@ -1816,6 +1838,7 @@ We use dictionaries when we want to be able to quickly access additional data as
 Looking for a key in a large dictionary is extremely fast. Unlike lists, we don't have to check every item for a match.
 
 ### `dict`ionary cheat sheet
+{: .no_toc }
 
 | type               	| `dict`                                                                                                                                             	|
 |--------------------	|----------------------------------------------------------------------------------------------------------------------------------------------------	|
@@ -1829,8 +1852,10 @@ Looking for a key in a large dictionary is extremely fast. Unlike lists, we don'
 | in-place sortable? 	| **No**. `dict`s don't have an index, only keys.                                                                                                    	|
 
 ### Examples
+{: .no_toc }
 
 #### Empty `dict`s
+{: .no_toc }
 
 We already learned one of the methods of creating an empty `dict` when we tried (and failed) to create an empty set with `{}`. The other way is to use the `dict()` method.
 
@@ -1845,6 +1870,7 @@ We already learned one of the methods of creating an empty `dict` when we tried 
 ```
 
 #### Creating `dict`s with items
+{: .no_toc }
 
 If we want to create `dict`s with items in them, we need to pass in key, value pairs. A `dict` is declared with curly braces `{}`, followed by a key and a value, separated with a colon `:`. Multiple key and value pairs are separated with commas `,`.
 
@@ -1859,6 +1885,7 @@ We can call familiar methods on our dictionary, like finding out how many key / 
 ```
 
 #### Side note: What can be used as keys?
+{: .no_toc }
 
 Any type of object, mutable or immutable, can be used as a value but just like `set`s, `dict`ionaries can only use immutable types as keys. That means you can use `int`, `str`, or even `tuple` as a key, but **not** a `set`, `list`, or other `dict`ionary.
 
@@ -1881,6 +1908,7 @@ TypeError: unhashable type: 'list'
 ```
 
 #### Accessing
+{: .no_toc }
 
 Our `dict` contains `key`, `value` pairs. Because a `dict`ionary isn't ordered, we *can't access the items in it by position*. Instead, to access the items in it, we use square-bracket `my_dict[key]` notation, similar to how we access items in a list with square bracket notation containing the position.
 
@@ -1927,6 +1955,7 @@ If we want to provide a *default value* if the key is missing, we also pass an *
 ```
 
 #### Adding, Removing
+{: .no_toc }
 
 To add a new key value pair to the dictionary, you'll use square-bracket notation.
 
@@ -1947,6 +1976,7 @@ True
 ```
 
 #### Updating
+{: .no_toc }
 
 Just like with `list`s an `set`s, you can update the items in a dictionary with the items from another dictionary.
 
@@ -1959,6 +1989,7 @@ Just like with `list`s an `set`s, you can update the items in a dictionary with 
 ```
 
 ### Complex Dictionaries
+{: .no_toc }
 
 One incredibly useful scenario for dictionaries is storing the values in a `list` or other sequence. Going into too much detail is outside of the scope of the class, but I'll show you a quick example:
 
@@ -1972,6 +2003,7 @@ One incredibly useful scenario for dictionaries is storing the values in a `list
 ```
 
 ### Working with `items`, `keys`, and `values`
+{: .no_toc }
 
 There are three useful methods you need to remember about `dict`ionary access:
 
@@ -1980,6 +2012,7 @@ There are three useful methods you need to remember about `dict`ionary access:
 3. `my_dict.items()`
 
 #### 1. `my_dict.keys()` Getting all the keys in a dictionary
+{: .no_toc }
 
 ```python
 >>> nums = {1: 'one', 2: 'two', 3: 'three', 8: 'eight'}
@@ -1988,6 +2021,7 @@ dict_keys([1, 2, 3, 8])
 ```
 
 #### 2. `my_dict.values()` Getting all the values in a dictionary.
+{: .no_toc }
 
 ```python
 >>> nums = {1: 'one', 2: 'two', 3: 'three', 8: 'eight'}
@@ -1996,6 +2030,7 @@ dict_values(['one', 'two', 'three', 'eight'])
 ```
 
 #### 3. `my_dict.items()` Getting all the items (key, value pairs) in a dictionary
+{: .no_toc }
 
 Notice that `my_dict.items()` returns a type that looks like a list. It contains two-item `tuple`s containing the key, value pairs.
 
@@ -2009,7 +2044,8 @@ dict_items([(1, 'one'), (2, 'two'), (3, 'three'), (8, 'eight')])
 
 Mutability, simply put: the contents of a mutable object can be changed, while the contents of an immutable object cannot be.
 
-### Simple Types
+#### Simple Types
+{: .no_toc }
 
 All of the simple data types we covered first are **immutable**
 
@@ -2019,7 +2055,8 @@ All of the simple data types we covered first are **immutable**
 | `str`                     	| store strings           	| **no**   	|
 | `bool`                    	| store `True` or `False` 	| **no**   	|
 
-### Container Types
+#### Container Types
+{: .no_toc }
 
 For the mutability of the container types we covered in this chapter, check this helpful list:
 
@@ -2030,9 +2067,12 @@ For the mutability of the container types we covered in this chapter, check this
 | `tuple`        	| contain ordered groups of items in an **immutable** collection                                          	| **no**   	|
 | `dict`         	| contains key value pairs                                                                                	| **yes**  	|
 
-## Lists, Dictionaries, Tuples, and Sets
+
+### Practice
+Lists, Dictionaries, Tuples, and Sets
 
 ### Lists
+{: .no_toc }
 
 Lists are great for storing an ordered sequence of objects. Remember that you can see the current state of your list at any time by typing the name of your list by itself. Check your list after every operation to see if it has changed.
 
@@ -2126,6 +2166,8 @@ False
 {{% /expand%}}
 
 ### Sets
+{: .no_toc }
+
 <!--
 - show that trying to create an empty set with {} creates an empty dictionary. always use set() for empty set
 -->
@@ -2203,6 +2245,7 @@ False
 
 
 ### Tuples
+{: .no_toc }
 
 Tuples are a lightweight way to hold information that describes something, like a person - their name, age, and hometown. You can think about it kind of like a row in a spreadsheet. Tuples are represented inside parentheses, however parentheses are not required to create a tuple, just a sequence of objects followed by commas.
 
@@ -2250,6 +2293,7 @@ TypeError: 'tuple' object does not support item assignment
 
 
 ### Dictionaries
+{: .no_toc }
 
 Dictionaries are great for storing data that you can index with keys. The keys must be unique, and the dictionaries *are* stored in the order you inserted items, however this is only guaranteed as of Python 3.7.
 
@@ -2323,6 +2367,7 @@ False
 {{% /expand%}}
 
 ### Mutability
+{: .no_toc }
 
 Remember, in Python, some data types are **immutable** -- that means that once they're created, their contents can't be changed. Tuples are immutable - once you make one, you can't alter it, you can only make a new one. Conversely, lists, dictionaries, and sets are mutable - you can change them without making new ones.
 
@@ -2380,593 +2425,6 @@ TypeError: 'tuple' object does not support item assignment
 ```
 
 {{% /expand%}}
-
----
-## Boolean Logic
-
-### Truthiness
-Evaluating expression to be `True` or `False` will help us control the flow of our program.
-
-### cheat sheet
-
-| type                                        	| truthiness                                                                     	|   	|
-|---------------------------------------------	|--------------------------------------------------------------------------------	|---	|
-| `int`                                       	| `0` is `False`, all other numbers are `True` (including negative)              	|   	|
-| containers - `list`, `tuple`, `set`, `dict` 	| empty container evaluates to `False`, container with items evaluates to `True`) 	|   	|
-| `None`                                      	| `False`                                                                        	|   	|
-
-We talked about `boolean` types, `True` and `False` earlier. `True` and `False` are keywords in Python, so make sure you don't name your variables the same thing.
-
-```python
->>> True
-True
->>> False
-False
-```
-
-Sometimes the truth is obvious. For example `3 < 5` is always `True`. Other times, in Python, the truth value might surprise you. Let's review. First, let's start with an expression we know is always `True`.
-
-```python
->>> 3 < 5
-True
-```
-
-{{% notice tip %}}
-Tip: If you want to test your assumptions about an expression that returns `True` or `False`, you can pass it into the constructor for `bool`eans: `bool(expression)`.
-{{% /notice %}}
-
-### Numbers
-
-In Python, the integer `0` is always `False`, while every other number, *including negative numbers*, are `True`. In fact, under the hood, `bool`eans inherit from `int`egers.
-
-```python
->>> bool(0)
-False
->>> bool(1)
-True
->>> bool(-1)
-True
-```
-
-### Sequences
-
-Empty sequences in Python always evaluate to `False`, **including empty `str`ings.**
-
-```python
->>> bool("")    # String
-False
->>> bool([])    # Empty List
-False
->>> bool(set()) # Empty Set
-False
->>> bool({})    # Empty Dictionary
-False
->>> bool(())    # Empty Tuple
-False
-```
-
-Sequences with at least one value will evaluate to `True`.
-
-```python
->>> bool("Hello")   # String
-True
->>> bool([1])       # List
-True
->>> bool({1})       # Set
-True
->>> bool({1: 1})    # Dictionary
-True
->>> bool((1,))      # Tuple
-True
-```
-
-### `None`
-
-The `None` type in Python represents nothing. No returned value. It shouldn't come as a surprise that the truthiness of `None` is `False`.
-
-```python
->>> bool(None)
-False
-```
-
-`None` is commonly used as a placeholder to mean *"I haven't set this value yet."* Since empty `str`ings and sequence evaluate to `False`, we need to be very careful when we're checking if a sequence has been *declared* or not, or if it's *empty*.   We'll review this concept again when talking about `if` statements later in the day.
-
-```python
->>> my_name = None
->>> bool(my_name)
-False
->>> my_name = ""
->>> bool(my_name)
-False
-
->>> my_list = None
->>> bool(my_list)
-False
->>> my_list = []
->>> bool(my_list)
-False
-```
-
-### Order Comparisons Cheat Sheet
-
-|Operator|Means|
-|---|---|
-|`<`|less-than|
-|`<=`|less-than-or-equal-to|
-|`>`|greater-than|
-|`>=`|greater-than-or-equal-to|
-
-In Python, comparing numbers is pretty straight forward.
-
-```python
->>> 1 < 10  # 1 is less than 10? True
-True
->>> 20 <= 20  # 20 is less than or equal to 20? True
-True
->>> 10 > 1  # 10 is greater than 1? True
-True
->>> -1 > 1  # -1 is greater than 1? False
-False
->>> 30 >= 30  # 30 is greater than or equal to 30? True
-True
-```
-
-Things get interesting when you try to compare strings. Strings are compared lexicographically. That means by the ASCII value of the character. You don't need to know much about ASCII, besides that capital letters come before lower case ones.
-
-Each character in the two strings is checked one by one, until a character is found that is of a different value. That determines the order. Under the hood, this allows Python to sort strings by comparing them to each other.
-
-```python
->>> "T" < "t"  # Upper case letters are "lower" valued.
-True
->>> "a" < "b"
-True
->>> "bat" < "cat"
-True
-```
-
-### Equality Cheat Sheet
-
-|Operator|Means|
-|---|---|
-|`==`|equals|
-|`!=`|not-equals|
-
-The equality operators `val1 == val2` *(`val1` equals `val2`)* and `val1 != val2` *(`val1` doesn't equal `val2`)* compare the contents of two different values and return a `bool`ean.
-
-Equality works like you'd expect it to for simple data types.
-
-```python
->>> a = 1
->>> b = 1
->>> a == b
-True
->>> a != b
-False
-
->>> a = "Nina"
->>> b = "Nina"
->>> a == b
-True
->>> a != b
-False
-```
-
-Equality for container types is interesting. Even though `a` and `b` are two different `list`s, their contents are still the same. So compared two lists containing the same values with `==` will return `True`.
-
-```python
->>> a = [1, 2, 3]
->>> b = [1, 2, 3]
->>> a == b
-True
->>> a != b
-False
-```
-
-### Identity Cheat Sheet
-
-|Operator|Means|
-|---|---|
-|`is`| *is* the same object in memory? (not equality!)|
-|`is not`| *is not* the same object in memory? (not equality!)|
-
-{{% notice note %}}
-This is something that trips up Python beginners, so make sure you remember that *equality* (`==`, `!=`) **is not** the same as *identity* (`is`, `not is`).
-{{% /notice %}}
-
-The `is` keywords tests if the two compared objects are stored in the same memory location. I won't go into too much detail into why, but remember **not** to use `is` when what you actually want to check for is equality.
-
-```python
->>> a = [1, 2, 3]
->>> b = [1, 2, 3]
-
->>> a == b  # Testing for equality. a and b contain the same values
-True
->>> a is b  # Testing for identity. a and b are NOT the same object.
-False
-```
-
-{{% notice tip %}}
-When you're first starting out, the only place you'll want to use the `is` keyword is to explicitly compare a value to the built-in types of `None`, `True`, or `False`.
-{{% /notice %}}
-
-```python
->>> a = True
->>> a is True
-True
-
->>> b = False
->>> b is False
-True
->>> b is not True   # Opposite of is b True. aka is b False?
-True
-
->>> c = None
->>> c is None
-True
->>> c is not None
-False
-```
-
-### Compound Operators
-`and`, `or`, and `not` are the three basic types of boolean operators that are present in math, programming, and database logic.
-
-In other programming languages, you might have seen the concept of `and` represented with `&&`, `or`, represented with `||`, and `not` represented by `!`. The Python language is instead focused on readability. So we'll use the english `and` instead of trying to remember fancy symbols. Python still uses the `&`, `|` and `!` expressions, but they're used for bitwise operations.
-
-You can use them to compare one (or more expressions) and determine if they evaluate to `True` or `False`.
-
-Thankfully, you don't have to be a computer scientist to understand them if you use this handy table.
-
-### `and`, `or`, `not` Cheat Sheet
-
-|Operation|Result|
-|---|---|
-|`a or b`|if a is False, then b, else a|
-|`a and b`|if a is False, then a, else b|
-|`not a`|if a is false, then `True`, else `False`|
-
-
-### `and`
-
-<!--
-| a       	| b       	| a `and` b  	|
-|---------	|---------	|------------	|
-| `True`  	| `True`  	| **`True`** 	|
-| `True`  	| False 	| False    	|
-| False 	| `True`  	| False    	|
-| False 	| False 	| False    	|
--->
-
-{{% notice note %}}
-For `a and b`, if a is false, a is returned. Otherwise b is returned.
-*If `a and b` are both `bool`ean values, the expression evaluates to`True` if both a and b are `True`.*
-{{% /notice %}}
-
-```python
->>> a = True    # a is True
->>> b = True
->>> a and b     # True is returned. (value of b)
-True
-
->>> a = False   # a is False
->>> b = True
->>> a and b     # False is returned. (value of a)
-False
-
->>> a = False   # a is False
->>> b = False
->>> a and b     # False is returned. (value of a)
-False
-```
-
-Notice what happens when do the same thing to values that have a "truthiness" to them.
-
-```python
->>> bool(0) # Verify that zero is "falsey"
-False
->>> bool(1) # Verify that one is "truthy"
-True
->>> 0 and 1 # 0 is False. 0 is returned.
-0
-```
-
-### `or`
-
-<!--
-| a       	| b       	| a `or` b   	|
-|---------	|---------	|------------	|
-| `True`  	| `True`  	| **`True`** 	|
-| `True`  	| False 	| **`True`** 	|
-| False 	| `True`  	| **`True`** 	|
-| False 	| False 	| False    	|
--->
-
-{{% notice note %}}
-For `a or b`, if a is false, b is returned. If a is true, a is returned.
-*`a or b` evaluates to `True` if either (or both) of the expressions are true.*
-{{% /notice %}}
-
-```python
->>> a = True    # a is true
->>> b = True
->>> a or b      # True is returned (value of a)
-True
-
->>> a = False   # a is false
->>> b = True
->>> a or b      # True is returned (value of b)
-True
-
->>> 0 or 1      # 0 is false. Return 1.
-1
-```
-
-### `not`
-
-| a       	| `not` a    	|
-|---------	|------------	|
-| true  	| False    	|
-| false 	| **`True`** 	|
-
-
-{{% notice note %}}
-`not a` reverses the `bool`ean value of `a`. If it *was* true, it will return `False`. If it was false, it will return `True`.
-{{% /notice %}}
-
-```python
->>> a = True
->>> not a  # not returns the opposite. True -> False
-False
-
->>> a = False
->>> not a  # not returns the opposite. False -> True
-True
-```
-
-And again, with numbers. Remember, zero is considered `False`, any other number is considered `True`.
-
-```python
->>> bool(1)
-True
->>> not 1
-False
->>> bool(0)
-False
->>> not 0
-True
-```
-
-### In Combination
-
-When combining multiple boolean operators, you can add optional parenthesis for readability.
-
-```python
->>> a = True
->>> b = True
->>> c = False
-
->>> a and (b or c)
-True
-```
-
-You can combine multiple operators to test complex assumptions. For example, to return `True` only if *both* values are `False`, we can use the `not` negation operation on the result of an `or`.
-
-```python
->>> a = False
->>> b = False
-
->>> a or b  # False because both are False.
-False
-
->>> not (a or b)  # True - checking if both are False.
-True
-```
-
-### With "truthiness"
-
-Remember, we learned that some values in Python are *falsey* like the number zero, and some are *truthy* like any number *expect* for zero.
-
-It's a little counter intuitive, but when we compare values other than `bool`eans, our code behaves a little differently.
-
-|Operation|Result|
-|---|---|
-|`x or y`|if x is false, then y, else x|
-|`x and y`|if x is false, then x, else y|
-
-Let's see it in action. First, lets test our assumptions again.
-
-```python
->>> bool(0)     # Truthiness of 0 is False
-False
-
->>> bool(1)     # Truthiness of 1 is True
-True
-
->>> bool(None)  # Truthiness of None type is False
-False
-
->>> 1 or 0      # Returns 1, the True value
-1
-
->>> 1 and 0     # Returns 0, the False value
-0
-
->>> 0 or None   # Neither are True. Returns nothing (None)
-```
-
-## Boolean Logic
-
-### Comparisons
-
-Let's practice using our comparison operators. Remember:
-
-|Operator|Means|
-|---|---|
-|`<`|less-than|
-|`<=`|less-than-or-equal-to|
-|`>`|greater-than|
-|`>=`|greater-than-or-equal-to|
-|`==`|equals|
-|`!=`|not-equals|
-
-Remember, the first six operators test the object's *value*. `is` and `is not` test whether two objects are the same thing. This is useful for singletons, such as `None` or `False`. We won't be using them much in this intro course, but feel free to play with them.
-
-```python
->>> 10 > 5
->>> 5 > 10
->>> 10 > 10
->>> 10 >= 10
->>> 5 < 10
->>> 5 < 5
->>> 5 <= 5
->>> 5 == 5
->>> 5 != 10
-```
-
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
-```python
->>> 10 > 5
-True
->>> 5 > 10
-False
->>> 10 > 10
-False
->>> 10 >= 10
-True
->>> 5 < 10
-True
->>> 5 < 5
-False
->>> 5 <= 5
-True
->>> 5 == 5
-True
->>> 5 != 10
-True
-```
-
-{{% /expand %}}
-
-### Truthiness
-
-Different languages have different ideas of what is "truthy" and "falsy." In Python, all objects can be tested for truth, and an object is considered True unless except under certain circumstances that we talked about earlier in the chapter. Remember that checking if an object is "equal" to another object doesn't necessarily mean the same thing. An object is considered "truthy" if it satisfies the check performed by `if` or `while` statements.
-
-Let's try a few of these out:
-
-```python
->>> 5 == True
->>> # The number 5 does not equal True, but...
->>> if 5:
-...     print("The number 5 is truthy!")
-...
->>> # The number 5 is truthy for an if test!
-```
-
-True and False can also be represented by 1 and 0
-```python
->>> 1 == True
->>> 0 == False
-```
-
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
-```python
->>> 5 == True
-False
->>> # The number 5 does not equal True, but...
->>> if 5:
-...     print("The number 5 is truthy!")
-...
-The number 5 is truthy!
->>> # The number 5 is truthy for an if test!
-```
-
-```python
->>> 1 == True
-True
->>> 0 == False
-True
-```
-{{% /expand %}}
-
-### Boolean Operators
-
-Python also supports boolean operators, although they're a little different than the comparison operators. Remember that `or` and `and` return one of their operands, rather than `True` or `False`.
-
-|Operation|Result|
-|---|---|
-|`x or y`|if x is false, then y, else x|
-|`x and y`|if x is false, then x, else y|
-|`not x`|if x is false, then `True`, else `False`|
-
-```python
->>> True or False
->>> [] or [1, 2, 3]
->>> "Hello" or None
-```
-
-```python
->>> True and False
->>> 5 and 0
->>> [1] and [1, 2, 3]
->>> "Hello" and None
-```
-
-```python
-# Of course, you can use `and` and `or` aren't limited to two operands
->>> a = False
->>> b = False
->>> c = False
->>> a or b or c
->>> b = True
->>> a or b or c
-
->>> a and b and c
->>> a = True
->>> c = True
->>> a and b and c
-```
-
-{{%expand "Here's what you should have seen in your REPL:" %}}
-```python
->>> True or False
-True
->>> [] or [1, 2, 3]
-[1, 2, 3]
->>> "Hello" or None
-'Hello'
-```
-
-```python
->>> True and False
-False
->>> 5 and 0
-0
->>> [1] and [1, 2, 3]
-[1, 2, 3]
->>> "Hello" and None
->>> # No output, since the result was None
-```
-
-```python
->>> a = False
->>> b = False
->>> c = False
->>> a or b or c
-False
->>> b = True
->>> a or b or c
-True
-
->>> a and b and c
-False
->>> a = True
->>> c = True
->>> a and b and c
-True
-```
-
-{{% /expand %}}
 
 
 
