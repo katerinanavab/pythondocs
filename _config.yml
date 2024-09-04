@@ -9,13 +9,13 @@ favicon_ico: "favicon.ico"
 
 aux_links_new_tab: true
 aux_links:
-  "DevDocs":
-    - "https://devdocs.io/"
-  "GitHub":
-    - "https://classroom.github.com/classrooms/180414627-bwl-cs3-python"
   "Blackbaud":
     - "https://bwl.myschoolapp.com/app#login"
-    
+  "GitHub":
+    - "https://classroom.github.com/classrooms/180414627-bwl-cs3-python"    
+  "DevDocs":
+    - "https://devdocs.io/"
+
 back_to_top: true
 back_to_top_text: "⬆️ BACK TO TOP"
 
