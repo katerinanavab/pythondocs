@@ -217,10 +217,9 @@ long_greeting = """
                 """
 ```
 
-#### Printing Strings
-{: .no_toc }
+### The `print()` Function
 
-Strings can be printed out using the `print()` function in Python. While you're working the REPL, you'll see that variables are displayed for you. When you move on to writing standalone Python programs, that will no longer be the case.
+Strings can be printed out using the `print()` function in Python.
 
 To use the `print()` function, call it with a regular or formatted string.
 
@@ -237,7 +236,7 @@ Nina
 
 There are several types of string formatting in Python.
 
-If you're using Python 3.7 and above you can use my favorite type of string formatting, and the one I'll be using for the course called `f-strings`.
+If you're using Python 3.7 and above you can use my favorite type of string formatting, and the one I'll be using for the course called **f-strings**.
 
 ```python
 >>> name = "Nina"
@@ -247,27 +246,21 @@ If you're using Python 3.7 and above you can use my favorite type of string form
 Hello, Nina
 ```
 
-f-strings allow you to simply and easily reference variables in your code, and as a bonus, they're *much* faster.
+**f-strings** allow you to simply and easily reference variables in your code, and as a bonus, they're *much* faster.
 
 ### Common Mistakes
 
 There are a few common errors that you'll encounter when working with Strings and numbers. In Python programs, errors are called `Exceptions`. By going over what they are, you'll be able to recognize them immediately.
 
-### Scenario 1: Mismatched string quotes
+#### Scenario 1: Mismatched string quotes
 {: .no_toc }
 
-{{% notice info %}}
+{:.highlight}
 Mismatched string quotes will result in a `SyntaxError`
-{{% /notice %}}
 
 When we try to start a String with one type of quote, and end with another, we'll see a syntax error.
 
 For example, starting the string Hello with a double quote, and ending in a single quote, like this:
-
-#### Input: **"**Hello**'**
-{: .no_toc }
-
-For example, in the REPL:
 
 ```python
 >>> name = 'Hello"
@@ -279,19 +272,15 @@ SyntaxError: EOL while scanning string literal
 
 **Solution:** use matching quote types for defining your strings. Either single quotes `'Hello'` or double quotes `"Hello"`.
 
-### Scenario 2: Trying to print a String and a number with concatenation using the "+" symbol.
+#### Scenario 2: Trying to print a String and a number with concatenation using the "+" symbol.
 {: .no_toc }
 
-{{% notice info %}}
+{:.highlight}
 Trying to add or concatenate a String and a number will result in a `TypeError`
-{{% /notice %}}
+
 
 If you add try to add (or concatenate) a String and a number, you'll get an error saying that adding the two types together isn't possible.
 
-#### Input: 3 + "Three"
-{: .no_toc }
-
-In the REPL:
 ```python
 >>> print(3 + " Three")
 Traceback (most recent call last):
@@ -303,18 +292,16 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 There are two possible solutions here, for two different scenarios.
 
-In the first scenario, you'd like to add a number to a string via concatenation. In order to do that, you must first convert the number to a string via the `str()` method.
+1. In the first scenario, you'd like to add a number to a string via **concatenation**. In order to do that, you must first convert the number to a string via the `str()` method.
 
-In the REPL:
 ```python
 >>> my_num = 3
 >>> print(str(my_num) + " Three")
 3 Three
 ```
 
-In the second scenario, you'd like to a convert a number that's contained in a string (ex: `"3"`) into an Integer, so you can use it like any other number. In this case, you'd like to convert it to an Integer, with the `int()` method.
+2. In the second scenario, you'd like to a convert a number that's contained in a string (ex: `"3"`) into an Integer, so you can use it like any other number. In this case, you'd like to convert it to an Integer, with the `int()` method.
 
-In the REPL:
 ```python
 >>> str_num = "3"
 >>> print(int(str_num) + 5)
@@ -351,7 +338,7 @@ Calculate the amount of rent you pay daily, by taking your monthly rent and divi
 #### Strings
 {: .no_toc }
 
-Try printing some things to your REPL:
+Try printing some things:
 
 ```python
 >>> print("Hello world")
@@ -361,7 +348,10 @@ Hello world
 My name is Nina
 ```
 
-The current recommended way to format string is with f-Strings. f-Strings are much more readable and easier to maintain than the previous methods. With f-Strings, your string is prepended with the letter `f` and your variables or expressions to interpret are placed in `{brackets}`.
+The current recommended way to format string is with **f-Strings**. f-Strings are much more readable and easier to maintain than the previous methods. 
+
+{:.highlight}
+With f-Strings, your string is prepended with the letter `f` and your **variables** or **expressions to interpret** are placed in `{brackets}`.
 
 ```python
 >>> name = "Nina"
