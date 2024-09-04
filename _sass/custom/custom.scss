@@ -55,7 +55,25 @@ h3 {
     padding-bottom: .125rem;
 }
 
-blockquote.setup, blockquote.task {
+.warn {
+    background: rgba($red-000, 0.2);
+    border-left: $border-radius solid $red-300;
+    border-radius: $border-radius;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: .8rem;
+}
+
+.warn::before {
+	color: $red-300;
+    content: "Warning";
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .75em;
+    padding-bottom: .125rem;
+}
+
+blockquote.setup, blockquote.task, blockquote.warn {
   margin-left: 0;
   margin-right: 0;
   
@@ -67,3 +85,5 @@ blockquote.setup, blockquote.task {
     margin-bottom: 0;
   }
 }
+
+
