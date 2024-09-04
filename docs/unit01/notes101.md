@@ -510,8 +510,7 @@ Let's try it together. Type the following code in your REPL. Note that the 3 dot
 
 <html>
 <details>
-<summary>See an error? Expand this section:</summary>
-
+<summary><strong>See an error? Expand this section:</strong></summary>
 <div markdown="block"> 
     
 **Note:** If you get an `IndentationError`, that means that you didn't correctly indent your code after your function definition. Try typing your function into the REPL one more time.
@@ -526,7 +525,6 @@ File "<stdin>", line 2
 IndentationError: expected an indented block
 ```
 </div>
-
 </details>
 </html>
 
@@ -552,9 +550,8 @@ Hello, World!
 
 Let's try it again, this time with a function that does accept arguments.
 
-{{% notice tip %}}
+{:.highlight}
 Here, note that the function accepts **names** for the arguments. But, when we call the function, we're passing in **values**.
-{{% /notice %}}
 
 ```python
 >>> def add_numbers(x, y):
@@ -569,8 +566,6 @@ Here, note that the function accepts **names** for the arguments. But, when we c
 {: .no_toc }
 
 Storing the `return`ed value of a function is easy. All you need to do is assign it to a variable.
-
-Let's try it now.
 
 ```python
 >>> def add_numbers(x, y):
@@ -592,8 +587,6 @@ The variable `new_number` now contains the result of running our `add_numbers` f
 Positional arguments are all required, and must be given in the order they are declared.
 
 For example, this function doesn't do what we expected, because we passed in our arguments in the wrong order.
-
-In the REPL:
 
 ```python
 >>> def say_greeting(name, greeting):
@@ -640,8 +633,6 @@ Good Day, Nina.
 
 Let's make a new function, `say_greeting_with_default` that accepts two arguments -- `name`, and a now **optional** argument, `greeting`. If `greeting` is not passed in, it will default to `Hello`.
 
-In the REPL:
-
 ```python
 >>> # With Default Arguments
 >>> def say_greeting_with_default(name, greeting="Hello", punctuation="!"):
@@ -656,7 +647,7 @@ Good Day, Nina!
 #### Order matters!
 {: .no_toc }
 
-A function can accept all of one type or the other, but arguments need to go in a specific order.
+A function can accept all of one type or the other, but **arguments need to go in a specific order**.
 
 All of the *required arguments go first*. They are then *followed by the optional keyword arguments*.
 
@@ -726,9 +717,8 @@ Bonjour, Max.
 ### Arguments Danger Zone
 {: .no_toc }
 
-{{% notice warning %}}
-Never use mutable types, like `list`s as a default argument.
-{{% /notice %}}
+{:.warning}
+Never use **mutable** types, like `list`s, as a default argument.
 
 We'll talk more about `list`s and mutability in the coming chapter, but for the time being remember to never use an empty list as a default value to a function.
 
@@ -762,9 +752,8 @@ Because Python is a dynamic language (sometimes called duck-typed) we use names 
 
 This is especially important because we generally don't declare *types* for our programs when we're first starting out. *Note: Python does support Type hinting, but it's more of an intermediate feature. Make sure you have the basics down before learning more about it.*
 
-{{% notice tip %}}
+{:.highlight}
 Try to avoid single character names for your functions and variables, unless they have meaning in math.
-{{% /notice %}}
 
 For example, in this function, `x` and `y` are common names used when referring to points, so it's OK to use single-letter names in this scenario.
 
@@ -777,19 +766,16 @@ For sequences, like `list`s, it's appropriate to name them in the plural.
 
 For example, I'd expect a variable called `name` to be a single string, and a variable called `names` to be a list of strings.
 
-{{% notice tip %}}
+{:.highlight}
 A great resource to help you figure out the best naming conventions to use in your production Python code is a talk by Brandon Rhodes, called ["The Naming of Ducks: Where Dynamic Types Meet Smart Conventions"](https://www.youtube.com/watch?v=YklKUuDpX5c).
-{{% /notice %}}
 
 ### Function Scope
 
 Inside of a function in Python, the **scope** changes.
 
-Think about it this way: scoping in Python happens with whitespace. When we delineate the code a function contains by indenting it under a function definition, it's scope **changes** to a new internal scope. It has access to the variables defined outside of it, but it can't change them.
+Think about it this way: scoping in Python happens with **whitespace**. When we delineate the code a function contains by indenting it under a function definition, it's scope **changes** to a new internal scope. It has access to the variables defined outside of it, but it can't change them.
 
 Once the function is done running, its scope goes away, as do its defined variables.
-
-Let's double check this in the REPL:
 
 ```python
 >>> def twitter_info():
@@ -836,9 +822,8 @@ Name outside of function: Nina
 If we didn't know what to look for, the program might not behave how we'd expect it to. A good rule of thumb is to name our variables clearly, and minimize how many variables we declare outside of functions and classes, which you'll learn about in day two.
 
 
-{{% notice tip %}}
-An appropriate use is when using a constant, a variable defined in all caps, with the words separated by underscores. A constant is a value that we expect to use several times within our program, but we never expect to change it programmatically.
-{{% /notice %}}
+{:.highlight}
+An appropriate use is when using a **constant**, a variable defined in all caps, with the words separated by underscores. A constant is a value that we expect to use several times within our program, but we never expect to change it programmatically.
 
 For example:
 
@@ -873,8 +858,11 @@ Now let's try our new function. Type this into your REPL:
 >>> print(f"The sum of 1 and 2 is {add_numbers(1, 2)}")
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+    
 ```python
 >>> add_numbers(1, 2)
 3
@@ -883,7 +871,9 @@ Now let's try our new function. Type this into your REPL:
 The sum of 1 and 2 is 3
 ```
 
-{{% /expand%}}
+</div>
+</details>
+</html>
 
 
 #### The Importance of Whitespace
@@ -918,8 +908,11 @@ As we saw earlier, scoping in Python happens with whitespace. Let's see this in 
 >>> print(f"The sum of 5 and 6 is {add_numbers(5, 6)}")
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+    
 ```python
 >>> x = 1
 >>> y = 2
@@ -935,8 +928,9 @@ Inside the function, x = 5 and y = 6
 The sum of 5 and 6 is 11
 ```
 
-{{% /expand%}}
-
+</div>
+</details>
+</html>
 
 #### Positional Arguments vs Keyword Arguments
 {: .no_toc }
@@ -958,8 +952,11 @@ The `x` and `y` arguments for our `add_numbers()` function are called positional
 >>> calculate_numbers(2, 3, operation="subtract")
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+    
 ```python
 >>> def calculate_numbers(x, y, operation="add"):
 ...     if operation == "add":
@@ -978,13 +975,15 @@ The `x` and `y` arguments for our `add_numbers()` function are called positional
 -1
 ```
 
-{{% /expand%}}
+</div>
+</details>
+</html>
 
 ---
 ## Advanced Data Types
 
 ### Lists
-Lists are one of the most powerful data types in Python. Generally, they're container objects used to store related items together.
+Lists are one of the most powerful data types in Python. Generally, they're container objects used to **store related items together**.
 
 #### `list` cheat sheet
 {: .no_toc }
@@ -1032,22 +1031,18 @@ We can check its length with the built-in `len()` method, like so:
 ### Indexes and Indices
 {: .no_toc }
 
-Lists retain the order of the items in them. In the next section, you'll learn about some data structures that don't.
+**Lists retain the order** of the items in them. In the next section, you'll learn about some data structures that don't.
 
 In order to *access* items in a list, we'll need to use an *index*. (Multiple indexes are sometimes also called indices). The index for the item you want to access is *an integer* put in *square brackets* after the list.
 
-{{% notice tip %}}
-**Indexes start at 0** in Python and most other programming languages.
-{{% /notice %}}
+{:.highlight}
+**Indexes start at** `0` in Python and most other programming languages.
 
 ```python
 >>> names = ["Nina", "Max", "Jane"]
 >>> names[0]
-'Nina'
 >>> names[1]
-'Max'
 >>> names[2]
-'Jane'
 ```
 
 #### Updating an item in a list
@@ -1059,12 +1054,10 @@ To update a particular item in a `list` use square-bracket notion and assign a n
 >>> names = ["Nina", "Max", "Jane"]
 >>> names[2] = "Floyd"
 >>> names
-['Nina', 'Max', 'Floyd']
 ```
 
-{{% notice info %}}
+{:.highlight}
 If you try to access an index that is greater than or equal to (>=) the length of the list, you'll get an `IndexError`.
-{{% /notice %}}
 
 ```python
 >>> names = ["Nina", "Max", "Jane"]
@@ -1079,9 +1072,8 @@ IndexError: list index out of range
 #### Formatting
 {: .no_toc }
 
-{{% notice tip %}}
+{:.highlight}
 We can *optionally* add new lines after the commas. This helps with readability for more complex list items.
-{{% /notice %}}
 
 Notice that we can also *optionally* add a trailing comma after the last item. A trailing comma isn't required to create a valid list, but it does help minimize version control differences when working on a Python codebase with a team.
 
@@ -1097,9 +1089,8 @@ Notice that we can also *optionally* add a trailing comma after the last item. A
 ### Common Mistakes
 {: .no_toc }
 
-{{% notice info %}}
+{:.highlight}
 If you forget to include commas between your items, you'll get a `SyntaxError`.
-{{% /notice %}}
 
 ```python
 >>> numbers = [1, 2 3]
@@ -1312,9 +1303,8 @@ False
 
 Notice that only the *first* index of the string `"Nina"` is returned. We'll learn more about what an index is in the next chapter.
 
-{{% notice info %}}
+{:.highlight}
 If the item we're looking for *is not* in the list, Python will throw a `ValueError`.
-{{% /notice %}}
 
 You'll learn how to deal with exceptions later. For now, you can use the `in` operator to check if an item is present in the list before finding its index.
 
@@ -1361,9 +1351,8 @@ Or, when used with `my_list.index(item)`:
 ['Nina', 'Rose']
 ```
 
-{{% notice info %}}
+{:.highlight}
 You'll see a `IndexError: list assignment index out of range` if you try to update an item in a position that doesn't exist, that is *if the position is greater than or equal to `>=` the length of the list*.
-{{% /notice %}}
 
 ```python
 >>> names = ["Nina", "Max"]
@@ -1398,9 +1387,8 @@ Be careful. `remove()` only removes the first instance of the item from the list
 ['Max', 'Nina']
 ```
 
-{{% notice info %}}
+{:.highlight}
 If we try to remove an item that's not in the list, we'll get a `ValueError: list.remove(x): x not in list`.
-{{% /notice %}}
 
 ```python
 >>> names = ["Nina"]
@@ -1427,9 +1415,8 @@ Using `pop()` will also **return** the item that was in that position. That's us
 ['Nina']
 ```
 
-{{% notice info %}}
+{:.highlight}
 If we try to pop an item from an index that is longer than or equal to the length of the list, we'll get an `IndexError: pop index out of range`.
-{{% /notice %}}
 
 ```python
 >>> names = ["Nina"]
@@ -1496,9 +1483,8 @@ It didn't work! `type((1))` is an `int`eger. In order to create a one-item tuple
 <class 'tuple'>
 ```
 
-{{% notice tip %}}
+{:.highlight}
 If you're creating a one-item tuple, you **must** include a trailing comma, like this: `(1, )`
-{{% /notice %}}
 
 #### Creation
 {: .no_toc }
@@ -1524,9 +1510,8 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 ```
 
-{{% notice info %}}
+{:.highlight}
 We'll see `TypeError: 'tuple' object does not support item assignment` if we try to change the items in a tuple.
-{{% /notice %}}
 
 `tuple`s also don't have an `append` or `extend` method available on them like lists do, because they can't be changed.
 
@@ -1602,13 +1587,11 @@ The first thing we might try to do is create an empty set with `{}`, but we'll c
 <class 'set'>
 ```
 
-{{% notice info %}}
+{:.highlight}
 You can't create an empty `set` with `{}`. That creates a `dict`. Create an empty set with `set()` instead.
-{{% /notice %}}
 
-{{% notice tip %}}
+{:.highlight}
 While you're learning Python, it's useful to use `type()`, `dir()` and `help()` as often as possible.
-{{% /notice %}}
 
 #### `set`s with items
 {: .no_toc }
@@ -1642,9 +1625,8 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 ```
 
-{{% notice info %}}
+{:.highlight}
 You'll see a `TypeError: unhashable type: 'list'` if you try to add a mutable data type (like a `list`) to a set.
-{{% /notice %}}
 
 If you try to add a mutable data type (like a `list`) to a set, you'll see the same `TypeError`, complaining about an `unhashable type`.
 
@@ -1660,7 +1642,7 @@ TypeError: unhashable type: 'list'
 #### `set`s can be used to de-duplicate the items in a list
 {: .no_toc }
 
-Tip: *If you don't care about order*, you can quickly de-duplicate the items in a `list` by passing the `list` into the `set` constructor.
+**Tip:** *If you don't care about order*, you can quickly de-duplicate the items in a `list` by passing the `list` into the `set` constructor.
 
 ```python
 >>> colors = ["Red", "Yellow", "Red", "Green", "Green", "Green"]
@@ -1689,11 +1671,10 @@ Traceback (most recent call last):
 TypeError: 'set' object does not support indexing
 ```
 
-{{% notice info %}}
+{:.highlight}
 You'll see `TypeError: 'set' object does not support indexing` if you try to access the items in a `set` by index with `my_set[pos]`
-{{% /notice %}}
 
-Tip: If your set contains items of the same type, and you want to sort the items, you'll need to convert the `set` to a `list` first. Or, you can use the built-in `sorted(sequence)` method, which will do the conversion for you.
+**Tip:** If your set contains items of the same type, and you want to sort the items, you'll need to convert the `set` to a `list` first. Or, you can use the built-in `sorted(sequence)` method, which will do the conversion for you.
 
 ```python
 >>> my_set = {"a", "b", "cat", "dog", "red"}
@@ -1749,9 +1730,8 @@ You can update a `set` by passing in another sequence, meaning another `set`, `l
 {1, 3, 'Red', 5, 'Green'}
 ```
 
-{{% notice info %}}
+{:.highlight}
 Be careful passing in a `str`ing to `my_set.update(sequence)`. That's because a `str`ing is *also* a sequence. It's a sequence of characters.
-{{% /notice %}}
 
 ```python
 >>> numbers = {1, 3, 5}
@@ -1879,9 +1859,8 @@ The follow is OK:
 >>> my_dict = {1: []}
 ```
 
-{{% notice info %}}
+{:.highlight}
 You'll see a `TypeError: unhashable type: 'list'` if you try to use a mutable type, like a `list` as a `dict`ionary key.
-{{% /notice %}}
 
 ```python
 >>> my_dict = {[]: 1}
@@ -1905,9 +1884,8 @@ Our `dict` contains `key`, `value` pairs. Because a `dict`ionary isn't ordered, 
 
 Q: What happens when we try to access a key in a `dict`ionary with square bracket notation, but the key isn't present?
 
-{{% notice info %}}
+{:.highlight}
 We'll get a `KeyError: key` if we try to access `my_dict[key]` with square bracket notation, but `key` isn't in the dictionary.
-{{% /notice %}}
 
 ```python
 >>> nums = {1: "one", 2: "two", 3: "three"}
@@ -2110,7 +2088,10 @@ There are many other ways to interact with our lists as well:
 >>> my_list
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
+<html>
+<details>
+<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
 
 ```python
 >>> my_list = ["h", "e", "l", "l", "o"]
@@ -2146,7 +2127,9 @@ False
 ['!', 'e', 'h', 'l', 'l', 'o']
 ```
 
-{{% /expand%}}
+</div>
+</details>
+</html>
 
 ### Sets
 {: .no_toc }
@@ -2193,8 +2176,11 @@ Let's play with some set operations:
 
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+    
 ```python
 >>> my_set = {}
 >>> type(my_set)
@@ -2224,8 +2210,9 @@ False
 {4}
 ```
 
-{{% /expand%}}
-
+</div>
+</details>
+</html>
 
 ### Tuples
 {: .no_toc }
@@ -2249,8 +2236,11 @@ Oops! Remember that tuples are immutable, so you can't change them once they've 
 >>> hometown
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+    
 ```python
 >>> my_tuple = 1,
 >>> my_tuple
@@ -2272,8 +2262,9 @@ TypeError: 'tuple' object does not support item assignment
 'Austin, TX'
 ```
 
-{{% /expand%}}
-
+</div>
+</details>
+</html>
 
 ### Dictionaries
 {: .no_toc }
@@ -2311,8 +2302,11 @@ Dictionaries are great for storing data that you can index with keys. The keys m
 >>> my_dict.items()
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+    
 ```python
 >>> my_dict = {"key": "value"}
 >>> my_dict[0]
@@ -2347,7 +2341,9 @@ False
 [('foo', 'bar'), ('hello', 'world'), ('key', 'value')]
 ```
 
-{{% /expand%}}
+</div>
+</details>
+</html>
 
 ### Mutability
 {: .no_toc }
@@ -2378,8 +2374,11 @@ Let's see this in practice:
 >>> my_tuple[0] = 'a' # This will throw a TypeError
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>☑️ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+    
 ```python
 >>> my_list = [1, 2, 3]
 >>> my_list[0] = 'a'
@@ -2407,8 +2406,9 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 ```
 
-{{% /expand%}}
-
+</div>
+</details>
+</html>
 
 
 ---
