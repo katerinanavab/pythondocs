@@ -7,17 +7,21 @@ nav_order: 0
 
 # 💬 CodeCollab Homework Instructions
 
+<!--
+UPDATE TO REFLECT CHANGE FROM REPLIT TO GITHUB!!!
+
 ### Getting Started
 1. Locate the discussion assignment for the current week on **BlackBaud**.
 2. Follow the provided link to open the **Replit** program.
 3. Click `FORK` to **make your own copy** of the program to **run**, **test**, and **modify** the code.
    
   > Your **forked copy** of the program will be saved in the `MY REPLS` section of Replit. You can always access my **original copy** at the provided link and fork a new copy if you need to start over.
-  
+-->
+
 ### Discussion Requirements
 
 {: .important }
-You must contribute at least **two (2) valid comments** in the discussion before `Friday @ 11:59PM` to earn full credit. See below for more detailed guidelines for what qualifies as an acceptable comment.
+You must contribute at least **two (2) valid comments** in the Blackbaud discussion before `Friday @ 11:59PM` to earn full credit. See below for more detailed guidelines for what qualifies as an acceptable comment.
 
 #### Checklist:
 - [ ] At least one (1) of your comments must be a **paragraph-long post** where you analyze/attempt to explain a section of code. This is considered your "individual contribution" and it's the most important part of the assignment.
