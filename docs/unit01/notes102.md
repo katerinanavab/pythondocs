@@ -15,7 +15,7 @@ nav_order: 2
 ---
 ## Boolean Logic
 
-### Truthiness Cheat Sheet
+### Truthiness
 Evaluating an expression to be `True` or `False` will help us control the flow of our program.
 
 
@@ -119,7 +119,7 @@ False
 False
 ```
 
-### Order Comparisons Cheat Sheet
+### Comparison Operators
 
 |Operator|Means|
 |---|---|
@@ -156,7 +156,7 @@ True
 True
 ```
 
-### Equality Cheat Sheet
+### Checking Equality
 
 |Operator|Means|
 |---|---|
@@ -194,7 +194,7 @@ True
 False
 ```
 
-### Identity Cheat Sheet
+### Checking Identity
 
 |Operator|Means|
 |---|---|
@@ -237,7 +237,7 @@ True
 False
 ```
 
-### Compound Operators
+### Compound Operators: `and`, `or`, `not`
 `and`, `or`, and `not` are the three basic types of boolean operators that are present in math, programming, and database logic.
 
 In other programming languages, you might have seen the concept of `and` represented with `&&`, `or`, represented with `||`, and `not` represented by `!`. The Python language is instead focused on readability. So we'll use the english `and` instead of trying to remember fancy symbols. Python still uses the `&`, `|` and `!` expressions, but they're used for bitwise operations.
@@ -245,9 +245,6 @@ In other programming languages, you might have seen the concept of `and` represe
 You can use them to compare one (or more expressions) and determine if they evaluate to `True` or `False`.
 
 Thankfully, you don't have to be a computer scientist to understand them if you use this handy table.
-
-### `and`, `or`, `not` Cheat Sheet
-{:.no_toc}
 
 |Operation|Result|
 |---|---|
@@ -312,10 +309,9 @@ True
 | False 	| False 	| False    	|
 -->
 
-{{% notice note %}}
+{:.highlight}
 For `a or b`, if a is false, b is returned. If a is true, a is returned.
 *`a or b` evaluates to `True` if either (or both) of the expressions are true.*
-{{% /notice %}}
 
 ```python
 >>> a = True    # a is true
@@ -341,9 +337,8 @@ True
 | false 	| **`True`** 	|
 
 
-{{% notice note %}}
+{:.highlight}
 `not a` reverses the `bool`ean value of `a`. If it *was* true, it will return `False`. If it was false, it will return `True`.
-{{% /notice %}}
 
 ```python
 >>> a = True
@@ -428,7 +423,7 @@ False
 >>> 0 or None   # Neither are True. Returns nothing (None)
 ```
 
-### Practice
+### ⭐️ Practice
 
 #### Comparison Operators
 {:.no_toc}
@@ -630,9 +625,8 @@ True
 
 Anatomy of an `if` statement: Start with the `if` keyword, followed by a boolean value, an expression that evaluates to `True`, or a value with "Truthiness". Add a colon `:`, a new line, and write the code that will run if the statement is `True` under a level of indentation.
 
-{{% notice note %}}
+{:.highlight}
 Remember, just like with functions, we know that code is associated with an `if` statement *by it's level of indentation*. All the lines indented under the `if` statement will run if it evaluates to `True`.
-{{% /notice %}}
 
 ```python
 >>> if 3 < 5:
@@ -641,9 +635,8 @@ Remember, just like with functions, we know that code is associated with an `if`
 Hello, World!
 ```
 
-{{% notice tip %}}
+{:.highlight}
 Remember, your `if` statements only run if the expression in them evaluates to `True` and just like with functions, you'll need to enter an extra space in the REPL to run it.
-{{% /notice %}}
 
 #### Using `not` With `if` Statements
 
@@ -1221,7 +1214,7 @@ Nina
 'Found the special name'
 ```
 
-## Exercises
+### ⭐️ Practice
 ### `if`, `else`, and `elif`
 
 Let's practice our branching statements. Remember that `elif` (short for `else if`) is an optional branch that will let you add another `if` test, and `else` is an optional branch that will catch anything not previously caught by `if` or `elif`.
