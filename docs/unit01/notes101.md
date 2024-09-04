@@ -308,10 +308,12 @@ There are two possible solutions here, for two different scenarios.
 8
 ```
 
-### Practice
+### ⭐️ Practice
 
 #### Types
 {: .no_toc }
+
+<div class=“task” markdown="block">
 
 List the type of the following variables using the `type()` function.
 
@@ -323,9 +325,12 @@ List the type of the following variables using the `type()` function.
 >>> name = "Nina"
 ```
 
+</div>
+
 #### Numbers
 {: .no_toc }
 
+<div class=“task” markdown="block">
 Calculate the amount of rent you pay daily, by taking your monthly rent and diving it by 30.
 
 ```python
@@ -335,8 +340,12 @@ Calculate the amount of rent you pay daily, by taking your monthly rent and divi
 16.0
 ```
 
+</div>
+
 #### Strings
 {: .no_toc }
+
+<div class=“task” markdown="block">
 
 Try printing some things:
 
@@ -347,6 +356,7 @@ Hello world
 >>> print("My name is", name)
 My name is Nina
 ```
+</div>
 
 The current recommended way to format string is with **f-Strings**. f-Strings are much more readable and easier to maintain than the previous methods. 
 
@@ -364,6 +374,9 @@ Hello, my name is Nina and I pay $16.0 in rent per day
 
 Python has a few built-in functions to help you if you get stuck. `type()` tells you what an object's type is, for example a string (`str`) or integer (`int`). `dir()` returns a list of valid attributes for an object, so you can quickly see what variables an object has or what functions you can call on it. `help()` brings up helpful documentation on any object. You can also type `help()` on its own to bring an interactive help console.
 
+<div class=“task” markdown="block">
+ Try it out: 
+    
 ```python
 >>> x = 42
 >>> y = 3 / 4
@@ -372,6 +385,7 @@ Python has a few built-in functions to help you if you get stuck. `type()` tells
 >>> type(y)
 >>> type(name)
 ```
+</div>
 
 ---
 ## Functions
@@ -379,6 +393,8 @@ Python has a few built-in functions to help you if you get stuck. `type()` tells
 The purpose of functions in Python are to **create reusable code**. If we find ourselves copying and pasting the same code multiple times, that's a good sign that a function might help!
 
 ### Defining Functions
+
+<div class=“imp” markdown="block">
 
 This is the recipe for defining a Python function:
 
@@ -389,6 +405,8 @@ This is the recipe for defining a Python function:
 1. (optional) the **names** and **values** of one or more default arguments, separated with (`,`) *note: we'll see these in the next section*
 1. `)` closing parenthesis
 1. `:` a colon
+
+</div>
 
 {:.highlight}
 A function in Python is defined with the `def` keyword, followed by the function names, zero or more argument names contained in parenthesis `()`, and a colon `:` to indicate the start of the function. The contents of the function then follow. Then, an *optional* `return` statement can follow, if the function plans on passing data back to the caller.
@@ -431,12 +449,16 @@ SyntaxError: invalid syntax
 ### Function Contents
 {: .no_toc }
 
-The recipe for function contents:
+<div class=“imp” markdown="block">
+
+The recipe for **function contents**:
 
 1. a new line
 1. indentation (press tab on your keyboard)
 1. one or more lines
 1. (optional) a `return` statement
+
+</div>
 
 #### `return` statement
 {: .no_toc }
@@ -502,11 +524,15 @@ If you're using the REPL, once you're done entering your function, you'll need t
 
 Let's try it together. Type the following code in your REPL. Note that the 3 dots '...' indicate that those lines are *indented* in the REPL. If you type your code in a Python file, you won't see the `...` dots.
 
+<div class=“task” markdown="block">
+
 ```python
 >>> def add_numbers(x, y):
 ...     return x + y
 ...
 ```
+
+</div>
 
 <html>
 <details>
@@ -617,7 +643,7 @@ def say_greeting_with_default(name, greeting="Hello", punctuation="!"):
 #### Without default arguments
 {: .no_toc }
 
-Now, in the REPL, let's try calling our function with no default arguments:
+Now, let's try calling our function with no default arguments:
 
 ```python
 >>> # No Default arguments
@@ -837,10 +863,12 @@ For example:
 >>>
 ```
 
-### Practice
+### ⭐️ Practice
 
 #### Functions
 {: .no_toc }
+
+<div class=“task” markdown="block">
 
 Let's try creating a basic function. Use tab to indent the second line, and press enter on an empty line to finish the function.
 
@@ -857,6 +885,8 @@ Now let's try our new function. Type this into your REPL:
 # Let's use the string formatting we learned in the last chapter
 >>> print(f"The sum of 1 and 2 is {add_numbers(1, 2)}")
 ```
+
+</div>
 
 <html>
 <details>
@@ -935,7 +965,11 @@ The sum of 5 and 6 is 11
 #### Positional Arguments vs Keyword Arguments
 {: .no_toc }
 
-The `x` and `y` arguments for our `add_numbers()` function are called positional arguments. Python also lets us declare *keyword* arguments. Keyword arguments are great for setting default values, because passing them is optional. Just remember that keyword arguments must come *after* any positional arguments. Let's make a more generic function for doing math:
+The `x` and `y` arguments for our `add_numbers()` function are called positional arguments. Python also lets us declare *keyword* arguments. Keyword arguments are great for setting default values, because passing them is optional. Just remember that keyword arguments must come *after* any positional arguments. 
+
+<div class=“task” markdown="block">
+
+Let's define a more generic function for doing math:
 
 ```python
 >>> def calculate_numbers(x, y, operation="add"):
@@ -951,6 +985,8 @@ The `x` and `y` arguments for our `add_numbers()` function are called positional
 # You can also use the argument's keyword. This helps with readability
 >>> calculate_numbers(2, 3, operation="subtract")
 ```
+
+</div>
 
 <html>
 <details>
@@ -1038,6 +1074,8 @@ In order to *access* items in a list, we'll need to use an *index*. (Multiple in
 {:.highlight}
 **Indexes start at** `0` in Python and most other programming languages.
 
+<div class=“task” markdown="block">
+
 ```python
 >>> names = ["Nina", "Max", "Jane"]
 >>> names[0]
@@ -1045,16 +1083,21 @@ In order to *access* items in a list, we'll need to use an *index*. (Multiple in
 >>> names[2]
 ```
 
+</div>
+
 #### Updating an item in a list
 {: .no_toc }
 
 To update a particular item in a `list` use square-bracket notion and assign a new value. `my_list[pos] = new_value`
+
+<div class=“task” markdown="block">
 
 ```python
 >>> names = ["Nina", "Max", "Jane"]
 >>> names[2] = "Floyd"
 >>> names
 ```
+</div>
 
 {:.highlight}
 If you try to access an index that is greater than or equal to (>=) the length of the list, you'll get an `IndexError`.
@@ -2029,13 +2072,16 @@ For the mutability of the container types we covered in this chapter, check this
 | `dict`         	| contains key value pairs                                                                                	| **yes**  	|
 
 
-### Practice
-Lists, Dictionaries, Tuples, and Sets
+### ⭐️ Practice
 
 ### Lists
 {: .no_toc }
 
-Lists are great for storing an ordered sequence of objects. Remember that you can see the current state of your list at any time by typing the name of your list by itself. Check your list after every operation to see if it has changed.
+Lists are great for storing an ordered sequence of objects. 
+
+<div class=“task” markdown="block">
+
+Remember that you can see the current state of your list at any time by typing the name of your list by itself. Check your list after every operation to see if it has changed.
 
 ```python
 >>> my_list = ["h", "e", "l", "l", "o"]
@@ -2046,6 +2092,9 @@ Lists are great for storing an ordered sequence of objects. Remember that you ca
 # Now let's see it again:
 >>> my_list
 ```
+</div>
+
+<div class=“task” markdown="block">
 
 Let's play with slices. How do we get the last two elements of our list?
 
@@ -2060,6 +2109,9 @@ Let's play with slices. How do we get the last two elements of our list?
 # Or, we can ask for just the last two items without caring how big the list is. This means "give me everything starting from two before the end":
 >>> my_list[-2:]
 ```
+</div>
+
+<div class=“task” markdown="block">
 
 There are many other ways to interact with our lists as well:
 
@@ -2087,6 +2139,7 @@ There are many other ways to interact with our lists as well:
 >>> sorted(my_list, reverse=False)
 >>> my_list
 ```
+</div>
 
 <html>
 <details>
@@ -2134,11 +2187,9 @@ False
 ### Sets
 {: .no_toc }
 
-<!--
-- show that trying to create an empty set with {} creates an empty dictionary. always use set() for empty set
--->
-
 Sets are a great data type for storing unique data - you can only have one of any given object in a set. Sets are unordered, thus you can't access them with `[]` indexing syntax, but they do have some handy functions.
+
+<div class=“task” markdown="block">
 
 Let's play with some set operations:
 
@@ -2175,6 +2226,7 @@ Let's play with some set operations:
 >>> my_set.difference(my_other_set)
 
 ```
+</div>
 
 <html>
 <details>
@@ -2219,6 +2271,10 @@ False
 
 Tuples are a lightweight way to hold information that describes something, like a person - their name, age, and hometown. You can think about it kind of like a row in a spreadsheet. Tuples are represented inside parentheses, however parentheses are not required to create a tuple, just a sequence of objects followed by commas.
 
+<div class=“task” markdown="block">
+
+Try this:
+
 ```python
 >>> my_tuple = 1,
 >>> my_tuple
@@ -2226,8 +2282,13 @@ Tuples are a lightweight way to hold information that describes something, like 
 >>> my_tuple[1] = 2
 ```
 
+</div>
+
 Oops! Remember that tuples are immutable, so you can't change them once they've been created. Tuples are great for moving data around in a lightweight way, because you can unpack them easily into multiple variables.
 
+<div class=“task” markdown="block">
+Try this:
+    
 ```python
 >>> person = ('Jim', 29, 'Austin, TX')
 >>> name, age, hometown = person
@@ -2235,6 +2296,8 @@ Oops! Remember that tuples are immutable, so you can't change them once they've 
 >>> age
 >>> hometown
 ```
+
+</div>
 
 <html>
 <details>
@@ -2271,6 +2334,10 @@ TypeError: 'tuple' object does not support item assignment
 
 Dictionaries are great for storing data that you can index with keys. The keys must be unique, and the dictionaries *are* stored in the order you inserted items, however this is only guaranteed as of Python 3.7.
 
+<div class=“task” markdown="block">
+
+Try this:
+    
 ```python
 >>> my_dict = {"key": "value"}
 # Remember, dictionaries don't have numerical indexes like lists, so if you try to use an index number...
@@ -2301,6 +2368,7 @@ Dictionaries are great for storing data that you can index with keys. The keys m
 # What if we want to iterate over a dictionary's items? We can use the items() function to get a list of tuples:
 >>> my_dict.items()
 ```
+</div>
 
 <html>
 <details>
@@ -2350,6 +2418,8 @@ False
 
 Remember, in Python, some data types are **immutable** -- that means that once they're created, their contents can't be changed. Tuples are immutable - once you make one, you can't alter it, you can only make a new one. Conversely, lists, dictionaries, and sets are mutable - you can change them without making new ones.
 
+<div class=“task” markdown="block">
+
 Let's see this in practice:
 
 ```python
@@ -2373,6 +2443,7 @@ Let's see this in practice:
 >>> my_tuple = (1, 2, 3)
 >>> my_tuple[0] = 'a' # This will throw a TypeError
 ```
+</div>
 
 <html>
 <details>
