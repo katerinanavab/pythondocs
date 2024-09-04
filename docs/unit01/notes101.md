@@ -108,7 +108,7 @@ It's ok to be _verbose_. For example, `n` is a poor variable name, while `number
 
 </div>
 
-### Types
+### The `type()` Function
 
 Python has a very easy way of determining the type of something, with the `type()` function.
 
@@ -152,7 +152,7 @@ z = 0.
 x = 42j
 ```
 
-In Python, Integers and other simple data types are just objects under the hood. That means that you can create new ones by calling methods. You can provide either a number, or a string. This will come in handy later on in the course.
+In Python, Integers and other simple data types are just **objects** under the hood. That means that you can create new ones by calling methods. You can provide either a number, or a string. This will come in handy later on in the course.
 
 ```python
 x = int(4)
@@ -169,7 +169,7 @@ Numbers can be added together. If you add a `float` and an `int`, the resulting 
 
 If you divide two `int`s (integers), the result will be of type `float`.
 
-### Boolean Types
+### Booleans
 {: .no_toc }
 
 In Python, Booleans are of type `bool`. Surprisingly, the boolean types `True` and `False` are also numbers under the hood.
@@ -179,7 +179,7 @@ In Python, Booleans are of type `bool`. Surprisingly, the boolean types `True` a
 
 That means you can do silly things, like add two Boolean numbers together, but I'll cover why this is a useful Python feature later in the course.
 
-### Representing Strings
+### Strings
 
 Strings in Python can be enclosed either with single quotes like `'hello'` or double quotes, like `"hello"`.
 
