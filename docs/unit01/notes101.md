@@ -313,7 +313,8 @@ There are two possible solutions here, for two different scenarios.
 #### Types
 {: .no_toc }
 
-<div class=“task” markdown="block">
+<html>
+<div class="task" markdown="block">
 
 List the type of the following variables using the `type()` function.
 
@@ -326,11 +327,13 @@ List the type of the following variables using the `type()` function.
 ```
 
 </div>
+</html>
 
 #### Numbers
 {: .no_toc }
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
+
 Calculate the amount of rent you pay daily, by taking your monthly rent and diving it by 30.
 
 ```python
