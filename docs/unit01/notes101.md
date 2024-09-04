@@ -369,11 +369,8 @@ Python has a few built-in functions to help you if you get stuck. `type()` tells
 >>> y = 3 / 4
 >>> name = "Nina"
 >>> type(x)
-<class 'int'>
 >>> type(y)
-<class 'float'>
 >>> type(name)
-<class 'str'>
 ```
 
 ---
@@ -393,11 +390,8 @@ This is the recipe for defining a Python function:
 1. `)` closing parenthesis
 1. `:` a colon
 
-A function in Python is defined with the `def` keyword, followed by the function names, zero or more argument names contained in parenthesis `()`, and a colon `:` to indicate the start of the function.
-
-The contents of the function then follow.
-
-Then, an *optional* `return` statement can follow, if the function plans on passing data back to the caller.
+{:.highlight}
+A function in Python is defined with the `def` keyword, followed by the function names, zero or more argument names contained in parenthesis `()`, and a colon `:` to indicate the start of the function. The contents of the function then follow. Then, an *optional* `return` statement can follow, if the function plans on passing data back to the caller.
 
 ```python
 # A Basic Function that accepts no arguments and returns nothing.
@@ -411,9 +405,8 @@ def add_numbers(x, y):
     return x + y
 ```
 
-{{% notice tip %}}
+{:.highlight}
 If you **forget** the recipe while trying to create a function, Python will help you remember with a `SyntaxError`.
-{{% /notice %}}
 
 For example, trying to create a function without the colon `:`:
 
@@ -463,7 +456,6 @@ If a function doesn't have a return statement, it implicitly returns `None`.
 ...
 >>> val = foo()
 >>> type(val)
-<type 'NoneType'>
 ```
 
 #### with a `return` statement, but no value
@@ -478,7 +470,6 @@ If a function has a return statement, but no value, it also returns `None`. This
 ...
 >>> val = foo()
 >>> type(val)
-<type 'NoneType'>
 ```
 
 #### with a `return` statement and a value
@@ -498,15 +489,10 @@ To return a value from a function, just type it after the `return` statement. Yo
 
 As we explore simple functions, our `return` statements will usually be at the end of the function, but that's not the only way they can be used. A function can have multiple `return` statements, and those `return` statements can be used to help control the flow of the program.
 
-{{% notice note %}}
-Note: Because it's syntactically correct to have multiple return statements in a function, it's up to you to use them correctly. If you use a linter for your code files and you place additional code in a function **after** a return statement, the
-linter will give you a helpful hint about the rest of the code being unreachable.
-{{% /notice %}}
 
 ### Indentation
-{: .no_toc }
 
-One of the most important aspects of functions is indentation. Remember, Python doesn't use curly braces to figure out what's inside a function like other languages you've seen like JavaScript or Java.
+One of the most important aspects of functions is **indentation**. Remember, Python doesn't use curly braces to figure out what's inside a function like other languages you've seen like JavaScript or Java.
 
 Python knows what code is related to a function by how it's indented. Anything that's indented one level deep under the function declaration is part of the function, no matter how many spaces there are between lines.
 
@@ -522,8 +508,11 @@ Let's try it together. Type the following code in your REPL. Note that the 3 dot
 ...
 ```
 
-{{%expand "See an error? Expand this section." %}}
-Note: If you get an `IndentationError`, that means that you didn't correctly indent your code after your function definition. Try typing your function into the REPL one more time.
+<html>
+<details markdown="block">
+<summary>See an error? Expand this section:</summary>
+    
+**Note:** If you get an `IndentationError`, that means that you didn't correctly indent your code after your function definition. Try typing your function into the REPL one more time.
 
 ```python
 # The error you'll see if you didn't indent your function correctly.
@@ -534,7 +523,9 @@ File "<stdin>", line 2
         ^
 IndentationError: expected an indented block
 ```
-{{% /expand%}}
+
+</details>
+</html>
 
 ### Arguments & Calling Functions
 
