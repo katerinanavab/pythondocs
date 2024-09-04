@@ -509,8 +509,10 @@ Let's try it together. Type the following code in your REPL. Note that the 3 dot
 ```
 
 <html>
-<details markdown="block">
+<details>
 <summary>See an error? Expand this section:</summary>
+
+<div markdown="block"> 
     
 **Note:** If you get an `IndentationError`, that means that you didn't correctly indent your code after your function definition. Try typing your function into the REPL one more time.
 
@@ -523,6 +525,7 @@ File "<stdin>", line 2
         ^
 IndentationError: expected an indented block
 ```
+</div>
 
 </details>
 </html>
