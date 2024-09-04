@@ -348,7 +348,7 @@ Calculate the amount of rent you pay daily, by taking your monthly rent and divi
 #### Strings
 {: .no_toc }
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 Try printing some things:
 
@@ -377,7 +377,7 @@ Hello, my name is Nina and I pay $16.0 in rent per day
 
 Python has a few built-in functions to help you if you get stuck. `type()` tells you what an object's type is, for example a string (`str`) or integer (`int`). `dir()` returns a list of valid attributes for an object, so you can quickly see what variables an object has or what functions you can call on it. `help()` brings up helpful documentation on any object. You can also type `help()` on its own to bring an interactive help console.
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
  Try it out: 
     
 ```python
@@ -397,7 +397,7 @@ The purpose of functions in Python are to **create reusable code**. If we find o
 
 ### Defining Functions
 
-<div class=“imp” markdown="block">
+<div class="imp" markdown="block">
 
 This is the recipe for defining a Python function:
 
@@ -452,7 +452,7 @@ SyntaxError: invalid syntax
 ### Function Contents
 {: .no_toc }
 
-<div class=“imp” markdown="block">
+<div class="imp" markdown="block">
 
 The recipe for **function contents**:
 
@@ -527,7 +527,7 @@ If you're using the REPL, once you're done entering your function, you'll need t
 
 Let's try it together. Type the following code in your REPL. Note that the 3 dots '...' indicate that those lines are *indented* in the REPL. If you type your code in a Python file, you won't see the `...` dots.
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 ```python
 >>> def add_numbers(x, y):
@@ -871,7 +871,7 @@ For example:
 #### Functions
 {: .no_toc }
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 Let's try creating a basic function. Use tab to indent the second line, and press enter on an empty line to finish the function.
 
@@ -970,7 +970,7 @@ The sum of 5 and 6 is 11
 
 The `x` and `y` arguments for our `add_numbers()` function are called positional arguments. Python also lets us declare *keyword* arguments. Keyword arguments are great for setting default values, because passing them is optional. Just remember that keyword arguments must come *after* any positional arguments. 
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 Let's define a more generic function for doing math:
 
@@ -1077,7 +1077,7 @@ In order to *access* items in a list, we'll need to use an *index*. (Multiple in
 {:.highlight}
 **Indexes start at** `0` in Python and most other programming languages.
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 ```python
 >>> names = ["Nina", "Max", "Jane"]
@@ -1093,7 +1093,7 @@ In order to *access* items in a list, we'll need to use an *index*. (Multiple in
 
 To update a particular item in a `list` use square-bracket notion and assign a new value. `my_list[pos] = new_value`
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 ```python
 >>> names = ["Nina", "Max", "Jane"]
@@ -1966,7 +1966,7 @@ If we want to provide a *default value* if the key is missing, we also pass an *
 
 To add a new key value pair to the dictionary, you'll use square-bracket notation.
 
-If you try to put a key into a dictionary that's already there, you'll just end up replacing it. To avoid subtle bugs, you can check if a particular key is in a dictionary with the `in` keyword. We'll cover that technique in Chapter 6 - Control Statements and Looping.
+If you try to put a key into a dictionary that's already there, you'll just end up replacing it. To avoid subtle bugs, you can check if a particular key is in a dictionary with the `in` keyword. We'll cover that technique in the Control Statements and Looping topic.
 
 ```python
 >>> nums = {1: "one", 2: "two", 3: "three"}
@@ -2082,7 +2082,7 @@ For the mutability of the container types we covered in this chapter, check this
 
 Lists are great for storing an ordered sequence of objects. 
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 Remember that you can see the current state of your list at any time by typing the name of your list by itself. Check your list after every operation to see if it has changed.
 
@@ -2097,7 +2097,7 @@ Remember that you can see the current state of your list at any time by typing t
 ```
 </div>
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 Let's play with slices. How do we get the last two elements of our list?
 
@@ -2114,7 +2114,7 @@ Let's play with slices. How do we get the last two elements of our list?
 ```
 </div>
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 There are many other ways to interact with our lists as well:
 
@@ -2192,7 +2192,7 @@ False
 
 Sets are a great data type for storing unique data - you can only have one of any given object in a set. Sets are unordered, thus you can't access them with `[]` indexing syntax, but they do have some handy functions.
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 Let's play with some set operations:
 
@@ -2274,7 +2274,7 @@ False
 
 Tuples are a lightweight way to hold information that describes something, like a person - their name, age, and hometown. You can think about it kind of like a row in a spreadsheet. Tuples are represented inside parentheses, however parentheses are not required to create a tuple, just a sequence of objects followed by commas.
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 Try this:
 
@@ -2289,7 +2289,7 @@ Try this:
 
 Oops! Remember that tuples are immutable, so you can't change them once they've been created. Tuples are great for moving data around in a lightweight way, because you can unpack them easily into multiple variables.
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 Try this:
     
 ```python
@@ -2337,7 +2337,7 @@ TypeError: 'tuple' object does not support item assignment
 
 Dictionaries are great for storing data that you can index with keys. The keys must be unique, and the dictionaries *are* stored in the order you inserted items, however this is only guaranteed as of Python 3.7.
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 Try this:
     
@@ -2421,7 +2421,7 @@ False
 
 Remember, in Python, some data types are **immutable** -- that means that once they're created, their contents can't be changed. Tuples are immutable - once you make one, you can't alter it, you can only make a new one. Conversely, lists, dictionaries, and sets are mutable - you can change them without making new ones.
 
-<div class=“task” markdown="block">
+<div class="task" markdown="block">
 
 Let's see this in practice:
 
