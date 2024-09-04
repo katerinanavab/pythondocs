@@ -96,17 +96,15 @@ Because Python is a** dynamic language** and you don't have type hints to explai
 
 It's ok to be _verbose_. For example, `n` is a poor variable name, while `numbers` is a better one. If you're storing a collection of items, name your variable as a plural.
 
-<html>
-<div class="warning" markdown="block">
+<div class="warn" markdown="block">
 
 * You can't start your variable name with a numerical digit, although your variable name can end in a digit. 
 * Your variable name can't contain special characters, such as `!`,  `@`,  `#`, `$`,  `%` and more.
 * There are some things that you can't name your variables, such as `and`, `if`, `True`, or `False`. That's because Python uses these names for program control structure.
 * 💣 Python will let you override built-in methods and types without a warning so don't name your Python variables things like `list`, `str`, or `int`.
-* If you notice your program behaving oddly and you can't find the source of the bug, double check the list of [built-in functions](https://docs.python.org/3/library/functions.html) and [built-in types](https://docs.python.org/3/library/stdtypes.html) to make sure that your variable names don't conflict.
+    * If you notice your program behaving oddly and you can't find the source of the bug, double check the list of [built-in functions](https://docs.python.org/3/library/functions.html) and [built-in types](https://docs.python.org/3/library/stdtypes.html) to make sure that your variable names don't conflict.
 
 </div>
-</html>
 
 ### The `type()` Function
 
@@ -115,8 +113,9 @@ Python has a very easy way of determining the type of something, with the `type(
 ```python
 >>> num = 42
 >>> type(num)
-<class 'int'>
 ```
+
+The output in this case would be: `<class 'int'>`.
 
 #### No-Value, `None`, or Null Value
 {: .no_toc }
