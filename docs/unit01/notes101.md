@@ -46,6 +46,34 @@ Python is considered to be a "batteries included" language, because the standard
 
 [PEP8](https://pep8.org/) is a Python  **coding standard**, that sets guidelines for how our Python code should look like.
 
+#### GitHub Classroom and Codespaces
+{:.no_toc}
+
+Github provides many free opportunities for students and teachers (_unlike Replit_). [Github Classroom](https://classroom.github.com/) allows teachers to set up a classroom group based on Github repositories. Github and `git` are widely used in the computer industry, so learning to use it is great experience for students. Github now has a cloud (online) **IDE** called [Codespaces](https://github.com/features/codespaces) which you can use completely free if you join as a school or get approved as a teacher or student. 
+
+_In Codespaces, you can:_
+* Start from a **blank template** or a **repository** ("repo")
+* Open a `.py` file in the VSCode editor
+* Follow prompts to install the **Python Extension Pack**
+* Click on the `Run and Debug` (play button ▶️)
+* Follow the prompts to install the Python **debugger**
+* See the **output** of your code in the `terminal`
+
+
+#### GitHub Account Setup
+
+<div class="task" markdown="block">
+
+1. **Go to:** [GitHub Sign Up](https://github.com/signup)
+2. Enter your `@gbwl.org` **school email**
+3. Create a **password** that you'll remember 
+4. Enter a **username** that follows this pattern: `FirstName` `LastInitial` `GradYear`
+    > _For example:_ `KaterinaN2014`
+    > 
+    > DO NOT include your entire last name (_privacy reasons_)
+
+</div>
+
 ---
 ## Basic Data Types
 
