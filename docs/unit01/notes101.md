@@ -71,7 +71,9 @@ _In Codespaces, you can:_
     > _For example:_ `KaterinaN2014`
     > 
     > DO NOT include your entire last name (_privacy reasons_)
-
+5. After verifying your account, **let me know** so I can add you to the GitHub Classroom group!
+6. Once everyone is ready, we'll follow this **tutorial**: [GitHub Workflow](https://docs.github.com/en/get-started/start-your-journey/hello-world)
+   
 </div>
 
 ---
