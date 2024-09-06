@@ -16,9 +16,7 @@ In this project, students will demonstrate their understanding of Python program
 
 <div class="setup" markdown="block">
 
-1. On [Replit](https://replit.com/~), click `+ Create Repl` on the sidebar to open a **NEW PROJECT**
-2. In the pop-up menu, select `Python` as the **TEMPLATE**
-3. Specify the **TITLE** following this pattern: `CS3_Unit1_Proj1_FirstNameLastInitial`
+1. GITHUB SETUP INSTRUCTIONS GO HERE
 
 </div>
 
