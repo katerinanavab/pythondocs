@@ -83,9 +83,22 @@ First, make sure you have a blank Python program to take notes and code along as
 
 <div class="setup" markdown="block">
 
-1. GITHUB NOTES FILE
+#### Using a GitHub Template for class notes
+
+1. Go to the public template **repository** for our class: [BWL-CS Python Template](https://github.com/BWL-CS/python-template)
+2. Click the <button type="button" name="button" class="btn btn-green">Use this template</button> button above the list of files then select `Create a new repository`
+3. Specify the **repository name**: `CS3-Unit1-Notes`
+4. Click <button type="button" name="button" class="btn btn-green">Create repository</button>
+    > Now you have **your own copy** of this starter code that you can always access under the `My repositories` section of GitHub! 
+5. Now on your repository, click <button type="button" name="button" class="btn btn-green"> < > Code </button> and select the `Codespaces` tab
+6. Click `Create Codespace on main` and wait for the environment to load, _then you're ready to code_!
 
 </div>
+
+📝 Take notes in this Codespace during class, testing your code as we move along.
+
+{:.warning}
+🛑 When class ends, don't forget to **SAVE YOUR WORK**! Navigate to the `Source Control` tab in 
 
 ### Variables
 
