@@ -5,6 +5,12 @@ $content-line-height: 1.4;
 $body-heading-line-height: 1.1;
 $jtdpurple: #5739ce;
 
+img[alt=image] {
+	width:50%;
+	text-align: center;
+	margin:auto;
+}
+
 h1 {
 	color: $jtdpurple;
 	font-weight: bold;	
