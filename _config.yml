@@ -17,7 +17,7 @@ aux_links:
     - "https://devdocs.io/"
 
 back_to_top: true
-back_to_top_text: "⬆️ BACK TO TOP"
+back_to_top_text: "⬆️ TO TOP"
 
 kramdown:
   parse_block_html: true
