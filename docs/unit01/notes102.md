@@ -1088,8 +1088,12 @@ ValueError: too many values to unpack (expected 2)
 {:.highlight}
 You'll see `ValueError: too many values to unpack (expected 2)` if you *forget* to call `my_dict.items()`, and try to loop over what you'd expect to be key, value pairs.
 
-### Using `break`
+### Using `break` and `continue`
+
 `break` and `continue` allow you to control the flow of your loops. They're a concept that beginners to Python tend to misunderstand, so pay careful attention.
+
+#### Using `break`
+{:.no_toc}
 
 The `break` statement will completely break out of the *current loop*, meaning it won't run any more of the statements contained inside of it.
 
@@ -1108,7 +1112,8 @@ Hello, Nina
 {:.highlight}
 `break` completely **breaks out** of the loop.
 
-### Using `continue`
+#### Using `continue`
+{:.no_toc}
 
 `continue` works a little differently. Instead, it goes back to the start of the loop, skipping over any other statements contained within the loop.
 
