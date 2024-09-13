@@ -14,6 +14,8 @@ nav_order: 2
 
 ---
 
+#### USING A GITHUB CODESPACE TO TAKE CLASS NOTES
+
 <div class="setup" markdown="block">
 
 1. Go to GitHub and click on your picture in the _TOP RIGHT_ corner
@@ -44,6 +46,8 @@ nav_order: 2
 ## Boolean Logic
 
 ### Truthiness
+{:.no_toc}
+
 Evaluating an expression to be `True` or `False` will help us control the flow of our program.
 
 
@@ -645,9 +649,10 @@ True
 
 ---
 
-## Control Structures: Conditionals & Loops
+## Control Structures: Conditionals
 
 ### The `if` Statement and Conditionals
+{:.no_toc}
 
 `if` in Python means: **only run the rest of this code once, *if* the condition evaluates to `True`.** Don't run the rest of the code at all if it's not.
 
@@ -716,7 +721,7 @@ Hi there.
 Hi there.
 ```
 
-### `if` Statements and Functions
+### `if` Statements inside Functions
 
 You can easily declare `if` statements in your functions, you just need to mindful of the level of indentation. Notice how the code belonging to the `if` statement is indented at *two levels*.
 
@@ -733,6 +738,7 @@ You can easily declare `if` statements in your functions, you just need to mindf
 ```
 
 #### Nested `if` Statements
+{:.no_toc}
 
 Using the same technique, you can also *nest* your `if` statements.
 
@@ -752,12 +758,12 @@ Also greater than 10.
 
 
 #### How *Not* To Use `if` Statements
+{:.no_toc}
 
 Remember, comparisons in Python evaluate to `True` or `False`. With conditional statements, we check for that value *implicitly*. In Python, we **do not** want to compare to `True` or `False` with `==`.
 
-{{% notice warning %}}
-Warning - pay attention, because the code below shows what you **shouldn't** do.
-{{% /notice %}}
+{:.warning}
+Watch out, because the code below shows what you **SHOULD NOT** do!
 
 ```python
 # Warning: Don't do this!
@@ -773,9 +779,8 @@ Hello
 Hello
 ```
 
-{{% notice tip %}}
+{:.highlight}
 Do this instead:
-{{% /notice %}}
 
 ```python
 >>> if 3 < 5:
@@ -804,7 +809,7 @@ Hello
 >>>
 ```
 
-### `else`
+### `else` Statements
 
 The `else` statement is what you want to run **if and only if** your `if` statement wasn't triggered.
 
@@ -835,9 +840,8 @@ Goodbye
 
 In the REPL it must be written on the line after your last line of indented code. In Python code in a file, there can't be any other code between the `if` and the `else`.
 
-{{% notice info %}}
+{:.highlight}
 You'll see `SyntaxError: invalid syntax` if you try to write an `else` statement on its own, or put extra code between the `if` and the `else` in a Python file.
-{{% /notice %}}
 
 ```python
 >>> if a:
@@ -851,7 +855,7 @@ Hello
 SyntaxError: invalid syntax
 ```
 
-### `elif` Means Else, If.
+### `elif` (Else, If) Statements
 
 `elif` means *else if*. It means, **if** this `if` statement isn't considered `True`, try this **instead.**
 
@@ -871,10 +875,14 @@ You can have as many `elif` statements in your code as you want. They get evalua
 Less than 10
 ```
 
-### While Loops
+---
+
+## Control Structures: Iteration
+
+### `while` Loops
 `while` loops are a special type of loop in Python. Instead of running just once when a condition is met, like an `if` statement, they run **forever** until a condition is *no longer* met.
 
-`while` loops usually need to be accompanied by an always changing sentinel value.
+`while` loops usually need to be accompanied by an **always-changing sentinel value**, which acts like a flag 🚩.
 
 ```python
 >>> counter = 0
@@ -890,9 +898,8 @@ The count is: 2
 The count is: 3
 ```
 
-{{% notice warning %}}
+{:.warning}
 Our loop will run forever if we forget to *update* the sentinel value. **Press Ctrl-C to exit the infinite loop.**
-{{% /notice %}}
 
 
 ```python
@@ -915,7 +922,7 @@ The count ^CTraceback (most recent call last):
 KeyboardInterrupt
 ```
 
-### For Loops
+### `for in` Loops
 Looping in Python doesn't look like looping in other languages.
 
 If you write JavaScript, Java, or other languages, you might have seen code that looks something like this code, that keeps track of 3 things: the starting index, the condition the loop will run until, and which action to take (in this case, incrementing the variable `i` by 1) until the condition is met.
@@ -928,9 +935,7 @@ for (i = 0; i < 5; i++) {
 
 In fact, before these languages introduced something called a `for each` loop, that was also the clunky way you'd loop through items in a sequence.
 
-### Looping in Python
-
-Looping in Python is a simpler, cleaner process because the Python language prides itself on readability.
+Looping in Python is a simpler, cleaner process because the Python language prides itself on **readability**.
 
 Remember you used the `in` keyword to test if an item was in a sequence? When combined with the `for` keyword, `in` can be used to indicate looping over each item in the sequence. The syntax is: `for single_item in items`, followed by a colon `:`, followed by a new line, a level of indentation, and the code you'd like to consider as the *body* of the loop. That is, the code that'll run multiple times, until there are no more items in the collection.
 
@@ -946,7 +951,7 @@ The color is: Blue
 The color is: Orange
 ```
 
-#### Looping over a range of numbers
+#### Looping over a `range()` of numbers
 
 Let's say we wanted to duplicate the code in the example JavaScript above, that prints out the numbers from 0 to 4.
 
@@ -1005,22 +1010,9 @@ What do inclusive and exclusive mean in this context? *Exclusive* means that the
 If you can't remember how to use range, don't forget to call `help(range)` from the command line.
 {{% /notice %}}
 
-#### Looping over items with the index using `enumerate`.
+#### Looping over items with the index using `enumerate()`
 
 In Python, we avoid writing code like the JavaScript `for` loop at the top, but sometimes it's unavoidable, and we need a way to access the index of the items we're looping through. To do that we use a special function called `enumerate()`. The function takes a sequence, like a `list`, and it *returns* a `list` of tuples, containing the index of the item in the sequence, and the sequence itself.
-
-Don't worry about the list of tuples for now, but remember our tuple unpacking from earlier?
-
-```python
->>> point = (2, 5, 11)
->>> x, y, z = point
->>> x
-2
->>> y
-5
->>> z
-11
-```
 
 Because `enumerate()` returns a structure that looks like a list of `tuple`s under the hood, we can take advantage of tuple unpacking in the `for` loop.
 
@@ -1034,9 +1026,8 @@ Item: Blue is at index: 2.
 Item: Orange is at index: 3.
 ```
 
-{{% notice tip %}}
+{:.highlight}
 Remember, indicies in Python start at zero.
-{{% /notice %}}
 
 #### Looping over a dictionary
 
@@ -1052,9 +1043,8 @@ Let's say we have a dictionary of colors to their hex color code used for HTML i
 ... }
 ```
 
-{{% notice warning %}}
-Remember, a dictionary is composed of key, value pairs. When we loop over a dictionary with the `for item in my_dict` syntax, we'll end up looping over **just** the keys.
-{{% /notice %}}
+{:.warning}
+Remember, a dictionary is composed of `key, value` pairs. When we loop over a dictionary with the `for item in my_dict` syntax, we'll end up looping over **just** the keys.
 
 In this example, notice how we're looping over the wrong thing:
 
@@ -1067,9 +1057,8 @@ The value of color is actually: Green
 The value of color is actually: Blue
 ```
 
-{{% notice tip %}}
+{:.highlight}
 If we want to loop over the key, value pairs in a dictionary, we'll want to call `my_dict.items()`.
-{{% /notice %}}
 
 We can use tuple unpacking along with the `my_dict.items()` list to loop over both the keys and the values at the same time.
 
@@ -1083,6 +1072,7 @@ For color Blue, the hex value is: #0000FF
 ```
 
 ##### Common Errors
+{:.no_toc}
 
 What if you try to loop over key, value pairs, and forget to use `my_dict.items()`?
 
@@ -1095,20 +1085,13 @@ Traceback (most recent call last):
 ValueError: too many values to unpack (expected 2)
 ```
 
-{{% notice info %}}
+{:.highlight}
 You'll see `ValueError: too many values to unpack (expected 2)` if you *forget* to call `my_dict.items()`, and try to loop over what you'd expect to be key, value pairs.
-{{% /notice %}}
-
-#### Additional Resources
-
-If you really want to be a pro at looping in a Pythonic way, I recommend watching Raymond Hettinger's talk - [Transforming Code into Beautiful, Idiomatic Python](https://www.youtube.com/watch?time_continue=1855&v=OSGv2VnC0go) after the course.
-
-`break` and `continue` allow you to control the flow of your loops. They're a concept that beginners to Python tend to misunderstand, so pay careful attention.
 
 ### Using `break`
+`break` and `continue` allow you to control the flow of your loops. They're a concept that beginners to Python tend to misunderstand, so pay careful attention.
 
 The `break` statement will completely break out of the *current loop*, meaning it won't run any more of the statements contained inside of it.
-
 
 ```python
 >>> names = ["Rose", "Max", "Nina", "Phillip"]
@@ -1122,9 +1105,8 @@ Hello, Max
 Hello, Nina
 ```
 
-{{% notice tip %}}
+{:.highlight}
 `break` completely **breaks out** of the loop.
-{{% /notice %}}
 
 ### Using `continue`
 
@@ -1139,13 +1121,11 @@ Hello, Nina
 Hello, Nina
 ```
 
-{{% notice tip %}}
+{:.highlight}
 `continue` continues to the **start of the loop**
 
-{{% /notice %}}
-
-
-### `break` and `continue` visualized
+#### `break` and `continue` visualized
+{:.no_toc}
 
 What happens when we run the code from this Python file?
 
@@ -1168,6 +1148,7 @@ print("Done!")
 ![break and continue visualized](/02-introduction-to-python/110-control-statements-looping/images/break-continue.png?classes=shadow,border)
 
 #### Results
+{:.no_toc}
 
 {{%expand "See if you can guess the results before expanding this section." %}}
 ```bash
@@ -1179,7 +1160,8 @@ Done!
 ```
 {{% /expand%}}
 
-### Using `break` and `continue` in nested loops.
+### Using `break` and `continue` in nested loops
+{:.no_toc}
 
 Remember, `break` and `continue` only work for the **current loop**. *Even though I've been programming Python for years, this is something that still trips me up!*
 
@@ -1202,12 +1184,10 @@ Nina in outer loop
 >>>
 ```
 
-{{% notice tip %}}
+{:.highlight}
 `break` in the inner loop only breaks out of the inner loop! The outer loop continues to run.
-{{% /notice %}}
 
-
-### Loop Control in `while` loops
+#### Loop Control in `while` loops
 
 You can also use `break` and `continue` in `while` loops. One common scenario is running a loop forever, until a certain condition is met.
 
@@ -1222,11 +1202,10 @@ You can also use `break` and `continue` in `while` loops. One common scenario is
 Count reached
 ```
 
-{{% notice note %}}
+{:.highlight}
 Be careful that your condition will eventually be met, or else your program will get stuck in an infinite loop. For production use, it's better to use asynchronous programming.
-{{% /notice %}}
 
-### Loops and the `return` statement
+#### Loops and the `return` statement
 
 Just like in functions, consider the `return` statement the hard kill-switch of the loop.
 
@@ -1245,7 +1224,9 @@ Nina
 ```
 
 ### ⭐️ Practice
-### `if`, `else`, and `elif`
+
+#### `if`, `else`, and `elif`
+{:.no_toc}
 
 Let's practice our branching statements. Remember that `elif` (short for `else if`) is an optional branch that will let you add another `if` test, and `else` is an optional branch that will catch anything not previously caught by `if` or `elif`.
 
@@ -1337,7 +1318,8 @@ Got an empty list!
 ```
 
 
-## The `for` loop, `range()` and `enumerate()`
+#### The `for` loop, `range()` and `enumerate()`
+{:.no_toc}
 
 Let's try making a list and looping over it:
 
@@ -1454,7 +1436,8 @@ Item hello = world
 
 {{%/expand%}}
 
-## `break`, `continue`, and `return`
+#### `break`, `continue`, and `return`
+{:.no_toc}
 
 `break` and `continue` are important functions for controlling the program flow inside loops. `break` ends the loop immediately and continues executing from outside the loop's scope, and `continue` skips the remainder of the loop and continues executing from the next round of the loop. Let's practice:
 
@@ -1564,7 +1547,8 @@ True
 ```
 {{%/expand%}}
 
-## `while` loop
+#### `while` loop
+{:.no_toc}
 
 Instead of looping over a sequence, `while` loops continue looping while a certain condition is met (or not met). The condition is checked at the beginning every iteration.
 
@@ -1615,7 +1599,8 @@ Counter = 3
 
 {{%/expand%}}
 
-## Nested Loops
+#### Nested Loops
+{:.no_toc}
 
 Nesting loops is often necessary and sometimes tricky. The `break` keyword will only get you out of whichever loop you're `break`ing. The only way to exit all loops is with multiple `break` statements (at each level), or the `return` keyword (inside a function). For example:
 
