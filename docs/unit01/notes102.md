@@ -51,20 +51,13 @@ nav_order: 2
 Evaluating an expression to be `True` or `False` will help us control the flow of our program.
 
 
-| type                                        	| truthiness                                                                     	|   	|
-|---------------------------------------------	|--------------------------------------------------------------------------------	|---	|
-| `int`                                       	| `0` is `False`, all other numbers are `True` (including negative)              	|   	|
-| containers - `list`, `tuple`, `set`, `dict` 	| empty container evaluates to `False`, container with items evaluates to `True`) 	|   	|
-| `None`                                      	| `False`                                                                        	|   	|
+| type                                        	| truthiness                                                                     	|  
+|---------------------------------------------	|--------------------------------------------------------------------------------	|
+| `int`                                       	| `0` is `False`, all other numbers are `True` (including negative)              	|   	
+| containers - `list`, `tuple`, `set`, `dict` 	| empty container evaluates to `False`, container with items evaluates to `True`) |   	
+| `None`                                      	| `False`                                                                        	|   	
 
 We talked about `boolean` types, `True` and `False` earlier. `True` and `False` are keywords in Python, so make sure you don't name your variables the same thing.
-
-```python
->>> True
-True
->>> False
-False
-```
 
 Sometimes the truth is obvious. For example `3 < 5` is always `True`. Other times, in Python, the truth value might surprise you. Let's review. First, let's start with an expression we know is always `True`.
 
@@ -74,7 +67,7 @@ True
 ```
 
 {:.highlight}
-**Tip:** If you want to test your assumptions about an expression that returns `True` or `False`, you can pass it into the constructor for `bool`eans: `bool(expression)`.
+**TIP:** If you want to test your assumptions about an expression that returns `True` or `False`, you can pass it into the **constructor** for `bool`eans: `bool(expression)`.
 
 ### Numbers
 {:.no_toc}
