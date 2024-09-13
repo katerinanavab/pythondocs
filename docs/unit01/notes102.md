@@ -155,18 +155,53 @@ False
 
 In Python, comparing numbers is pretty straight forward.
 
+<div class="task" markdown="block">
+
+Test the following operations: 
+
 ```python
->>> 1 < 10  # 1 is less than 10? True
+>>> 10 > 5
+>>> 5 > 10
+>>> 10 > 10
+>>> 10 >= 10
+>>> 5 < 10
+>>> 5 < 5
+>>> 5 <= 5
+>>> 5 == 5
+>>> 5 != 10
+```
+
+</div>
+
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+  
+```python
+>>> 10 > 5
 True
->>> 20 <= 20  # 20 is less than or equal to 20? True
-True
->>> 10 > 1  # 10 is greater than 1? True
-True
->>> -1 > 1  # -1 is greater than 1? False
+>>> 5 > 10
 False
->>> 30 >= 30  # 30 is greater than or equal to 30? True
+>>> 10 > 10
+False
+>>> 10 >= 10
+True
+>>> 5 < 10
+True
+>>> 5 < 5
+False
+>>> 5 <= 5
+True
+>>> 5 == 5
+True
+>>> 5 != 10
 True
 ```
+
+</div>
+</details>
+</html>
 
 Things get interesting when you try to compare strings. Strings are compared lexicographically. That means by the ASCII value of the character. You don't need to know much about ASCII, besides that capital letters come before lower case ones.
 
@@ -325,14 +360,13 @@ True
 #### `or` table
 {:.no_toc}
 
-<!--
 | a       	| b       	| a `or` b   	|
 |---------	|---------	|------------	|
 | `True`  	| `True`  	| **`True`** 	|
-| `True`  	| False 	| **`True`** 	|
-| False 	| `True`  	| **`True`** 	|
-| False 	| False 	| False    	|
--->
+| `True`  	| `False` 	| **`True`** 	|
+| `False` 	| `True`  	| **`True`** 	|
+| `False` 	| `False` 	| **`False`** |
+
 
 {:.highlight}
 For `a or b`, if a is false, b is returned. If a is true, a is returned.
@@ -449,70 +483,6 @@ False
 ```
 
 ### ⭐️ Practice
-
-#### Comparison Operators
-{:.no_toc}
-
-|Operator|Means|
-|---|---|
-|`<`|less-than|
-|`<=`|less-than-or-equal-to|
-|`>`|greater-than|
-|`>=`|greater-than-or-equal-to|
-|`==`|equals|
-|`!=`|not-equals|
-
-> Remember, the first six operators test the object's *value*.
-> 
-> `is` and `is not` test whether two objects are the same thing. This is useful for singletons, such as `None` or `False`.
-
-<div class="task" markdown="block">
-
-Test the following operations: 
-
-```python
->>> 10 > 5
->>> 5 > 10
->>> 10 > 10
->>> 10 >= 10
->>> 5 < 10
->>> 5 < 5
->>> 5 <= 5
->>> 5 == 5
->>> 5 != 10
-```
-
-</div>
-
-<html>
-<details>
-<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
-<div markdown="block"> 
-  
-```python
->>> 10 > 5
-True
->>> 5 > 10
-False
->>> 10 > 10
-False
->>> 10 >= 10
-True
->>> 5 < 10
-True
->>> 5 < 5
-False
->>> 5 <= 5
-True
->>> 5 == 5
-True
->>> 5 != 10
-True
-```
-
-</div>
-</details>
-</html>
 
 #### Truthiness
 {:.no_toc}
