@@ -912,33 +912,12 @@ The count is: 3
 ```
 
 {:.warning}
-Our loop will run forever if we forget to *update* the sentinel value. **Press Ctrl-C to exit the infinite loop.**
-
-
-```python
-# Warning: don't copy and paste this example.
-
->>> counter = 0
->>> max = 4
-
->>> while counter < max:
-...     print(f"The count is: {counter}")
-...
-# What happens if we don't update counter?
-The count is: 0
-The count is: 0
-The count is: 0
-The count is: 0
-# An infinite loop repeated until we hit Ctrl-C
-The count ^CTraceback (most recent call last):
-  File "<stdin>", line 2, in <module>
-KeyboardInterrupt
-```
+♾️ A loop will run forever if we forget to *update* the sentinel value, like we did with `counter = counter + 1`. 
 
 ### `for in` Loops
 Looping in Python doesn't look like looping in other languages.
 
-If you write JavaScript, Java, or other languages, you might have seen code that looks something like this code, that keeps track of 3 things: the starting index, the condition the loop will run until, and which action to take (in this case, incrementing the variable `i` by 1) until the condition is met.
+If you write JavaScript, Java, or other languages, you might have seen code that looks something like this code below, that keeps track of 3 things: the **starting** **index**, the **condition** the loop will run until, and which **action** to take (in this case, incrementing the variable `i` by 1) until the condition is met.
 
 ```javascript
 for (i = 0; i < 5; i++) {
@@ -946,7 +925,7 @@ for (i = 0; i < 5; i++) {
 }
 ```
 
-In fact, before these languages introduced something called a `for each` loop, that was also the clunky way you'd loop through items in a sequence.
+> In fact, before these languages introduced something called a `for each` loop, that was also the clunky way you'd loop through items in a sequence.
 
 Looping in Python is a simpler, cleaner process because the Python language prides itself on **readability**.
 
