@@ -469,7 +469,13 @@ False
 |`==`|equals|
 |`!=`|not-equals|
 
-Remember, the first six operators test the object's *value*. `is` and `is not` test whether two objects are the same thing. This is useful for singletons, such as `None` or `False`. We won't be using them much in this intro course, but feel free to play with them.
+> Remember, the first six operators test the object's *value*.
+> 
+> `is` and `is not` test whether two objects are the same thing. This is useful for singletons, such as `None` or `False`.
+
+<div class="task" markdown="block">
+
+Test the following operations: 
 
 ```python
 >>> 10 > 5
@@ -482,6 +488,8 @@ Remember, the first six operators test the object's *value*. `is` and `is not` t
 >>> 5 == 5
 >>> 5 != 10
 ```
+
+</div>
 
 <html>
 <details>
@@ -518,6 +526,8 @@ True
 
 Different languages have different ideas of what is "truthy" and "falsy." In Python, all objects can be tested for truth, and an object is considered True unless except under certain circumstances that we talked about earlier in the chapter. Remember that checking if an object is "equal" to another object doesn't necessarily mean the same thing. An object is considered "truthy" if it satisfies the check performed by `if` or `while` statements.
 
+<div class="task" markdown="block">
+
 Let's try a few of these out:
 
 ```python
@@ -529,11 +539,14 @@ Let's try a few of these out:
 >>> # The number 5 is truthy for an if test!
 ```
 
-True and False can also be represented by 1 and 0
+`True` and `False` can also be represented by 1 and 0:
+
 ```python
 >>> 1 == True
 >>> 0 == False
 ```
+
+</div>
 
 <html>
 <details>
@@ -957,12 +970,10 @@ Let's say we wanted to duplicate the code in the example JavaScript above, that 
 
 In order to do this, we'll need to use a built-in function called `range()`. The range function in python produces a sequence of integers from an optional and inclusive start, to a defined and exclusive finish.
 
+> In Python2, this function created a list of each number in that sequence. As you can imagine, it was horribly inefficient for large ranges. In Python3, the `range()` function returns a new optimized data type. It's great for optimization, but it's harder for debugging.
 
-In Python2, this function created a list of each number in that sequence. As you can imagine, it was horribly inefficient for large ranges. In Python3, the `range()` function returns a new optimized data type. It's great for optimization, but it's harder for debugging.
-
-{{% notice note %}}
+{:.highlight}
 If you want to explicitly see what a call to `range()` produces for debugging purposes, you can pass the result into the `list()` method to see all the values at once. For example: `list(range(5))`. Remember that this is inefficient, so use it for testing, not in production code.
-{{% /notice %}}
 
 If we wanted to loop over all the values from 0 to 4, we'd use the range function like this:
 
@@ -1006,9 +1017,8 @@ The number is: 10
 
 What do inclusive and exclusive mean in this context? *Exclusive* means that the end result *will not* include that number. If you'd like the numbers from 0 to 4, you would call `range(5)`. Consider 5 to the *stopping point*. *Inclusive* means the range will include the number. The `start` parameter is inclusive, meaning if you'd like the range of numbers from 1 to 4, you'd call `range(1, 5)`.
 
-{{% notice tip %}}
+{:.highlight}
 If you can't remember how to use range, don't forget to call `help(range)` from the command line.
-{{% /notice %}}
 
 #### Looping over items with the index using `enumerate()`
 
@@ -1150,12 +1160,14 @@ for name in names:
 print("Done!")
 ```
 
-![break and continue visualized](/02-introduction-to-python/110-control-statements-looping/images/break-continue.png?classes=shadow,border)
-
 #### Results
 {:.no_toc}
 
-{{%expand "See if you can guess the results before expanding this section." %}}
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+
 ```bash
 (env) $ python names.py
 
@@ -1163,7 +1175,9 @@ Hello, Rose
 Hello, Nina
 Done!
 ```
-{{% /expand%}}
+</div>
+</details>
+</html>
 
 ### Using `break` and `continue` in nested loops
 {:.no_toc}
@@ -1193,6 +1207,7 @@ Nina in outer loop
 `break` in the inner loop only breaks out of the inner loop! The outer loop continues to run.
 
 #### Loop Control in `while` loops
+{:.no_toc}
 
 You can also use `break` and `continue` in `while` loops. One common scenario is running a loop forever, until a certain condition is met.
 
@@ -1211,6 +1226,7 @@ Count reached
 Be careful that your condition will eventually be met, or else your program will get stuck in an infinite loop. For production use, it's better to use asynchronous programming.
 
 #### Loops and the `return` statement
+{:.no_toc}
 
 Just like in functions, consider the `return` statement the hard kill-switch of the loop.
 
@@ -1250,7 +1266,11 @@ Let's practice our branching statements. Remember that `elif` (short for `else i
 >>> test_number(8675309)
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+  
 ```python
 >>> def test_number(number):
 ...     if number < 100:
@@ -1269,7 +1289,9 @@ This number is alright
 >>> test_number(8675309)
 This number is huge!
 ```
-{{%/expand%}}
+</div>
+</details>
+</html>
 
 You can also have multiple conditions in an if statement. This function prints "Fizzbuzz!" if the number is divisible by both 3 and 5 (the `%` or modulo operator returns the remainder from the division of two numbers):
 
@@ -1283,7 +1305,11 @@ You can also have multiple conditions in an if statement. This function prints "
 >>> fizzbuzz(15)
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+
 ```python
 >>> def fizzbuzz(number):
 ...     if number % 3 == 0 and number % 5 == 0:
@@ -1294,7 +1320,9 @@ You can also have multiple conditions in an if statement. This function prints "
 >>> fizzbuzz(15)
 Fizzbuzz!
 ```
-{{%/expand%}}
+</div>
+</details>
+</html>
 
 Let's also practice using `if` to test for an empty list. Remember that an empty list is "Falsey", or resolves to `False`. Write a function to print a list of elements, or an error message if the list is empty. Print a special message if a list item is `None`:
 
@@ -1382,7 +1410,11 @@ The most useful function, however, is `items()`, which returns the dictionary's 
 ...
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+  
 ```python
 >>> my_list = [1, 2, 3]
 >>> for num in my_list:
@@ -1439,7 +1471,9 @@ Item foo = bar
 Item hello = world
 ```
 
-{{%/expand%}}
+</div>
+</details>
+</html>
 
 #### `break`, `continue`, and `return`
 {:.no_toc}
@@ -1488,8 +1522,11 @@ You can also use the `return` keyword to break out of a loop within a function, 
 
 Notice that our function `is_number_in_list` checks all the numbers in `my_list` on the first run, but on the next run, stops immediately when it hits 3 and returns `True`.
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+  
 ```python
 >>> for num in range(0, 100):
 ...     print(f"Testing number {num}")
@@ -1550,7 +1587,9 @@ Checking 1...
 Checking 2...
 True
 ```
-{{%/expand%}}
+</div>
+</details>
+</html>
 
 #### `while` loop
 {:.no_toc}
@@ -1575,8 +1614,11 @@ Notice that the loop ends once `counter` 3, and the remainder of the loop is byp
 ...     counter += 1
 ```
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
-
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+  
 ```python
 >>> counter = 0
 >>> while counter < 3:
@@ -1602,7 +1644,9 @@ Counter = 2
 Counter = 3
 ```
 
-{{%/expand%}}
+</div>
+</details>
+</html>
 
 #### Nested Loops
 {:.no_toc}
@@ -1636,9 +1680,13 @@ Or:
 ...
 ```
 
-Notice how the inner `y` loop never gets above 2, whereas the outer `x` loop continues until the end of its range.
+> Notice how the inner `y` loop never gets above 2, whereas the outer `x` loop continues until the end of its range.
 
-{{%expand "Here's what you should have seen in your REPL:" %}}
+<html>
+<details>
+<summary><strong>✅ Check your result after testing (no peeking!):</strong></summary>
+<div markdown="block"> 
+
 ```python
 >>> for x in range(0, 5):
 ...     for y in range(0, 5):
@@ -1662,8 +1710,10 @@ x = 4, y = 0
 x = 4, y = 1
 x = 4, y = 2
 ```
-{{%/expand%}}
 
+</div>
+</details>
+</html>
 
 ---
 
