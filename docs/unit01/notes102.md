@@ -25,6 +25,8 @@ nav_order: 2
 
 </div>
 
+<br>
+
 <div class="warn" markdown="block">
 
 🛑 When class ends, don't forget to **SAVE YOUR WORK**! _There are multiple steps to saving in GitHub:_
@@ -145,7 +147,7 @@ False
 False
 ```
 
-### Comparison Operators
+### Comparison Operators: `<`, `<=`,`>`, `>=`
 
 |Operator|Means|
 |---|---|
@@ -182,7 +184,7 @@ True
 True
 ```
 
-### Checking Equality
+### Checking Equality: `==`, `!=`
 
 |Operator|Means|
 |---|---|
@@ -220,7 +222,7 @@ True
 False
 ```
 
-### Checking Identity
+### Checking Identity: `is`, `is not`
 
 |Operator|Means|
 |---|---|
@@ -664,7 +666,8 @@ Hello, World!
 {:.highlight}
 Remember, your `if` statements only run if the expression in them evaluates to `True` and just like with functions, you'll need to enter an extra space in the REPL to run it.
 
-#### Using `not` With `if` Statements
+#### Using `not` with `if` Statements
+{:.no_toc}
 
 If you only want your code to run if the expression is `False`, use the `not` keyword.
 
@@ -677,6 +680,7 @@ Negation in action!
 ```
 
 ### `if` Statements and Truthiness
+{:.no_toc}
 
 `if` statements also work with items that have a "truthiness" to them.
 
