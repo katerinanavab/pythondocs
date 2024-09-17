@@ -15,6 +15,7 @@ nav_order: 2
 ---
 
 #### USING A GITHUB CODESPACE TO TAKE CLASS NOTES
+{:.no_toc}
 
 <div class="setup" markdown="block">
 
@@ -548,6 +549,10 @@ Python also supports boolean operators, although they're a little different than
 |`x and y`|if x is false, then x, else y|
 |`not x`|if x is false, then `True`, else `False`|
 
+<div class="task" markdown="block">
+
+Test the following operations: 
+
 ```python
 >>> True or False
 >>> [] or [1, 2, 3]
@@ -575,6 +580,8 @@ Python also supports boolean operators, although they're a little different than
 >>> c = True
 >>> a and b and c
 ```
+
+</div>
 
 <html>
 <details>
@@ -1084,6 +1091,8 @@ Hello, Nina
 #### `break` and `continue` visualized
 {:.no_toc}
 
+<div class="task" markdown="block">
+
 What happens when we run the code from this Python file?
 
 ```python
@@ -1102,8 +1111,7 @@ for name in names:
 print("Done!")
 ```
 
-#### Results
-{:.no_toc}
+</div>
 
 <html>
 <details>
@@ -1193,6 +1201,10 @@ Nina
 
 Let's practice our branching statements. Remember that `elif` (short for `else if`) is an optional branch that will let you add another `if` test, and `else` is an optional branch that will catch anything not previously caught by `if` or `elif`.
 
+<div class="task" markdown="block">
+
+Test the following code: 
+
 ```python
 >>> def test_number(number):
 ...     if number < 100:
@@ -1207,6 +1219,8 @@ Let's practice our branching statements. Remember that `elif` (short for `else i
 >>> test_number(100)
 >>> test_number(8675309)
 ```
+
+</div>
 
 <html>
 <details>
@@ -1235,7 +1249,11 @@ This number is huge!
 </details>
 </html>
 
-You can also have multiple conditions in an if statement. This function prints "Fizzbuzz!" if the number is divisible by both 3 and 5 (the `%` or modulo operator returns the remainder from the division of two numbers):
+You can also have **multiple conditions** in an if statement. This function prints "Fizzbuzz!" if the number is divisible by both 3 and 5 (the `%` or modulo operator returns the remainder from the division of two numbers):
+
+<div class="task" markdown="block">
+
+Test the following code: 
 
 ```python
 >>> def fizzbuzz(number):
@@ -1246,6 +1264,8 @@ You can also have multiple conditions in an if statement. This function prints "
 >>> fizzbuzz(5)
 >>> fizzbuzz(15)
 ```
+
+</div>
 
 <html>
 <details>
@@ -1266,35 +1286,10 @@ Fizzbuzz!
 </details>
 </html>
 
-Let's also practice using `if` to test for an empty list. Remember that an empty list is "Falsey", or resolves to `False`. Write a function to print a list of elements, or an error message if the list is empty. Print a special message if a list item is `None`:
-
-```python
->>> def my_func(my_list):
-...     if my_list:
-...         for item in my_list:
-...             if item is None:
-...                 print("Got None!")
-...             else:
-...                 print(item)
-...     else:
-...         print("Got an empty list!")
-...
->>> my_func([1, 2, 3])
-1
-2
-3
->>> my_func([2, None, "hello", 42])
-2
-Got None!
-hello
-42
->>> my_func([])
-Got an empty list!
-```
-
-
 #### The `for` loop, `range()` and `enumerate()`
 {:.no_toc}
+
+<div class="task" markdown="block">
 
 Let's try making a list and looping over it:
 
@@ -1305,6 +1300,9 @@ Let's try making a list and looping over it:
 ...
 ```
 
+</div>
+
+<div class="task" markdown="block">
 
 If we're just interested in looping over a list of numbers, we can use the `range()` function instead. Remember that the first argument is inclusive and the second is exclusive:
 
@@ -1314,6 +1312,8 @@ If we're just interested in looping over a list of numbers, we can use the `rang
 ...
 ```
 
+</div>
+
 Another useful function is `enumerate()`, which iterates over an iterable (like a list) and also gives you an automatic counter. `enumerate()` returns a tuple in the form of (`counter`, `item`).
 
 ```python
@@ -1322,6 +1322,8 @@ Another useful function is `enumerate()`, which iterates over an iterable (like 
 ...     print(f"Item {index}: {item}")
 ...
 ```
+
+<div class="task" markdown="block">
 
 We can also loop over a dictionary's keys and/or values. If you try to iterate over the dictionary object itself, what do you get?
 
@@ -1336,6 +1338,10 @@ We can also loop over a dictionary's keys and/or values. If you try to iterate o
 ...
 ```
 
+</div>
+
+<div class="task" markdown="block">
+
 The `keys()` method returns the dictionary's keys as a list, which you can then iterate over as you would any other list. This also works for `values()`
 
 ```python
@@ -1344,13 +1350,19 @@ The `keys()` method returns the dictionary's keys as a list, which you can then 
 ...
 ```
 
-The most useful function, however, is `items()`, which returns the dictionary's items as tuples in the form of (key, value):
+</div>
+
+<div class="task" markdown="block">
+
+The most useful function, however, is `items()`, which returns the dictionary's items as tuples in the form of `(key, value)`:
 
 ```python
 >>> for key, value in my_dict.items():
 ...     print(f"Item {key} = {value}")
 ...
 ```
+
+</div>
 
 <html>
 <details>
@@ -1420,7 +1432,11 @@ Item hello = world
 #### `break`, `continue`, and `return`
 {:.no_toc}
 
-`break` and `continue` are important functions for controlling the program flow inside loops. `break` ends the loop immediately and continues executing from outside the loop's scope, and `continue` skips the remainder of the loop and continues executing from the next round of the loop. Let's practice:
+`break` and `continue` are important functions for controlling the program flow inside loops. `break` ends the loop immediately and continues executing from outside the loop's scope, and `continue` skips the remainder of the loop and continues executing from the next round of the loop. 
+
+<div class="task" markdown="block">
+
+Let's practice:
 
 ```python
 >>> for num in range(0, 100):
@@ -1432,8 +1448,13 @@ Item hello = world
 ...
 ```
 
-Notice that "Not yet..." doesn't get printed for number 3, because we `break` out of the loop first. Let's try a `continue`:
+</div>
 
+> Notice that "Not yet..." doesn't get printed for number 3, because we `break` out of the loop first. Let's try a `continue`:
+
+<div class="task" markdown="block">
+Try this:
+  
 ```python
 >>> for num in range(0, 100):
 ...     print(f"Testing number {num}")
@@ -1446,9 +1467,13 @@ Notice that "Not yet..." doesn't get printed for number 3, because we `break` ou
 ...
 ```
 
-Notice that "Not yet..." doesn't get printed at all until the number is 3, because the `continue` short-circuits the loop back to the beginning. Then we `break` when we hit 5.
+</div>
 
-You can also use the `return` keyword to break out of a loop within a function, while optionally returning a value.
+> Notice that "Not yet..." doesn't get printed at all until the number is 3, because the `continue` short-circuits the loop back to the beginning. Then we `break` when we hit 5.
+
+<div class="task" markdown="block">
+
+You can also use the `return` keyword to break out of a loop within a function, while optionally returning a value:
 
 ```python
 >>> def is_number_in_list(number_to_check, list_to_search):
@@ -1462,7 +1487,9 @@ You can also use the `return` keyword to break out of a loop within a function, 
 >>> is_number_in_list(2, my_list)
 ```
 
-Notice that our function `is_number_in_list` checks all the numbers in `my_list` on the first run, but on the next run, stops immediately when it hits 3 and returns `True`.
+</div>
+
+> Notice that our function `is_number_in_list` checks all the numbers in `my_list` on the first run, but on the next run, stops immediately when it hits 3 and returns `True`.
 
 <html>
 <details>
@@ -1538,6 +1565,9 @@ True
 
 Instead of looping over a sequence, `while` loops continue looping while a certain condition is met (or not met). The condition is checked at the beginning every iteration.
 
+<div class="task" markdown="block">
+Try this code:
+  
 ```python
 >>> counter = 0
 >>> while counter < 3:
@@ -1545,7 +1575,11 @@ Instead of looping over a sequence, `while` loops continue looping while a certa
 ...     counter += 1
 ```
 
-Notice that the loop ends once `counter` 3, and the remainder of the loop is bypassed. You can also loop forever by using `while True` or `while False`, but you should make sure you have solid `break` conditions, or your program will just loop forever (unless that's what you want).
+> Notice that the loop ends once `counter` 3, and the remainder of the loop is bypassed. You can also loop forever by using `while True` or `while False`, but you should make sure you have solid `break` conditions, or your program will just loop forever (unless that's what you want).
+
+<div class="task" markdown="block">
+
+Try this code:
 
 ```python
 >>> counter = 0
@@ -1555,6 +1589,8 @@ Notice that the loop ends once `counter` 3, and the remainder of the loop is byp
 ...         break
 ...     counter += 1
 ```
+
+</div>
 
 <html>
 <details>
@@ -1595,6 +1631,10 @@ Counter = 3
 
 Nesting loops is often necessary and sometimes tricky. The `break` keyword will only get you out of whichever loop you're `break`ing. The only way to exit all loops is with multiple `break` statements (at each level), or the `return` keyword (inside a function). For example:
 
+<div class="task" markdown="block">
+
+Practice nesting loops:
+
 ```python
 names = ["Rose", "Max", "Nina"]
 target_letter = 'x'
@@ -1621,6 +1661,8 @@ Or:
 ...             break
 ...
 ```
+
+</div>
 
 > Notice how the inner `y` loop never gets above 2, whereas the outer `x` loop continues until the end of its range.
 
