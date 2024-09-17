@@ -1575,6 +1575,8 @@ Try this code:
 ...     counter += 1
 ```
 
+</div>
+
 > Notice that the loop ends once `counter` 3, and the remainder of the loop is bypassed. You can also loop forever by using `while True` or `while False`, but you should make sure you have solid `break` conditions, or your program will just loop forever (unless that's what you want).
 
 <div class="task" markdown="block">
