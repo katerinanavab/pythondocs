@@ -31,7 +31,7 @@ In this project, students will demonstrate their understanding of Python program
 #### Project Specifications
 - **Trivia Questions:** The quiz should have a minimum of _10 multiple-choice_ questions. The program should evaluate the user’s responses and provide overall feedback on their performance at the end of the quiz.
 - **Main Program:** The main program should initialize the quiz, call the necessary functions, and handle the quiz’s overall flow.
-- **User Interaction:** Ensure the quiz is interactive by taking user input and providing immediate feedback after each question.
+- **User Interaction:** Ensure the quiz is interactive by taking user input (`choice = input(question)`) and providing immediate feedback after each question.
 - **Scoring:** Implement a scoring system that tracks the user’s correct answers and displays the final score at the end.
 - **Error Handling:** Include basic error handling for user inputs (e.g., ensuring the user selects a valid option for multiple-choice questions).
 
@@ -55,8 +55,8 @@ trivia = [
 ```
 
 - **Functions:** Write at least two functions:
-  - `ask_question(question, options, correct_answer)` displays the question and options, takes user input, checks if the answer is correct, and returns a boolean value indicating correctness.
-  - `calculate_score(total_questions, correct_answers)` calculates and returns the user’s score as a percentage.
+  - `ask_question(question, options, answer)` displays the question and options, takes user input, checks if the answer is correct, and **returns** a `boolean` value indicating correctness.
+  - `calculate_score(total_questions, num_correct)` calculates and returns the user’s score as a percentage.
 - **Loops:** Use loops to iterate through the questions stored in the list and handle repeated tasks (e.g., displaying questions, capturing responses).
 - **Conditionals:** Implement conditionals to check if the user’s response is correct and update the score accordingly.
 
