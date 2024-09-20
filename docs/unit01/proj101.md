@@ -38,8 +38,22 @@ In this project, students will demonstrate their understanding of Python program
 #### Core Python Concepts to Implement
 - **Variables:** Use variables to store user inputs, scores, and other relevant data.
 - **Data Types:** Implement different data types, including `strings`, `integers`, `lists`, and `dictionaries`, to manage quiz questions, answers, and user data.
-- **Dictionaries:** Use a `dictionary` to store each question and its corresponding possible answers.
-  - Create a dictionary where the `keys` are the questions (stored as strings), and the `values` are lists containing possible answer choices. 
+  - Use a `list` to store all the question objects. 
+  - Inside the list, create a `dictionary` to store the body of each question, the correct choice, and its corresponding possible answers. Each question object should be its own dictionary, within the overall list collection.
+ 
+```python
+trivia = [
+          { 'question': "question body goes here",
+            'answer': 'correct answer',
+            'options': ['option a', 'option b', 'option c', 'correct answer'],
+          },
+          { 'question': "question body goes here",
+            'answer': 'correct answer',
+            'options': ['option a', 'option b', 'option c', 'correct answer'],
+          }
+         ]
+```
+
 - **Functions:** Write at least two functions:
   - `ask_question(question, options, correct_answer)` displays the question and options, takes user input, checks if the answer is correct, and returns a boolean value indicating correctness.
   - `calculate_score(total_questions, correct_answers)` calculates and returns the user’s score as a percentage.
