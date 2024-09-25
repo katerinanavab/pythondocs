@@ -70,19 +70,6 @@ Data scientists have to deal with a lot of data at once. While Google Sheets and
 7. 📝 Take notes in this Codespace during class, coding along with the instructor.
 
 </div>
-<br>
-<div class="warn" markdown="block">
-
-🛑 When class ends, don't forget to **SAVE YOUR WORK**! _There are multiple steps to saving in GitHub:_
-
-1. Navigate to the `Source Control` menu on the _LEFT_ sidebar
-2. Click the <button type="button" name="button" class="btn btn-green">commit changes</button> button on the _LEFT_ menu
-3. Type a brief **commit message** at the top of the file that opens, for example: `updated main.py`
-4. Click the small `✔️` **checkmark** in the _TOP RIGHT_ corner
-5. Click the <button type="button" name="button" class="btn btn-green">sync changes</button> button on the _LEFT_ menu
-6. _Finally you can close your Codespace!_
-
-</div>
 
 ### Exploring the Data
 
@@ -169,6 +156,21 @@ df.columns
 ---
 
 ## ⭐️ Summary
+
+
+<br>
+<div class="warn" markdown="block">
+
+🛑 When class ends, don't forget to **SAVE YOUR WORK**! _There are multiple steps to saving in GitHub:_
+
+1. Navigate to the `Source Control` menu on the _LEFT_ sidebar
+2. Click the <button type="button" name="button" class="btn btn-green">commit changes</button> button on the _LEFT_ menu
+3. Type a brief **commit message** at the top of the file that opens, for example: `updated main.py`
+4. Click the small `✔️` **checkmark** in the _TOP RIGHT_ corner
+5. Click the <button type="button" name="button" class="btn btn-green">sync changes</button> button on the _LEFT_ menu
+6. _Finally you can close your Codespace!_
+
+</div>
 
 ---
 
