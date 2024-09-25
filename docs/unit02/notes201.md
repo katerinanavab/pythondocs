@@ -50,7 +50,7 @@ Combining statistics, computer science, writing, art, and ethics, data science h
 
 ## 🐼 Pandas with Movie Data
 
-First, make sure you have a blank Python program to take notes and code along as we dive into the lesson.
+Data scientists have to deal with a lot of data at once. While Google Sheets and Excel are great ways to visualize and manipulate data, they are not as _versatile_ as we might want. In this chapter, you will be introduced to **data frames** and learn to use them to obtain information from data.
 
 #### Using a GitHub Template for class notes
 
@@ -81,6 +81,7 @@ First, make sure you have a blank Python program to take notes and code along as
 </div>
 
 ### Exploring the Data
+
 
 ### Filtering the Data
 
