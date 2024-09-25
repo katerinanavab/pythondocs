@@ -56,6 +56,7 @@ Combining statistics, computer science, writing, art, and ethics, data science h
 Data scientists have to deal with a lot of data at once. While Google Sheets and Excel are great ways to visualize and manipulate data, they are not as _versatile_ as we might want. In this chapter, you will be introduced to **data frames** and learn to use them to obtain information from data.
 
 #### Using a GitHub Template for class notes
+{:.no_toc}
 
 <div class="setup" markdown="block">
 
@@ -292,6 +293,57 @@ time_scheduler.loc[7].head()
 
 
 ### Dealing with Multiple DataFrames
+
+Forget about budget or runtimes as criteria for selecting a movie, let's take a
+look at **popular opinion**. Our dataset has two relevant columns: ``vote_average``
+and ``vote_count``.
+
+<div class="task" markdown="block">
+
+Let's create a variable called ``df_high_rated`` that only contains movies that
+have received more than 20 votes, and whose average score is greater than 8.
+
+```python
+df_highly_voted = df[df.vote_count > 20]
+df_high_rated = df_highly_voted[df_highly_voted.vote_average > 8]
+df_high_rated[['title', 'vote_average', 'vote_count']].head()
+```
+
+Here we have some high-quality movies, at least according to some people.
+</div>
+
+> 💬: How many highly-rated movies are in this dataset? 
+
+But what about **my** opinion?
+
+<div class="task" markdown="block">
+
+Here are my favorite movies and their relative scores. Create a DataFrame called
+``compare_votes`` that contains the title as an index and both the
+``vote_average`` and ``my_vote`` as its columns. Also, only keep the movies that
+are both my favorites and popular favorites.
+
+> **Hint:** You'll need to create two Series, one for my ratings and one that maps
+titles to vote_average.
+
+```python
+my_votes = {
+       "Star Wars": 9,
+       "Paris is Burning": 8,
+       "Dead Poets Society": 7,
+       "The Empire Strikes Back": 9.5,
+       "The Shining": 8,
+       "Return of the Jedi": 8,
+       "1941": 8,
+       "Forrest Gump": 7.5,
+   }
+```
+
+</div>
+
+> 💬: What's the **percentage difference** between the popular rating for Star Wars and my vote for it? (_Make sure you use the popular rating minus my rating, and convert your answer to a percentage._)
+
+> 💬: Make up 3 questions you would like to answer about this movie data using the techniques you have learned.
 
 ---
 
