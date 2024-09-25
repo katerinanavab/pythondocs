@@ -15,10 +15,14 @@ nav_order: 1
 ---
 ## What is Data Science?
 
+<html>
+<div>
 <dl>
   <dt>Data Science</dt>
   <dd>An emerging, interdisciplinary field that brings together ideas that have been around for years, or even centuries about processes and systems to <strong>extract knowledge</strong> and/or to <strong>make predictions</strong> from data in various forms.</dd>
 </dl>
+</div>
+</html>
 
 In 2016 a study reported that [90% of the data in the world today has been created in the last two years alone](http://www.iflscience.com/technology/how-much-data-does-the-world-generate-every-minute).
 This is the result of the _continuing acceleration of the rate_ at which we store
