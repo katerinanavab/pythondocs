@@ -77,30 +77,22 @@ We're going to be using a dataset about movies to try out processing some data w
 <div class="task" markdown="block">
 
 1. We start with some standard **imports**:
-
 ```python
 import pandas as pd
 import numpy as np
 ```
-
 2. Download the `movies_metadata.csv` file from [Kaggle](https://www.kaggle.com/rounakbanik/the-movies-dataset) and upload it to your repository. 
-
 3. **Load** the data from a local file using `pandas`:
-
 ```python
 df = pd.read_csv('movies_metadata.csv').dropna(axis=1, how='all')
 df.head()
 ```
-
 4. Let's see what data we have:
-
 ```python
 df.shape
 ```
-
 5. Twenty-three columns of data for over 45,000 movies is going be a lot to look
 at, but let's start by looking at what the columns represent:
-
 ```python
 df.columns
 ```
