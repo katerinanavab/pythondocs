@@ -99,9 +99,11 @@ df.columns
 
 </div>
 
+<br>
+
 <html>
 <details>
-<summary>Explanation of Columns</summary>
+<summary>EXPLANATION OF COLUMNS</summary>
 
 <div markdown="block">
   
