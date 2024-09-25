@@ -20,9 +20,9 @@ Data scientists have to deal with a lot of data at once. While Google Sheets and
 
 </div>
 
-### Instructions & Requirements
+### Instructions
 
-### Exploring the Data
+#### PART A: Exploring the Data
 
 We're going to be using a dataset about movies to try out processing some data with the `Pandas` library. A [Python Library](https://www.geeksforgeeks.org/libraries-in-python/) is a collection of related modules. It contains bundles of code that can be used repeatedly in different programs.
 
@@ -92,7 +92,7 @@ df.columns
 </details>
 </html>
 
-### Filtering the Data
+#### PART B: Filtering the Data
 
 Let’s start by only looking at films that cost over a million dollars to make.
 
@@ -150,7 +150,7 @@ budget_lookup_as_and_bs.shape
 
 > 💬: ***How many** movies with a budget of over a million dollars and whose title starts with an "A" or a "B" are there?*
 
-### Numbers as Indices
+#### PART C: Numbers as Indices
 
 Enough about movie budgets, it's time to budget my time instead. Because I
 schedule my day to the minute, I like to be able to look up movies by their
@@ -243,7 +243,7 @@ time_scheduler.loc[7].head()
 > 💬: What is the **155th** shortest movie in this collection? (_Make sure you are using `iloc` and not `loc`!_)
 
 
-### Dealing with Multiple DataFrames
+#### PART D: Dealing with Multiple DataFrames
 
 Forget about budget or runtimes as criteria for selecting a movie, let's take a
 look at **popular opinion**. Our dataset has two relevant columns: ``vote_average``
