@@ -43,11 +43,11 @@ As an interdisciplinary field of inquiry, data science is perfect for a liberal 
 Combining statistics, computer science, writing, art, and ethics, data science has application across the entire curriculum:  biology, economics, management, English, history, music, pretty much everything. The best thing about data science is that the job of a data scientist seems perfectly suited to many liberal arts students.
 
 {:.highlight}
-"The best data scientists have one thing in common: **unbelievable curiosity**." - D.J. Patil,_ Chief Data Scientist of the United States from 2015 to 2017_.
+"The best data scientists have one thing in common: **unbelievable curiosity**." - D.J. Patil, *Chief Data Scientist of the United States from 2015 to 2017*.
 
 ![image](https://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png?format=1500w)
 
-> The diagram above is widely used to answer the question "What is Data Science?" It also is a great illustration of the liberal arts nature of data science. Some computer science, some statistics, and something from one of the many majors available at a liberal arts college, all of which are looking for people with data skills!
+> The diagram above is widely used to answer the question "What is Data Science?" It also is a great illustration of the **liberal arts** nature of data science. Some computer science, some statistics, and something from one of the many majors available at a liberal arts college, all of which are looking for people with data skills!
 
 ---
 
