@@ -76,7 +76,7 @@ Combining statistics, computer science, writing, art, and ethics, data science h
 
 <html>
 <dl>
-  <dt><code>DataFrame</code></dt>
+  <dt>DataFrame</dt>
   <dd>A multidimensional array object with attached <code>row</code> and <code>column</code> labels, often containing heterogeneous types and/or missing data. The concept is similar to a <strong>spreadsheet</strong> in Excel or Google Sheets, but more versatile.</dd>
 </dl>
 </html>
@@ -93,12 +93,14 @@ import numpy as np
 import pandas as pd
 ```
 
-### The Pandas `Series` Object
+---
+
+## The Pandas `Series` Object
 
 <html>
 <dl>
-  <dt><code>Series</code></dt>
-  <dd>A one-dimensional array of indexed data.</dd>
+  <dt>Series</dt>
+  <dd>A one-dimensional array object of indexed data.</dd>
 </dl>
 </html>
 
@@ -165,19 +167,118 @@ This typing is important: just as the type-specific compiled code behind a NumPy
 
 The `Series`-as-dictionary analogy can be made even more clear by constructing a `Series` object directly from a Python dictionary, here the five most populous US states according to the 2020 census:
 
-
 ```python
 population_dict = {'California': 39538223, 'Texas': 29145505,
                    'Florida': 21538187, 'New York': 20201249,
                    'Pennsylvania': 13002700}
 population = pd.Series(population_dict)
-population
 ```
 
-### The Pandas `DataFrame` Object
+From here, typical dictionary-style item access can be performed:
+
+```python
+print(population['California'])
+```
+
+Unlike a dictionary, though, the `Series` also supports array-style operations such as slicing:
+
+```python
+print(population['California':'Florida'])
+```
+
+#### Constructing Series Objects
+{:.no_toc}
+
+We've already seen a few ways of constructing a Pandas `Series` from scratch. All of them are some version of the following:
+
+```python
+pd.Series(data, index=index)
+```
+where `index` is an optional argument, and `data` can be one of many entities.
+
+For example, `data` can be a list or NumPy array, in which case `index` defaults to an integer sequence:
+
+```python
+pd.Series([2, 4, 6])
+```
+
+Or `data` can be a scalar, which is repeated to fill the specified index:
+
+```python
+pd.Series(5, index=[100, 200, 300])
+```
+
+Or it can be a dictionary, in which case `index` defaults to the dictionary keys:
+
+```python
+pd.Series({2:'a', 1:'b', 3:'c'})
+```
+
+In each case, the index can be explicitly set to control the order or the subset of keys used:
+
+```python
+pd.Series({2:'a', 1:'b', 3:'c'}, index=[1, 2])
+```
+
+---
+## The Pandas `DataFrame` Object
+
+The next fundamental structure in Pandas is the `DataFrame`.
+Like the `Series` object discussed in the previous section, the `DataFrame` can be thought of either as a generalization of a NumPy array, or as a specialization of a Python dictionary. Since we didn't spend time on NumPy arrays, we'll focus on the concept of a **DataFrame as a specialized dictionary**.
+
+#### DataFrame as Specialized Dictionary
+{:.no_toc}
+
+Where a dictionary maps a key to a value, a `DataFrame` maps a column name to a `Series` of column data.
+For example, asking for the `'area'` attribute returns the `Series` object containing the areas we saw earlier:
+
+```python
+print(states['area'])
+```
+
+### Constructing DataFrame Objects
+{:.no_toc}
+
+A Pandas `DataFrame` can be constructed in a variety of ways.
+Here we'll explore several examples.
+
+#### From a single Series object
+{:.no_toc}
+
+A `DataFrame` is a collection of `Series` objects, and a single-column `DataFrame` can be constructed from a single `Series`:
+
+```python
+pd.DataFrame(population, columns=['population'])
+```
+
+#### From a list of dicts
+{:.no_toc}
+
+Any list of dictionaries can be made into a `DataFrame`. Even if some keys in the dictionary are missing, Pandas will fill them in with `NaN` values (i.e., "Not a Number")
+
+We'll use a simple list comprehension to create some data:
 
 
-### Data Indexing and Selection
+```python
+data = [{'a': i, 'b': 2 * i}
+        for i in range(3)]
+pd.DataFrame(data)
+```
+
+#### From a dictionary of Series objects
+{:.no_toc}
+
+As we saw before, a `DataFrame` can be constructed from a dictionary of `Series` objects as well:
+
+
+```python
+pd.DataFrame({'population': population,
+              'area': area})
+```
+
+---
+
+## Data Indexing and Selection
 
 
 ---
