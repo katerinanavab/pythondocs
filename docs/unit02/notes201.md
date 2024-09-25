@@ -15,6 +15,10 @@ nav_order: 1
 ---
 ## What is Data Science?
 
+<dl>
+  <dt>Data Science</dt>
+  <dd>An emerging, interdisciplinary field that brings together ideas that have been around for years, or even centuries about processes and systems to extract knowledge and/or to make learned predictions from data in various forms.</dd>
+</dl>
 
 
 
