@@ -108,10 +108,9 @@ df.columns
 </div>
 
 <html>
-<div markdown=“block”>
-<details>
+<details markdown="block">
 <summary>Explanation of Columns</summary>
-
+  
 - **belongs_to_collection:** A stringified dictionary that identifies the
   collection that a movie belongs to (if any).
 - **budget:** The budget of the movie in dollars.
@@ -140,9 +139,8 @@ df.columns
 - **video:** Indicates if there is a video present of the movie with TMDB.
 - **vote_average:** The average rating of the movie on TMDB.
 - **vote_count:** The number of votes by users, as counted by TMDB.
-
+  
 </details>
-</div>
 </html>
 
 ### Filtering the Data
@@ -221,19 +219,16 @@ budget_lookup_as_and_bs.shape
 They are used to implement specific data operations that may not need the entire dataset.
 (In pandas it is called <code>DataFrame</code>)
   </dd>
-
   <dt>Explicit Index</dt>
   <dd>Uses the values (numeric or non-numeric) set as the index.  For example, if we 
 set a column or row as the index then we can use values in the row or column as indices in different 
 panda methods. 
   </dd>
-
   <dt>Implicit Index</dt> 
   <dd>Uses the location (numeric) of the indices, similar to the python style of indexing. 
-</dd>
-
+  </dd>
   <dt>Index</dt>
-  <dd>An Index is a value that represents a position (address) in the ``DataFrame`` or series. 
+  <dd>An Index is a value that represents a position (address) in the <code>DataFrame</code> or <code>Series</code>. 
   </dd>
   <dt>Series</dt>
   <dd>A series is an array of related data values that share a connecting factor or property.
