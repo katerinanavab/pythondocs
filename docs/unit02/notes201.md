@@ -287,6 +287,7 @@ time_scheduler = df.set_index('runtime')
 time_scheduler = time_scheduler[['title', 'release_date']]
 time_scheduler.loc[7].head()
 ```
+</div>
 
 > 💬: How many movies lasting **154 minutes** are there?
 
