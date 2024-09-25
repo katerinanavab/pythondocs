@@ -48,7 +48,7 @@ Combining statistics, computer science, writing, art, and ethics, data science h
 
 ---
 
-## Learning Pandas with Movie Data
+## 🐼 Pandas with Movie Data
 
 First, make sure you have a blank Python program to take notes and code along as we dive into the lesson.
 
@@ -58,7 +58,7 @@ First, make sure you have a blank Python program to take notes and code along as
 
 1. Go to the public template **repository** for our class: [BWL-CS Python Template](https://github.com/BWL-CS/python-template)
 2. Click the <button type="button" name="button" class="btn btn-green">Use this template</button> button above the list of files then select `Create a new repository`
-3. Specify the **repository name**: `CS3-Unit-2-Notes`
+3. Specify the **repository name**: `CS3-Unit-2-Pandas`
 4. Click <button type="button" name="button" class="btn btn-green">Create repository</button>
     > Now you have **your own personal copy** of this starter code that you can always access under the `Your repositories` section of GitHub! 
 5. Now on your repository, click <button type="button" name="button" class="btn btn-green"> < > Code </button> and select the `Codespaces` tab
@@ -79,6 +79,18 @@ First, make sure you have a blank Python program to take notes and code along as
 6. _Finally you can close your Codespace!_
 
 </div>
+
+### Exploring the Data
+
+### Filtering the Data
+
+### Numbers as Indices
+
+### Dealing with Multiple DataFrames
+
+---
+
+## ⭐️ Summary
 
 ---
 
