@@ -93,7 +93,7 @@ import pandas as pd
 import numpy as np
 ```
 
-2. Download the dataset from [Kaggle](https://www.kaggle.com/rounakbanik/the-movies-dataset) and upload the **CSV file** to your repository. 
+2. Download the `movies_metadata.csv` file from [Kaggle](https://www.kaggle.com/rounakbanik/the-movies-dataset) and upload it to your repository. 
 
 3. **Load** the data from a local file using `pandas`:
 
@@ -157,7 +157,6 @@ df.columns
 </html>
 
 ### Filtering the Data
-
 
 ### Numbers as Indices
 
