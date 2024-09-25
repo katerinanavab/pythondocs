@@ -219,7 +219,7 @@ budget_lookup_as_and_bs.shape
   <dt>Data Frame</dt>
   <dd>Data frames are multidimensional arrays taken from a larger dataset. 
 They are used to implement specific data operations that may not need the entire dataset.
-(In `pandas` it is called <code>DataFrame</code>)
+(In pandas it is called <code>DataFrame</code>)
   </dd>
 
   <dt>Explicit Index</dt>
