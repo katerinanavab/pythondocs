@@ -108,10 +108,9 @@ df.columns
 </div>
 
 <html>
+<div markdown=“block”>
 <details>
 <summary>Explanation of Columns</summary>
-
-<div markdown=“block”>
 
 - **belongs_to_collection:** A stringified dictionary that identifies the
   collection that a movie belongs to (if any).
@@ -142,8 +141,8 @@ df.columns
 - **vote_average:** The average rating of the movie on TMDB.
 - **vote_count:** The number of votes by users, as counted by TMDB.
 
-</div>
 </details>
+</div>
 </html>
 
 ### Filtering the Data
