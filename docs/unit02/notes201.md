@@ -34,6 +34,8 @@ Often, this data is collected and stored with _little idea about how to use it_,
 
 ### What does a data scientist do?
 
+<a href="https://www.youtube.com/watch?v=X3paOmcrTjQ"><button class="btn btn-purple">📺 VIDEO: Data Science in 5 Minutes</button></a>
+
 As an interdisciplinary field of inquiry, data science is perfect for a liberal arts college as well as many other types of universities.
 Combining statistics, computer science, writing, art, and ethics, data science has application across the entire curriculum:  biology, economics, management, English, history, music, pretty much everything. The best thing about data science is that the job of a data scientist seems perfectly suited to many liberal arts students.
 
