@@ -83,12 +83,33 @@ Combining statistics, computer science, writing, art, and ethics, data science h
 
 As well as offering a convenient storage interface for labeled data, Pandas implements a number of powerful **data operations** familiar to users of both database frameworks and spreadsheet programs. Pandas, and in particular its `Series` and `DataFrame` objects, builds on the NumPy array structure and provides efficient access to these sorts of "data munging" tasks that occupy much of a data scientist's time.
 
-### The Pandas `Series` Object
+As we will see during the course of this chapter, Pandas provides a host of useful tools, methods, and functionality on top of the basic data structures, but nearly everything that follows will require an understanding of what these structures are.
+Thus, before we go any further, let's take a look at these three fundamental Pandas data structures: the `Series`, `DataFrame`, and `Index`.
 
-First, we can import the Pandas library under the alias `pd`:
+We will start our code sessions with the standard NumPy and Pandas **imports**, under the aliases `np` and `pd`:
+
 ```python
+import numpy as np
 import pandas as pd
 ```
+
+### The Pandas `Series` Object
+
+<html>
+<dl>
+  <dt><code>Series</code></dt>
+  <dd>A one-dimensional array of indexed data.</dd>
+</dl>
+</html>
+
+A `Series` object can be created from a `list` or array as follows:
+
+```python
+data = pd.Series([0.25, 0.5, 0.75, 1.0])
+```
+
+The `Series` combines a sequence of **values** with an explicit sequence of **indices**, which we can access with the `values` and `index` attributes. The `values` are simply a NumPy array:
+
 
 ### The Pandas `DataFrame` Object
 
@@ -187,5 +208,5 @@ and returns a boolean value (True or False).
 #### Acknowledgement
 {: .no_toc }
 
-Content on this page is adapted from [How to Think Like a Data Scientist on Runestone Academy - Brad Miller, Jacqueline Boggs, and Jan Pearce](https://runestone.academy/ns/books/published/httlads/index.html?mode=browsing).
+Content on this page is adapted from [How to Think Like a Data Scientist on Runestone Academy - Brad Miller, Jacqueline Boggs, and Jan Pearce](https://runestone.academy/ns/books/published/httlads/index.html?mode=browsing) and [Python Data Science Handbook - Jake VanderPlas](https://jakevdp.github.io/PythonDataScienceHandbook/).
 {: .fs-2 }
