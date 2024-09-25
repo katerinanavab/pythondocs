@@ -75,7 +75,7 @@ Combining statistics, computer science, writing, art, and ethics, data science h
 <html>
 <dl>
   <dt><code>DataFrame</code></dt>
-  <dd>A multidimensional array object with attached `row` and `column` labels, often containing heterogeneous types and/or missing data. The concept is similar to a <strong>spreadsheet</strong> in Excel or Google Sheets, but more versatile.</dd>
+  <dd>A multidimensional array object with attached <code>row</code> and <code>column</code> labels, often containing heterogeneous types and/or missing data. The concept is similar to a <strong>spreadsheet</strong> in Excel or Google Sheets, but more versatile.</dd>
 </dl>
 </html>
 
