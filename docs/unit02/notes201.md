@@ -69,11 +69,32 @@ Combining statistics, computer science, writing, art, and ethics, data science h
 
 </div>
 
----
-## Introducing Pandas Objects
+**NumPy** is a Python library centered around the `ndarray` object, which enables efficient storage and manipulation of dense typed arrays. **Pandas** is a newer package built on top of **NumPy** that provides an efficient implementation of a `DataFrame`, which is the main data structure offered by Pandas. 
+> **NumPy**'s limitations become clear when we need more flexibility (e.g., attaching labels to data, working with missing data, etc.) and when attempting operations that do not map well to element-wise broadcasting (e.g., groupings, pivots, etc.), each of which is an important piece of analyzing the less structured data available in many forms in the world around us.
 
----
-## Data Indexing and Selection
+<html>
+<dl>
+  <dt><code>DataFrame</code></dt>
+  <dd>A multidimensional array object with attached `row` and `column` labels, often containing heterogeneous types and/or missing data. The concept is similar to a <strong>spreadsheet</strong> in Excel or Google Sheets, but more versatile.</dd>
+</dl>
+</html>
+
+As well as offering a convenient storage interface for labeled data, Pandas implements a number of powerful **data operations** familiar to users of both database frameworks and spreadsheet programs. Pandas, and in particular its `Series` and `DataFrame` objects, builds on the NumPy array structure and provides efficient access to these sorts of "data munging" tasks that occupy much of a data scientist's time.
+
+In this part of the book, we will focus on the mechanics of using `Series`, `DataFrame`, and related structures effectively. We will use examples drawn from real datasets where appropriate, but these examples are not necessarily the focus.
+
+### Importing Pandas
+We can import the Pandas library under the alias `pd`:
+```python
+import pandas as pd
+```
+
+### Introducing Pandas Objects
+
+
+
+### Data Indexing and Selection
+
 
 ---
 
