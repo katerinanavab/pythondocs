@@ -82,8 +82,82 @@ Data scientists have to deal with a lot of data at once. While Google Sheets and
 
 ### Exploring the Data
 
+We're going to be using a dataset about movies to try out processing some data with the `Pandas` library. A [Python Library](https://www.geeksforgeeks.org/libraries-in-python/) is a collection of related modules. It contains bundles of code that can be used repeatedly in different programs.
+
+<div class="task" markdown="block">
+
+1. We start with some standard **imports**:
+
+```python
+import pandas as pd
+import numpy as np
+```
+
+2. Download the dataset from [Kaggle](https://www.kaggle.com/rounakbanik/the-movies-dataset) and upload the **CSV file** to your repository. 
+
+3. **Load** the data from a local file using `pandas`:
+
+```python
+df = pd.read_csv('movies_metadata.csv').dropna(axis=1, how='all')
+df.head()
+```
+
+4. Let's see what data we have:
+
+```python
+df.shape
+```
+
+5. Twenty-three columns of data for over 45,000 movies is going be a lot to look
+at, but let's start by looking at what the columns represent:
+
+```python
+df.columns
+```
+
+</div>
+
+<html>
+<details>
+<summary>Explanation of Columns</summary>
+
+<div markdown=“block”>
+
+- **belongs_to_collection:** A stringified dictionary that identifies the
+  collection that a movie belongs to (if any).
+- **budget:** The budget of the movie in dollars.
+- **genres:** A stringified list of dictionaries that list out all the genres
+  associated with the movie.
+- **homepage:** The Official Homepage of the movie.
+- **id:** An arbitrary ID for the movie.
+- **imdb_id:** The IMDB ID of the movie.
+- **original_language:** The language in which the movie was filmed.
+- **original_title:** The title of the movie in its original language.
+- **overview:** A blurb of the movie.
+- **popularity:** The Popularity Score assigned by TMDB.
+- **poster_path:** The URL of the poster image (relative to
+  http://image.TMDB.org/t/p/w185/).
+- **production_companies:** A stringified list of production companies involved
+  with the making of the movie.
+- **production_countries:** A stringified list of countries where the movie was
+  filmed or produced.
+- **release_date:** Theatrical release date of the movie.
+- **revenue:** World-wide revenue of the movie in dollars.
+- **runtime:** Duration of the movie in minutes.
+- **spoken_languages:** A stringified list of spoken languages in the film.
+- **status:** Released, To Be Released, Announced, etc.
+- **tagline:** The tagline of the movie.
+- **title:** The official title of the movie.
+- **video:** Indicates if there is a video present of the movie with TMDB.
+- **vote_average:** The average rating of the movie on TMDB.
+- **vote_count:** The number of votes by users, as counted by TMDB.
+
+</div>
+</details>
+</html>
 
 ### Filtering the Data
+
 
 ### Numbers as Indices
 
