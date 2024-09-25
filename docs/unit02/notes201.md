@@ -109,7 +109,70 @@ data = pd.Series([0.25, 0.5, 0.75, 1.0])
 ```
 
 The `Series` combines a sequence of **values** with an explicit sequence of **indices**, which we can access with the `values` and `index` attributes. The `values` are simply a NumPy array:
+```python
+data.values
+```
 
+The `index` is an array-like object of type `pd.Index`, which we'll discuss in more detail momentarily:
+```python
+data.index
+```
+
+Like with a NumPy array, data can be accessed by the associated index via the familiar Python square-bracket notation:
+
+```python
+data[1]
+data[1:3]
+```
+
+As we will see, though, the Pandas `Series` is much more general and flexible than the one-dimensional NumPy array that it emulates.
+
+#### Series as Generalized NumPy Array
+{:.no_toc}
+
+From what we've seen so far, the `Series` object may appear to be basically interchangeable with a one-dimensional NumPy array. The essential difference is that while the NumPy array has an *implicitly defined* integer index used to access the values, the Pandas `Series` has an *explicitly defined* index associated with the values.
+
+This explicit index definition gives the `Series` object additional capabilities. For example, the index need not be an integer, but can consist of values of any desired type.
+So, if we wish, we can use strings as an index:
+
+```python
+data = pd.Series([0.25, 0.5, 0.75, 1.0],
+                 index=['a', 'b', 'c', 'd'])
+print(data)
+```
+
+And the item access works as expected:
+
+```python
+print(data['b'])
+```
+
+We can even use noncontiguous or nonsequential indices:
+
+```python
+data = pd.Series([0.25, 0.5, 0.75, 1.0],
+                 index=[2, 5, 3, 7])
+print(data)
+print(data[5])
+```
+
+#### Series as Specialized Dictionary
+{:.no_toc}
+
+In this way, you can think of a Pandas `Series` a bit like a specialization of a Python dictionary.
+A dictionary is a structure that maps arbitrary keys to a set of arbitrary values, and a `Series` is a structure that maps typed keys to a set of typed values.
+This typing is important: just as the type-specific compiled code behind a NumPy array makes it more efficient than a Python list for certain operations, the type information of a Pandas `Series` makes it more efficient than Python dictionaries for certain operations.
+
+The `Series`-as-dictionary analogy can be made even more clear by constructing a `Series` object directly from a Python dictionary, here the five most populous US states according to the 2020 census:
+
+
+```python
+population_dict = {'California': 39538223, 'Texas': 29145505,
+                   'Florida': 21538187, 'New York': 20201249,
+                   'Pennsylvania': 13002700}
+population = pd.Series(population_dict)
+population
+```
 
 ### The Pandas `DataFrame` Object
 
