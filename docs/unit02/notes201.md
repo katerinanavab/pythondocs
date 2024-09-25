@@ -95,7 +95,9 @@ import pandas as pd
 
 ---
 
-## The Pandas `Series` Object
+## Pandas Objects
+
+### The `Series` Object
 
 <html>
 <dl>
@@ -220,11 +222,9 @@ In each case, the index can be explicitly set to control the order or the subset
 pd.Series({2:'a', 1:'b', 3:'c'}, index=[1, 2])
 ```
 
----
-## The Pandas `DataFrame` Object
+### The Pandas `DataFrame` Object
 
-The next fundamental structure in Pandas is the `DataFrame`.
-Like the `Series` object discussed in the previous section, the `DataFrame` can be thought of either as a generalization of a NumPy array, or as a specialization of a Python dictionary. Since we didn't spend time on NumPy arrays, we'll focus on the concept of a **DataFrame as a specialized dictionary**.
+The next fundamental structure in Pandas is the `DataFrame`. Like the `Series` object discussed in the previous section, the `DataFrame` can be thought of either as a generalization of a NumPy array, or as a specialization of a Python dictionary. Since we didn't spend time on NumPy arrays, we'll focus on the concept of a **DataFrame as a specialized dictionary**.
 
 #### DataFrame as Specialized Dictionary
 {:.no_toc}
@@ -280,6 +280,219 @@ pd.DataFrame({'population': population,
 
 ## Data Indexing and Selection
 
+### Data Selection in Series
+
+As you saw in the previous chapter, a `Series` object acts in many ways like a one-dimensional NumPy array, and in many ways like a standard Python dictionary.
+If you keep these two overlapping analogies in mind, it will help you understand the patterns of data indexing and selection in these arrays.
+
+#### Series as Dictionary
+{:.no_toc}
+
+Like a dictionary, the `Series` object provides a mapping from a collection of keys to a collection of values:
+
+```python
+data = pd.Series([0.25, 0.5, 0.75, 1.0],
+                 index=['a', 'b', 'c', 'd'])
+
+data['b']
+```
+
+We can also use dictionary-like Python expressions and methods to examine the keys/indices and values:
+
+```python
+'a' in data
+
+data.keys()
+
+list(data.items())
+```
+
+`Series` objects can also be modified with a dictionary-like syntax.
+Just as you can extend a dictionary by assigning to a new key, you can extend a `Series` by assigning to a new index value:
+
+
+```python
+data['e'] = 1.25
+data
+```
+
+This easy mutability of the objects is a convenient feature: under the hood, Pandas is making decisions about memory layout and data copying that might need to take place, and the user generally does not need to worry about these issues.
+
+#### Series as One-Dimensional Array
+{:.no_toc}
+
+A `Series` builds on this dictionary-like interface and provides array-style item selection via the same basic mechanisms as NumPy arrays—that is, slices, masking, and fancy indexing.
+Examples of these are as follows:
+
+```python
+# slicing by explicit index
+data['a':'c']
+
+# slicing by implicit integer index
+data[0:2]
+
+# masking
+data[(data > 0.3) & (data < 0.8)]
+
+# fancy indexing
+data[['a', 'e']]
+```
+
+Of these, slicing may be the source of the most confusion.
+Notice that when slicing with an explicit index (e.g., `data['a':'c']`), the final index is *included* in the slice, while when slicing with an implicit index (e.g., `data[0:2]`), the final index is *excluded* from the slice.
+
+#### Indexers: loc and iloc
+
+If your `Series` has an explicit integer index, an indexing operation such as `data[1]` will use the explicit indices, while a slicing operation like `data[1:3]` will use the implicit Python-style indices:
+
+
+```python
+data = pd.Series(['a', 'b', 'c'], index=[1, 3, 5])
+
+# explicit index when indexing
+data[1]
+
+# implicit index when slicing
+data[1:3]
+```
+
+Because of this potential confusion in the case of integer indexes, Pandas provides some special *indexer* attributes that explicitly expose certain indexing schemes.
+These are not functional methods, but attributes that expose a particular slicing interface to the data in the `Series`.
+
+First, the `loc` attribute allows indexing and slicing that always references the explicit index:
+
+```python
+data.loc[1]
+
+data.loc[1:3]
+```
+
+The `iloc` attribute allows indexing and slicing that always references the implicit Python-style index:
+
+```python
+data.iloc[1]
+
+data.iloc[1:3]
+```
+
+One guiding principle of Python code is that "explicit is better than implicit."
+The explicit nature of `loc` and `iloc` makes them helpful in maintaining clean and readable code; especially in the case of integer indexes, using them consistently can prevent subtle bugs due to the mixed indexing/slicing convention.
+
+### Data Selection in DataFrames
+
+Recall that a `DataFrame` acts in many ways like a two-dimensional or structured array, and in other ways like a dictionary of `Series` structures sharing the same index.
+These analogies can be helpful to keep in mind as we explore data selection within this structure.
+
+#### DataFrame as Dictionary
+{:.no_toc}
+
+The first analogy we will consider is the `DataFrame` as a dictionary of related `Series` objects.
+Let's return to our example of areas and populations of states:
+
+
+```python
+area = pd.Series({'California': 423967, 'Texas': 695662,
+                  'Florida': 170312, 'New York': 141297,
+                  'Pennsylvania': 119280})
+pop = pd.Series({'California': 39538223, 'Texas': 29145505,
+                 'Florida': 21538187, 'New York': 20201249,
+                 'Pennsylvania': 13002700})
+data = pd.DataFrame({'area':area, 'pop':pop})
+```
+
+The individual `Series` that make up the columns of the `DataFrame` can be accessed via dictionary-style indexing of the column name:
+
+```python
+data['area']
+```
+
+Equivalently, we can use attribute-style access with column names that are strings:
+
+```python
+data.area
+```
+
+Though this is a useful shorthand, keep in mind that it does not work for all cases!
+For example, if the column names are not strings, or if the column names conflict with methods of the `DataFrame`, this attribute-style access is not possible.
+
+For example, the `DataFrame` has a `pop` method, so `data.pop` will point to this rather than the `pop` column:
+
+```python
+data.pop is data["pop"]
+```
+
+In particular, you should avoid the temptation to try column assignment via attributes (i.e., use `data['pop'] = z` rather than `data.pop = z`).
+
+Like with the `Series` objects discussed earlier, this dictionary-style syntax can also be used to modify the object, in this case adding a new column:
+
+```python
+data['density'] = data['pop'] / data['area']
+```
+
+#### DataFrame as Two-Dimensional Array
+{:.no_toc}
+
+As mentioned previously, we can also view the `DataFrame` as an enhanced two-dimensional array.
+We can examine the raw underlying data array using the `values` attribute:
+
+
+```python
+data.values
+```
+
+With this picture in mind, many familiar array-like operations can be done on the `DataFrame` itself.
+For example, we can transpose the full `DataFrame` to swap rows and columns:
+
+```python
+data.T
+```
+
+When it comes to indexing of a `DataFrame` object, however, it is clear that the dictionary-style indexing of columns precludes our ability to simply treat it as a NumPy array.
+In particular, passing a single index to an array accesses a row:
+
+
+```python
+data.values[0]
+```
+
+and passing a single "index" to a `DataFrame` accesses a column:
+
+
+```python
+data['area']
+```
+
+Thus, for array-style indexing, we need another convention.
+Here Pandas again uses the `loc` and `iloc` indexers mentioned earlier.
+Using the `iloc` indexer, we can index the underlying array as if it were a simple NumPy array (using the implicit Python-style index), but the `DataFrame` index and column labels are maintained in the result:
+
+
+```python
+data.iloc[:3, :2]
+```
+
+Similarly, using the `loc` indexer we can index the underlying data in an array-like style but using the explicit index and column names:
+
+
+```python
+data.loc[:'Florida', :'pop']
+```
+
+Any of the familiar NumPy-style data access patterns can be used within these indexers.
+For example, in the `loc` indexer we can combine masking and fancy indexing as follows:
+
+
+```python
+data.loc[data.density > 120, ['pop', 'density']]
+```
+
+Any of these indexing conventions may also be used to set or modify values; this is done in the standard way that you might be accustomed to from working with NumPy:
+
+
+```python
+data.iloc[0, 2] = 90
+data
+```
 
 ---
 
