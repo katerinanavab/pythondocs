@@ -290,6 +290,15 @@ pd.DataFrame({'population': population,
 ```python
 pokemon = pd.read_csv('pokemon_data.csv')
 ```
+4. Check out the DataFrame:
+```python
+print(pokemon.head(10))
+print(pokemon.columns)
+```
+5. Let's use the `Name` column as indices:
+```python
+pokemon.set_index('Name')
+```
 </div>
 
 ### Data Selection in Series
