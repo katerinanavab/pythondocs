@@ -282,6 +282,16 @@ pd.DataFrame({'population': population,
 
 ## Data Indexing and Selection
 
+<div class="task" markdown="block">
+ 
+1. Download this [Pokemon Dataset](https://github.com/katerinanavab/pokemon-pandas-tutorial/blob/master/pokemon_data.csv) CSV file to use while we learn `Pandas` operations.
+2. Upload it to your `Unit-2-Notes` repository.
+3. Load data from the CSV file into a `DataFrame`:
+```python
+pokemon = pd.read_csv('pokemon_data.csv')
+```
+</div>
+
 ### Data Selection in Series
 
 As you saw in the previous chapter, a `Series` object acts in many ways like a one-dimensional NumPy array, and in many ways like a standard Python dictionary.
