@@ -282,89 +282,13 @@ pd.DataFrame({'population': population,
 
 ## Data Indexing and Selection
 
-<div class="task" markdown="block">
- 
-1. Download this [Pokemon Dataset](https://github.com/katerinanavab/pokemon-pandas-tutorial/blob/master/pokemon_data.csv) CSV file to use while we learn `Pandas` operations.
-2. Upload it to your `Unit-2-Notes` repository.
-3. Load data from the CSV file into a `DataFrame`:
-```python
-pokemon = pd.read_csv('pokemon_data.csv')
-```
-4. Check out the DataFrame:
-```python
-print(pokemon.head(10))
-print(pokemon.columns)
-```
-5. Let's use the `Name` column as indices:
-```python
-pokemon.set_index('Name')
-```
-</div>
-
 ### Data Selection in Series
 
 As you saw in the previous chapter, a `Series` object acts in many ways like a one-dimensional NumPy array, and in many ways like a standard Python dictionary.
-If you keep these two overlapping analogies in mind, it will help you understand the patterns of data indexing and selection in these arrays.
-
-#### Series as Dictionary
-{:.no_toc}
-
-Like a dictionary, the `Series` object provides a mapping from a collection of keys to a collection of values:
-
-```python
-data = pd.Series([0.25, 0.5, 0.75, 1.0],
-                 index=['a', 'b', 'c', 'd'])
-
-data['b']
-```
-
-We can also use dictionary-like Python expressions and methods to examine the keys/indices and values:
-
-```python
-'a' in data
-
-data.keys()
-
-list(data.items())
-```
-
-`Series` objects can also be modified with a dictionary-like syntax.
-Just as you can extend a dictionary by assigning to a new key, you can extend a `Series` by assigning to a new index value:
-
-
-```python
-data['e'] = 1.25
-data
-```
-
-This easy mutability of the objects is a convenient feature: under the hood, Pandas is making decisions about memory layout and data copying that might need to take place, and the user generally does not need to worry about these issues.
-
-#### Series as One-Dimensional Array
-{:.no_toc}
-
-A `Series` builds on this dictionary-like interface and provides array-style item selection via the same basic mechanisms as NumPy arrays—that is, slices, masking, and fancy indexing.
-Examples of these are as follows:
-
-```python
-# slicing by explicit index
-data['a':'c']
-
-# slicing by implicit integer index
-data[0:2]
-
-# masking
-data[(data > 0.3) & (data < 0.8)]
-
-# fancy indexing
-data[['a', 'e']]
-```
-
-Of these, slicing may be the source of the most confusion.
-Notice that when slicing with an explicit index (e.g., `data['a':'c']`), the final index is *included* in the slice, while when slicing with an implicit index (e.g., `data[0:2]`), the final index is *excluded* from the slice.
 
 #### Indexers: loc and iloc
 
-If your `Series` has an explicit integer index, an indexing operation such as `data[1]` will use the explicit indices, while a slicing operation like `data[1:3]` will use the implicit Python-style indices:
+If your `Series` has an explicit integer index, an indexing operation such as `data[1]` will use the explicit indices, while a slicing operation like `data[1:3]` will use the implicit indices:
 
 
 ```python
@@ -380,7 +304,7 @@ data[1:3]
 Because of this potential confusion in the case of integer indexes, Pandas provides some special *indexer* attributes that explicitly expose certain indexing schemes.
 These are not functional methods, but attributes that expose a particular slicing interface to the data in the `Series`.
 
-First, the `loc` attribute allows indexing and slicing that always references the explicit index:
+First, the `loc` attribute allows indexing and slicing that always references the **explicit index**:
 
 ```python
 data.loc[1]
@@ -388,7 +312,7 @@ data.loc[1]
 data.loc[1:3]
 ```
 
-The `iloc` attribute allows indexing and slicing that always references the implicit Python-style index:
+The `iloc` attribute allows indexing and slicing that always references the **implicit Python-style index**:
 
 ```python
 data.iloc[1]
@@ -399,120 +323,115 @@ data.iloc[1:3]
 One guiding principle of Python code is that "explicit is better than implicit."
 The explicit nature of `loc` and `iloc` makes them helpful in maintaining clean and readable code; especially in the case of integer indexes, using them consistently can prevent subtle bugs due to the mixed indexing/slicing convention.
 
-### Data Selection in DataFrames
+### Selecting Columns & Rows in DataFrames
 
-Recall that a `DataFrame` acts in many ways like a two-dimensional or structured array, and in other ways like a dictionary of `Series` structures sharing the same index.
-These analogies can be helpful to keep in mind as we explore data selection within this structure.
+<div class="task" markdown="block">
+ 
+1. Download this [Pokemon Dataset](https://github.com/katerinanavab/pokemon-pandas-tutorial/blob/master/pokemon_data.csv) CSV file to use while we learn `Pandas` operations.
+2. Upload it to your `Unit-2-Notes` repository.
+3. Load data from the CSV file into a `DataFrame`:
+```python
+pokemon = pd.read_csv('pokemon_data.csv')
+```
+4. Check out the DataFrame:
+```python
+print(pokemon)
+print(pokemon.columns)
+```
+</div>
+
+Recall that a `DataFrame` acts in many ways like a two-dimensional or structured _array_, and in other ways like a _dictionary_ of `Series` structures sharing the same index. These analogies can be helpful to keep in mind as we explore **data selection** within this structure.
 
 #### DataFrame as Dictionary
 {:.no_toc}
 
-The first analogy we will consider is the `DataFrame` as a dictionary of related `Series` objects.
-Let's return to our example of areas and populations of states:
-
+The first analogy we will consider is the `DataFrame` as a _dictionary_ of related `Series` objects. The individual `Series` that make up the **columns** of the `DataFrame` can be _accessed via dictionary-style indexing_ of the column name:
 
 ```python
-area = pd.Series({'California': 423967, 'Texas': 695662,
-                  'Florida': 170312, 'New York': 141297,
-                  'Pennsylvania': 119280})
-pop = pd.Series({'California': 39538223, 'Texas': 29145505,
-                 'Florida': 21538187, 'New York': 20201249,
-                 'Pennsylvania': 13002700})
-data = pd.DataFrame({'area':area, 'pop':pop})
+pokemon['Type 1']
 ```
 
-The individual `Series` that make up the columns of the `DataFrame` can be accessed via dictionary-style indexing of the column name:
+Equivalently, we can use _attribute-style access_ with simple string column names:
 
 ```python
-data['area']
+pokemon.HP
 ```
 
-Equivalently, we can use attribute-style access with column names that are strings:
-
-```python
-data.area
-```
-
+{:.warning}
 Though this is a useful shorthand, keep in mind that it does not work for all cases!
-For example, if the column names are not strings, or if the column names conflict with methods of the `DataFrame`, this attribute-style access is not possible.
+_For example:_ if the column names include whitespace (like `'Type 1'`), are not strings, or if the column names conflict with methods of the `DataFrame`, this **attribute-style access** is not possible.
 
-For example, the `DataFrame` has a `pop` method, so `data.pop` will point to this rather than the `pop` column:
-
-```python
-data.pop is data["pop"]
-```
-
-In particular, you should avoid the temptation to try column assignment via attributes (i.e., use `data['pop'] = z` rather than `data.pop = z`).
-
-Like with the `Series` objects discussed earlier, this dictionary-style syntax can also be used to modify the object, in this case adding a new column:
+Like with the `Series` objects discussed earlier, this dictionary-style syntax can also be used to **modify** the object, in this case _adding a new column_:
 
 ```python
-data['density'] = data['pop'] / data['area']
+# Compute ratio of Attack stat to Special Attack stat
+pokemon['Attack Ratio'] = pokemon['Attack'] / pokemon['Sp. Atk']
 ```
 
 #### DataFrame as Two-Dimensional Array
 {:.no_toc}
 
 As mentioned previously, we can also view the `DataFrame` as an enhanced two-dimensional array.
+
 We can examine the raw underlying data array using the `values` attribute:
 
-
 ```python
-data.values
+pokemon.values
 ```
 
-With this picture in mind, many familiar array-like operations can be done on the `DataFrame` itself.
-For example, we can transpose the full `DataFrame` to swap rows and columns:
+When it comes to indexing of a `DataFrame` object, Pandas again uses the `loc` and `iloc` indexers mentioned earlier.
 
-```python
-data.T
-```
+* Use `.iloc` when you want to access data by position.
+* Use `.loc` when you want to access data by label (e.g., Pokémon names).
 
-When it comes to indexing of a `DataFrame` object, however, it is clear that the dictionary-style indexing of columns precludes our ability to simply treat it as a NumPy array.
-In particular, passing a single index to an array accesses a row:
-
-
-```python
-data.values[0]
-```
-
-and passing a single "index" to a `DataFrame` accesses a column:
-
-
-```python
-data['area']
-```
-
-Thus, for array-style indexing, we need another convention.
-Here Pandas again uses the `loc` and `iloc` indexers mentioned earlier.
 Using the `iloc` indexer, we can index the underlying array as if it were a simple NumPy array (using the implicit Python-style index), but the `DataFrame` index and column labels are maintained in the result:
 
-
 ```python
-data.iloc[:3, :2]
+# Read a specific location [R, C]
+print(pokemon.iloc[100,1])
+
+# Read several rows
+print(pokemon.iloc[25:30])
+
+# Read every row for a certain column
+for index, row in pokemon.iterrows():
+    print(index, row['Name'])
 ```
 
 Similarly, using the `loc` indexer we can index the underlying data in an array-like style but using the explicit index and column names:
 
-
 ```python
-data.loc[:'Florida', :'pop']
+grass_types = pokemon.loc[pokemon['Type 1'] == "Grass"]
+print(grass_types)
 ```
 
-Any of the familiar NumPy-style data access patterns can be used within these indexers.
-For example, in the `loc` indexer we can combine masking and fancy indexing as follows:
+#### Using String Indices
 
+If you modify your DataFrame to use string indices, such as the Pokémon names, you will likely use `.loc` more frequently than `.iloc`. You first need to set the Pokémon names as the index: 
 
 ```python
-data.loc[data.density > 120, ['pop', 'density']]
+poke = pokemon.set_index('Name', inplace=True)
 ```
 
-Any of these indexing conventions may also be used to set or modify values; this is done in the standard way that you might be accustomed to from working with NumPy:
-
+Accessing a specific row and column:
 
 ```python
-data.iloc[0, 2] = 90
-data
+# Example accessing Pikachu's type by name
+print(poke.loc['Pikachu', 'Type 1'])
+```
+
+To read multiple rows using `.loc`, you need to specify a list of Pokémon names:
+
+```python
+# Example accessing a range of Pokémon by their names
+print(poke.loc[['Squirtle', 'Bulbasaur', 'Charmander']])
+```
+
+When iterating with `.iterrows()`, it automatically provides the index (now Pokémon names) along with the row:
+```python
+# Iterate through each row, printing Name - Type
+for index, row in poke.iterrows():
+    print(index, " - ", row['Type 1'])
 ```
 
 ---
