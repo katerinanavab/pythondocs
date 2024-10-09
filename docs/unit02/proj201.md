@@ -98,11 +98,11 @@ Let’s start by only looking at films that cost over a million dollars to make.
 
 <div class="task" markdown="block">
 
-Create a variable called ``budget_df`` that contains all columns for the movies
-whose budget was over a million dollars.
+Create a variable called ``budget_df`` that pulls the entire row (contains all columns) for any movies whose value in the `'budget'` column was **over a million dollars**.
 ```python
-budget_df = [] # fill in the brackets
-budget_df.shape
+# Fill in brackets with a CONDITIONAL
+budget_df = df[] 
+print(budget_df.shape)
 ```
 
 </div>
@@ -114,41 +114,45 @@ up the budget** of a particular movie.
 
 <div class="task" markdown="block">
 
-Create a Series object called ``budget_lookup`` such that you are able to use a
-call to ``budget_lookup['Dead Presidents']`` to find the budget of that movie.
+Create a **Series** object called ``budget_lookup`` such that you are able to use a
+call to ``budget_lookup['Movie Title']`` to find the budget of that movie. 
 ```python
-budget_lookup = [] # fill in the brackets
-budget_lookup['Dead Presidents']
+# Fill in the parameters for (values, index)
+budget_lookup = pd.Series()
 ```
+Print out the first five rows of the `budget_lookup` Series.
 
 </div>
 
-> 💬: *What was the budget for Dead Presidents?* 
+> 💬: *What was the budget for Jumanji?* 
 
-Let's say I have figured out that the first (alphabetically) movie whose title starts with
-an "A" is "A Bag of Hammers" and the last movie that starts with a "B" is
+Let's say I have figured out that the first (alphabetically) movie whose title starts with an "A" is "A Bag of Hammers" and the last movie that starts with a "B" is
 "Byzantium".
 
 ```python
-# Get first movie whose title starts with A
+# Get FIRST movie whose title starts with A
 budget_lookup[budget_lookup.index.str.startswith('A')].sort_index()[[0]]
-# Get last movie whos title starts with B
+# Get LAST movie whos title starts with B
 budget_lookup[budget_lookup.index.str.startswith('B')].sort_index()[[-1]]
 ```
 
 <div class="task" markdown="block">
 
-Use that knowledge to create a `Series` that contains budget informations for all the movies that start with an "A" or a "B". 
-> **Hint:** No need to use ``startswith`` like I did above, just use the movie **titles** to do a _slice_.
+Use that knowledge to create a `Series` that contains budget data for all the movies that start with an "A" or a "B". 
+
+> **Hint:** No need to use ``startswith`` like I did above, just use the two movie **titles** I found and compare `budget_lookup.index` to them.
 
 ```python
-budget_lookup_as_and_bs = [] # fill in the brackets
-budget_lookup_as_and_bs.shape
+# First define the condition to be checked
+condition = 
+
+# Pull rows conditionally
+budget_lookup_A_B = budget_lookup[condition]
 ```
 
 </div>
 
-> 💬: ***How many** movies with a budget of over a million dollars and whose title starts with an "A" or a "B" are there?*
+> 💬: ***How many** movies with a budget of over a million dollars AND whose title starts with an "A" or a "B" are there?*
 
 #### PART C: Numbers as Indices
 
@@ -158,13 +162,13 @@ runtime, so that when I have a spare two hours and 34 minutes, I can find all
 the movies that would fit precisely in that time slot. (Popcorn-making time is
 budgeted separately).
 
-Before you start, here is a refresher on the index operator in Pandas.
+Before you start, here is a refresher on the index operator in Pandas:
 
 **Selecting Columns of a DataFrame**
 
-* ``df[<string>]`` gets me a column and returns the Series corresponding to that
+* ``df[<string>]`` gets me a column and returns the **Series** corresponding to that
   column.
-* ``df[<list of strings>]`` gets me a bunch of columns and returns a DataFrame.
+* ``df[<list of strings>]`` gets me a bunch of columns and returns a **DataFrame**.
 
 **Selecting Rows of a DataFrame**
 
@@ -218,27 +222,26 @@ df.loc['c':'o']
 
 <div class="task" markdown="block">
   
-1. Create a Series called ``time_scheduler`` that is indexed by runtime and has the
+1. Create a Series called ``movies_by_runtime`` that is indexed by runtime and has the
 movie's title as its values. Note that you will need to use ``sort_index()`` in
-order to be able to look up movies by their duration. Base yourself on ``df``
+order to be able to look up movies by their duration. Base yourself on the original ``df``
 rather than ``budget_df``.
 
-2. While you’re at it, remove any movie that is less than 10 minutes (you can’t get
-into it if it's too short) or longer than 3 hours (who's got time for that?).
+2. While you’re at it, filter to excluse any movie that is **less than 10 minutes** (_you can’t get into it if it's too short_) or **longer than 3 hours** (who's got time for that?).
 
-> **Hint:** You may have to use ``pd.to_numeric`` to force the runtimes to be
+> **Hint:** You may MAY to use ``pd.to_numeric`` to force the runtimes to be
 numbers (instead of strings).
 
-Here is a simpler example that shows the movies that are 7 minutes long:
+Here is a simpler example that shows the movies that are exactly 7 minutes long:
 
 ```python
-time_scheduler = df.set_index('runtime')
-time_scheduler = time_scheduler[['title', 'release_date']]
-time_scheduler.loc[7].head()
+movies_by_runtime = pd.Series(df['title'].values, index=df['runtime'])
+movies_by_runtime = movies_by_runtime.sort_index()
+print(movies_by_runtime.loc[7])
 ```
 </div>
 
-> 💬: How many movies lasting **154 minutes** are there?
+> 💬: How many movies lasting exactly **154 minutes** are there?
 
 > 💬: What is the **155th** shortest movie in this collection? (_Make sure you are using `iloc` and not `loc`!_)
 
