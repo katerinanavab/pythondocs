@@ -164,6 +164,8 @@ budgeted separately).
 
 Before you start, here is a refresher on the index operator in Pandas:
 
+<div class="imp" markdown="block">
+  
 **Selecting Columns of a DataFrame**
 
 * ``df[<string>]`` gets me a column and returns the **Series** corresponding to that
@@ -219,6 +221,7 @@ On the other hand, if we sort the index then the last instance can be found quit
 df = df.sort_index()
 df.loc['c':'o']
 ```
+</div>
 
 <div class="task" markdown="block">
   
