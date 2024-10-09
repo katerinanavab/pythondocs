@@ -39,14 +39,14 @@ import numpy as np
 df = pd.read_csv('movies_metadata.csv').dropna(axis=1, how='all')
 df.head()
 ```
-4. Let's see what data we have:
+4. Let's see how much data we have:
 ```python
 df.shape
 ```
 5. Twenty-three columns of data for over 45,000 movies is going be a lot to look
 at, but let's start by looking at what the columns represent:
 ```python
-df.columns
+df.info()
 ```
 
 </div>
