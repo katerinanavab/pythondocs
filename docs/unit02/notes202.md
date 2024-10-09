@@ -13,7 +13,7 @@ nav_order: 2
 {:toc}
 
 ---
-## What is Data Visualization?
+## What is Data Visualization? 📈📊📉
 
 First, discuss: [One Dataset, Visualized 25 Ways](https://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/)
 
