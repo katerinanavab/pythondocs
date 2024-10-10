@@ -101,7 +101,8 @@ Perhaps the simplest of all plots is the visualization of a single function `y =
 
 <div class="task" markdown="block">
 
-1. Create a new python script called `lineplots.py` in your working directory and set it up as follows:
+Create a new python script called `lineplots.py` in your working directory and set it up as follows:
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -110,7 +111,8 @@ plt.style.use('seaborn-whitegrid')
 fig = plt.figure()
 ax = plt.axes()
 ```
-</div>
+
+</div
 
 For all Matplotlib plots, we start by creating a `figure` object and `axes`.
 
@@ -245,7 +247,8 @@ Another commonly used plot type is the **simple scatter plot**, a close cousin o
 
 <div class="task" markdown="block">
 
-1. Create a new python script called `scatterplots.py` in your working directory and set it up as follows:
+Create a new python script called `scatterplots.py` in your working directory and set it up as follows:
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
