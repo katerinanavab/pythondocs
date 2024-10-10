@@ -49,7 +49,7 @@ We will use the `plt.style` directive to choose appropriate aesthetic styles for
 plt.style.use('classic')
 ```
 
-For more information on stylesheets, see [Styling Matplotlib]().
+For more information on stylesheets, see [Styling Matplotlib](https://coderina.dev/pythondocs/docs/unit02/notes203.html).
 
 ### How to Display Your Plots
 
@@ -78,12 +78,12 @@ The details of this operation can vary greatly from system to system and even in
 One thing to be aware of: the `plt.show` command should be used *only once* per Python session, and is most often seen at the very end of the script.
 Multiple `show` commands can lead to unpredictable backend-dependent behavior, and should mostly be avoided.
 
-### Saving Figures to File
+### Saving Figures to Files
 
 One nice feature of Matplotlib is the ability to save figures in a wide variety of formats.
-Saving a figure can be done using the `savefig` command.
-For example, to save the previous figure as a PNG file, we can run this:
 
+Saving a figure can be done using the `savefig` command.
+For example, to save the previous figure as a `PNG` file, we can run this:
 
 ```python
 fig.savefig('my_figure.png')
@@ -93,7 +93,17 @@ We now have a file called *my_figure.png* in the current working directory.
 
 In `savefig`, the file format is inferred from the extension of the given filename.
 
+{:.highlight}
 Note that when saving your figure, it is not necessary to use `plt.show` or related commands discussed earlier.
+
+---
+## Line Plots
+
+--
+## Scatter Plots
+
+--
+## Histograms, Binning, and Density
 
 
 ---
