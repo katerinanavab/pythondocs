@@ -1,6 +1,6 @@
 ---
 layout: notes
-title: "📓2.2: Matplotlib" 
+title: "📓2.2: Matplotlib Plotting" 
 parent: "2️⃣ Data Science"
 nav_order: 2
 ---
@@ -61,9 +61,7 @@ If you are using Matplotlib from within a script, the function `plt.show` is you
 So, for example, you may have a file containing the following:
 
 ```python
-import matplotlib.pyplot as plt
-import numpy as np
-
+# Generate values to plot
 x = np.linspace(0, 10, 100)
 
 plt.plot(x, np.sin(x))
@@ -99,8 +97,253 @@ Note that when saving your figure, it is not necessary to use `plt.show` or rela
 ---
 ## Line Plots
 
+Perhaps the simplest of all plots is the visualization of a single function `y = f(x)`.
+
+<div class="task" markdown="block">
+
+1. Create a new python script called `lineplots.py` in your working directory and set it up as follows:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-whitegrid')
+
+fig = plt.figure()
+ax = plt.axes()
+```
+> For all Matplotlib plots, we start by creating a `figure` object and `axes`.
+
+</div>
+
+In Matplotlib, the *figure* (an instance of the class `plt.Figure`) can be thought of as a single container that contains all the objects representing axes, graphics, text, and labels.
+The *axes* (an instance of the class `plt.Axes`) is what we see above: a bounding box with ticks, grids, and labels, which will eventually contain the plot elements that make up our visualization.
+Throughout this part of the book, I'll commonly use the variable name `fig` to refer to a figure instance and `ax` to refer to an axes instance or group of axes instances.
+
+Once we have created an axes, we can use the `ax.plot` method to plot some data. Let's start with a simple sinusoid, as shown in the following figure:
+
+
+```python
+x = np.linspace(0, 10, 1000)
+ax.plot(x, np.sin(x))
+```
+
+### Line Colors and Styles
+
+🎨 The first adjustment you might wish to make to a plot is to control the line colors and styles. The `plt.plot` function takes additional arguments that can be used to specify these.
+
+To adjust the color, you can use the `color` keyword, which accepts a string argument representing virtually any imaginable color:
+
+```python
+plt.plot(x, np.sin(x - 0), color='blue')        # specify color by name
+plt.plot(x, np.sin(x - 1), color='g')           # short color code (rgbcmyk)
+plt.plot(x, np.sin(x - 2), color='0.75')        # grayscale between 0 and 1
+plt.plot(x, np.sin(x - 3), color='#FFDD44')     # hex code (RRGGBB, 00 to FF)
+plt.plot(x, np.sin(x - 4), color=(1.0,0.2,0.3)) # RGB tuple, values 0 to 1
+plt.plot(x, np.sin(x - 5), color='chartreuse'); # HTML color names supported
+```
+
+{:.highlight}
+If no color is specified, Matplotlib will automatically cycle through a set of default colors for multiple lines.
+
+Similarly, the line style can be adjusted using the `linestyle` keyword (see the following figure):
+
+```python
+plt.plot(x, x + 0, linestyle='solid')
+plt.plot(x, x + 1, linestyle='dashed')
+plt.plot(x, x + 2, linestyle='dashdot')
+plt.plot(x, x + 3, linestyle='dotted');
+
+# For short, you can use the following codes:
+plt.plot(x, x + 4, linestyle='-')  # solid
+plt.plot(x, x + 5, linestyle='--') # dashed
+plt.plot(x, x + 6, linestyle='-.') # dashdot
+plt.plot(x, x + 7, linestyle=':');  # dotted
+```
+
+Though it may be less clear to someone reading your code, you can save some keystrokes by combining these `linestyle` and `color` codes into a single non-keyword argument to the `plt.plot` function; the following figure shows the result:
+
+```python
+plt.plot(x, x + 0, '-g')   # solid green
+plt.plot(x, x + 1, '--c')  # dashed cyan
+plt.plot(x, x + 2, '-.k')  # dashdot black
+plt.plot(x, x + 3, ':r');  # dotted red
+```
+> These single-character color codes reflect the standard abbreviations in the **RGB (Red/Green/Blue)** and **CMYK (Cyan/Magenta/Yellow/blacK)** color systems, commonly used for digital color graphics.
+
+### Axes Limits
+
+Matplotlib does a decent job of choosing default axes limits for your plot, but sometimes it's nice to have finer control.
+
+The most basic way to adjust the limits is to use the `plt.xlim` and `plt.ylim` functions:
+
+```python
+plt.plot(x, np.sin(x))
+
+plt.xlim(-1, 11)
+plt.ylim(-1.5, 1.5);
+```
+
+If for some reason you'd like either axis to be displayed in _reverse_, you can simply reverse the order of the arguments:
+
+```python
+plt.plot(x, np.sin(x))
+
+plt.xlim(10, 0)
+plt.ylim(1.2, -1.2);
+```
+
+A useful related method is `plt.axis` (note here the potential confusion between *axes* with an *e*, and *axis* with an *i*), which allows more qualitative specifications of axis limits. For example, you can automatically tighten the bounds around the current content, as shown in the following figure:
+
+```python
+plt.plot(x, np.sin(x))
+plt.axis('tight')
+```
+
+Or you can specify that you want an equal axis ratio, such that one unit in `x` is visually equivalent to one unit in `y`, as seen in the following figure:
+
+```python
+plt.plot(x, np.sin(x))
+plt.axis('equal')
+```
+
+Other axis options include `'on'`, `'off'`, `'square'`, `'image'`, and more. For more information on these, refer to the `plt.axis` docstring.
+
+### Labeling Plots
+
+As the last piece of this chapter, we'll briefly look at the _labeling_ of plots: titles, axis labels, and simple legends.
+
+**Titles** and **axis labels** are the simplest such labels—there are methods that can be used to quickly set them (see the following figure):
+
+
+```python
+plt.plot(x, np.sin(x))
+plt.title("A Sine Curve")
+plt.xlabel("x")
+plt.ylabel("sin(x)")
+```
+
+The position, size, and style of these labels can be adjusted using optional arguments to the functions, described in the docstrings.
+
+When multiple lines are being shown within a single axes, it can be useful to create a **plot legend** that labels each line type.
+
+Again, Matplotlib has a built-in way of quickly creating such a legend; it is done via the (you guessed it) `plt.legend` method.
+
+Though there are several valid ways of using this, I find it easiest to specify the label of each line using the `label` keyword of the `plot` function (see the following figure):
+
+```python
+plt.plot(x, np.sin(x), '-g', label='sin(x)')
+plt.plot(x, np.cos(x), ':b', label='cos(x)')
+plt.axis('equal')
+
+plt.legend()
+```
+
 --
 ## Scatter Plots
+
+Another commonly used plot type is the **simple scatter plot**, a close cousin of the line plot. Instead of points being joined by line segments, here the points are represented individually with a **dot**, **circle**, or other shape.
+
+<div class="task" markdown="block">
+
+1. Create a new python script called `scatterplots.py` in your working directory and set it up as follows:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-whitegrid')
+```
+
+</div>
+
+### Scatter Plots with plt.plot
+
+In the previous chapter we looked at using `plt.plot`/`ax.plot` to produce line plots.
+It turns out that this same function can produce scatter plots as well:
+
+```python
+x = np.linspace(0, 10, 30)
+y = np.sin(x)
+
+plt.plot(x, y, 'o', color='black')
+```
+
+The third argument in the function call is a character that represents the type of symbol used for the plotting. Just as you can specify options such as `'-'` or `'--'` to control the line style, the marker style has its own set of short string codes. The full list of available symbols can be seen in the documentation of `plt.plot`, or in Matplotlib's [online documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.markers.MarkerStyle.html). 
+
+```python
+rng = np.random.default_rng(0)
+for marker in ['o', '.', ',', 'x', '+', 'v', '^', '<', '>', 's', 'd']:
+    plt.plot(rng.random(2), rng.random(2), marker, color='black',
+             label="marker='{0}'".format(marker))
+plt.legend(numpoints=1, fontsize=13)
+plt.xlim(0, 1.8)
+```
+
+For even more possibilities, these character codes can be used together with line and color codes to plot points along with a line connecting them (see the following figure):
+
+```python
+plt.plot(x, y, '-ok');
+```
+
+Additional keyword arguments to `plt.plot` specify a wide range of properties of the lines and markers, as you can see in the following figure:
+
+```python
+plt.plot(x, y, '-p', color='gray',
+         markersize=15, linewidth=4,
+         markerfacecolor='white',
+         markeredgecolor='gray',
+         markeredgewidth=2)
+plt.ylim(-1.2, 1.2);
+```
+
+These kinds of options make `plt.plot` the **primary workhorse for two-dimensional plots** in Matplotlib.
+
+For a full description of the options available, refer to the [`plt.plot` documentation](https://matplotlib.org/3.5.0/api/_as_gen/matplotlib.pyplot.plot.html).
+
+## Scatter Plots with plt.scatter
+
+A second, more powerful method of creating scatter plots is the `plt.scatter` function, which can be used very similarly to the `plt.plot` function (see the following figure):
+
+```python
+plt.scatter(x, y, marker='o');
+```    
+
+The primary difference of `plt.scatter` from `plt.plot` is that it can be used to create scatter plots where the properties of each individual point (size, face color, edge color, etc.) can be individually controlled or mapped to data.
+
+Let's show this by creating a random scatter plot with points of many colors and sizes.
+In order to better see the overlapping results, we'll also use the `alpha` keyword to adjust the transparency level (see the following figure):
+
+
+```python
+rng = np.random.default_rng(0)
+x = rng.normal(size=100)
+y = rng.normal(size=100)
+colors = rng.random(100)
+sizes = 1000 * rng.random(100)
+
+plt.scatter(x, y, c=colors, s=sizes, alpha=0.3)
+plt.colorbar();  # show color scale
+```
+
+Notice that the color argument is automatically mapped to a color scale (shown here by the `colorbar` command), and that the size argument is given in pixels.
+In this way, the color and size of points can be used to convey information in the visualization, in order to visualize multidimensional data.
+
+For example, we might use the Iris dataset from Scikit-Learn, where each sample is one of three types of flowers that has had the size of its petals and sepals carefully measured:
+
+```python
+from sklearn.datasets import load_iris
+iris = load_iris()
+features = iris.data.T
+
+plt.scatter(features[0], features[1], alpha=0.4,
+            s=100*features[3], c=iris.target, cmap='viridis')
+plt.xlabel(iris.feature_names[0])
+plt.ylabel(iris.feature_names[1])
+```  
+
+We can see that this scatter plot has given us the ability to simultaneously explore **four different dimensions** of the data:
+
+* the (*x*, *y*) **location** of each point corresponds to the sepal length and width
+* the **size** of the point is related to the petal width
+* the **color** is related to the particular species of flower
+
 
 --
 ## Histograms, Binning, and Density
