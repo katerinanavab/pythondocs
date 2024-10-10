@@ -18,13 +18,13 @@ nav_order: 3
 ---
 ## Customizing Legends
 
---
+---
 ## Customizing Colorbars
 
---
+---
 ## Text and Annotation
 
---
+---
 ## Customizing Ticks
 
 
