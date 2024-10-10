@@ -31,6 +31,7 @@ We'll now take an in-depth look at the `Matplotlib` package for **visualization*
 Before we dive into the details of creating visualizations with Matplotlib, there are a few useful things you should know about using the package.
 
 ### Importing Matplotlib
+{:.no_toc}
 
 Just as we use the `np` shorthand for NumPy and the `pd` shorthand for Pandas, we will use some standard shorthands for Matplotlib imports:
 
@@ -42,6 +43,7 @@ import matplotlib.pyplot as plt
 The `plt` interface is what we will use most often, as you shall see throughout this part of the book.
 
 ### Setting Styles
+{:.no_toc}
 
 We will use the `plt.style` directive to choose appropriate aesthetic styles for our figures. Here we will set the `classic` style, which ensures that the plots we create use the classic Matplotlib style:
 
@@ -52,6 +54,7 @@ plt.style.use('classic')
 For more information on stylesheets, see [Styling Matplotlib](https://coderina.dev/pythondocs/docs/unit02/notes203.html).
 
 ### How to Display Your Plots
+{:.no_toc}
 
 A visualization you can't see won't be of much use!
 
@@ -77,6 +80,7 @@ One thing to be aware of: the `plt.show` command should be used *only once* per 
 Multiple `show` commands can lead to unpredictable backend-dependent behavior, and should mostly be avoided.
 
 ### Saving Figures to Files
+{:.no_toc}
 
 One nice feature of Matplotlib is the ability to save figures in a wide variety of formats.
 
