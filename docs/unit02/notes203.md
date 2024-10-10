@@ -40,12 +40,7 @@ ax.plot(x, np.sin(x), '-b', label='Sine')
 ax.plot(x, np.cos(x), '--r', label='Cosine')
 ax.axis('equal')
 leg = ax.legend()
-```
-
-
-    
-![png](04_06_Customizing_Legends_files/04_06_Customizing_Legends_4_0.png)
-    
+```    
 
 
 But there are many ways we might want to customize such a legend.
@@ -55,32 +50,14 @@ For example, we can specify the location and turn on the frame (see the followin
 ```python
 ax.legend(loc='upper left', frameon=True)
 fig
-```
-
-
-
-
-    
-![png](04_06_Customizing_Legends_files/04_06_Customizing_Legends_6_0.png)
-    
-
-
+```    
 
 We can use the ``ncol`` command to specify the number of columns in the legend, as shown in the following figure:
-
 
 ```python
 ax.legend(loc='lower center', ncol=2)
 fig
-```
-
-
-
-
-    
-![png](04_06_Customizing_Legends_files/04_06_Customizing_Legends_8_0.png)
-    
-
+```    
 
 
 And we can use a rounded box (`fancybox`) or add a shadow, change the transparency (alpha value) of the frame, or change the padding around the text (see the following figure):
@@ -90,14 +67,7 @@ And we can use a rounded box (`fancybox`) or add a shadow, change the transparen
 ax.legend(frameon=True, fancybox=True, framealpha=1,
           shadow=True, borderpad=1)
 fig
-```
-
-
-
-
-    
-![png](04_06_Customizing_Legends_files/04_06_Customizing_Legends_10_0.png)
-    
+```    
 
 
 
@@ -119,9 +89,6 @@ lines = plt.plot(x, y)
 plt.legend(lines[:2], ['first', 'second'], frameon=True);
 ```
 
-
-    
-![png](04_06_Customizing_Legends_files/04_06_Customizing_Legends_13_0.png)
     
 
 
@@ -133,12 +100,7 @@ plt.plot(x, y[:, 0], label='first')
 plt.plot(x, y[:, 1], label='second')
 plt.plot(x, y[:, 2:])
 plt.legend(frameon=True);
-```
-
-
-    
-![png](04_06_Customizing_Legends_files/04_06_Customizing_Legends_15_0.png)
-    
+```    
 
 
 Notice that the legend ignores all elements without a `label` attribute set.
@@ -185,12 +147,7 @@ for area in [100, 300, 500]:
 plt.legend(scatterpoints=1, frameon=False, labelspacing=1, title='City Area')
 
 plt.title('California Cities: Area and Population');
-```
-
-
-    
-![png](04_06_Customizing_Legends_files/04_06_Customizing_Legends_19_0.png)
-    
+```    
 
 
 The legend will always reference some object that is on the plot, so if we'd like to display a particular shape we need to plot it.
@@ -231,10 +188,6 @@ I = np.sin(x) * np.cos(x[:, np.newaxis])
 plt.imshow(I)
 plt.colorbar();
 ```
-
-
-    
-![png](04_07_Customizing_Colorbars_files/04_07_Customizing_Colorbars_5_0.png)
     
 
 
@@ -248,12 +201,6 @@ The colormap can be specified using the `cmap` argument to the plotting function
 ```python
 plt.imshow(I, cmap='Blues');
 ```
-
-
-    
-![png](04_07_Customizing_Colorbars_files/04_07_Customizing_Colorbars_8_0.png)
-    
-
 
 The names of available colormaps are in the `plt.cm` namespace; using IPython's tab completion feature will give you a full list of built-in possibilities:
 
@@ -319,11 +266,6 @@ view_colormap('jet')
 ```
 
 
-    
-![png](04_07_Customizing_Colorbars_files/04_07_Customizing_Colorbars_12_0.png)
-    
-
-
 Notice the bright stripes in the grayscale image.
 Even in full color, this uneven brightness means that the eye will be drawn to certain portions of the color range, which will potentially emphasize unimportant parts of the dataset.
 It's better to use a colormap such as `viridis` (the default as of Matplotlib 2.0), which is specifically constructed to have an even brightness variation across the range; thus, it not only plays well with our color perception, but also will translate well to grayscale printing (see the following figure):
@@ -334,11 +276,6 @@ view_colormap('viridis')
 ```
 
 
-    
-![png](04_07_Customizing_Colorbars_files/04_07_Customizing_Colorbars_14_0.png)
-    
-
-
 For other situations, such as showing positive and negative deviations from some mean, dual-color colorbars such as `RdBu` (*Red–Blue*) are helpful. However, as you can see in the following figure, it's important to note that the positive/negative information will be lost upon translation to grayscale!
 
 
@@ -347,14 +284,7 @@ view_colormap('RdBu')
 ```
 
 
-    
-![png](04_07_Customizing_Colorbars_files/04_07_Customizing_Colorbars_16_0.png)
-    
-
-
 We'll see examples of using some of these colormaps as we continue.
-
-There are a large number of colormaps available in Matplotlib; to see a list of them, you can use IPython to explore the `plt.cm` submodule. For a more principled approach to colors in Python, you can refer to the tools and documentation within the Seaborn library (see [Visualization With Seaborn](04.14-Visualization-With-Seaborn.ipynb)).
 
 ### Color Limits and Extensions
 
@@ -382,11 +312,6 @@ plt.clim(-1, 1)
 ```
 
 
-    
-![png](04_07_Customizing_Colorbars_files/04_07_Customizing_Colorbars_19_0.png)
-    
-
-
 Notice that in the left panel, the default color limits respond to the noisy pixels, and the range of the noise completely washes out the pattern we are interested in.
 In the right panel, we manually set the color limits and add extensions to indicate values that are above or below those limits.
 The result is a much more useful visualization of our data.
@@ -402,11 +327,6 @@ plt.imshow(I, cmap=plt.cm.get_cmap('Blues', 6))
 plt.colorbar(extend='both')
 plt.clim(-1, 1);
 ```
-
-
-    
-![png](04_07_Customizing_Colorbars_files/04_07_Customizing_Colorbars_22_0.png)
-    
 
 
 The discrete version of a colormap can be used just like any other colormap.
@@ -468,11 +388,6 @@ births_by_date.plot(ax=ax);
 ```
 
 
-    
-![png](04_09_Text_and_Annotation_files/04_09_Text_and_Annotation_6_0.png)
-    
-
-
 When we're visualizing data like this, it is often useful to annotate certain features of the plot to draw the reader's attention.
 This can be done manually with the `plt.text`/`ax.text` functions, which will place text at a particular *x*/*y* value (see the following figure):
 
@@ -501,12 +416,6 @@ ax.xaxis.set_minor_locator(mpl.dates.MonthLocator(bymonthday=15))
 ax.xaxis.set_major_formatter(plt.NullFormatter())
 ax.xaxis.set_minor_formatter(mpl.dates.DateFormatter('%h'));
 ```
-
-
-    
-![png](04_09_Text_and_Annotation_files/04_09_Text_and_Annotation_8_0.png)
-    
-
 
 The `ax.text` method takes an *x* position, a *y* position, a string, and then optional keywords specifying the color, size, style, alignment, and other properties of the text.
 Here we used `ha='right'` and `ha='center'`, where `ha` is short for *horizontal alignment*.
@@ -539,11 +448,6 @@ ax.text(0.2, 0.2, ". Figure: (0.2, 0.2)", transform=fig.transFigure);
 ```
 
 
-    
-![png](04_09_Text_and_Annotation_files/04_09_Text_and_Annotation_11_0.png)
-    
-
-
 Matplotlib's default text alignment is such that the "." at the beginning of each string will approximately mark the specified coordinate location.
 
 The `transData` coordinates give the usual data coordinates associated with the x- and y-axis labels.
@@ -558,13 +462,6 @@ ax.set_xlim(0, 2)
 ax.set_ylim(-6, 6)
 fig
 ```
-
-
-
-
-    
-![png](04_09_Text_and_Annotation_files/04_09_Text_and_Annotation_13_0.png)
-    
 
 
 
@@ -594,11 +491,6 @@ ax.annotate('local minimum', xy=(5 * np.pi, -1), xytext=(2, -6),
             arrowprops=dict(arrowstyle="->",
                             connectionstyle="angle3,angleA=0,angleB=-90"));
 ```
-
-
-    
-![png](04_09_Text_and_Annotation_files/04_09_Text_and_Annotation_16_0.png)
-    
 
 
 The arrow style is controlled through the `arrowprops` dictionary, which has numerous options available.
@@ -659,12 +551,6 @@ ax.xaxis.set_minor_formatter(mpl.dates.DateFormatter('%h'));
 ax.set_ylim(3600, 5400);
 ```
 
-
-    
-![png](04_09_Text_and_Annotation_files/04_09_Text_and_Annotation_18_0.png)
-    
-
-
 The variety of options make `annotate` powerful and flexible: you can create nearly any arrow style you wish.
 Unfortunately, it also means that these sorts of features often must be manually tweaked, a process that can be very time-consuming when producing publication-quality graphics!
 Finally, I'll note that the preceding mix of styles is by no means best practice for presenting data, but rather is included as a demonstration of some of the available options.
@@ -699,11 +585,6 @@ plt.hist(x);
 ```
 
 
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_4_0.png)
-    
-
-
 We can adjust this by hand to make it a much more visually pleasing plot, as you can see in the following figure:
 
 
@@ -734,12 +615,6 @@ for tick in ax.get_yticklabels():
 # control face and edge color of histogram
 ax.hist(x, edgecolor='#E6E6E6', color='#EE6666');
 ```
-
-
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_6_0.png)
-    
-
 
 This looks better, and you may recognize the look as inspired by that of the R language's `ggplot` visualization package.
 But this took a whole lot of effort!
@@ -777,12 +652,6 @@ With these settings defined, we can now create a plot and see our settings in ac
 plt.hist(x);
 ```
 
-
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_11_0.png)
-    
-
-
 Let's see what simple line plots look like with these rc parameters (see the following figure):
 
 
@@ -790,12 +659,6 @@ Let's see what simple line plots look like with these rc parameters (see the fol
 for i in range(4):
     plt.plot(np.random.rand(10))
 ```
-
-
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_13_0.png)
-    
-
 
 For charts viewed onscreen rather than printed, I find this much more aesthetically pleasing than the default styling.
 If you disagree with my aesthetic sense, the good news is that you can adjust the rc parameters to suit your own tastes!
@@ -806,19 +669,12 @@ Optionally, these settings can be saved in a *.matplotlibrc* file, which you can
 A newer mechanism for adjusting overall chart styles is via Matplotlib's `style` module, which includes a number of default stylesheets, as well as the ability to create and package your own styles. These stylesheets are formatted similarly to the *.matplotlibrc* files mentioned earlier, but must be named with a *.mplstyle* extension.
 
 Even if you don't go as far as creating your own style, you may find what you're looking for in the built-in stylesheets.
-`plt.style.available` contains a list of the available styles—here I'll list only the first five for brevity:
+`plt.style.available` contains a list of the available styles:
 
 
 ```python
-plt.style.available[:5]
+print(plt.style.available)
 ```
-
-
-
-
-    ['Solarize_Light2', '_classic_test_patch', 'bmh', 'classic', 'dark_background']
-
-
 
 The standard way to switch to a stylesheet is to call `style.use`:
 
@@ -860,12 +716,6 @@ with plt.style.context('default'):
     hist_and_lines()
 ```
 
-
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_22_0.png)
-    
-
-
 ### FiveThiryEight Style
 
 The `fivethirtyeight` style mimics the graphics found on the popular [FiveThirtyEight website](https://fivethirtyeight.com).
@@ -877,12 +727,6 @@ with plt.style.context('fivethirtyeight'):
     hist_and_lines()
 ```
 
-
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_24_0.png)
-    
-
-
 ### ggplot Style
 
 The `ggplot` package in the R language is a popular visualization tool among data scientists.
@@ -893,11 +737,6 @@ Matplotlib's `ggplot` style mimics the default styles from that package (see the
 with plt.style.context('ggplot'):
     hist_and_lines()
 ```
-
-
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_26_0.png)
-    
 
 
 ### Bayesian Methods for Hackers Style
@@ -912,11 +751,6 @@ with plt.style.context('bmh'):
 ```
 
 
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_28_0.png)
-    
-
-
 ### Dark Background Style
 
 For figures used within presentations, it is often useful to have a dark rather than light background.
@@ -929,11 +763,6 @@ with plt.style.context('dark_background'):
 ```
 
 
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_30_0.png)
-    
-
-
 ### Grayscale Style
 
 Sometimes you might find yourself preparing figures for a print publication that does not accept color figures.
@@ -944,28 +773,6 @@ For this, the `grayscale` style (see the following figure) can be useful:
 with plt.style.context('grayscale'):
     hist_and_lines()
 ```
-
-
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_32_0.png)
-    
-
-
-### Seaborn Style
-
-Matplotlib also has several stylesheets inspired by the Seaborn library (discussed more fully in [Visualization With Seaborn](04.14-Visualization-With-Seaborn.ipynb)).
-I've found these settings to be very nice, and tend to use them as defaults in my own data exploration (see the following figure):
-
-
-```python
-with plt.style.context('seaborn-whitegrid'):
-    hist_and_lines()
-```
-
-
-    
-![png](04_11_Settings_and_Stylesheets_files/04_11_Settings_and_Stylesheets_34_0.png)
-    
 
 
 Take some time to explore the built-in options and find one that appeals to you!
