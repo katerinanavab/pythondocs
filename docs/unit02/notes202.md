@@ -112,7 +112,7 @@ fig = plt.figure()
 ax = plt.axes()
 ```
 
-</div
+</div>
 
 For all Matplotlib plots, we start by creating a `figure` object and `axes`.
 
