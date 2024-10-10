@@ -240,7 +240,8 @@ plt.axis('equal')
 plt.legend()
 ```
 
---
+---
+
 ## Scatter Plots
 
 Another commonly used plot type is the **simple scatter plot**, a close cousin of the line plot. Instead of points being joined by line segments, here the points are represented individually with a **dot**, **circle**, or other shape.
@@ -301,7 +302,7 @@ These kinds of options make `plt.plot` the **primary workhorse for two-dimension
 
 For a full description of the options available, refer to the [`plt.plot` documentation](https://matplotlib.org/3.5.0/api/_as_gen/matplotlib.pyplot.plot.html).
 
-## Scatter Plots with plt.scatter
+### Scatter Plots with plt.scatter
 
 A second, more powerful method of creating scatter plots is the `plt.scatter` function, which can be used very similarly to the `plt.plot` function (see the following figure):
 
@@ -349,8 +350,104 @@ We can see that this scatter plot has given us the ability to simultaneously exp
 * the **color** is related to the particular species of flower
 
 
---
+---
+
 ## Histograms, Binning, and Density
+
+A simple histogram can be a great first step in understanding a dataset. Matplotlib's `hist` function creates a basic histogram in one line.
+
+<div class="task" markdown="block">
+
+Create a new python script called `histograms.py` in your working directory and set it up as follows:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-whitegrid')
+
+rng = np.random.default_rng(1701)
+data = rng.normal(size=1000)
+
+plt.hist(data)
+```
+
+</div>
+
+
+The `hist` function has many options to tune both the calculation and the display;
+here's an example of a more customized histogram, shown in the following figure:
+
+
+```python
+plt.hist(data, bins=30, density=True, alpha=0.5,
+         histtype='stepfilled', color='steelblue',
+         edgecolor='none');
+```
+
+The `plt.hist` docstring has more information on other available customization options.
+I find this combination of `histtype='stepfilled'` along with some transparency `alpha` to be helpful when comparing histograms of several distributions (see the following figure):
+
+
+```python
+x1 = rng.normal(0, 0.8, 1000)
+x2 = rng.normal(-2, 1, 1000)
+x3 = rng.normal(3, 2, 1000)
+
+kwargs = dict(histtype='stepfilled', alpha=0.3, density=True, bins=40)
+
+plt.hist(x1, **kwargs)
+plt.hist(x2, **kwargs)
+plt.hist(x3, **kwargs);
+```
+
+Just as we create histograms in one dimension by dividing the number line into bins, we can also create histograms in two dimensions by dividing points among two-dimensional bins.
+
+We'll start by defining some data—an `x` and `y` array drawn from a multivariate Gaussian distribution:
+
+```python
+mean = [0, 0]
+cov = [[1, 1], [1, 2]]
+x, y = rng.multivariate_normal(mean, cov, 10000).T
+```
+
+### plt.hist2d: Two-dimensional histogram
+
+One straightforward way to plot a two-dimensional histogram is to use Matplotlib's `plt.hist2d` function (see the following figure):
+
+
+```python
+plt.hist2d(x, y, bins=30)
+cb = plt.colorbar()
+cb.set_label('counts in bin')
+```
+
+ 
+
+
+Just like `plt.hist`, `plt.hist2d` has a number of extra options to fine-tune the plot and the binning, which are nicely outlined in the function docstring.
+Further, just as `plt.hist` has a counterpart in `np.histogram`, `plt.hist2d` has a counterpart in `np.histogram2d`:
+
+```python
+counts, xedges, yedges = np.histogram2d(x, y, bins=30)
+print(counts.shape)
+```
+
+For the generalization of this histogram binning when there are more than two dimensions, see the `np.histogramdd` function.
+
+### plt.hexbin: Hexagonal binnings
+
+The two-dimensional histogram creates a tesselation of squares across the axes.
+Another natural shape for such a tesselation is the regular hexagon.
+For this purpose, Matplotlib provides the `plt.hexbin` routine, which represents a two-dimensional dataset binned within a grid of hexagons (see the following figure):
+
+
+```python
+plt.hexbin(x, y, gridsize=30)
+cb = plt.colorbar(label='count in bin')
+```
+
+
+`plt.hexbin` has a number of additional options, including the ability to specify weights for each point and to change the output in each bin to any NumPy aggregate (mean of weights, standard deviation of weights, etc.).
 
 
 ---
