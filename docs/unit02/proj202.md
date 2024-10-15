@@ -27,11 +27,12 @@ In this project, you will work together to create a Pandas DataFrame containing 
 ### Instructions
 
 
-#### Part A: Collaborative Data Collection
+#### 🐼 Part A: Collaborative Data Collection
 
 In this part, the class will work together to design a Pandas DataFrame that contains data on each student. You will be interviewing your classmates to gather this data.
 
-#### Steps:
+<div class="task" markdown="block">
+
 1. **Choose the Columns for the DataFrame**: 
     - Decide as a class what kinds of data to collect. This could include basic information such as:
       - Name
@@ -43,11 +44,9 @@ In this part, the class will work together to design a Pandas DataFrame that con
       - GPA
       - Favorite Sports Team
       - Any other creative data you come up with as a class!
-
 2. **Conduct Interviews**: 
     - Each student will interview the rest of the classmates to fill in the data for the DataFrame.
     - Make sure you are accurate and respectful when collecting information.
-
 3. **Create the DataFrame**:
     - Once all the data is collected, combine it into a Pandas DataFrame. This can be done by sharing the data and using Python code to structure it.
     - _Example of creating a simple DataFrame:_
@@ -65,8 +64,9 @@ In this part, the class will work together to design a Pandas DataFrame that con
       ```python
       df.to_csv('class_data.csv', index=False)
       ```
+</div>
 
-#### Part B: Independent Data Visualization
+#### 📊 Part B: Independent Data Visualization
 
 Now that we have a class DataFrame, you will each work independently to create your own **unique** data visualizations. You will choose any subset of the data to visualize using `matplotlib`. You are free to explore any kind of visualization that helps you understand the data better.
 
