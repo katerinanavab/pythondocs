@@ -94,8 +94,8 @@ Here are some common types of visualizations that `matplotlib` can create:
 2. **Create Your Visualization**:
     - Using `matplotlib`, create your visualization.
       - You can _clean_ or _filter_ the data as needed.
-      - Use `plt.savefig('figure1.png', bbox_inches='tight')` to _save your figure_ as a PNG. 
-    {:.warning} Feel free to explore and create as many figures as you want, but check with me to make sure you generate **at least ONE type of visualization** that no one else in the class is doing!!!
+      - Use `plt.savefig('figure1.png', bbox_inches='tight')` to _save your figure_ as a PNG.
+      - Feel free to explore and create as many figures as you want, but check with me to make sure you generate **at least ONE type of visualization** that no one else in the class is doing!!!
 3. **Interpret the Visualization**:
     - In a `''' multi-line comment '''`, write a few sentences about what your visualization tells you about the data.
     - What _trends_, _patterns_, or _insights_ can you gather from your chart?
