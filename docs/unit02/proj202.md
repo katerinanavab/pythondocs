@@ -81,6 +81,8 @@ Here are some common types of visualizations that `matplotlib` can create:
 
 </div>
 
+<br>
+
 <div class="task" markdown="block">
   
 1. **Choose Your Focus**:
