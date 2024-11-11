@@ -93,6 +93,8 @@ Visualizing the multidimensional relationships among the samples is as easy as c
 sns.pairplot(iris, hue='species', height=2.5);
 ```
 
+![image](sns-pairplot.png)
+
 ### Faceted Histograms
 
 Sometimes the best way to view data is via **histograms of subsets**, as shown in the following figure. Seaborn's `FacetGrid` makes this simple.
@@ -113,6 +115,8 @@ tips['tip_pct'] = 100 * tips['tip'] / tips['total_bill']
 grid = sns.FacetGrid(tips, row="sex", col="time", margin_titles=True)
 grid.map(plt.hist, "tip_pct", bins=np.linspace(0, 40, 15));
 ```
+
+![image](sns-facetgrid.png)
 
 The faceted chart gives us some quick insights into the dataset: for example, we see that it contains far more data on male servers during the dinner hour than other categories, and typical tip amounts appear to range from approximately 10% to 20%, with some outliers on either end.
 
