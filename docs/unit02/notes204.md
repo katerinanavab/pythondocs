@@ -65,14 +65,7 @@ Rather than just providing a histogram as a visual output, we can get a **smooth
 sns.kdeplot(data=data, shade=True);
 ```    
 
-If we pass `x` and `y` columns to `kdeplot`, we instead get a two-dimensional visualization of the joint density (see the following figure):
-
-
-```python
-sns.kdeplot(data=data, x='x', y='y');
-```
-
-We can see the joint distribution and the marginal distributions together using `sns.jointplot`, which we'll explore further later in this chapter.
+![image](sns-kdeplot.png)
 
 ### Pair Plots
 
