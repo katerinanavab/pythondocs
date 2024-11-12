@@ -23,6 +23,7 @@ There are several complaints about Matplotlib that often come up:
 - Matplotlib's API is relatively low-level. Doing sophisticated statistical visualization is possible, but often requires a *lot* of boilerplate code.
 - Matplotlib predated Pandas by more than a decade, and thus is not designed for use with Pandas `DataFrame` objects. In order to visualize data from a `DataFrame`, you must extract each `Series` and often concatenate them together into the right format. It would be nicer to have a plotting library that can intelligently use the `DataFrame` labels in a plot.
 
+{:.highlight}
 An answer to these problems is [Seaborn](http://seaborn.pydata.org/). `Seaborn` provides an API on top of Matplotlib that offers sane choices for plot style and color defaults, defines simple high-level functions for common statistical plot types, and integrates with the functionality provided by Pandas.
 
 By convention, Seaborn is often imported as `sns`:
@@ -43,13 +44,12 @@ sns.set()  # seaborn's method to set its chart style
 
 The main idea of Seaborn is that it provides high-level commands to create a variety of plot types useful for statistical data exploration, and even some statistical model fitting.
 
-Let's take a look at a few of the datasets and plot types available in Seaborn. Note that all of the following *could* be done using raw Matplotlib commands (this is, in fact, what Seaborn does under the hood), but the Seaborn API is much more convenient.
+Let's take a look at a few of the datasets and plot types available in Seaborn. Note that all of the following *could* be done using raw Matplotlib commands (this is, in fact, what Seaborn does under the hood), but the Seaborn API is much more **convenient**.
 
 ### Histograms, KDE, and Densities
 
 Often in statistical data visualization, all you want is to plot histograms and joint distributions of variables.
 We have seen that this is relatively straightforward in Matplotlib (see the following figure):
-
 
 ```python
 data = np.random.multivariate_normal([0, 0], [[5, 2], [2, 2]], size=2000)
@@ -69,18 +69,17 @@ sns.kdeplot(data=data, shade=True);
 
 ### Pair Plots
 
-When you generalize joint plots to datasets of larger dimensions, you end up with *pair plots*. These are very useful for exploring correlations between multidimensional data, when you'd like to plot all pairs of values against each other.
+When you generalize joint plots to datasets of larger dimensions, you end up with *pair plots*. These are very useful for exploring **correlations between multidimensional data**, when you'd like to plot all pairs of values against each other.
 
-We'll demo this with the well-known Iris dataset, which lists measurements of petals and sepals of three Iris species:
+We'll demo this with the well-known `Iris` dataset, which lists measurements of petals and sepals of three Iris species:
 
 
 ```python
 iris = sns.load_dataset("iris")
-iris.head()
+print(iris.head())
 ```
 
-Visualizing the multidimensional relationships among the samples is as easy as calling ``sns.pairplot`` (see the following figure):
-
+Visualizing the **multidimensional** **relationships** among the samples is as easy as calling ``sns.pairplot`` (see the following figure):
 
 ```python
 sns.pairplot(iris, hue='species', height=2.5);
@@ -94,12 +93,12 @@ Sometimes the best way to view data is via **histograms of subsets**, as shown i
 
 We'll take a look at some data that shows the amount that restaurant staff receive in tips based on various indicator data:
 
-> NOTE: The restaurant staff data used in this section divides employees into two sexes: `female` and `male`. Biological sex
-isn’t binary, but the following discussion and visualizations are limited by this data.
+> NOTE: The restaurant staff data used in this section divides employees into two sexes: `female` and `male`. _Biological sex
+isn’t binary, but the following discussion and visualizations are limited by this data._
 
 ```python
 tips = sns.load_dataset('tips')
-tips.head()
+print(tips.head())
 ```
 
 ```python
@@ -123,6 +122,21 @@ with sns.axes_style(style='ticks'):
     g.set_axis_labels("Day", "Total Bill");
 ```
 
+![image](sns-factorplot.png)
+
+<!--
+
+### Factor plots
+
+Factor plots can be useful for this kind of visualization as well. This allows you to view the distribution of a parameter within bins defined by any other parameter:
+
+```python
+with sns.axes_style(style='ticks'):
+    g = sns.factorplot("day", "total_bill", "sex", data=tips, kind="box")
+    g.set_axis_labels("Day", "Total Bill");
+```
+-->
+
 ### Joint Distributions
 
 Similar to the pair plot we saw earlier, we can use `sns.jointplot` to show the joint distribution between different datasets, along with the associated marginal distributions (see the following figure):
@@ -133,7 +147,9 @@ with sns.axes_style('white'):
     sns.jointplot(x="total_bill", y="tip", data=tips, kind='hex')
 ```
 
-The joint plot can even do some automatic kernel density estimation and regression, as shown in the following figure:
+![image](sns-jointplot.png)
+
+The joint plot can even do some automatic kernel density estimation and regression, as shown with the following code:
 
 ```python
 sns.jointplot(x="total_bill", y="tip", data=tips, kind='reg');
