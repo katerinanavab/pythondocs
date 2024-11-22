@@ -19,9 +19,7 @@ nav_order: 8
 
 </div>
 
-# Exploratory Data Analysis (EDA) with Python (pandas, matplotlib, seaborn)
-
-This document provides a detailed outline for a cumulative project focusing on Exploratory Data Analysis (EDA) using Python. The project aims to demonstrate skills in data wrangling, visualization, and communication of findings through a scientific conference-style poster. You will work with a dataset of your choice to perform EDA. The project consists of three main deliverables: A descriptive **`README.md` file, code in a **`main.py` script**, and a Scientific Conference Poster. 
+This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** using Python's `pandas`, `matplotlib`, and `seaborn` libraries. The project aims to demonstrate skills in data wrangling, visualization, and communication of findings through a scientific conference-style poster. You will work with a dataset of your choice to perform EDA. The project consists of three main deliverables: A descriptive **`README.md` file, code in a **`main.py` script**, and a Scientific Conference Poster. 
 
 
 #### Dataset Sources:
@@ -35,25 +33,25 @@ This document provides a detailed outline for a cumulative project focusing on E
 
 1. `README.md` file must include the following:
 
-- **Dataset**:
+[ ] **Dataset**:
   - Provide a link to the dataset you chose. You may use platforms like Kaggle, UCI Machine Learning Repository, or government open data portals.
-- **Column Descriptions**:
+[ ] **Column Descriptions**:
   - Write a brief description of each column in your dataset. Include data types and potential values.
-- **Hypotheses/Questions**:
-  - List at least 5 questions you want to explore using your dataset. Examples:
+[ ] **Hypotheses/Questions**:
+  - List at least 5 questions you want to explore using your dataset. _Examples:_
     - Is there a correlation between two variables?
     - How do values in a specific column change over time or categories?
-- **Visualization Plan**:
+[ ] **Visualization Plan**:
   - Explain how you will use visualizations to test your hypotheses. Include the type of chart you plan to use for each question.
 
 2. `main.py` script must:
 
-- Load and preprocess the dataset:
+[ ] **Load & process the dataset**:
   - Handle missing values.
   - Rename columns if necessary for clarity.
   - Convert data types if needed.
   - Filter and/or group data for focused analysis.
-- Contain code for at least **4 different types of visualizations**:
+[ ] Contain code for at least **4 different types of visualizations**:
   - Examples include:
     - Bar plot
     - Scatter plot
@@ -61,29 +59,29 @@ This document provides a detailed outline for a cumulative project focusing on E
     - Heatmap
     - Box plot
   - Ensure each visualization is well-labeled with titles, axis labels, and legends.
-- Be thoroughly commented:
+[ ] Be thoroughly **commented**:
   - Explain the purpose of each section of the code.
   - Use functions for reusable components of your code.
 
 3. Use this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the scientific conference poster, which must include the following sections:
 
-- **Introduction**:
+[ ] **Introduction**:
   - Context for the dataset and why it is interesting/relevant.
   - Clearly state your research questions or hypotheses.
-- **Methods**:
+[ ] **Methods**:
   - Describe your process for cleaning and analyzing the data.
   - Include screenshots of key Python code snippets.
-- **Results**:
+[ ] **Results**:
   - Present 2–3 visualizations from your analysis.
   - Provide clear captions for each figure.
-- **Discussion**:
+[ ] **Discussion**:
   - Interpret your findings and discuss patterns or trends observed in the data.
   - Mention any limitations of your analysis.
-- **Conclusions**:
+[ ] **Conclusions**:
   - Summarize key takeaways.
   - Suggest potential areas for future research or data exploration.
-- **References**:
-  - Cite the dataset and any external libraries or resources used in the project.
+[ ] **References**:
+  - Cite the dataset and any external resources (_research on the topic for your poster's Introduction and/or Discussion sections_).
 
 ---
 
