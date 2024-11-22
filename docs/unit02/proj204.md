@@ -50,15 +50,15 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 
 #### ② Python script:
 
-Your `main.py` script should demonstrate that you performed meaningful data analysis and generated diverse visualizations.
+Your `main.py` script should be well-organized and demonstrate that you performed meaningful data analysis and generated diverse visualizations.
 
 - [ ] **Load & process the dataset**
   - Handle missing values.
   - Rename columns if necessary for clarity.
   - Convert data types if needed.
   - Filter and/or group data for focused analysis.
-- [ ] Contain code for at least **4 different types of visualizations**:
-  - [Example Graph Gallery](https://python-graph-gallery.com/)
+- [ ] Contain code for at least **4 different types of visualizations**
+  - See the [Example Graph Gallery](https://python-graph-gallery.com/) for inspiration
   - Ensure each visualization is well-labeled with titles, axis labels, and legends.
   - Visualizations should be clear, informative, and appropriate for the data (_see guidelines below_)
 - [ ] Be thoroughly **commented**
@@ -114,12 +114,12 @@ A scientific poster for an academic conference must effectively communicate **ke
   - **Trends**:
     - Line plots are best for visualizing trends over time or sequential events.
 3. **Highlight Key Insights**
-  - Use color and annotations sparingly but effectively to emphasize critical points.
-  - Avoid clutter by focusing on the most relevant data.
+    - Use color and annotations sparingly but effectively to emphasize critical points.
+    - Avoid clutter by focusing on the most relevant data.
 4. **Keep Accessibility in Mind**
-  - Ensure your visualizations are easy to interpret:
-    - Include clear titles, axis labels, and legends.
-    - Choose color palettes that are colorblind-friendly (e.g., Seaborn's default palette).
+    - Ensure your visualizations are easy to interpret:
+      - Include clear titles, axis labels, and legends.
+      - Choose color palettes that are colorblind-friendly (e.g., Seaborn's default palette).
 
 #### Example Chart Selection Table
 
