@@ -19,7 +19,7 @@ nav_order: 8
 
 </div>
 
-This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** using Python's `pandas`, `matplotlib`, and `seaborn` libraries. The project aims to demonstrate skills in data wrangling, visualization, and communication of findings through a scientific conference-style poster. You will work with a dataset of your choice to perform EDA. The project consists of three main deliverables: A descriptive **`README.md` file, code in a **`main.py` script**, and a Scientific Conference Poster. 
+This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** using Python's `pandas`, `matplotlib`, and `seaborn` libraries. The project aims to demonstrate skills in data wrangling, visualization, and communication of findings through a scientific conference-style poster. You will work with a dataset of your choice to perform EDA. The project consists of three main deliverables: A descriptive **`README.md`** file, code in a **`main.py`** script, and a Scientific Conference Poster. 
 
 
 #### Dataset Sources:
@@ -31,7 +31,7 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 
 ### Deliverable Details
 
-1. `README.md` file must include the following:
+##### ① `README.md` file must include the following:
 
 [ ] **Dataset**:
   - Provide a link to the dataset you chose. You may use platforms like Kaggle, UCI Machine Learning Repository, or government open data portals.
@@ -44,7 +44,7 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 [ ] **Visualization Plan**:
   - Explain how you will use visualizations to test your hypotheses. Include the type of chart you plan to use for each question.
 
-2. `main.py` script must:
+##### ② `main.py` script must:
 
 [ ] **Load & process the dataset**:
   - Handle missing values.
@@ -63,7 +63,7 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
   - Explain the purpose of each section of the code.
   - Use functions for reusable components of your code.
 
-3. Use this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the scientific conference poster, which must include the following sections:
+##### ③ Use this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the scientific conference poster, which must include the following sections:
 
 [ ] **Introduction**:
   - Context for the dataset and why it is interesting/relevant.
