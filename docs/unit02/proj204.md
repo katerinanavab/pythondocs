@@ -61,7 +61,7 @@ Your `main.py` script should be well-organized and demonstrate that you performe
 - [ ] Contain code for at least **4 different types of visualizations**
   - Ensure each visualization is well-labeled with titles, axis labels, and legends.
   - Visualizations should be clear, informative, and appropriate for the data (_see guidelines below_)
-  > See the [Example Graph Gallery](https://python-graph-gallery.com/) for inspiration
+  > See the [Example Graph Gallery](https://python-graph-gallery.com/) for inspiration.
 - [ ] Be thoroughly **commented**
   - Explain the purpose of each section of the code.
   - Use functions for reusable components of your code.
@@ -95,39 +95,15 @@ A scientific poster for an academic conference must effectively communicate **ke
 {:.highlight}
 💡 Choosing the right type of visualization is crucial for effectively communicating your findings. Below are some **guidelines** to help you decide. Check out this resource from [UC Berkeley](https://guides.lib.berkeley.edu/data-visualization/about) for additional tips.
 
-1. **Understand the Nature of Your Data**
-    - **Categorical Data**:
-      - Use **bar plots** or **pie charts** to show _proportions_ or _comparisons_ between categories.
-    - **Numerical Data**:
-      - Use **histograms** or **box plots** to display _distributions_.
-      - Use **scatter plots** to show _relationships_ between two numerical variables.
-    - **Time-Series Data**:
-      - Use **line plots** to show trends over time.
-2. **Match the Visualization to Your Question**
-    - **Comparisons Across Groups**:
-      - Bar plots or grouped bar plots work well.
-      - Consider box plots if comparing distributions between groups.
-    - **Relationships Between Variables**:
-      - Scatter plots are ideal for _two_ numerical variables.
-      - Heatmaps can show correlations between _multiple_ variables.
-    - **Proportions**:
-      - Pie charts or stacked bar plots can highlight _proportions_ within a whole.
-    - **Trends**:
-      - Line plots are best for visualizing _trends over time_ or sequential events.
-3. **Highlight Key Insights**
-    - Use color and annotations sparingly but effectively to emphasize critical points.
-    - Include clear titles, axis labels, and legends.
-    - Avoid clutter by focusing on the most relevant data.
-
 #### Example Chart Selection Table
 
 | **Question Type**              | **Recommended Chart Type**       |
 |--------------------------------|----------------------------------|
-| Proportions                    | Pie chart, Stacked bar plot      |
-| Trends over time               | Line plot                        |
-| Distribution of a variable     | Histogram, Box plot              |
+| Proportions within a whole                    | Pie chart, Stacked bar plot, Word cloud      |
+| Trends over time, sequential events              | Line plot, Animated plots                        |
+| Distribution of a variable     | Histogram, Box plot (comparing between groups)             |
 | Comparison across categories   | Bar plot, Grouped bar plot (catplot)      |
-| Relationships between variables| Scatter plot, Heatmap            |
+| Relationships between variables| Scatter plot (two variables), Heatmap (multiple variables)            |
 
 ![image](data-viz-cheatsheet.jpeg)
 
