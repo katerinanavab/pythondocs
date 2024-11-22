@@ -97,10 +97,10 @@ A scientific poster for an academic conference must effectively communicate **ke
 
 1. **Understand the Nature of Your Data**
   - **Categorical Data**:
-    - Use **bar plots** or **pie charts** to show proportions or comparisons between categories.
+    - Use **bar plots** or **pie charts** to show _proportions_ or _comparisons_ between categories.
   - **Numerical Data**:
-    - Use **histograms** or **box plots** to display distributions.
-    - Use **scatter plots** to show relationships between two numerical variables.
+    - Use **histograms** or **box plots** to display _distributions_.
+    - Use **scatter plots** to show _relationships_ between two numerical variables.
   - **Time-Series Data**:
     - Use **line plots** to show trends over time.
 2. **Match the Visualization to Your Question**
@@ -108,19 +108,16 @@ A scientific poster for an academic conference must effectively communicate **ke
     - Bar plots or grouped bar plots work well.
     - Consider box plots if comparing distributions between groups.
   - **Relationships Between Variables**:
-    - Scatter plots are ideal for two numerical variables.
-    - Heatmaps can show correlations between multiple variables.
+    - Scatter plots are ideal for _two_ numerical variables.
+    - Heatmaps can show correlations between _multiple_ variables.
   - **Proportions**:
-    - Pie charts or stacked bar plots can highlight proportions within a whole.
+    - Pie charts or stacked bar plots can highlight _proportions_ within a whole.
   - **Trends**:
-    - Line plots are best for visualizing trends over time or sequential events.
+    - Line plots are best for visualizing _trends over time_ or sequential events.
 3. **Highlight Key Insights**
-    - Use color and annotations sparingly but effectively to emphasize critical points.
-    - Avoid clutter by focusing on the most relevant data.
-4. **Keep Accessibility in Mind**
-    - Ensure your visualizations are easy to interpret:
-      - Include clear titles, axis labels, and legends.
-      - Choose color palettes that are colorblind-friendly (e.g., Seaborn's default palette).
+  - Use color and annotations sparingly but effectively to emphasize critical points.
+  - Include clear titles, axis labels, and legends.
+  - Avoid clutter by focusing on the most relevant data.
 
 #### Example Chart Selection Table
 
