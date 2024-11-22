@@ -19,8 +19,12 @@ nav_order: 8
 
 </div>
 
-This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** using Python's `pandas`, `matplotlib`, and `seaborn` libraries. The project aims to demonstrate skills in data wrangling, visualization, and communication of findings through a scientific conference-style poster. You will work with a dataset of your choice to perform EDA. The project consists of three main deliverables: A descriptive **`README.md`** file, code in a **`main.py`** script, and a Scientific Conference Poster. 
+This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** using Python's `pandas`, `matplotlib`, and `seaborn` libraries. The project aims to demonstrate skills in data wrangling, visualization, and communication of findings through a scientific conference-style poster. You will work with a large, real-world dataset of your choice to perform EDA. The long-term project consists of THREE main deliverables:
 
+1. A descriptive **markdown** text file
+2. A **python** code script
+3. An academic conference-style **poster** 
+> 📰 Make a copy of this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the poster!
 
 #### Dataset Sources:
 - [Kaggle](https://www.kaggle.com/)
@@ -29,9 +33,9 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 
 ---
 
-### Deliverable Details
+### Instructions & Requirements
 
-##### ① `README.md` file must include the following:
+#### ① Markdown file:
 
 - [ ] **Dataset**:
   - Provide a link to the dataset you chose. You may use platforms like Kaggle, UCI Machine Learning Repository, or government open data portals.
@@ -44,50 +48,51 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 - [ ] **Visualization Plan**:
   - Explain how you will use visualizations to test your hypotheses. Include the type of chart you plan to use for each question.
 
-##### ② `main.py` script must:
+#### ② Python script:
 
-- [ ] **Load & process the dataset**:
+Your `main.py` script should demonstrate that you performed meaningful data analysis and generated diverse visualizations.
+
+- [ ] **Load & process the dataset**
   - Handle missing values.
   - Rename columns if necessary for clarity.
   - Convert data types if needed.
   - Filter and/or group data for focused analysis.
 - [ ] Contain code for at least **4 different types of visualizations**:
-  - Examples include:
-    - Bar plot
-    - Scatter plot
-    - Pie chart
-    - Heatmap
-    - Box plot
+  - [Example Graph Gallery](https://python-graph-gallery.com/)
   - Ensure each visualization is well-labeled with titles, axis labels, and legends.
-- [ ] Be thoroughly **commented**:
+  - Visualizations should be clear, informative, and appropriate for the data (_see guidelines below_)
+- [ ] Be thoroughly **commented**
   - Explain the purpose of each section of the code.
   - Use functions for reusable components of your code.
 
-##### ③ Use this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the scientific conference poster, which must include the following sections:
+#### ③ Poster: 
 
-- [ ] **Introduction**:
+A scientific poster for an academic conference must effectively communicate **key findings**. All captions and text should be concise and relevant.
+  
+- [ ] **Introduction**
   - Context for the dataset and why it is interesting/relevant.
   - Clearly state your research questions or hypotheses.
-- [ ] **Methods**:
+- [ ] **Methods**
   - Describe your process for cleaning and analyzing the data.
   - Include screenshots of key Python code snippets.
-- [ ] **Results**:
+- [ ] **Results**
   - Present 2–3 visualizations from your analysis.
   - Provide clear captions for each figure.
-- [ ] **Discussion**:
+- [ ] **Discussion**
   - Interpret your findings and discuss patterns or trends observed in the data.
   - Mention any limitations of your analysis.
-- [ ] **Conclusions**:
+- [ ] **Conclusions**
   - Summarize key takeaways.
   - Suggest potential areas for future research or data exploration.
-- [ ] **References**:
+- [ ] **References**
   - Cite the dataset and any external resources (_research on the topic for your poster's Introduction and/or Discussion sections_).
 
 ---
 
 ### Choosing Appropriate Visualizations
 
-Choosing the right type of visualization is crucial for effectively communicating your findings. Here are some guidelines to help you decide:
+{:.highlight}
+💡 Choosing the right type of visualization is crucial for effectively communicating your findings. Below are some **guidelines** to help you decide. Check out this resource from [UC Berkeley](https://guides.lib.berkeley.edu/data-visualization/about) for additional tips.
 
 1. **Understand the Nature of Your Data**
   - **Categorical Data**:
@@ -97,7 +102,6 @@ Choosing the right type of visualization is crucial for effectively communicatin
     - Use **scatter plots** to show relationships between two numerical variables.
   - **Time-Series Data**:
     - Use **line plots** to show trends over time.
-
 2. **Match the Visualization to Your Question**
   - **Comparisons Across Groups**:
     - Bar plots or grouped bar plots work well.
@@ -109,11 +113,9 @@ Choosing the right type of visualization is crucial for effectively communicatin
     - Pie charts or stacked bar plots can highlight proportions within a whole.
   - **Trends**:
     - Line plots are best for visualizing trends over time or sequential events.
-
 3. **Highlight Key Insights**
   - Use color and annotations sparingly but effectively to emphasize critical points.
   - Avoid clutter by focusing on the most relevant data.
-
 4. **Keep Accessibility in Mind**
   - Ensure your visualizations are easy to interpret:
     - Include clear titles, axis labels, and legends.
@@ -130,20 +132,4 @@ Choosing the right type of visualization is crucial for effectively communicatin
 | Relationships between variables| Scatter plot, Heatmap            |
 
 ![image](data-viz-cheatsheet.jpeg)
-
----
-
-### Requirements & Grading Criteria
-
-- **Completeness**:
-  - All deliverables are submitted.
-  - Each section of the `README.md` is detailed and insightful.
-  - The Python script performs meaningful analysis and includes diverse visualizations.
-  - The poster contains all required sections with a professional presentation.
-- **Code Quality**:
-  - Code is well-organized, with comments and function definitions.
-  - Visualizations are clear and informative.
-- **Communication**:
-  - The poster effectively communicates the key findings.
-  - Captions and text are concise and relevant.
 
