@@ -38,14 +38,14 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 #### ① Markdown file:
 
 - [ ] **Dataset**:
-  - Provide a _link_ to the dataset you chose. You may use platforms like Kaggle, UCI Machine Learning Repository, or government open data portals.
-  > Note that in `markdown`, you can format links like this: `[Link text](Link address)` 
+  - Provide a _link_ to the dataset you chose. 
+    > - Note that in `markdown`, you can format links like this: `[Link text](Link address)` 
 - [ ] **Column Descriptions**:
   - Write a brief description of each column in your dataset. Include data types and potential values.
 - [ ] **Hypotheses/Questions**:
   - List at least 5 questions you want to explore using your dataset. 
-    - _Is there a correlation between two variables?_
-    - _How do values in a specific column change over time or categories?_
+    > - _Is there a correlation between two variables?_
+    > - _How do values in a specific column change over time or categories?_
 - [ ] **Visualization Plan**:
   - Explain how you will use visualizations to test your hypotheses. Include the type of chart you plan to use for each question.
 
