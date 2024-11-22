@@ -86,7 +86,8 @@ A scientific poster for an academic conference must effectively communicate **ke
   - Summarize key takeaways.
   - Suggest potential areas for future research or data exploration.
 - [ ] **References**
-  - Cite the dataset and any external resources (_research on the topic for your poster's Introduction and/or Discussion sections_).
+  - Cite the dataset and any external resources
+  > 📚 Conduct _research_ on the topic to enhance your poster's **Introduction** and/or **Discussion** sections!
 
 ---
 
