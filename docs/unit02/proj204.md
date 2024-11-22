@@ -38,7 +38,8 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 #### ① Markdown file:
 
 - [ ] **Dataset**:
-  - Provide a link to the dataset you chose. You may use platforms like Kaggle, UCI Machine Learning Repository, or government open data portals.
+  - Provide a _link_ to the dataset you chose. You may use platforms like Kaggle, UCI Machine Learning Repository, or government open data portals.
+  > Note that in `markdown`, you can format links like this: `[Link text](Link address)` 
 - [ ] **Column Descriptions**:
   - Write a brief description of each column in your dataset. Include data types and potential values.
 - [ ] **Hypotheses/Questions**:
