@@ -33,25 +33,25 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 
 ##### ① `README.md` file must include the following:
 
-[ ] **Dataset**:
+- [ ] **Dataset**:
   - Provide a link to the dataset you chose. You may use platforms like Kaggle, UCI Machine Learning Repository, or government open data portals.
-[ ] **Column Descriptions**:
+- [ ] **Column Descriptions**:
   - Write a brief description of each column in your dataset. Include data types and potential values.
-[ ] **Hypotheses/Questions**:
-  - List at least 5 questions you want to explore using your dataset. _Examples:_
-    - Is there a correlation between two variables?
-    - How do values in a specific column change over time or categories?
-[ ] **Visualization Plan**:
+- [ ] **Hypotheses/Questions**:
+  - List at least 5 questions you want to explore using your dataset. 
+    - _Is there a correlation between two variables?_
+    - _How do values in a specific column change over time or categories?_
+- [ ] **Visualization Plan**:
   - Explain how you will use visualizations to test your hypotheses. Include the type of chart you plan to use for each question.
 
 ##### ② `main.py` script must:
 
-[ ] **Load & process the dataset**:
+- [ ] **Load & process the dataset**:
   - Handle missing values.
   - Rename columns if necessary for clarity.
   - Convert data types if needed.
   - Filter and/or group data for focused analysis.
-[ ] Contain code for at least **4 different types of visualizations**:
+- [ ] Contain code for at least **4 different types of visualizations**:
   - Examples include:
     - Bar plot
     - Scatter plot
@@ -59,35 +59,35 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
     - Heatmap
     - Box plot
   - Ensure each visualization is well-labeled with titles, axis labels, and legends.
-[ ] Be thoroughly **commented**:
+- [ ] Be thoroughly **commented**:
   - Explain the purpose of each section of the code.
   - Use functions for reusable components of your code.
 
 ##### ③ Use this [Google Slide Template](https://docs.google.com/presentation/d/1IkrIYBNTEBLFIO7kqUJWvrWhzRuiYhXyX7lxNZglkpU/edit?usp=sharing) for the scientific conference poster, which must include the following sections:
 
-[ ] **Introduction**:
+- [ ] **Introduction**:
   - Context for the dataset and why it is interesting/relevant.
   - Clearly state your research questions or hypotheses.
-[ ] **Methods**:
+- [ ] **Methods**:
   - Describe your process for cleaning and analyzing the data.
   - Include screenshots of key Python code snippets.
-[ ] **Results**:
+- [ ] **Results**:
   - Present 2–3 visualizations from your analysis.
   - Provide clear captions for each figure.
-[ ] **Discussion**:
+- [ ] **Discussion**:
   - Interpret your findings and discuss patterns or trends observed in the data.
   - Mention any limitations of your analysis.
-[ ] **Conclusions**:
+- [ ] **Conclusions**:
   - Summarize key takeaways.
   - Suggest potential areas for future research or data exploration.
-[ ] **References**:
+- [ ] **References**:
   - Cite the dataset and any external resources (_research on the topic for your poster's Introduction and/or Discussion sections_).
 
 ---
 
-### Choosing the Right Visualizations
+### Choosing Appropriate Visualizations
 
-Choosing the appropriate visualization is crucial for effectively communicating your findings. Here are guidelines to help you decide:
+Choosing the right type of visualization is crucial for effectively communicating your findings. Here are some guidelines to help you decide:
 
 1. **Understand the Nature of Your Data**
   - **Categorical Data**:
@@ -126,7 +126,7 @@ Choosing the appropriate visualization is crucial for effectively communicating 
 | Proportions                    | Pie chart, Stacked bar plot      |
 | Trends over time               | Line plot                        |
 | Distribution of a variable     | Histogram, Box plot              |
-| Comparison across categories   | Bar plot, Grouped bar plot       |
+| Comparison across categories   | Bar plot, Grouped bar plot (catplot)      |
 | Relationships between variables| Scatter plot, Heatmap            |
 
 ![image](data-viz-cheatsheet.jpeg)
