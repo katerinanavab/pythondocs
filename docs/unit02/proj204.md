@@ -39,13 +39,13 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 
 - [ ] **Dataset**:
   - Provide a _link_ to the dataset you chose. 
-    > - In `markdown` syntax, you can format links like this: `[Link text](Link address)` 
+    > In `markdown` syntax, you can format links like this: `[Link text](Link address)` 
 - [ ] **Column Descriptions**:
   - Write a brief description of each column in your dataset. Include data types and potential values.
 - [ ] **Hypotheses/Questions**:
   - List at least 5 questions you want to explore using your dataset. 
-    > - _Is there a correlation between two variables?_
-    > - _How do values in a specific column change over time or categories?_
+    > _Is there a correlation between two variables?_
+    > _How do values in a specific column change over time or categories?_
 - [ ] **Visualization Plan**:
   - Explain how you will use visualizations to test your hypotheses. Include the type of chart you plan to use for each question.
 
@@ -59,9 +59,9 @@ Your `main.py` script should be well-organized and demonstrate that you performe
   - Convert data types if needed.
   - Filter and/or group data for focused analysis.
 - [ ] Contain code for at least **4 different types of visualizations**
-  - See the [Example Graph Gallery](https://python-graph-gallery.com/) for inspiration
   - Ensure each visualization is well-labeled with titles, axis labels, and legends.
   - Visualizations should be clear, informative, and appropriate for the data (_see guidelines below_)
+  > See the [Example Graph Gallery](https://python-graph-gallery.com/) for inspiration
 - [ ] Be thoroughly **commented**
   - Explain the purpose of each section of the code.
   - Use functions for reusable components of your code.
