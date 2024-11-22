@@ -39,7 +39,7 @@ This is a cumulative project focusing on **Exploratory Data Analysis (EDA)** usi
 
 - [ ] **Dataset**:
   - Provide a _link_ to the dataset you chose. 
-    > - Note that in `markdown`, you can format links like this: `[Link text](Link address)` 
+    > - In `markdown` syntax, you can format links like this: `[Link text](Link address)` 
 - [ ] **Column Descriptions**:
   - Write a brief description of each column in your dataset. Include data types and potential values.
 - [ ] **Hypotheses/Questions**:
