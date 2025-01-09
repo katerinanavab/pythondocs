@@ -61,5 +61,5 @@ nav_order: 1
 #### Acknowledgement
 {: .no_toc }
 
-Content on this page is adapted from []().
+Content on this page is adapted from [The Flask Mega-Tutorial - Miguel Grinberg](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
 {: .fs-2 }
