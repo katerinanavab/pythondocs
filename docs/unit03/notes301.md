@@ -408,29 +408,25 @@ The following sections demonstrate both types of static files.
 
 1. In `templates/hello_there.html`, add the following line before the `</head>` tag, which creates a reference to the stylesheet.
 
-```markdown
-{% raw %}
     ```html
+    {% raw %}
     <link rel="stylesheet" type="text/css" href="\{{ url_for('static', filename='site.css')}}" />
+    {% endraw %}
     ```
-{% endraw %}
-```
 
   > Flask's [url_for](https://flask.palletsprojects.com/api/#flask.url_for) tag that is used here, creates the appropriate path to the file. Because it can accept variables as arguments, `url_for` allows you to programmatically control the generated path, if desired.
 
 1. Also in `templates/hello_there.html`, replace the contents `<body>` element with the following markup that uses the `message` style instead of a `<strong>` tag (and also displays a message if you just use a hello/ URL without a name):
 
-```markdown
-{% raw %}
     ```html
+    {% raw %}
     {%if name %}
         <span class="message">Hello there, \{{ name }}!</span> It's \{{ date.strftime("%A, %d %B, %Y at %X") }}.
     {% else %}
         <span class="message">What's your name? Provide it after /hello/ in the URL.</span>
     {% endif %}
+    {% endraw %}
     ```
-{% endraw %}
-```
 
 1. Run the app, navigate to a /hello/name URL, and observe that the message renders in blue. Stop the app when you're done.
 
@@ -476,9 +472,8 @@ The following steps demonstrate creating a base template.
 
 1. In the `templates` folder, create a file named `layout.html` with the contents below, which contains blocks named "title" and "content". As you can see, the markup defines a simple nav bar structure with links to Home, About, and Contact pages, which you will create in a later section. Each link again uses Flask's `url_for` tag to generate a link at runtime for the matching route.
 
-```markdown
-{% raw %}
-```html
+    ```html
+    {% raw %}
     <!DOCTYPE html>
     <html>
         <head>
@@ -504,9 +499,8 @@ The following steps demonstrate creating a base template.
             </div>
         </body>
     </html>
+    {% endraw %}
     ```
-{% endraw %}
-```
 
 1. Add the following styles to `static/site.css`, below the existing "message" style, and save the file. Note that this walkthrough doesn't attempt to demonstrate responsive design; these styles simply generate a reasonably interesting result.
 
@@ -552,9 +546,9 @@ Because the three pages you create in the next section extend `layout.html`, it 
 
 1. After VS Code opens `html.json`, add the following entry within the existing curly braces (the explanatory comments, not shown here, describe details such as how the `$0` line indicates where VS Code places the cursor after inserting a snippet):
 
-```markdown
-{% raw %}
+
     ```json
+    {% raw %}
     "Flask Tutorial: template extending layout.html": {
         "prefix": "flextlayout",
         "body": [
@@ -568,9 +562,8 @@ Because the three pages you create in the next section extend `layout.html`, it 
 
         "description": "Boilerplate template that extends layout.html"
     },
+    {% endraw %}
     ```
-{% endraw %}
-```
 
 1. Save the `html.json` file.
 
@@ -718,6 +711,7 @@ Throughout this Flask tutorial, all the app code is contained in a single `app.p
     1. Navigate into the `hello_app` folder, then launch the program using `python -m flask run`.
 
 ### Create a container for a Flask app using the Docker extension
+{:.no_toc}
 
 The [Docker extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. If you're interested in learning how to create a Python container for the Flask app developed in this tutorial, check out the [Python in a container](/docs/containers/quickstart-python.md) tutorial, which will walk you through how to:
 
@@ -728,10 +722,6 @@ The [Docker extension](https://marketplace.visualstudio.com/items?itemName=ms-az
 If you have any problems, you can search for answers or ask a question on the [Python extension Discussions Q&A](https://github.com/microsoft/vscode-python/discussions/categories/q-a).
 
 ## Next steps
-
-Congratulations on completing this walkthrough of working with Flask in Visual Studio Code!
-
-The completed code project from this tutorial can be found on GitHub: [python-sample-vscode-flask-tutorial](https://github.com/microsoft/python-sample-vscode-flask-tutorial).
 
 Because this tutorial has only scratched the surface of page templates, refer to the [Jinja2 documentation](https://jinja.palletsprojects.com) for more information about templates. The [Template Designer Documentation](https://jinja.palletsprojects.com/templates/#synopsis) contains all the details on the template language. You might also want to review the [official Flask tutorial](https://flask.palletsprojects.com/tutorial) as well as the documentation for Flask [extensions](https://flask.palletsprojects.com/extensions/).
 
