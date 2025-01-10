@@ -339,26 +339,26 @@ In this section, you create a single page using a template. In the sections that
 1. In the `templates` folder, create a file named `hello_there.html` with the contents below. This template contains two placeholders named "name" and "date", which are delineated by pairs of curly braces, `\{{` and `}}`. As you can see, you can also include formatting code in the template directly:
 
 
-```html
-{% raw %}
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="utf-8" />
-            <title>Hello, Flask</title>
-        </head>
-        <body>
-            {%if name %}
-                <strong>Hello there, \{{ name }}!</strong> It's \{{ date.strftime("%A, %d %B, %Y at %X") }}.
-            {% else %}
-                What's your name? Provide it after /hello/ in the URL.
-            {% endif %}
-        </body>
-    </html>
-{% endraw %}
-```
+    ```html
+    {% raw %}
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="utf-8" />
+                <title>Hello, Flask</title>
+            </head>
+            <body>
+                {%if name %}
+                    <strong>Hello there, \{{ name }}!</strong> It's \{{ date.strftime("%A, %d %B, %Y at %X") }}.
+                {% else %}
+                    What's your name? Provide it after /hello/ in the URL.
+                {% endif %}
+            </body>
+        </html>
+    {% endraw %}
+    ```
 
-> **Tip**: Flask developers often use the [flask-babel](https://pythonhosted.org/Flask-Babel/) extension for date formatting, rather than `strftime`, as flask-babel takes locales and timezones into consideration.
+    > **Tip**: Flask developers often use the [flask-babel](https://pythonhosted.org/Flask-Babel/) extension for date formatting, rather than `strftime`, as flask-babel takes locales and timezones into consideration.
 
 1. In `app.py`, import Flask's `render_template` function near the top of the file:
 
