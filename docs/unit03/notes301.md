@@ -338,10 +338,9 @@ In this section, you create a single page using a template. In the sections that
 
 1. In the `templates` folder, create a file named `hello_there.html` with the contents below. This template contains two placeholders named "name" and "date", which are delineated by pairs of curly braces, `\{{` and `}}`. As you can see, you can also include formatting code in the template directly:
 
-```markdown
-{% raw %}
 
-    ```html
+```html
+{% raw %}
     <!DOCTYPE html>
     <html>
         <head>
@@ -356,9 +355,9 @@ In this section, you create a single page using a template. In the sections that
             {% endif %}
         </body>
     </html>
-    ```
 {% endraw %}
 ```
+
 > **Tip**: Flask developers often use the [flask-babel](https://pythonhosted.org/Flask-Babel/) extension for date formatting, rather than `strftime`, as flask-babel takes locales and timezones into consideration.
 
 1. In `app.py`, import Flask's `render_template` function near the top of the file:
