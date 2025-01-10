@@ -728,7 +728,7 @@ You may also want to review the following articles in the VS Code docs that are 
 --- 
 
 <div class="warn" markdown="block">
-
+ 
 🛑 When class ends, don't forget to **SAVE YOUR WORK**! _There are multiple steps to saving in GitHub:_
 
 1. Navigate to the `Source Control` menu on the _LEFT_ sidebar
