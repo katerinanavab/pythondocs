@@ -359,7 +359,7 @@ In this section, you create a single page using a template. In the sections that
     ```
 {% endraw %}
 ```
-    > **Tip**: Flask developers often use the [flask-babel](https://pythonhosted.org/Flask-Babel/) extension for date formatting, rather than `strftime`, as flask-babel takes locales and timezones into consideration.
+> **Tip**: Flask developers often use the [flask-babel](https://pythonhosted.org/Flask-Babel/) extension for date formatting, rather than `strftime`, as flask-babel takes locales and timezones into consideration.
 
 1. In `app.py`, import Flask's `render_template` function near the top of the file:
 
@@ -619,9 +619,9 @@ With the code snippet in place, you can quickly create templates for the Home, A
 
 With all the page templates in place, save `app.py`, run the app, and open a browser to see the results. Navigate between the pages to verify that the page templates are properly extending the base template.
 
-![Flask tutorial: app rendering a common nav bar from the base template](images/flask-tutorial/full-app.png)
+![image](figures/full-app.png)
 
->**Note**: If you're not seeing the latest changes, you might need to do a hard refresh on the page to avoid seeing a cached file.
+> **Note**: If you're not seeing the latest changes, you might need to do a hard refresh on the page to avoid seeing a cached file.
 
 ## Optional activities
 
@@ -712,7 +712,7 @@ Throughout this Flask tutorial, all the app code is contained in a single `app.p
 
 1. Your project's structure should now be similar to the following:
 
-    ![Flask tutorial: modified project structure with separate files and folders for parts of the app](images/flask-tutorial/project-structure.png)
+    ![image](figures/project-structure.png)
 
 1. Run the app in the debugger again to make sure everything works. To run the app outside of the VS Code debugger, use the following steps from a terminal:
     1. Set an environment variable for `FLASK_APP`. On Linux and macOS, use `export set FLASK_APP=webapp`; on Windows use `$env:FLASK_APP=webapp` if you're using PowerShell, or `set FLASK_APP=webapp` if you're using Command Prompt.
