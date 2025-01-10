@@ -479,7 +479,7 @@ The following steps demonstrate creating a base template.
 
 ```markdown
 {% raw %}
-    ```html
+```html
     <!DOCTYPE html>
     <html>
         <head>
@@ -585,11 +585,11 @@ With the code snippet in place, you can quickly create templates for the Home, A
 
 1. In the `templates` folder, create a new file named `home.html`, Then start typing `flext` to see the snippet appear as a completion:
 
-    ![Flask tutorial: autocompletion for the flextlayout code snippet](images/flask-tutorial/autocomplete-for-code-snippet.png)
+    ![image](figures/autocomplete-for-code-snippet.png)
 
     When you select the completion, the snippet's code appears with the cursor on the snippet's insertion point:
 
-    ![Flask tutorial: insertion of the flextlayout code snippet](images/flask-tutorial/code-snippet-inserted.png)
+    ![image](figures/code-snippet-inserted.png)
 
 1. At the insertion point in the "title" block, write `Home`, and in the "content" block, write `<p>Home page for the Visual Studio Code Flask tutorial.</p>`, then save the file. These lines are the only unique parts of the extended page template:
 
