@@ -104,7 +104,7 @@ In this section, you will create a virtual environment in which Flask is install
 1. In VS Code, open the Command Palette (**View** > **Command Palette** or (`kb(workbench.action.showCommands)`)). Then select the **Python: Create Environment** command to create a virtual environment in your workspace. Select `venv` and then the Python environment you want to use to create it.
     > **Note**: If you want to create an environment manually, or run into error in the environment creation process, visit the [Environments](/docs/python/environments.md#create-a-virtual-environment-in-the-terminal) page.
 
-    ![Flask tutorial: opening the Command Palette in VS Code](images/flask-tutorial/command-palette.png)
+    ![image](figures/command-palette.png)
 
 1. After your virtual environment creation has been completed, run [**Terminal: Create New Terminal**](/docs/terminal/basics.md) (`kb(workbench.action.terminal.new)`)) from the Command Palette, which creates a terminal and automatically activates the virtual environment by running its activation script.
 
@@ -122,7 +122,7 @@ You now have a self-contained environment ready for writing Flask code. VS Code 
 
 1. In VS Code, create a new file in your project folder named `app.py` using either **File** > **New** from the menu, pressing `kbstyle(Ctrl+N)`, or using the new file icon in the Explorer View (shown below).
 
-    ![Flask tutorial: new file icon in Explorer View](images/flask-tutorial/new-file-icon.png)
+    ![image](figures/new-file-icon.png)
 
 1. In `app.py`, add code to import Flask and create an instance of the Flask object. If you type the code below (instead of using copy-paste), you can observe VS Code's [IntelliSense and auto-completions](/docs/python/editing.md#autocomplete-and-intellisense):
 
@@ -160,7 +160,7 @@ You now have a self-contained environment ready for writing Flask code. VS Code 
 
 1. To open your default browser to the rendered page, `kbstyle(Ctrl+click)` the `http://127.0.0.1:5000/` URL in the terminal.
 
-    ![Flask tutorial: the running app in a browser](images/flask-tutorial/app-in-browser-01.png)
+    ![image](figures/app-in-browser-01.png)
 
 1. Observe that when you visit a URL like /, a message appears in the debug terminal showing the HTTP request:
 
@@ -225,11 +225,11 @@ Debugging gives you the opportunity to pause a running program on a particular l
 
     The breakpoint appears as a red dot in the left margin:
 
-    ![Flask tutorial: a breakpoint set on the first line of the hello_there function](images/flask-tutorial/debug-breakpoint-set.png)
+    ![image](figures/debug-breakpoint-set.png)
 
 1. Switch to the **Run and Debug** view in VS Code (using the left-side activity bar or `kb(workbench.view.debug)`). You may see the message "To customize Run and Debug create a launch.json file". This means that you don't yet have a `launch.json` file containing debug configurations. VS Code can create that for you if you click on the **create a launch.json file** link:
 
-    ![Flask tutorial: initial view of the debug panel](images/shared/debug-panel-initial-view.png)
+    ![image](figures/debug-panel-initial-view.png)
 
 1. Select the link and VS Code will prompt for a debug configuration. Select **Flask** from the dropdown and VS Code will populate a new `launch.json` file with a Flask run configuration. The `launch.json` file contains a number of debugging configurations, each of which is a separate JSON object within the `configuration` array.
 
@@ -261,29 +261,29 @@ Debugging gives you the opportunity to pause a running program on a particular l
 
 1. Save `launch.json` (`kb(workbench.action.files.save)`). In the debug configuration dropdown list select the **Python: Flask** configuration.
 
-    ![Flask tutorial: selecting the Flask debugging configuration](images/flask-tutorial/debug-select-configuration.png)
+    ![image](figures/debug-select-configuration.png)
 
 1. Start the debugger by selecting the **Run** > **Start Debugging** menu command, or selecting the green **Start Debugging** arrow next to the list (`kb(workbench.action.debug.continue)`):
 
-    ![Flask tutorial: start debugging/continue arrow on the debug toolbar](images/flask-tutorial/debug-continue-arrow.png)
+    ![image](figures/debug-continue-arrow.png)
 
     Observe that the status bar changes color to indicate debugging:
 
-    ![Flask tutorial: appearance of the debugging status bar](images/flask-tutorial/debug-status-bar.png)
+    ![image](figures/debug-status-bar.png)
 
     A debugging toolbar (shown below) also appears in VS Code containing commands in the following order: Pause (or Continue, `kb(workbench.action.debug.continue)`), Step Over (`kb(workbench.action.debug.stepOver)`), Step Into (`kb(workbench.action.debug.stepInto)`), Step Out (`kb(workbench.action.debug.stepOut)`), Restart (`kb(workbench.action.debug.restart)`), and Stop (`kb(workbench.action.debug.stop)`). See [VS Code debugging](/docs/editor/debugging.md) for a description of each command.
 
-    ![Flask tutorial: the VS Code debug toolbar](images/flask-tutorial/debug-toolbar.png)
+    ![image](figures/debug-toolbar.png)
 
 1. Output appears in a "Python Debug Console" terminal. `kbstyle(Ctrl+click)` the `http://127.0.0.1:5000/` link in that terminal to open a browser to that URL. In the browser's address bar, navigate to `http://127.0.0.1:5000/hello/VSCode`. Before the page renders, VS Code pauses the program at the breakpoint you set. The small yellow arrow on the breakpoint indicates that it's the next line of code to run.
 
-    ![Flask tutorial: VS Code paused at a breakpoint](images/flask-tutorial/debug-program-paused.png)
+    ![image](figures/debug-program-paused.png)
 
 1. Use Step Over to run the `now = datetime.now()` statement.
 
 1. On the left side of the VS Code window, you see a **Variables** pane that shows local variables, such as `now`, as well as arguments, such as `name`. Below that are panes for **Watch**, **Call Stack**, and **Breakpoints** (see [VS Code debugging](/docs/editor/debugging.md) for details). In the **Locals** section, try expanding different values. You can also double-click values (or use `kb(debug.setVariable)`) to modify them. Changing variables such as `now`, however, can break the program. Developers typically make changes only to correct values when the code didn't produce the right value to begin with.
 
-    ![Flask tutorial: local variables and arguments in VS Code during debugging](images/flask-tutorial/debug-local-variables.png)
+    ![image](figures/debug-local-variables.png)
 
 1. When a program is paused, the **Debug Console** panel (which is different from the "Python Debug Console" in the Terminal panel) lets you experiment with expressions and try out bits of code using the current state of the program. For example, once you've stepped over the line `now = datetime.now()`, you might experiment with different date/time formats. In the editor, select the code that reads `now.strftime("%A, %d %B, %Y at %X")`, then right-click and select **Evaluate in Debug Console** to send that code to the debug console, where it runs:
 
@@ -307,7 +307,7 @@ Debugging gives you the opportunity to pause a running program on a particular l
 
 1. Step through a few more lines of code, if you'd like, then select Continue (`kb(workbench.action.debug.continue)`) to let the program run. The browser window shows the result:
 
-    ![Flask tutorial: result of the modified program](images/flask-tutorial/debug-run-result.png)
+    ![image](figures/debug-run-result.png)
 
 1. Change the line in the code to use different datetime format, for example `now.strftime("%a, %d %b, %y at %X")`, and then save the file. The Flask server will automatically reload, which means the changes will be applied without the need to restart the debugger. Refresh the page on the browser to see the update.
 
@@ -323,7 +323,7 @@ During your work with Flask or any other library, you may want to examine the co
 
 - **Peek Definition** (`kb(editor.action.peekDefinition)`, also on the right-click context menu), is similar, but displays the class definition directly in the editor (making space in the editor window to avoid obscuring any code). Press `kbstyle(Escape)` to close the Peek window or use the **x** in the upper right corner.
 
-    ![Flask tutorial: peek definition showing the Flask class inline](images/flask-tutorial/peek-definition.png)
+    ![image](figures/peek-definition.png)
 
 ## Use a template to render a page
 
@@ -563,11 +563,11 @@ With the code snippet in place, you can quickly create templates for the Home, A
 
 1. In the `templates` folder, create a new file named `home.html`, Then start typing `flext` to see the snippet appear as a completion:
 
-    ![Flask tutorial: autocompletion for the flextlayout code snippet](images/flask-tutorial/autocomplete-for-code-snippet.png)
+    ![image](figures/autocomplete-for-code-snippet.png)
 
     When you select the completion, the snippet's code appears with the cursor on the snippet's insertion point:
 
-    ![Flask tutorial: insertion of the flextlayout code snippet](images/flask-tutorial/code-snippet-inserted.png)
+    ![image](figures/code-snippet-inserted.png)
 
 1. At the insertion point in the "title" block, write `Home`, and in the "content" block, write `<p>Home page for the Visual Studio Code Flask tutorial.</p>`, then save the file. These lines are the only unique parts of the extended page template:
 
@@ -597,7 +597,7 @@ With the code snippet in place, you can quickly create templates for the Home, A
 
 With all the page templates in place, save `app.py`, run the app, and open a browser to see the results. Navigate between the pages to verify that the page templates are properly extending the base template.
 
-![Flask tutorial: app rendering a common nav bar from the base template](images/flask-tutorial/full-app.png)
+![image](figures/full-app.png)
 
 >**Note**: If you're not seeing the latest changes, you might need to do a hard refresh on the page to avoid seeing a cached file.
 
@@ -690,7 +690,7 @@ Throughout this Flask tutorial, all the app code is contained in a single `app.p
 
 1. Your project's structure should now be similar to the following:
 
-    ![Flask tutorial: modified project structure with separate files and folders for parts of the app](images/flask-tutorial/project-structure.png)
+    ![image](figures/project-structure.png)
 
 1. Run the app in the debugger again to make sure everything works. To run the app outside of the VS Code debugger, use the following steps from a terminal:
     1. Set an environment variable for `FLASK_APP`. On Linux and macOS, use `export set FLASK_APP=webapp`; on Windows use `$env:FLASK_APP=webapp` if you're using PowerShell, or `set FLASK_APP=webapp` if you're using Command Prompt.
