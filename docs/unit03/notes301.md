@@ -73,6 +73,7 @@ Flask is called a "micro" framework because it doesn't directly provide features
 In this Flask tutorial, you create a simple Flask app with three pages that use a common base template. Along the way, you experience a number of features of Visual Studio Code including using the terminal, the editor, the debugger, code snippets, and more.
 
 ### Create and run a minimal Flask app
+{:.no_toc}
 
 1. Install Flask in the virtual environment by running the following command in the VS Code Terminal:
 
@@ -282,7 +283,7 @@ During your work with Flask or any other library, you may want to examine the co
 
     ![image](figures/peek-definition.png)
 
-### Use a template to render a page
+### Use an HTML template to render a page
 
 The app you've created so far in this tutorial generates only plain text web pages from Python code. Although it's possible to generate HTML directly in code, developers avoid such a practice because it opens the app to [cross-site scripting (XSS) attacks](https://flask.palletsprojects.com/security/#cross-site-scripting-xss). In the `hello_there` function of this tutorial, for example, one might think to format the output in code with something like `content = "<h1>Hello there, " + clean_name + "!</h1>"`, where the result in `content` is given directly to a browser. This opening allows an attacker to place malicious HTML, including JavaScript code, in the URL that ends up in `clean_name` and thus ends up being run in the browser.
 
@@ -391,6 +392,7 @@ The following sections demonstrate both types of static files.
 1. Run the app, navigate to a /hello/name URL, and observe that the message renders in blue. Stop the app when you're done.
 
 #### Serve a static file from code
+{:.no_toc}
 
 1. In the `static` folder, create a JSON data file named `data.json` with the following contents (which are meaningless sample data):
 
@@ -421,6 +423,7 @@ Also, because you'll likely create many pages that extend the same template, it'
 The following sections walk through different parts of this process.
 
 #### Create a base page template and styles
+{:.no_toc}
 
 ```markdown
 {% raw %}
@@ -497,6 +500,7 @@ The following steps demonstrate creating a base template.
 You can run the app at this point, but because you haven't made use of the base template anywhere and haven't changed any code files, the result is the same as the previous step. Complete the remaining sections to see the final effect.
 
 #### Create a code snippet
+{:.no_toc}
 
 Because the three pages you create in the next section extend `layout.html`, it saves time to create a **code snippet** to initialize a new template file with the appropriate reference to the base template. A code snippet provides a consistent piece of code from a single source, which avoids errors that can creep in when using copy-paste from existing code.
 
@@ -532,6 +536,7 @@ Because the three pages you create in the next section extend `layout.html`, it 
 For more information on code snippets in general, refer to [Creating snippets](/docs/editor/userdefinedsnippets.md).
 
 ### Use the code snippet to add pages
+{:.no_toc}
 
 With the code snippet in place, you can quickly create templates for the Home, About, and Contact pages.
 
@@ -568,6 +573,7 @@ With the code snippet in place, you can quickly create templates for the Home, A
     ```
 
 #### Run the app
+{:.no_toc}
 
 With all the page templates in place, save `app.py`, run the app, and open a browser to see the results. Navigate between the pages to verify that the page templates are properly extending the base template.
 
