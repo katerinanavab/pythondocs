@@ -274,6 +274,7 @@ Debugging gives you the opportunity to pause a running program on a particular l
 > **Tip**: To make it easier to repeatedly navigate to a specific URL like `http://127.0.0.1:5000/hello/VSCode`, output that URL using a `print` statement. The URL appears in the terminal where you can use `Ctrl+click` to open it in a browser.
 
 ### Go to Definition and Peek Definition commands
+{:.no_toc}
 
 During your work with Flask or any other library, you may want to examine the code in those libraries themselves. VS Code provides two convenient commands that navigate directly to the definitions of classes and other objects in any code:
 
@@ -355,6 +356,7 @@ The second type are those that you want to address in code, such as when you wan
 The following sections demonstrate both types of static files.
 
 ### Refer to static files in a template
+{:.no_toc}
 
 1. In the `hello_flask` folder, create a folder named `static`.
 
