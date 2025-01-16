@@ -92,7 +92,7 @@ In this Flask tutorial, you create a simple Flask app with three pages that use 
     app = Flask(__name__)
     ```
 
-1. Also in `app.py`, add a function that returns content, in this case a simple string, and use Flask's `app.route` decorator to map the URL route `/` to that function:
+1. Also in `app.py`, add a function that returns content, in this case a simple string, and use Flask's `app.route` **decorator** to map the URL route `/` to that function:
 
     ```python
     @app.route("/")
@@ -104,10 +104,9 @@ In this Flask tutorial, you create a simple Flask app with three pages that use 
 
 1. Save the `app.py` file.
 
-1. In the Integrated Terminal, run the app by entering `python -m flask run`, which runs the Flask development server. The development server looks for `app.py` by default. When you run Flask, you should see output similar to the following:
+1. In the Integrated Terminal, run the app by entering `flask run`, which runs the Flask development server. The development server looks for `app.py` by default. When you run Flask, you should see output similar to the following:
 
     ```bash
-    (.venv) D:\py\\hello_flask>python -m flask run
      * Environment: production
        WARNING: Do not use the development server in a production environment.
        Use a production WSGI server instead.
@@ -115,15 +114,17 @@ In this Flask tutorial, you create a simple Flask app with three pages that use 
      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
     ```
 
-    If you see an error that the Flask module cannot be found, make sure you've run `python -m pip install flask` in your virtual environment as described at the end of the previous section.
+{:.warning}
+If you see an error that the Flask module cannot be found, make sure you've run `python -m pip install flask` in your virtual environment as described at the end of the previous section. 
 
-    Also, if you want to run the development server on a different IP address or port, use the host and port command-line arguments, as with `--host=0.0.0.0 --port=80`.
+{:.highlight}
+Also, if you want to run the development server on a different IP address or port, use the host and port command-line arguments, as with `--host=0.0.0.0 --port=80`.
 
 1. To open your default browser to the rendered page, `Ctrl+click` the `http://127.0.0.1:5000/` URL in the terminal.
 
     ![image](figures/app-in-browser-01.png)
 
-1. Observe that when you visit a URL like /, a message appears in the debug terminal showing the HTTP request:
+1. Observe that when you visit a URL like /, a message appears in the debug terminal showing the **HTTP request**:
 
     ```bash
     127.0.0.1 - - [11/Jul/2018 08:40:15] "GET / HTTP/1.1" 200 -
@@ -133,166 +134,22 @@ In this Flask tutorial, you create a simple Flask app with three pages that use 
 
 > **Tip**: When using a different filename than `app.py`, such as `webapp.py`, you will need to define an environment variable named FLASK_APP and set its value to your chosen file. Flask's development server then uses the value of FLASK_APP instead of the default file `app.py`. For more information, see [Flask command line interface](https://flask.palletsprojects.com/en/1.1.x/cli/).
 
-### Run the app in the debugger
-
-Debugging gives you the opportunity to pause a running program on a particular line of code. When a program is paused, you can examine variables, run code in the Debug Console panel, and otherwise take advantage of the features described on [Debugging](/docs/python/debugging.md). Running the debugger also automatically saves any modified files before the debugging session begins.
-
-**Before you begin**: Make sure you've stopped the running app at the end of the last section by using `Ctrl+C` in the terminal. If you leave the app running in one terminal, it continues to own the port. As a result, when you run the app in the debugger using the same port, the original running app handles all the requests and you won't see any activity in the app being debugged and the program won't stop at breakpoints. In other words, if the debugger doesn't seem to be working, make sure that no other instance of the app is still running.
-
-1. Replace the contents of `app.py` with the following code, which adds a second route and function that you can step through in the debugger:
-
-    ```python
-    import re
-    from datetime import datetime
-
-    from flask import Flask
-
-    app = Flask(__name__)
-
-
-    @app.route("/")
-    def home():
-        return "Hello, Flask!"
-
-
-    @app.route("/hello/<name>")
-    def hello_there(name):
-        now = datetime.now()
-        formatted_now = now.strftime("%A, %d %B, %Y at %X")
-
-        # Filter the name argument to letters only using regular expressions. URL arguments
-        # can contain arbitrary text, so we restrict to safe characters only.
-        match_object = re.match("[a-zA-Z]+", name)
-
-        if match_object:
-            clean_name = match_object.group(0)
-        else:
-            clean_name = "Friend"
-
-        content = "Hello there, " + clean_name + "! It's " + formatted_now
-        return content
-    ```
-
-    The decorator used for the new URL route, `/hello/<name>`, defines an endpoint /hello/ that can accept any additional value. The identifier inside `<` and `>` in the route defines a variable that is passed to the function and can be used in your code.
-
-    URL routes are case-sensitive. For example, the route `/hello/<name>` is distinct from `/Hello/<name>`. If you want the same function to handle both, use decorators for each variant.
-
-    As described in the code comments, always filter arbitrary user-provided information to avoid various attacks on your app. In this case, the code filters the name argument to contain only letters, which avoids injection of control characters, HTML, and so forth. (When you use templates in the next section, Flask does automatic filtering and you won't need this code.)
-
-1. Set a breakpoint at the first line of code in the `hello_there` function (`now = datetime.now()`) by doing any one of the following:
-    - With the cursor on that line, select the **Run** > **Toggle Breakpoint** menu command, or,
-    - Click directly in the margin to the left of the line number (a faded red dot appears when hovering there).
-
-    The breakpoint appears as a red dot in the left margin:
-
-    ![image](figures/debug-breakpoint-set.png)
-
-1. Switch to the **Run and Debug** view in VS Code (using the left-side activity bar or `⇧⌘D`). You may see the message "To customize Run and Debug create a launch.json file". This means that you don't yet have a `launch.json` file containing debug configurations. VS Code can create that for you if you click on the **create a launch.json file** link.
-
-1. Select the link and VS Code will prompt for a debug configuration. Select **Flask** from the dropdown and VS Code will populate a new `launch.json` file with a Flask run configuration. The `launch.json` file contains a number of debugging configurations, each of which is a separate JSON object within the `configuration` array.
-
-1. Scroll down to and examine the configuration, which is named "Python: Flask". This configuration contains `"module": "flask",`, which tells VS Code to run Python with `-m flask` when it starts the debugger. It also defines the FLASK_APP environment variable in the `env` property to identify the startup file, which is `app.py` by default, but allows you to easily specify a different file. If you want to change the host and/or port, you can use the `args` array.
-
-    ```json
-    {
-        "name": "Python Debugger: Flask",
-        "type": "debugpy",
-        "request": "launch",
-        "module": "flask",
-        "env": {
-            "FLASK_APP": "app.py",
-            "FLASK_DEBUG": "1"
-        },
-        "args": [
-            "run",
-            "--no-debugger",
-            "--no-reload"
-        ],
-        "jinja": true,
-        "justMyCode": true
-    },
-    ```
-
-    > **Note**: If the `env` entry in your configuration contains `"FLASK_APP": "${workspaceFolder}/app.py"`, change it to `"FLASK_APP": "app.py"` as shown above. Otherwise you may encounter error messages like "Cannot import module C" where C is the drive letter where your project folder resides.
-
-    > **Note**: Once `launch.json` is created, an **Add Configuration** button appears in the editor. That button displays a list of additional configurations to add to the beginning of the configuration list. (The **Run** > **Add Configuration** menu command does the same action.).
-
-1. Save `launch.json`. In the debug configuration dropdown list select the **Python: Flask** configuration.
-
-    ![image](figures/debug-select-configuration.png)
-
-1. Start the debugger by selecting the **Run** > **Start Debugging** menu command, or selecting the green **Start Debugging** arrow next to the list:
-
-    ![image](figures/debug-continue-arrow.png)
-
-    Observe that the status bar changes color to indicate debugging:
-
-    ![image](figures/debug-status-bar.png)
-
-    A debugging toolbar (shown below) also appears in VS Code containing commands in the following order: Pause (or Continue), Step Over, Step Into, Step Out, Restart, and Stop. See [VS Code debugging](/docs/editor/debugging.md) for a description of each command.
-
-    ![image](figures/debug-toolbar.png)
-
-1. Output appears in a "Python Debug Console" terminal. `Ctrl+click` the `http://127.0.0.1:5000/` link in that terminal to open a browser to that URL. In the browser's address bar, navigate to `http://127.0.0.1:5000/hello/VSCode`. Before the page renders, VS Code pauses the program at the breakpoint you set. The small yellow arrow on the breakpoint indicates that it's the next line of code to run.
-
-    ![image](figures/debug-program-paused.png)
-
-1. Use Step Over to run the `now = datetime.now()` statement.
-
-1. On the left side of the VS Code window, you see a **Variables** pane that shows local variables, such as `now`, as well as arguments, such as `name`. Below that are panes for **Watch**, **Call Stack**, and **Breakpoints** (see [VS Code debugging](/docs/editor/debugging.md) for details). In the **Locals** section, try expanding different values. You can also double-click values to modify them. Changing variables such as `now`, however, can break the program. Developers typically make changes only to correct values when the code didn't produce the right value to begin with.
-
-    ![image](figures/debug-local-variables.png)
-
-1. When a program is paused, the **Debug Console** panel (which is different from the "Python Debug Console" in the Terminal panel) lets you experiment with expressions and try out bits of code using the current state of the program. For example, once you've stepped over the line `now = datetime.now()`, you might experiment with different date/time formats. In the editor, select the code that reads `now.strftime("%A, %d %B, %Y at %X")`, then right-click and select **Evaluate in Debug Console** to send that code to the debug console, where it runs:
-
-    ```bash
-    now.strftime("%A, %d %B, %Y at %X")
-    'Wednesday, 31 October, 2018 at 18:13:39'
-    ```
-
-    > **Tip**: The **Debug Console** also shows exceptions from within the app that may not appear in the terminal. For example, if you see a "Paused on exception" message in the **Call Stack** area of **Run and Debug** view, switch to the **Debug Console** to see the exception message.
-
-1. Copy that line into the > prompt at the bottom of the debug console, and try changing the formatting:
-
-    ```bash
-    now.strftime("%a, %d %B, %Y at %X")
-    'Wed, 31 October, 2018 at 18:13:39'
-    now.strftime("%a, %d %b, %Y at %X")
-    'Wed, 31 Oct, 2018 at 18:13:39'
-    now.strftime("%a, %d %b, %y at %X")
-    'Wed, 31 Oct, 18 at 18:13:39'
-    ```
-
-1. Step through a few more lines of code, if you'd like, then select Continue to let the program run. The browser window shows the result:
-
-    ![image](figures/debug-run-result.png)
-
-1. Change the line in the code to use different datetime format, for example `now.strftime("%a, %d %b, %y at %X")`, and then save the file. The Flask server will automatically reload, which means the changes will be applied without the need to restart the debugger. Refresh the page on the browser to see the update.
-
-1. Close the browser and stop the debugger when you're finished. To stop the debugger, use the Stop toolbar button (the red square) or the **Run** > **Stop Debugging** command.
-
-> **Tip**: To make it easier to repeatedly navigate to a specific URL like `http://127.0.0.1:5000/hello/VSCode`, output that URL using a `print` statement. The URL appears in the terminal where you can use `Ctrl+click` to open it in a browser.
-
-### Go to Definition and Peek Definition commands
-{:.no_toc}
-
-During your work with Flask or any other library, you may want to examine the code in those libraries themselves. VS Code provides two convenient commands that navigate directly to the definitions of classes and other objects in any code:
-
-- **Go to Definition** jumps from your code into the code that defines an object. For example, in `app.py`, right-click on the `Flask` class (in the line `app = Flask(__name__)`) and select **Go to Definition**, which navigates to the class definition in the Flask library.
-
-- **Peek Definition** (also on the right-click context menu), is similar, but displays the class definition directly in the editor (making space in the editor window to avoid obscuring any code). Press to close the Peek window or use the **x** in the upper right corner.
-
-    ![image](figures/peek-definition.png)
-
 ### Use an HTML template to render a page
 
-The app you've created so far in this tutorial generates only plain text web pages from Python code. Although it's possible to generate HTML directly in code, developers avoid such a practice because it opens the app to [cross-site scripting (XSS) attacks](https://flask.palletsprojects.com/security/#cross-site-scripting-xss). In the `hello_there` function of this tutorial, for example, one might think to format the output in code with something like `content = "<h1>Hello there, " + clean_name + "!</h1>"`, where the result in `content` is given directly to a browser. This opening allows an attacker to place malicious HTML, including JavaScript code, in the URL that ends up in `clean_name` and thus ends up being run in the browser.
+The app you've created so far in this tutorial generates only plain text web pages from Python code. Although it's possible to generate HTML directly in code, developers avoid such a practice because it opens the app to [cross-site scripting (XSS) attacks](https://flask.palletsprojects.com/security/#cross-site-scripting-xss). 
 
 {:.highlight}
 A much better practice is to keep `HTML` out of your python code entirely by using **templates**, so that your code is concerned only with _data values_ and not with _rendering_.
 
-- A template is an HTML file that contains placeholders for values that the code provides at run time. The templating engine takes care of making the substitutions when rendering the page. The code, therefore, concerns itself only with data values and the template concerns itself only with markup.
-- The default templating engine for Flask is [Jinja](https://jinja.palletsprojects.com), which is installed automatically when you install Flask. This engine provides flexible options including automatic escaping (to prevent XSS attacks) and template inheritance. With inheritance, you can define a base page with common markup and then build upon that base with page-specific additions.
+<html>
+<dl>
+  <dt>Template</dt>
+  <dd>An <code>HTML</code> file that contains <strong>placeholders</strong> for values that the code provides at run time. The templating engine takes care of making the <strong>substitutions</strong> when rendering the page. The code, therefore, concerns itself only with <em>data values</em> and the template concerns itself only with <em>markup</em>.
+  </dd>
+</dl>
+</html>
+
+> The default templating engine for Flask is [Jinja](https://jinja.palletsprojects.com), which is installed automatically when you install Flask. This engine provides flexible options including automatic escaping (to prevent XSS attacks) and **template inheritance**. With inheritance, you can define a **base page** with _common markup_ and then build upon that base with _page-specific_ additions.
 
 In this section, you create a single page using a template. In the sections that follow, you configure the app to serve static files, and then create multiple pages to the app that each contains a nav bar from a base template.
 
@@ -340,8 +197,11 @@ In this section, you create a single page using a template. In the sections that
             date=datetime.now()
         )
     ```
+   > The decorator used for the new URL route, `/hello/<name>`, defines an **endpoint** `/hello/` that can accept any additional value. The identifier inside `<` and `>` in the route defines a **variable** that is passed to the function and can be used in your code.
 
-    You can see that the code is now much simpler, and concerned only with data values, because the markup and formatting is all contained in the template.
+{:.highlight}
+URL routes are case-sensitive. For example, the route `/hello/<name>` is distinct from `/Hello/<name>`. If you want the same function to handle both, use decorators for each variant.
+
 
 1. Start the program (inside or outside of the debugger), navigate to a /hello/name URL, and observe the results.
 
