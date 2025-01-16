@@ -156,8 +156,6 @@ In this section, you create a single page using a template. In the sections that
 1. Inside the `hello_flask` folder, create a folder named `templates`, which is where Flask looks for templates by default.
 
 1. In the `templates` folder, create a file named `hello_there.html` with the contents below. This template contains two placeholders named "name" and "date", which are delineated by pairs of curly braces, `{{` and `}}`. As you can see, you can also include formatting code in the template directly:
-
-
     ```html
     {% raw %}
         <!DOCTYPE html>
@@ -176,7 +174,6 @@ In this section, you create a single page using a template. In the sections that
         </html>
     {% endraw %}
     ```
-
     > **Tip**: Flask developers often use the [flask-babel](https://pythonhosted.org/Flask-Babel/) extension for date formatting, rather than `strftime`, as flask-babel takes locales and timezones into consideration.
 
 1. In `app.py`, import Flask's `render_template` function near the top of the file:
@@ -186,7 +183,6 @@ In this section, you create a single page using a template. In the sections that
     ```
 
 1. Also in `app.py`, modify the `hello_there` function to use `render_template` to load a template and apply the named values (and add a route to recognize the case without a name). `render_template` assumes that the first argument is relative to the `templates` folder. Typically, developers name the templates the same as the functions that use them, but matching names are not required because you always refer to the exact filename in your code.
-
     ```python
     @app.route("/hello/")
     @app.route("/hello/<name>")
@@ -207,10 +203,10 @@ URL routes are **case-sensitive**. For example, the route `/hello/<name>` is dis
 
 1. Also try navigating to a /hello/name URL using a name like `<a%20value%20that%20could%20be%20HTML>` to see Flask's automatic escaping at work. The "name" value shows up as plain text in the browser rather than as rendering an actual element.
 
-### Serve static files like CSS
+### Serve static files (CSS)
 
 **Static** files are of two types:
-* 🎨 First are those files like **stylesheets** to which a page template can just refer directly, or even a JavaScript file that handles real-time user interactions (button clicks, etc). 
+* 🎨 First are those files like **CSS stylesheets** to which a page template can just refer directly, or even a **JavaScript** file that handles real-time user interactions (button clicks, etc). 
   * Such files can live in any folder in the app, but are commonly placed within a `static` folder.
 * The second type are those that you want to address in **code**, such as when you want to implement an API endpoint that returns a static file.
   * For this purpose, the Flask object contains a built-in method, `send_static_file`, which generates a response with a static file contained within the app's `static` folder.
@@ -278,7 +274,7 @@ The following sections demonstrate both types of static files.
 
 ### Create multiple templates that extend a base template
 
-Because most web apps have more than one page, and because those pages typically share many common elements, developers separate those common elements into a **base page template** that other page templates can then extend (this is also called _template inheritance_.)
+🌐 Because most web apps have more than one page, and because those pages typically share many common elements, developers separate those common elements into a **base page template** that other page templates can then extend (this is also called _template inheritance_.)
 
 Also, because you'll likely create many pages that extend the same template, it's helpful to create a reusable **code snippet** in VS Code with which you can quickly initialize new page templates. A snippet helps you avoid tedious and error-prone copy-paste operations!
 
@@ -287,15 +283,7 @@ The following sections walk through different parts of this process.
 #### Create a base page template and styles
 {:.no_toc}
 
-A base page template in Flask contains all the shared parts of a set of pages, including references to CSS files, script files, and so forth. Base templates also define one or more **block** tags that other templates that extend the base are expected to override. 
-
-<div class="imp" markdown="block">
-
-{% raw %}
-A **block tag** is delineated by `{% block <name> %}` and `{% endblock %}` in both the base template and extended templates.
-{% endraw %}
-  
-</div>
+A **base page template** in Flask contains all the shared parts of a set of pages, including references to CSS files, script files, and so forth. Base templates also define one or more **block** tags that other templates that _extend_ the base are expected to override. 
 
 <div class="imp" markdown="block">
 
@@ -303,11 +291,6 @@ A **block tag** is delineated by {% raw %}`{% block <name> %}`{% endraw %} and {
   
 </div>
 
-```markdown
-{% raw %}
-A block tag is delineated by `{% block <name> %}` and `{% endblock %}` in both the base template and extended templates.
-{% endraw %}
-```
 
 The following steps demonstrate creating a base template.
 
