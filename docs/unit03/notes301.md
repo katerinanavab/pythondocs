@@ -155,7 +155,7 @@ In this section, you create a single page using a template. In the sections that
 
 1. Inside the `hello_flask` folder, create a folder named `templates`, which is where Flask looks for templates by default.
 
-1. In the `templates` folder, create a file named `hello_there.html` with the contents below. This template contains two placeholders named "name" and "date", which are delineated by pairs of curly braces, `\{{` and `}}`. As you can see, you can also include formatting code in the template directly:
+1. In the `templates` folder, create a file named `hello_there.html` with the contents below. This template contains two placeholders named "name" and "date", which are delineated by pairs of curly braces, `{{` and `}}`. As you can see, you can also include formatting code in the template directly:
 
 
     ```html
@@ -168,7 +168,7 @@ In this section, you create a single page using a template. In the sections that
             </head>
             <body>
                 {%if name %}
-                    <strong>Hello there, \{{ name }}!</strong> It's \{{ date.strftime("%A, %d %B, %Y at %X") }}.
+                    <strong>Hello there, {{ name }}!</strong> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
                 {% else %}
                     What's your name? Provide it after /hello/ in the URL.
                 {% endif %}
@@ -200,22 +200,24 @@ In this section, you create a single page using a template. In the sections that
    > The decorator used for the new URL route, `/hello/<name>`, defines an **endpoint** `/hello/` that can accept any additional value. The identifier inside `<` and `>` in the route defines a **variable** that is passed to the function and can be used in your code.
 
 {:.highlight}
-URL routes are case-sensitive. For example, the route `/hello/<name>` is distinct from `/Hello/<name>`. If you want the same function to handle both, use decorators for each variant.
+URL routes are **case-sensitive**. For example, the route `/hello/<name>` is distinct from `/Hello/<name>`. If you want the same function to handle both, use decorators for each variant.
 
 
-1. Start the program (inside or outside of the debugger), navigate to a /hello/name URL, and observe the results.
+1. Start the program, navigate to a /hello/name URL, and observe the results.
 
 1. Also try navigating to a /hello/name URL using a name like `<a%20value%20that%20could%20be%20HTML>` to see Flask's automatic escaping at work. The "name" value shows up as plain text in the browser rather than as rendering an actual element.
 
-### Serve static files
+### Serve static files like CSS
 
-Static files are of two types. First are those files like stylesheets to which a page template can just refer directly. Such files can live in any folder in the app, but are commonly placed within a `static` folder.
-
-The second type are those that you want to address in code, such as when you want to implement an API endpoint that returns a static file. For this purpose, the Flask object contains a built-in method, `send_static_file`, which generates a response with a static file contained within the app's `static` folder.
+**Static** files are of two types:
+* 🎨 First are those files like **stylesheets** to which a page template can just refer directly, or even a JavaScript file that handles real-time user interactions (button clicks, etc). 
+  * Such files can live in any folder in the app, but are commonly placed within a `static` folder.
+* The second type are those that you want to address in **code**, such as when you want to implement an API endpoint that returns a static file.
+  * For this purpose, the Flask object contains a built-in method, `send_static_file`, which generates a response with a static file contained within the app's `static` folder.
 
 The following sections demonstrate both types of static files.
 
-### Refer to static files in a template
+#### Refer to static files in a template
 {:.no_toc}
 
 1. In the `hello_flask` folder, create a folder named `static`.
@@ -230,14 +232,12 @@ The following sections demonstrate both types of static files.
     ```
 
 1. In `templates/hello_there.html`, add the following line before the `</head>` tag, which creates a reference to the stylesheet.
-
     ```html
     {% raw %}
     <link rel="stylesheet" type="text/css" href="\{{ url_for('static', filename='site.css')}}" />
     {% endraw %}
     ```
-
-  > Flask's [url_for](https://flask.palletsprojects.com/api/#flask.url_for) tag that is used here, creates the appropriate path to the file. Because it can accept variables as arguments, `url_for` allows you to programmatically control the generated path, if desired.
+    > Flask's [url_for](https://flask.palletsprojects.com/api/#flask.url_for) tag that is used here, creates the appropriate path to the file. Because it can accept variables as arguments, `url_for` allows you to programmatically control the generated path, if desired.
 
 1. Also in `templates/hello_there.html`, replace the contents `<body>` element with the following markup that uses the `message` style instead of a `<strong>` tag (and also displays a message if you just use a hello/ URL without a name):
 
@@ -278,18 +278,34 @@ The following sections demonstrate both types of static files.
 
 ### Create multiple templates that extend a base template
 
-Because most web apps have more than one page, and because those pages typically share many common elements, developers separate those common elements into a base page template that other page templates can then extend (this is also called template inheritance.)
+Because most web apps have more than one page, and because those pages typically share many common elements, developers separate those common elements into a **base page template** that other page templates can then extend (this is also called _template inheritance_.)
 
-Also, because you'll likely create many pages that extend the same template, it's helpful to create a code snippet in VS Code with which you can quickly initialize new page templates. A snippet helps you avoid tedious and error-prone copy-paste operations.
+Also, because you'll likely create many pages that extend the same template, it's helpful to create a reusable **code snippet** in VS Code with which you can quickly initialize new page templates. A snippet helps you avoid tedious and error-prone copy-paste operations!
 
 The following sections walk through different parts of this process.
 
 #### Create a base page template and styles
 {:.no_toc}
 
+A base page template in Flask contains all the shared parts of a set of pages, including references to CSS files, script files, and so forth. Base templates also define one or more **block** tags that other templates that extend the base are expected to override. 
+
+<div class="imp" markdown="block">
+
+{% raw %}
+A **block tag** is delineated by `{% block <name> %}` and `{% endblock %}` in both the base template and extended templates.
+{% endraw %}
+  
+</div>
+
+<div class="imp" markdown="block">
+
+A **block tag** is delineated by {% raw %}`{% block <name> %}`{% endraw %} and {% raw %}`{% endblock %}`{% endraw %} in both the base template and extended templates.
+  
+</div>
+
 ```markdown
 {% raw %}
-A base page template in Flask contains all the shared parts of a set of pages, including references to CSS files, script files, and so forth. Base templates also define one or more **block** tags that other templates that extend the base are expected to override. A block tag is delineated by `{% block <name> %}` and `{% endblock %}` in both the base template and extended templates.
+A block tag is delineated by `{% block <name> %}` and `{% endblock %}` in both the base template and extended templates.
 {% endraw %}
 ```
 
