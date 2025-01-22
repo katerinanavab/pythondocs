@@ -155,7 +155,7 @@ In this section, you create a single page using a template. In the sections that
 
 1. Inside the `hello_flask` folder, create a folder named `templates`, which is where Flask looks for templates by default.
 
-1. In the `templates` folder, create a file named `hello_there.html` with the contents below. This template contains two placeholders named "name" and "date", which are delineated by pairs of curly braces, `{{` and `}}`. As you can see, you can also include formatting code in the template directly:
+1. In the `templates` folder, create a file named `hello_there.html` with the contents below. This template contains two placeholders named "name" and "date", which are delineated by pairs of curly braces, {% raw %}`{{`{% endraw %} and {% raw %}`}}`{% endraw %}. As you can see, you can also include formatting code in the template directly:
     ```html
     {% raw %}
         <!DOCTYPE html>
@@ -203,7 +203,7 @@ URL routes are **case-sensitive**! For example, the route `/hello/<name>` is dis
 
 1. Also try navigating to a /hello/name URL using a name like `<a%20value%20that%20could%20be%20HTML>` to see Flask's automatic escaping at work. The "name" value shows up as plain text in the browser rather than as rendering an actual element.
 
-### Serve static files (CSS)
+### Serve static files (CSS, JS, JSON)
 
 **Static** files are of two types:
 * 🎨 First are those files like **CSS stylesheets** to which a page template can just refer directly, or even a **JavaScript** file that handles real-time user interactions (button clicks, etc). 
@@ -239,7 +239,7 @@ The following sections demonstrate both types of static files.
 
     ```html
     {% raw %}
-    {%if name %}
+    {% if name %}
         <span class="message">Hello there, {{ name }}!</span> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
     {% else %}
         <span class="message">What's your name? Provide it after /hello/ in the URL.</span>
