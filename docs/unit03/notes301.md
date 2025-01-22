@@ -165,7 +165,7 @@ In this section, you create a single page using a template. In the sections that
                 <title>Hello, Flask</title>
             </head>
             <body>
-                {%if name %}
+                {% if name %}
                     <strong>Hello there, {{ name }}!</strong> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
                 {% else %}
                     What's your name? Provide it after /hello/ in the URL.
@@ -195,8 +195,8 @@ In this section, you create a single page using a template. In the sections that
     ```
    > The decorator used for the new URL route, `/hello/<name>`, defines an **endpoint** `/hello/` that can accept any additional value. The identifier inside `<` and `>` in the route defines a **variable** that is passed to the function and can be used in your code.
 
-{:.highlight}
-URL routes are **case-sensitive**. For example, the route `/hello/<name>` is distinct from `/Hello/<name>`. If you want the same function to handle both, use decorators for each variant.
+{:.warning}
+URL routes are **case-sensitive**! For example, the route `/hello/<name>` is distinct from `/Hello/<name>`. If you want the same function to handle both, use decorators for each variant.
 
 
 1. Start the program, navigate to a /hello/name URL, and observe the results.
@@ -218,7 +218,7 @@ The following sections demonstrate both types of static files.
 
 1. In the `hello_flask` folder, create a folder named `static`.
 
-1. Within the `static` folder, create a file named `site.css` with the following contents. After entering this code, also observe the syntax highlighting that VS Code provides for CSS files, including a color preview:
+1. Within the `static` folder, create a file named `style.css` with the following contents. After entering this code, also observe the syntax highlighting that VS Code provides for CSS files, including a color preview:
 
     ```css
     .message {
@@ -230,7 +230,7 @@ The following sections demonstrate both types of static files.
 1. In `templates/hello_there.html`, add the following line before the `</head>` tag, which creates a reference to the stylesheet.
     ```html
     {% raw %}
-    <link rel="stylesheet" type="text/css" href="\{{ url_for('static', filename='site.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
     {% endraw %}
     ```
     > Flask's [url_for](https://flask.palletsprojects.com/api/#flask.url_for) tag that is used here, creates the appropriate path to the file. Because it can accept variables as arguments, `url_for` allows you to programmatically control the generated path, if desired.
@@ -240,7 +240,7 @@ The following sections demonstrate both types of static files.
     ```html
     {% raw %}
     {%if name %}
-        <span class="message">Hello there, \{{ name }}!</span> It's \{{ date.strftime("%A, %d %B, %Y at %X") }}.
+        <span class="message">Hello there, {{ name }}!</span> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
     {% else %}
         <span class="message">What's your name? Provide it after /hello/ in the URL.</span>
     {% endif %}
@@ -303,14 +303,14 @@ The following steps demonstrate creating a base template.
         <head>
             <meta charset="utf-8" />
             <title>{% block title %}{% endblock %}</title>
-            <link rel="stylesheet" type="text/css" href="\{{ url_for('static', filename='site.css')}}" />
+            <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
         </head>
 
         <body>
             <div class="navbar">
-                <a href="\{{ url_for('home') }}" class="navbar-brand">Home</a>
-                <a href="\{{ url_for('about') }}" class="navbar-item">About</a>
-                <a href="\{{ url_for('contact') }}" class="navbar-item">Contact</a>
+                <a href="{{ url_for('index') }}" class="navbar-brand">Home</a>
+                <a href="{{ url_for('about') }}" class="navbar-item">About</a>
+                <a href="{{ url_for('contact') }}" class="navbar-item">Contact</a>
             </div>
 
             <div class="body-content">
@@ -318,7 +318,7 @@ The following steps demonstrate creating a base template.
                 {% endblock %}
                 <hr/>
                 <footer>
-                    <p>&copy; 2018</p>
+                    <p>&copy; 2025</p>
                 </footer>
             </div>
         </body>
@@ -326,7 +326,7 @@ The following steps demonstrate creating a base template.
     {% endraw %}
     ```
 
-1. Add the following styles to `static/site.css`, below the existing "message" style, and save the file. Note that this walkthrough doesn't attempt to demonstrate responsive design; these styles simply generate a reasonably interesting result.
+1. Add the following styles to `static/style.css`, below the existing "message" style, and save the file. Note that this walkthrough doesn't attempt to demonstrate responsive design; these styles simply generate a reasonably interesting result.
 
     ```css
     .navbar {
@@ -377,7 +377,7 @@ Because the three pages you create in the next section extend `layout.html`, it 
     "Flask Tutorial: template extending layout.html": {
         "prefix": "flextlayout",
         "body": [
-            "{% extends \"layout.html\" %}",
+            "{% extends "layout.html" %}",
             "{% block title %}",
             "$0",
             "{% endblock %}",
@@ -401,7 +401,7 @@ For more information on code snippets in general, refer to [Creating snippets](/
 
 With the code snippet in place, you can quickly create templates for the Home, About, and Contact pages.
 
-1. In the `templates` folder, create a new file named `home.html`, Then start typing `flext` to see the snippet appear as a completion:
+1. In the `templates` folder, create a new file named `index.html`, Then start typing `flext` to see the snippet appear as a completion:
 
     ![image](figures/autocomplete-for-code-snippet.png)
 
@@ -418,10 +418,10 @@ With the code snippet in place, you can quickly create templates for the Home, A
 1. In `app.py`, add functions for the /about/ and /contact/ routes that refer to their respective page templates. Also modify the `home` function to use the `home.html` template.
 
     ```python
-    # Replace the existing home function with the one below
+    # Replace the existing index function with the one below
     @app.route("/")
-    def home():
-        return render_template("home.html")
+    def index():
+        return render_template("index.html")
 
     # New functions
     @app.route("/about/")
