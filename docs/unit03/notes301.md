@@ -377,7 +377,7 @@ Because the three pages you create in the next section extend `layout.html`, it 
     "Flask Tutorial: template extending layout.html": {
         "prefix": "flextlayout",
         "body": [
-            "{% extends "layout.html" %}",
+            "{% extends 'layout.html' %}",
             "{% block title %}",
             "$0",
             "{% endblock %}",
@@ -396,7 +396,7 @@ Because the three pages you create in the next section extend `layout.html`, it 
 
 For more information on code snippets in general, refer to [Creating snippets](/docs/editor/userdefinedsnippets.md).
 
-### Use the code snippet to add pages
+#### Use the code snippet to add pages
 {:.no_toc}
 
 With the code snippet in place, you can quickly create templates for the Home, About, and Contact pages.
@@ -442,11 +442,79 @@ With all the page templates in place, save `app.py`, run the app, and open a bro
 
 > **Note**: If you're not seeing the latest changes, you might need to do a hard refresh on the page to avoid seeing a cached file.
 
+### Implementing Control Structures
+
+A **control structure** refers to all those things that control the flow of a program - conditionals (i.e. if/elif/else), for-loops, as well as things like macros and blocks. The official [Jinja Documentation](https://jinja.palletsprojects.com/en/stable/templates/#list-of-control-structures) provides examples for a variety of control structures and different data types.
+
+Let's try out some more in our `about.html` page!
+
+#### Conditionals
+
+Earlier, we used **if blocks** in our templates to generate different HTML content based on whether a value exists. For multiple branches, `elif` and `else` can be used like in Python. You can use more complex Expressions there, too:
+
+{% raw %}
+```html
+<p>
+{% if mood == "good"  %}
+    Hi!!! I'm so happy you're here!
+{% elif mood == "bad" %}
+    Not feeling it today.
+{% else %}
+    Feeling mysterious today...
+{% endif %}
+</p>
+```
+{% endraw %}
+
+> * Jinja handles **string comparisons** like Python, so {% raw %}`{% if mood == "good" %}`{% endraw %} will evaluate to `True` when `mood` is set to "good". 
+> * If `mood` is not "good" or "bad", the {% raw %}`{% else %}`{% endraw %} block will handle all other cases, which is a good fallback.
+
+{:.highlight}
+Don't forget to update `app.python` to pass in the appropriate data for this variable to render in the template!
+
+```
+@app.route('/about')
+def about():
+    mood = "good"  # or "bad", or some other value
+    return render_template('about.html', mood=mood)
+```
+
+#### For Loops
+
+Use a `for` loop to display a `list` of student names provided in a variable called students:
+
+{% raw %}
+```html
+<h1>Best Class Ever</h1>
+<ul>
+{% for student in students %}
+  <li>{{ student }}</li>
+{% endfor %}
+</ul>
+```
+{% endraw %}
+
+As variables in templates retain their object properties, it is possible to iterate over containers like `dict`:
+
+{% raw %}
+```html
+<dl>
+{% for key, value in my_dict.items() %}
+    <dt>{{ key }}</dt>
+    <dd>{{ value }}</dd>
+{% endfor %}
+</dl>
+```
+{% endraw %}
+
+{:.highlight}
+Don't forget to update `app.python` to pass in the appropriate data for this variable to render in the template!
+
 --- 
 
 ## Next steps
 
-1. Because this tutorial has only scratched the surface of page templates, refer to the [Jinja2 documentation](https://jinja.palletsprojects.com) for more information about templates. The [Template Designer Documentation](https://jinja.palletsprojects.com/templates/#synopsis) contains all the details on the template language. You might also want to review the [official Flask tutorial](https://flask.palletsprojects.com/tutorial) as well as the documentation for Flask [extensions](https://flask.palletsprojects.com/extensions/).
+1. Because this tutorial has only scratched the surface of page templates, refer to the [Jinja Documentation](https://jinja.palletsprojects.com) for more information about templates. The [Template Designer Documentation](https://jinja.palletsprojects.com/templates/#synopsis) contains all the details on the template language. You might also want to review the [official Flask tutorial](https://flask.palletsprojects.com/tutorial) as well as the documentation for Flask [extensions](https://flask.palletsprojects.com/extensions/).
 
 1. The [Docker extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) makes it easy to build, manage, and deploy containerized applications from Visual Studio Code. If you're interested in learning how to create a Python container for the Flask app developed in this tutorial, check out the [Python in a container](/docs/containers/quickstart-python.md) tutorial. 
 
