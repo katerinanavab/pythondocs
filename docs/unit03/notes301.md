@@ -454,15 +454,13 @@ Earlier, we used **if blocks** in our templates to generate different HTML conte
 
 {% raw %}
 ```html
-<p>
 {% if mood == "good"  %}
-    Hi!!! I'm so happy you're here!
+    <p>Hi!!! I'm sooo happy you're here!</p>
 {% elif mood == "bad" %}
-    Not feeling it today.
+    <p>Not feeling it today.</p>
 {% else %}
-    Feeling mysterious today...
+    <p>Feeling mysterious today...</p>
 {% endif %}
-</p>
 ```
 {% endraw %}
 
@@ -473,10 +471,10 @@ Earlier, we used **if blocks** in our templates to generate different HTML conte
 Don't forget to update `app.python` to pass in the appropriate data for this variable to render in the template!
 
 ```
-@app.route('/about')
+@app.route('/about/')
 def about():
-    mood = "good"  # or "bad", or some other value
-    return render_template('about.html', mood=mood)
+    current_mood = "good"  # or "bad", or some other value
+    return render_template('about.html', mood=current_mood)
 ```
 
 #### For Loops
