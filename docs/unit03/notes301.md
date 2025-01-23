@@ -470,7 +470,7 @@ Earlier, we used **if blocks** in our templates to generate different HTML conte
 {:.highlight}
 Don't forget to update `app.python` to pass in the appropriate data for this variable to render in the template!
 
-```
+```python
 @app.route('/about/')
 def about():
     current_mood = "good"  # or "bad", or some other value
@@ -479,14 +479,14 @@ def about():
 
 #### For Loops
 
-Use a `for` loop to display a `list` of student names provided in a variable called students:
+Use a `for` loop to display a `list` of people provided in a variable called `friends`:
 
 {% raw %}
 ```html
 <h1>Best Class Ever</h1>
 <ul>
-{% for student in students %}
-  <li>{{ student }}</li>
+{% for friend in friends %}
+  <li>{{ friend }}</li>
 {% endfor %}
 </ul>
 ```
