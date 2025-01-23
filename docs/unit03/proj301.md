@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "💻 PROJECT #3.1"
-projectname: "Flask"
+projectname: "Fun Web App"
 parent: "3️⃣ Flask Web Apps"
 nav_order: 5
 ---
@@ -28,7 +28,7 @@ Design and develop a **themed Flask web application** with at least **three inte
 ### Project Instructions
 
 #### 1. Choose a Theme
-Pick a theme for your app that excites you! Examples:
+Pick a theme for your app that excites you! _Examples:_
 - **Interactive Museum**: A virtual tour showcasing exhibits with descriptions and images.
 - **Game Hub**: A hub featuring game stats, leaderboards, or interactive minigames.
 - **Fantasy World Explorer**: A site where users can "travel" to different realms, each with unique features.
@@ -74,8 +74,6 @@ Incorporate the following features:
 - **Static Files**: Include at least one custom CSS file and one image.
 - **API Endpoint**: Create a route that serves a JSON response.
 
----
-
 ### Minimum Requirements
 1. **Pages**: A minimum of three HTML pages, extending a base template.
 2. **Dynamic Content**:
@@ -84,8 +82,6 @@ Incorporate the following features:
 3. **Styling**: A custom CSS file to style your pages.
 5. **Static Files**: Use at least one image and one stylesheet.
 6. **Documentation**: Include comments in your code explaining key sections.
-
----
 
 ### Bonus Challenges
 - Use HTML **forms** to gather user input. 
