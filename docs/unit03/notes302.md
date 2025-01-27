@@ -15,15 +15,18 @@ nav_order: 2
 ---
 ## HTTP Methods in Flask Apps
 
+In a **Client-Server** architecture, there is a set of rules, called a _protocol_, using which, we can allow the clients, to communicate with the server, and, vice-versa. Here, the **Hyper Text Transfer Protocol** (HTTP) is used, through which, communication is possible. The commonly used HTTP methods are: `GET` and `POST`.
+> For example: our browser passes our query to the Google server, then the Google server recieves and returns relevant suggestions.
+
 <html>
 <dl>
-  <dt>HTTP Method</dt>
-  <dd>
+  <dt>HTTP Request Method</dt>
+  <dd>A request that tells a server what <strong>action</strong> to perform on a given resource.
   </dd>
 </dl>
 </html>
 
-Flask provides support for common **HTTP methods** such as `GET`, `POST`, `PUT`, `DELETE`, and others. These methods allow developers to build RESTful APIs and handle various types of _client-server interactions_. Below is an overview of HTTP methods supported in Flask, along with simple examples for each.
+Flask provides support for common **HTTP methods** such as `GET`, `POST`, `PUT`, `DELETE`, and others. These methods allow developers to build RESTful APIs and handle various types of _client-server interactions_. Below is an overview of HTTP methods supported in Flask, along with simple examples for each. Watch this <a href="https://www.youtube.com/watch?v=tkfVQK6UxDI" target="_blank"><button class="btn">📺 VIDEO</button></a> for an overview. 
 
 ---
 
@@ -162,61 +165,6 @@ def delete_example(resource_id):
 ```bash
 curl -X DELETE http://127.0.0.1:5000/delete_example/1
 ```
-
----
-
-### PATCH
-
-The **PATCH** method is used to make _partial updates_ to a resource.
-
-#### Example:
-{:.no_toc}
-
-```python
-@app.route('/patch_example/<resource_id>', methods=['PATCH'])
-def patch_example(resource_id):
-    data = request.json
-    return f"Patched resource {resource_id} with data: {data}"
-```
-> - Similar to PUT, but PATCH typically updates only specific fields of a resource.
-
-#### Example Request (Using cURL):
-
-```bash
-curl -X PATCH http://127.0.0.1:5000/patch_example/1 -H "Content-Type: application/json" -d '{"field": "new value"}'
-```
-
----
-
-### HEAD
-
-The **HEAD** method is similar to GET but does not return the response body, only the _headers_.
-
-#### Example:
-{:.no_toc}
-
-```python
-@app.route('/head_example', methods=['HEAD'])
-def head_example():
-    return '', 200
-```
-> - Useful for checking resource metadata or server status.
-
----
-
-### OPTIONS Method
-
-The **OPTIONS** method returns the allowed HTTP methods for a specific resource.
-
-#### Example:
-{:.no_toc}
-
-```python
-@app.route('/options_example', methods=['OPTIONS'])
-def options_example():
-    return '', 204, {'Allow': 'GET, POST, PUT, DELETE'}
-```
-> - Used by clients to discover supported methods for a resource.
 
 ---
 
