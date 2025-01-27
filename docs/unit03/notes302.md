@@ -25,7 +25,11 @@ nav_order: 2
 
 Flask provides support for common **HTTP methods** such as `GET`, `POST`, `PUT`, `DELETE`, and others. These methods allow developers to build RESTful APIs and handle various types of _client-server interactions_. Below is an overview of HTTP methods supported in Flask, along with simple examples for each.
 
-### HTML Form Handling
+---
+
+### POST Method for handling HTML forms
+
+The **POST** method is used to _send data_ to the server, typically to create or update resources. It is often used with forms or APIs.
 
 Here is an example that demonstrates handling an **HTML form** and dynamically generating a page based on user responses.
 
@@ -96,11 +100,159 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
 {% endraw }
 ```
 
+--- 
+
+### GET Method
+
+The **GET** method is used to _retrieve data_ from the server. It is the default method for routes in Flask and is typically used to fetch data without making changes on the server.
+
+#### Example:
+{:.no_toc}
+
+```python
+@app.route('/get_example', methods=['GET'])
+def get_example():
+    param = request.args.get('param', 'default value')
+    return f"Received parameter: {param}"
+```
+> - `request.args.get('param')` retrieves query parameters from the URL (e.g., `/get_example?param=test`).
+
+---
+
+### PUT
+
+The **PUT** method is used to _update_ an existing resource or create a new one if it doesn’t exist.
+
+#### Example:
+{:.no_toc}
+
+```python
+@app.route('/put_example/<resource_id>', methods=['PUT'])
+def put_example(resource_id):
+    data = request.json
+    return f"Updated resource {resource_id} with data: {data}"
+```
+> - `request.json` retrieves JSON data sent in the body of the PUT request.
+> - Typically, the resource ID is passed in the URL.
+
+#### Example Request (Using cURL):
+{:.no_toc}
+```bash
+curl -X PUT http://127.0.0.1:5000/put_example/1 -H "Content-Type: application/json" -d '{"key": "value"}'
+```
+
+---
+
+### DELETE Method
+
+The **DELETE** method is used to _delete_ a resource identified by the URL.
+
+#### Example:
+{:.no_toc}
+
+```python
+@app.route('/delete_example/<resource_id>', methods=['DELETE'])
+def delete_example(resource_id):
+    return f"Deleted resource {resource_id}"
+```
+> - The resource ID is passed in the URL to identify which resource to delete.
+
+#### Example Request (Using cURL):
+{:.no_toc}
+```bash
+curl -X DELETE http://127.0.0.1:5000/delete_example/1
+```
+
+---
+
+### PATCH
+
+The **PATCH** method is used to make _partial updates_ to a resource.
+
+#### Example:
+{:.no_toc}
+
+```python
+@app.route('/patch_example/<resource_id>', methods=['PATCH'])
+def patch_example(resource_id):
+    data = request.json
+    return f"Patched resource {resource_id} with data: {data}"
+```
+> - Similar to PUT, but PATCH typically updates only specific fields of a resource.
+
+#### Example Request (Using cURL):
+
+```bash
+curl -X PATCH http://127.0.0.1:5000/patch_example/1 -H "Content-Type: application/json" -d '{"field": "new value"}'
+```
+
+---
+
+### HEAD
+
+The **HEAD** method is similar to GET but does not return the response body, only the _headers_.
+
+#### Example:
+{:.no_toc}
+
+```python
+@app.route('/head_example', methods=['HEAD'])
+def head_example():
+    return '', 200
+```
+> - Useful for checking resource metadata or server status.
+
+---
+
+### OPTIONS Method
+
+The **OPTIONS** method returns the allowed HTTP methods for a specific resource.
+
+#### Example:
+{:.no_toc}
+
+```python
+@app.route('/options_example', methods=['OPTIONS'])
+def options_example():
+    return '', 204, {'Allow': 'GET, POST, PUT, DELETE'}
+```
+> - Used by clients to discover supported methods for a resource.
+
+---
+
+## Summary of HTTP Methods
+
+| Method      | Description                 | Use Case                  |
+| ----------- | --------------------------- | ------------------------- |
+| **GET**     | Retrieve data               | Fetching resources        |
+| **POST**    | Send data to the server     | Creating resources        |
+| **PUT**     | Create or update a resource | Updating entire resources |
+| **DELETE**  | Delete a resource           | Removing resources        |
+| **PATCH**   | Partially update a resource | Updating specific fields  |
+| **HEAD**    | Fetch metadata              | Checking resource headers |
+| **OPTIONS** | Discover allowed methods    | API method discovery      |
+
+
+- Use appropriate HTTP methods for their intended purpose to ensure your API adheres to RESTful principles.
+- Flask provides the flexibility to use `methods` in `@app.route` to handle multiple HTTP methods for a single route if needed.
+
+#### Example for Multiple Methods:
+{:.no_toc}
+
+```python
+@app.route('/multi_example', methods=['GET', 'POST'])
+def multi_example():
+    if request.method == 'GET':
+        return "This is a GET request"
+    elif request.method == 'POST':
+        return "This is a POST request"
+```
+
 
 ---
 
 #### Acknowledgement
 {: .no_toc }
 
-Content on this page is adapted from [Flask Tutorial in Visual Studio Code](https://code.visualstudio.com/docs/python/tutorial-flask).
+Content on this page is adapted from []().
 {: .fs-2 }
