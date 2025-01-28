@@ -107,7 +107,7 @@ The `/submit` route processes the data and passes it to another template (here, 
   </ul>
   <a href="/">Go Back</a>
   {% endblock %}
-  {% endraw }
+  {% endraw %}
 ```
 
 --- 
