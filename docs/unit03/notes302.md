@@ -38,7 +38,6 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
 
 1. An HTML page (such as `index.html`) page renders the form:
   ```html
-  {% raw %}
   <form action="/submit" method="POST">
       <!-- Text Input -->
       <label for="name">Name:</label>
@@ -69,7 +68,6 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
       <!-- Submit Button -->
       <button type="submit">Submit</button>
   </form>
-  {% endraw %}
   ```
   > Note the `<form>` attributes: `action="/submit"` and `method="POST"`.
 1. When the user clicks the button to submit the form, the data is sent to the `/submit` route in `app.py`:
@@ -89,23 +87,23 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
   {% endraw %}
   ```
 1. The `/submit` route processes the data and passes it to another template (here, `result.html`) for display. The user sees their submitted responses on the result page.
-```html
-{% raw %}
-{% extends 'layout.html' %}
-
-{% block content %}
-<p>Thank you for submitting your details! Here is what you entered:</p>
-<ul>
-    <li><strong>Name:</strong> {{ user_data.name }}</li>
-    <li><strong>Age:</strong> {{ user_data.age }}</li>
-    <li><strong>Favorite Hobby:</strong> {{ user_data.favorite_hobby }}</li>
-    <li><strong>Favorite Color:</strong> {{ user_data.favorite_color }}</li>
-    <li><strong>Lucky Number:</strong> {{ user_data.lucky_number }}</li>
-</ul>
-<a href="/">Go Back</a>
-{% endblock %}
-{% endraw }
-```
+  ```html
+  {% raw %}
+  {% extends 'layout.html' %}
+  
+  {% block content %}
+  <p>Thank you for submitting your details! Here is what you entered:</p>
+  <ul>
+      <li><strong>Name:</strong> {{ user_data.name }}</li>
+      <li><strong>Age:</strong> {{ user_data.age }}</li>
+      <li><strong>Favorite Hobby:</strong> {{ user_data.favorite_hobby }}</li>
+      <li><strong>Favorite Color:</strong> {{ user_data.favorite_color }}</li>
+      <li><strong>Lucky Number:</strong> {{ user_data.lucky_number }}</li>
+  </ul>
+  <a href="/">Go Back</a>
+  {% endblock %}
+  {% endraw }
+  ```
 
 --- 
 
@@ -117,12 +115,10 @@ The **GET** method is used to _retrieve data_ from the server. It is the default
 {:.no_toc}
 
 ```python
-{% raw %}
 @app.route('/get_example', methods=['GET'])
 def get_example():
     param = request.args.get('param', 'default value')
     return f"Received parameter: {param}"
-{% endraw %}
 ```
 > - `request.args.get('param')` retrieves query parameters from the URL (e.g., `/get_example?param=test`).
 
@@ -136,18 +132,17 @@ The **PUT** method is used to _update_ an existing resource or create a new one 
 {:.no_toc}
 
 ```python
-{% raw %}
 @app.route('/put_example/<resource_id>', methods=['PUT'])
 def put_example(resource_id):
     data = request.json
     return f"Updated resource {resource_id} with data: {data}"
-{% endraw %}
 ```
 > - `request.json` retrieves JSON data sent in the body of the PUT request.
 > - Typically, the resource ID is passed in the URL.
 
 #### Example Request (Using cURL):
 {:.no_toc}
+
 ```bash
 {% raw %}
 curl -X PUT http://127.0.0.1:5000/put_example/1 -H "Content-Type: application/json" -d '{"key": "value"}'
@@ -164,11 +159,9 @@ The **DELETE** method is used to _delete_ a resource identified by the URL.
 {:.no_toc}
 
 ```python
-{% raw %}
 @app.route('/delete_example/<resource_id>', methods=['DELETE'])
 def delete_example(resource_id):
     return f"Deleted resource {resource_id}"
-{% endraw %}
 ```
 > - The resource ID is passed in the URL to identify which resource to delete.
 
