@@ -129,7 +129,7 @@ def get_example():
 
 ---
 
-### PUT
+### PUT Method
 
 The **PUT** method is used to _update_ an existing resource or create a new one if it doesn’t exist.
 
