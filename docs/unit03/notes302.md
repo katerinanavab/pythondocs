@@ -36,8 +36,9 @@ The **POST** method is used to _send data_ to the server, typically to create or
 
 Here is an example that demonstrates handling an **HTML form** and dynamically generating a page based on user responses.
 
-1. An HTML page (such as `index.html`) page renders the form:
-  ```html
+An HTML page (such as `index.html`) page renders the form:
+
+```html
   <form action="/submit" method="POST">
       <!-- Text Input -->
       <label for="name">Name:</label>
@@ -68,10 +69,12 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
       <!-- Submit Button -->
       <button type="submit">Submit</button>
   </form>
-  ```
-  > Note the `<form>` attributes: `action="/submit"` and `method="POST"`.
-1. When the user clicks the button to submit the form, the data is sent to the `/submit` route in `app.py`:
-  ```python
+```
+> Note the `<form>` attributes: `action="/submit"` and `method="POST"`.
+
+When the user clicks the button to submit the form, the data is sent to the `/submit` route in `app.py`:
+
+```python
   {% raw %}
   @app.route('/submit', methods=['POST'])
   def submit():
@@ -85,9 +88,11 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
       }
       return render_template('result.html', user_data=user_data)
   {% endraw %}
-  ```
-1. The `/submit` route processes the data and passes it to another template (here, `result.html`) for display. The user sees their submitted responses on the result page.
-  ```html
+```
+
+The `/submit` route processes the data and passes it to another template (here, `result.html`) for display. The user sees their submitted responses on the result page.
+
+```html
   {% raw %}
   {% extends 'layout.html' %}
   
@@ -103,7 +108,7 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
   <a href="/">Go Back</a>
   {% endblock %}
   {% endraw }
-  ```
+```
 
 --- 
 
