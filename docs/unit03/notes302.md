@@ -38,6 +38,7 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
 
 1. An HTML page (such as `index.html`) page renders the form:
   ```html
+  {% raw %}
   <form action="/submit" method="POST">
       <!-- Text Input -->
       <label for="name">Name:</label>
@@ -68,10 +69,12 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
       <!-- Submit Button -->
       <button type="submit">Submit</button>
   </form>
+  {% endraw %}
   ```
   > Note the `<form>` attributes: `action="/submit"` and `method="POST"`.
 1. When the user clicks the button to submit the form, the data is sent to the `/submit` route in `app.py`:
   ```python
+  {% raw %}
   @app.route('/submit', methods=['POST'])
   def submit():
       # Collect form data
@@ -83,6 +86,7 @@ Here is an example that demonstrates handling an **HTML form** and dynamically g
           'lucky_number': request.form.get('lucky_number')
       }
       return render_template('result.html', user_data=user_data)
+  {% endraw %}
   ```
 1. The `/submit` route processes the data and passes it to another template (here, `result.html`) for display. The user sees their submitted responses on the result page.
 ```html
@@ -113,10 +117,12 @@ The **GET** method is used to _retrieve data_ from the server. It is the default
 {:.no_toc}
 
 ```python
+{% raw %}
 @app.route('/get_example', methods=['GET'])
 def get_example():
     param = request.args.get('param', 'default value')
     return f"Received parameter: {param}"
+{% endraw %}
 ```
 > - `request.args.get('param')` retrieves query parameters from the URL (e.g., `/get_example?param=test`).
 
@@ -130,10 +136,12 @@ The **PUT** method is used to _update_ an existing resource or create a new one 
 {:.no_toc}
 
 ```python
+{% raw %}
 @app.route('/put_example/<resource_id>', methods=['PUT'])
 def put_example(resource_id):
     data = request.json
     return f"Updated resource {resource_id} with data: {data}"
+{% endraw %}
 ```
 > - `request.json` retrieves JSON data sent in the body of the PUT request.
 > - Typically, the resource ID is passed in the URL.
@@ -141,7 +149,9 @@ def put_example(resource_id):
 #### Example Request (Using cURL):
 {:.no_toc}
 ```bash
+{% raw %}
 curl -X PUT http://127.0.0.1:5000/put_example/1 -H "Content-Type: application/json" -d '{"key": "value"}'
+{% endraw %}
 ```
 
 ---
@@ -154,16 +164,20 @@ The **DELETE** method is used to _delete_ a resource identified by the URL.
 {:.no_toc}
 
 ```python
+{% raw %}
 @app.route('/delete_example/<resource_id>', methods=['DELETE'])
 def delete_example(resource_id):
     return f"Deleted resource {resource_id}"
+{% endraw %}
 ```
 > - The resource ID is passed in the URL to identify which resource to delete.
 
 #### Example Request (Using cURL):
 {:.no_toc}
 ```bash
+{% raw %}
 curl -X DELETE http://127.0.0.1:5000/delete_example/1
+{% endraw %}
 ```
 
 ---
@@ -188,12 +202,14 @@ curl -X DELETE http://127.0.0.1:5000/delete_example/1
 {:.no_toc}
 
 ```python
+{% raw %}
 @app.route('/multi_example', methods=['GET', 'POST'])
 def multi_example():
     if request.method == 'GET':
         return "This is a GET request"
     elif request.method == 'POST':
         return "This is a POST request"
+{% endraw %}
 ```
 
 
