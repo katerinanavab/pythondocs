@@ -13,7 +13,11 @@ nav_order: 3
 {:toc}
 
 ---
-## Integrating SQLite Databases in Flask
+## Databases in Python Web Apps
+
+---
+
+## Tutorial: SQLite + Flask
 
 In this tutorial, we will walk through the process of integrating an `SQLite` **database** into a `Flask` **web application**. We will use `SQLAlchemy`, Flask's ORM (Object-Relational Mapper), to manage the database. By the end of this tutorial, you will have a working to-do list web application that allows users to add and delete tasks, all stored in an SQLite database.
 
