@@ -15,11 +15,13 @@ nav_order: 3
 ---
 ## Databases in Python Web Apps
 
+### CRUD: Create, Read, Update, Delete
+
 ---
 
 ## Tutorial: SQLite + Flask
 
-In this tutorial, we will walk through the process of integrating an `SQLite` **database** into a `Flask` **web application**. We will use `SQLAlchemy`, Flask's ORM (Object-Relational Mapper), to manage the database. By the end of this tutorial, you will have a working to-do list web application that allows users to add and delete tasks, all stored in an SQLite database.
+In this tutorial, we will walk through the process of integrating an `SQLite` **database** into a `Flask` **web application**. We will use `SQLAlchemy`, Flask's **ORM** ([Object-Relational Mapper](https://www.freecodecamp.org/news/what-is-an-orm-the-meaning-of-object-relational-mapping-database-tools/), to manage the database. By the end of this tutorial, you will have a working to-do list web application that allows users to add and delete tasks, all stored in an SQLite database.
 
 You can install the necessary dependencies using pip:
 ```bash
@@ -172,6 +174,12 @@ def delete(id):
 </div>
 {% endblock %}
 ```
+
+---
+
+## Next Steps: Advanced SQLite
+
+
 
 ---
 
