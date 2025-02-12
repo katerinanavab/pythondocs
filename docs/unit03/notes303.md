@@ -15,7 +15,55 @@ nav_order: 3
 ---
 ## Databases in Python Web Apps
 
+### What is SQL?
+{:.no_toc}
+
+**SQL** ([Structured Query Language]() is the standard language for interacting with **relational databases**. It allows users to _create_, _retrieve_, _update_, and _delete_ data stored in a structured format using **tables**. SQL databases, such as `SQLite`, `PostgreSQ`L, and `MySQL`, are widely used in web applications to ensure efficient data management.
+
+`SQLite` is a lightweight, _serverless_ SQL database engine that is built into `Python` and commonly used for small to medium-sized applications. Unlike other database systems that require a separate server process, SQLite operates as a simple file on disk, making it an excellent choice for local development and small-scale web applications.
+
 ### CRUD: Create, Read, Update, Delete
+
+<div class="imp" markdown="block">
+    
+💿 **CRUD** represents the four fundamental _operations_ performed on a database. Each operation corresponds to a _SQL statement_.
+
+1. **Create** – Inserting new records into the database.
+   > _SQL:_ `INSERT INTO table_name (column1, column2) VALUES (value1, value2);`
+3. **Read** – Retrieving and displaying stored data.
+   > _SQL:_ `SELECT * FROM table_name;`
+5. **Update** – Modifying existing records.
+   > _SQL:_ `UPDATE table_name SET column1 = value1 WHERE condition;`
+7. **Delete** – Removing records from the database.
+   > _SQL:_ `DELETE FROM table_name WHERE condition;`
+
+</div>
+
+![image](https://repository-images.githubusercontent.com/589202470/23a403ef-85c3-493f-881a-ffa186b043cb)
+
+#### EXAMPLE: Crud Operations in Python
+{:.no_toc}
+
+In a `Flask` app using `SQLAlchemy`, these operations translate into Python *methods*.
+
+```python
+# Create
+task = Todo(content="Complete Flask tutorial")
+db.session.add(task)
+db.session.commit()
+
+# Read
+tasks = Todo.query.all()
+
+# Update
+task = Todo.query.get(1)
+task.content = "Updated task"
+db.session.commit()
+
+# Delete
+db.session.delete(task)
+db.session.commit()
+```
 
 ---
 
@@ -128,10 +176,10 @@ def delete(id):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    {% block head %}{% endblock %}
+    {% raw %}{% block head %}{% endblock %}{% endraw %}
 </head>
 <body>
-    {% block body %}{% endblock %}
+    {% raw %}{% block body %}{% endblock %}{% endraw %}
 </body>
 </html>
 ```
@@ -140,6 +188,7 @@ def delete(id):
 {:.no_toc}
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block head %}
@@ -173,11 +222,62 @@ def delete(id):
     </div>
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 ---
 
 ## Next Steps: Advanced SQLite
+
+As your applications grow, you may need to implement advanced SQLite features for better performance and scalability.
+
+### Indexing for Performance Optimization
+
+An **index** is a data structure that improves the _speed_ of data retrieval operations. Without an index, a database must scan every row to find matching records, which can be slow for large datasets.
+
+#### Example: Creating an Index
+{:.no_toc}
+
+```sql
+CREATE INDEX idx_task_content ON Todo(content);
+```
+> This index allows faster lookups when searching for tasks by content.
+
+### Foreign Keys for Relational Data
+
+**Foreign keys** enforce relationships between tables, ensuring data integrity. They prevent orphaned records and help structure data _logically_.
+
+#### Example: Defining Foreign Keys in SQLAlchemy
+{:.no_toc}
+
+```python
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+
+class Task(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.String(200), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user = db.relationship('User', backref=db.backref('tasks', lazy=True))
+```
+> Here, each **task** is associated with a **specific user**, ensuring structured data relationships.
+
+### Transactions for Data Integrity
+
+A database **transaction** is a sequence of operations that must all be executed successfully or none at all. This ensures _consistency_ in case of failures.
+
+#### Example: Using Transactions in SQLAlchemy
+```python
+try:
+    db.session.begin()
+    db.session.add(task1)
+    db.session.add(task2)
+    db.session.commit()
+except:
+    db.session.rollback()
+```
+> If an error occurs while adding `task1` or `task2`, the rollback prevents partial data corruption.
 
 
 
