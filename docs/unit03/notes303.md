@@ -18,11 +18,13 @@ nav_order: 3
 ### What is SQL?
 {:.no_toc}
 
-**SQL** ([Structured Query Language]() is the standard language for interacting with **relational databases**. It allows users to _create_, _retrieve_, _update_, and _delete_ data stored in a structured format using **tables**. SQL databases, such as `SQLite`, `PostgreSQ`L, and `MySQL`, are widely used in web applications to ensure efficient data management.
+**SQL** ([Structured Query Language](https://www.w3schools.com/sql/)) is the standard language for interacting with **relational databases**. It allows users to _create_, _retrieve_, _update_, and _delete_ data stored in a structured format using **tables**. SQL databases, such as `SQLite`, `PostgreSQL`, and `MySQL`, are widely used in web applications to ensure efficient data management.
 
 `SQLite` is a lightweight, _serverless_ SQL database engine that is built into `Python` and commonly used for small to medium-sized applications. Unlike other database systems that require a separate server process, SQLite operates as a simple file on disk, making it an excellent choice for local development and small-scale web applications.
 
 ### CRUD: Create, Read, Update, Delete
+
+![image](https://repository-images.githubusercontent.com/589202470/23a403ef-85c3-493f-881a-ffa186b043cb)
 
 <div class="imp" markdown="block">
     
@@ -38,8 +40,6 @@ nav_order: 3
    > _SQL:_ `DELETE FROM table_name WHERE condition;`
 
 </div>
-
-![image](https://repository-images.githubusercontent.com/589202470/23a403ef-85c3-493f-881a-ffa186b043cb)
 
 #### EXAMPLE: Crud Operations in Python
 {:.no_toc}
@@ -93,7 +93,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///tasks.db'
 db = SQLAlchemy(app)
 ```
 
-#### Step 2: Creating the Database Model
+### Step 2: Creating the Database Model
 
 Next, define a database **model** that represents a task:
 
@@ -268,6 +268,8 @@ class Task(db.Model):
 A database **transaction** is a sequence of operations that must all be executed successfully or none at all. This ensures _consistency_ in case of failures.
 
 #### Example: Using Transactions in SQLAlchemy
+{:.no_toc}
+
 ```python
 try:
     db.session.begin()
