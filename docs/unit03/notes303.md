@@ -20,7 +20,8 @@ nav_order: 3
 
 **SQL** ([Structured Query Language](https://www.w3schools.com/sql/)) is the standard language for interacting with **relational databases**. It allows users to _create_, _retrieve_, _update_, and _delete_ data stored in a structured format using **tables**. SQL databases, such as `SQLite`, `PostgreSQL`, and `MySQL`, are widely used in web applications to ensure efficient data management.
 
-`SQLite` is a lightweight, _serverless_ SQL database engine that is built into `Python` and commonly used for small to medium-sized applications. Unlike other database systems that require a separate server process, SQLite operates as a simple file on disk, making it an excellent choice for local development and small-scale web applications.
+`SQLite` is a lightweight, _serverless_ SQL **database engine** that is built into `Python` and commonly used for small to medium-sized applications. 
+> Unlike other database systems that require a separate server process, SQLite operates as a simple file on disk, making it an excellent choice for local development and small-scale web applications.
 
 ### CRUD: Create, Read, Update, Delete
 
@@ -113,6 +114,7 @@ This model defines a `Todo` table with three columns:
 - `date_created`: A timestamp for when the task was added
 
 ### Step 3: Creating the Database
+
 Before running the application, create the database by adding the following code at the bottom of `app.py`:
 
 ```python
