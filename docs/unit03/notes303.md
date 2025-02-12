@@ -15,7 +15,7 @@ nav_order: 3
 ---
 ## Databases in Python Web Apps
 
-### What is SQL?
+### What is SQL? 
 {:.no_toc}
 
 **SQL** ([Structured Query Language](https://www.w3schools.com/sql/)) is the standard language for interacting with **relational databases**. It allows users to _create_, _retrieve_, _update_, and _delete_ data stored in a structured format using **tables**. SQL databases, such as `SQLite`, `PostgreSQL`, and `MySQL`, are widely used in web applications to ensure efficient data management.
