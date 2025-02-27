@@ -8,6 +8,8 @@ nav_order: 5
 
 ### Overview & Setup
 
+This project will help you practice **full-stack development** using `Flask` and `SQLAlchemy`, while allowing you to explore a topic that interests you. Choose a theme, be creative, and have fun! 🚀
+
 <div class="setup" markdown="block">
 
 1. Go to the `CS3 Project 3.2` assignment on **Blackbaud** and follow the provided **GitHub Classroom** link.
@@ -19,8 +21,6 @@ nav_order: 5
 </div>
 
 ---
-
-This project will help you practice **full-stack development** using `Flask` and `SQLAlchemy`, while allowing you to explore a topic that interests you. Choose a theme, be creative, and have fun! 🚀
 
 ### Project Instructions
 
@@ -35,7 +35,7 @@ Pick a theme for your app that excites you! Your app should **store, display, an
 - **Fantasy World Explorer**: A site where users create and manage characters, locations, or quests.
 
 #### 2. Set Up Your Flask App
-1. **App Structure**: Organize your app into the following folders and files:
+- **App Structure**: Organize your app into the following folders and files:
     ```
     project/
     ├── static/
@@ -48,7 +48,7 @@ Pick a theme for your app that excites you! Your app should **store, display, an
     ├── app.py
     ```
 
-2. **Install Dependencies**:
+- **Install Dependencies**:
    ```bash
    pip install flask flask-sqlalchemy
    ```
