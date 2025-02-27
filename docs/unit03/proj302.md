@@ -127,6 +127,7 @@ Your app must support the **Create, Read, Update, and Delete** operations. _Belo
 - Extend a base template (`layout.html`) for consistent navigation.
 - *Example:* `index.html`
   ```html
+  {% raw %}
   {% extends "layout.html" %}
   
   {% block content %}
@@ -142,6 +143,7 @@ Your app must support the **Create, Read, Update, and Delete** operations. _Belo
       <button type="submit">Add Task</button>
   </form>
   {% endblock %}
+  {% endraw %}
   ```
 
 #### 6. Style Your App
