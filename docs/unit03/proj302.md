@@ -22,9 +22,9 @@ nav_order: 5
 
 This project will help you practice **full-stack development** using `Flask` and `SQLAlchemy`, while allowing you to explore a topic that interests you. Choose a theme, be creative, and have fun! 🚀
 
-### **Project Instructions**
+### Project Instructions
 
-#### **1. Choose a Theme**
+#### 1. Choose a Theme
 Pick a theme for your app that excites you! Your app should **store, display, and modify data** from an SQLite database. _Examples:_
 
 - **Task Manager**: A to-do list app where users can add, edit, and delete tasks.
@@ -34,7 +34,7 @@ Pick a theme for your app that excites you! Your app should **store, display, an
 - **Recipe Manager**: A site where users can create, update, and delete recipes.
 - **Fantasy World Explorer**: A site where users create and manage characters, locations, or quests.
 
-#### **2. Set Up Your Flask App**
+#### 2. Set Up Your Flask App
 1. **App Structure**: Organize your app into the following folders and files:
     ```
     project/
@@ -46,11 +46,6 @@ Pick a theme for your app that excites you! Your app should **store, display, an
     │   ├── layout.html
     │   ├── (your HTML pages)
     ├── app.py
-    ├── models.py
-    ├── forms.py (optional)
-    ├── database.db
-    ├── requirements.txt
-    └── README.md
     ```
 
 2. **Install Dependencies**:
@@ -58,10 +53,10 @@ Pick a theme for your app that excites you! Your app should **store, display, an
    pip install flask flask-sqlalchemy
    ```
 
-#### **3. Database Setup**
-- **Define a database model** in `models.py` using `Flask-SQLAlchemy`.
-- Include at least **three fields** (e.g., `id`, `name`, `created_at`).
-- Example:
+#### 3. Database Setup
+- **Define a database model** in `app.py` using `Flask-SQLAlchemy`.
+- Include at least **three fields** (e.g., `id`, `name`, `date_created`).
+- _Example:_
    ```python
    from flask_sqlalchemy import SQLAlchemy
    from datetime import datetime, timezone
@@ -74,13 +69,14 @@ Pick a theme for your app that excites you! Your app should **store, display, an
        date_created = db.Column(db.DateTime, default=datetime.utcnow)
    ```
 
-#### **4. Implement CRUD Operations**
-Your app must support the **Create, Read, Update, and Delete** operations. Below are the required features:
+#### 4. Implement CRUD Operations
 
-##### **A. Create (Add Data)**
-- Use an **HTML form** to submit data.
-- Store the data in an SQLite database.
-- Example:
+Your app must support the **Create, Read, Update, and Delete** operations. _Below are the required features:_
+
+##### CREATE (Add Data)
+- Use an HTML `<form>` to **submit data**.
+- **Store** the data in an `SQLite` database.
+- _Example:_
    ```python
    @app.route('/', methods=['POST'])
    def add_task():
@@ -90,9 +86,9 @@ Your app must support the **Create, Read, Update, and Delete** operations. Below
        db.session.commit()
    ```
 
-##### **B. Read (View Data)**
-- Fetch records from the database and display them using a Jinja template.
-- Example:
+##### READ (View Data)
+- **Fetch** records from the database and **display** them using a `Jinja` template.
+- _Example:_
    ```python
    @app.route('/')
    def index():
@@ -100,9 +96,9 @@ Your app must support the **Create, Read, Update, and Delete** operations. Below
        return render_template('index.html', tasks=tasks)
    ```
 
-##### **C. Update (Modify Data)**
+##### UPDATE (Modify Data)
 - Provide an option to **edit** existing records.
-- Example:
+- _Example:_
    ```python
    @app.route('/update/<int:id>', methods=['GET', 'POST'])
    def update(id):
@@ -114,9 +110,9 @@ Your app must support the **Create, Read, Update, and Delete** operations. Below
        return render_template('update.html', task=task)
    ```
 
-##### **D. Delete (Remove Data)**
+##### DELETE (Remove Data)
 - Implement a **delete button** to remove entries.
-- Example:
+- _Example:_
    ```python
    @app.route('/delete/<int:id>')
    def delete(id):
@@ -126,46 +122,45 @@ Your app must support the **Create, Read, Update, and Delete** operations. Below
        return redirect('/')
    ```
 
-#### **5. Create HTML Templates**
-- Use **Jinja** to dynamically display data.
+#### 5. Create HTML Templates
+- Use [Jinja](https://jinja.palletsprojects.com/en/stable/) to dynamically display data.
 - Extend a base template (`layout.html`) for consistent navigation.
+- *Example:* `index.html`
+  ```html
+  {% extends "layout.html" %}
+  
+  {% block content %}
+  <h2>Task List</h2>
+  <ul>
+      {% for task in tasks %}
+      <li>{{ task.content }} - <a href="/update/{{task.id}}">Edit</a> | <a href="/delete/{{task.id}}">Delete</a></li>
+      {% endfor %}
+  </ul>
+  
+  <form action="/" method="POST">
+      <input type="text" name="content" required>
+      <button type="submit">Add Task</button>
+  </form>
+  {% endblock %}
+  ```
 
-**Example:** `index.html`
-```html
-{% extends "layout.html" %}
-
-{% block content %}
-<h2>Task List</h2>
-<ul>
-    {% for task in tasks %}
-    <li>{{ task.content }} - <a href="/update/{{task.id}}">Edit</a> | <a href="/delete/{{task.id}}">Delete</a></li>
-    {% endfor %}
-</ul>
-
-<form action="/" method="POST">
-    <input type="text" name="content" required>
-    <button type="submit">Add Task</button>
-</form>
-{% endblock %}
-```
-
-#### **6. Style Your App**
+#### 6. Style Your App
 - **CSS**: Create a `static/style.css` file for styling.
-- **Bootstrap (Optional)**: Use Bootstrap for a polished UI.
+- **Bootstrap (Optional)**: Use [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) for a responsive UI.
 - **Images/Icons**: Store visuals in the `static` folder.
 
-#### **7. Serve Your App**
+#### 7. Serve Your App
 Run your Flask app:
-```bash
-python app.py
-```
+  ```bash
+  python app.py
+  ```
 If using Flask’s built-in development server:
-```python
-if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
-    app.run(debug=True)
-```
+  ```python
+  if __name__ == "__main__":
+      with app.app_context():
+          db.create_all()
+      app.run(debug=True)
+  ```
 
 ---
 
