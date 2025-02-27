@@ -20,14 +20,11 @@ nav_order: 5
 
 ---
 
-For your project, you will create a **custom Flask web application** that demonstrates your mastery of Flask, Jinja templates, SQLAlchemy, and database management. The project is intentionally open-ended to encourage creativity. Choose a theme that interests you and build an app that is interactive, visually appealing, and functional.
-This project will help you practice **full-stack development** using **Flask and SQLAlchemy**, while allowing you to explore a topic that interests you. Be creative and have fun! 🚀
+This project will help you practice **full-stack development** using `Flask` and `SQLAlchemy`, while allowing you to explore a topic that interests you. Choose a theme, be creative, and have fun! 🚀
 
----
+### **Project Instructions**
 
-## **Project Instructions**
-
-### **1. Choose a Theme**
+#### **1. Choose a Theme**
 Pick a theme for your app that excites you! Your app should **store, display, and modify data** from an SQLite database. _Examples:_
 
 - **Task Manager**: A to-do list app where users can add, edit, and delete tasks.
@@ -37,7 +34,7 @@ Pick a theme for your app that excites you! Your app should **store, display, an
 - **Recipe Manager**: A site where users can create, update, and delete recipes.
 - **Fantasy World Explorer**: A site where users create and manage characters, locations, or quests.
 
-### **2. Set Up Your Flask App**
+#### **2. Set Up Your Flask App**
 1. **App Structure**: Organize your app into the following folders and files:
     ```
     project/
@@ -61,13 +58,13 @@ Pick a theme for your app that excites you! Your app should **store, display, an
    pip install flask flask-sqlalchemy
    ```
 
-### **3. Database Setup**
+#### **3. Database Setup**
 - **Define a database model** in `models.py` using `Flask-SQLAlchemy`.
 - Include at least **three fields** (e.g., `id`, `name`, `created_at`).
 - Example:
    ```python
    from flask_sqlalchemy import SQLAlchemy
-   from datetime import datetime
+   from datetime import datetime, timezone
 
    db = SQLAlchemy()
 
@@ -77,10 +74,10 @@ Pick a theme for your app that excites you! Your app should **store, display, an
        date_created = db.Column(db.DateTime, default=datetime.utcnow)
    ```
 
-### **4. Implement CRUD Operations**
+#### **4. Implement CRUD Operations**
 Your app must support the **Create, Read, Update, and Delete** operations. Below are the required features:
 
-#### **A. Create (Add Data)**
+##### **A. Create (Add Data)**
 - Use an **HTML form** to submit data.
 - Store the data in an SQLite database.
 - Example:
@@ -93,7 +90,7 @@ Your app must support the **Create, Read, Update, and Delete** operations. Below
        db.session.commit()
    ```
 
-#### **B. Read (View Data)**
+##### **B. Read (View Data)**
 - Fetch records from the database and display them using a Jinja template.
 - Example:
    ```python
@@ -103,7 +100,7 @@ Your app must support the **Create, Read, Update, and Delete** operations. Below
        return render_template('index.html', tasks=tasks)
    ```
 
-#### **C. Update (Modify Data)**
+##### **C. Update (Modify Data)**
 - Provide an option to **edit** existing records.
 - Example:
    ```python
@@ -117,7 +114,7 @@ Your app must support the **Create, Read, Update, and Delete** operations. Below
        return render_template('update.html', task=task)
    ```
 
-#### **D. Delete (Remove Data)**
+##### **D. Delete (Remove Data)**
 - Implement a **delete button** to remove entries.
 - Example:
    ```python
@@ -129,7 +126,7 @@ Your app must support the **Create, Read, Update, and Delete** operations. Below
        return redirect('/')
    ```
 
-### **5. Create HTML Templates**
+#### **5. Create HTML Templates**
 - Use **Jinja** to dynamically display data.
 - Extend a base template (`layout.html`) for consistent navigation.
 
@@ -152,12 +149,12 @@ Your app must support the **Create, Read, Update, and Delete** operations. Below
 {% endblock %}
 ```
 
-### **6. Style Your App**
+#### **6. Style Your App**
 - **CSS**: Create a `static/style.css` file for styling.
 - **Bootstrap (Optional)**: Use Bootstrap for a polished UI.
 - **Images/Icons**: Store visuals in the `static` folder.
 
-### **7. Serve Your App**
+#### **7. Serve Your App**
 Run your Flask app:
 ```bash
 python app.py
@@ -170,31 +167,22 @@ if __name__ == "__main__":
     app.run(debug=True)
 ```
 
-### **8. Document Your Work**
-- Add **comments** to explain key parts of your code.
-- Include a `README.md` file describing:
-  - The purpose of your app.
-  - How to install and run it.
-  - Features and how to use them.
+---
+
+### Minimum Requirements
+- [ ] At least **three HTML pages** extending a base template.  
+- [ ] A **Flask-SQLAlchemy database** with at least **one model**.  
+- [ ] **CRUD functionality** (Create, Read, Update, Delete).  
+- [ ] A **form** to add records.  
+- [ ] A **delete button** to remove records.  
+- [ ] Styling using **CSS** or **Bootstrap**.  
+- [ ] At least **one image** in the `static` folder.  
+- [ ] Use of **template inheritance** and Jinja control structures.  
 
 ---
 
-## **Minimum Requirements**
-✅ At least **three HTML pages** extending a base template.  
-✅ A **Flask-SQLAlchemy database** with at least **one model**.  
-✅ **CRUD functionality** (Create, Read, Update, Delete).  
-✅ A **form** to add records.  
-✅ A **delete button** to remove records.  
-✅ Styling using **CSS** or **Bootstrap**.  
-✅ At least **one image** in the `static` folder.  
-✅ Use of **template inheritance** and Jinja control structures.  
-
----
-
-## **Bonus Challenges**
-🎯 Add **user authentication** (login/logout).  
-🎯 Implement **pagination** for large datasets.  
-🎯 Use JavaScript for **live updates** or **form validation**.  
-🎯 Add a **REST API endpoint** returning JSON data.  
-🎯 Use Flask’s `flash` messages for user feedback.  
-🎯 Connect to a **PostgreSQL** or **MySQL** database.  
+### Bonus Challenges
+- 🎯 Add **user authentication** (login/logout).  
+- 🎯 Use `JavaScript` for **live updates** or **form validation**.  
+- 🎯 Add a **REST API endpoint** returning `JSON` data.  
+- 🎯 Use Flask’s `flash` messages for user feedback.  
