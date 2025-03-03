@@ -12,7 +12,7 @@ This project will help you practice **full-stack development** using `Flask` and
 
 <html>
   <details>
-    <summary>SETUP & SUBMISSION INSTRUCTIONS</summary>
+    <summary>📥 SETUP & SUBMISSION INSTRUCTIONS</summary>
 
 <div class="setup" markdown="block">
 
