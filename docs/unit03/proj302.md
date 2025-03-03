@@ -10,6 +10,10 @@ nav_order: 5
 
 This project will help you practice **full-stack development** using `Flask` and `SQLAlchemy`, while allowing you to explore a topic that interests you. Choose a theme, be creative, and have fun! 🚀
 
+<html>
+  <details>
+    <summary>SETUP & SUBMISSION INSTRUCTIONS</summary>
+
 <div class="setup" markdown="block">
 
 1. Go to the `CS3 Project 3.2` assignment on **Blackbaud** and follow the provided **GitHub Classroom** link.
@@ -19,6 +23,10 @@ This project will help you practice **full-stack development** using `Flask` and
 3. When your project is complete, **submit the link to your repository** in the `CS3 Project 3.2` assignment on Blackbaud.
 
 </div>
+
+    
+  </details>
+</html>
 
 ---
 
