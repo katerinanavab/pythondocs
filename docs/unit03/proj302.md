@@ -35,8 +35,8 @@ This project will help you practice **full-stack development** using `Flask` and
 #### 1. Choose a Theme
 Pick a theme for your app that excites you! Your app should **store, display, and modify data** from an SQLite database. _Examples:_
 
-- **Task Manager**: A to-do list app where users can add, edit, and delete tasks.
-- **Student Directory**: A portal for managing student records (names, grades, subjects).
+- **Shopping List App**: A shopping list app where users can add, edit, and delete items.
+- **Event Planner**: A portal for creating and sharing social plans with friends.
 - **Library System**: A database of books with borrowing and returning functionality.
 - **Movie Collection**: A catalog where users can add, rate, and review movies.
 - **Recipe Manager**: A site where users can create, update, and delete recipes.
