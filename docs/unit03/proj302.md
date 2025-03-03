@@ -6,7 +6,7 @@ parent: "3️⃣ Flask Web Apps"
 nav_order: 5
 ---
 
-### Overview & Setup
+### Project Overview
 
 This project will help you practice **full-stack development** using `Flask` and `SQLAlchemy`, while allowing you to explore a topic that interests you. Choose a theme, be creative, and have fun! 🚀
 
